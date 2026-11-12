@@ -1,0 +1,20 @@
+{
+  "library": "dramatiq",
+  "scenario": "admin",
+  "scale": "short",
+  "started_at": "2026-11-12T17:37:25.904331+00:00",
+  "measured": true,
+  "ready": true,
+  "admin_excerpt": "{\"error\": \"e(conn, command_name, **options)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/workspace/.venv/lib/python3.12/site-packages/redis/client.py\\\", line 935, in parse_response\\n    response = connection.read_response()\\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"/workspace/.venv/lib/python3.12/site-packages/redis/connection.py\\\", line 1437, in read_response\\n    raise response\\nredis.exceptions.ResponseError: WRONGTYPE Operation against a key holding the wrong kind of value\\n\", \"code\": 1}",
+  "stop": [
+    {
+      "sigterm_at": 1794505046.3117754,
+      "exit_at": 1794505049.3149512,
+      "t_drain_s": 3.003,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 3.411
+}

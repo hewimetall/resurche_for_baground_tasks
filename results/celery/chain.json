@@ -1,0 +1,30 @@
+{
+  "library": "celery",
+  "scenario": "chain",
+  "scale": "short",
+  "started_at": "2026-11-12T17:45:26.867964+00:00",
+  "measured": true,
+  "send": {
+    "accepted": true,
+    "id": "d5c98948-5f8b-467c-ad11-17d1b61df0dc",
+    "native_dedup": false
+  },
+  "steps": 4,
+  "rows": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794505530.1000805,
+      "exit_at": 1794505531.7012913,
+      "t_drain_s": 1.601,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 4.833
+}

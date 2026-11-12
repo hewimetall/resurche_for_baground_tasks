@@ -1,0 +1,24 @@
+{
+  "library": "dramatiq",
+  "scenario": "double_early",
+  "scale": "short",
+  "started_at": "2026-11-12T17:43:15.094127+00:00",
+  "measured": true,
+  "first": {
+    "sigterm_at": 1794505397.396033,
+    "exit_at": 1794505401.4024482,
+    "t_drain_s": 4.006,
+    "killed_after_grace": true,
+    "code": -9,
+    "already_exited": false
+  },
+  "second": {
+    "sigterm_at": 1794505403.4026382,
+    "exit_at": 1794505407.4087708,
+    "t_drain_s": 4.006,
+    "killed_after_grace": true,
+    "code": -9,
+    "already_exited": false
+  },
+  "duration_s": 12.315
+}

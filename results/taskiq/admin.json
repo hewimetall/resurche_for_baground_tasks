@@ -1,0 +1,20 @@
+{
+  "library": "taskiq",
+  "scenario": "admin",
+  "scale": "short",
+  "started_at": "2026-11-12T17:58:13.114252+00:00",
+  "measured": true,
+  "ready": true,
+  "admin_excerpt": "{\"xlen\": 1, \"pending\": {\"pending\": 0, \"min\": null, \"max\": null, \"consumers\": []}, \"groups\": [{\"name\": \"taskiq\", \"consumers\": 1, \"pending\": 0, \"last-delivered-id\": \"1794506293530-0\", \"entries-read\": 1, \"lag\": 0}], \"consumers\": [{\"name\": \"ae791f93-9650-43e6-8538-52e3b25ae204\", \"pending\": 0, \"idle\": 469}]}",
+  "stop": [
+    {
+      "sigterm_at": 1794506294.092037,
+      "exit_at": 1794506295.8934033,
+      "t_drain_s": 1.801,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 2.779
+}

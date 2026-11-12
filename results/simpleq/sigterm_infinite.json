@@ -1,0 +1,19 @@
+{
+  "library": "simpleq",
+  "scenario": "sigterm_infinite",
+  "scale": "short",
+  "started_at": "2026-11-12T17:24:40.149444+00:00",
+  "measured": true,
+  "grace_s": 6,
+  "stop": [
+    {
+      "sigterm_at": 1794504295.5508385,
+      "exit_at": 1794504301.5589395,
+      "t_drain_s": 6.008,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 21.41
+}

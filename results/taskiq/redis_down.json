@@ -1,0 +1,34 @@
+{
+  "library": "taskiq",
+  "scenario": "redis_down",
+  "scale": "short",
+  "started_at": "2026-11-12T18:05:30.755765+00:00",
+  "measured": true,
+  "down_s": 5,
+  "got": 6,
+  "worker_alive": true,
+  "invariant": {
+    "expected": 6,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 6,
+    "distinct_items": 6,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 6
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794506739.2919416,
+      "exit_at": 1794506740.69272,
+      "t_drain_s": 1.401,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 9.937
+}

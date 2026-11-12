@@ -1,0 +1,29 @@
+{
+  "library": "arq",
+  "scenario": "async",
+  "scale": "short",
+  "started_at": "2026-11-12T17:53:09.715863+00:00",
+  "measured": true,
+  "sent": {
+    "accepted": 16,
+    "rejected": 0,
+    "seconds": 0.003
+  },
+  "ends": 16,
+  "elapsed_s": 2.161,
+  "work_span_s": 1.756,
+  "serial_s": 4.0,
+  "parallel_floor_s": 1.0,
+  "concurrency": 4,
+  "stop": [
+    {
+      "sigterm_at": 1794505992.3333688,
+      "exit_at": 1794505992.5335186,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 2.818
+}

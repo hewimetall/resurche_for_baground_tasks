@@ -1,0 +1,35 @@
+{
+  "library": "celery",
+  "scenario": "prefetch",
+  "scale": "short",
+  "started_at": "2026-11-12T17:46:53.691882+00:00",
+  "measured": true,
+  "gap": {
+    "gap_s": 0.37663086669921875,
+    "starts_after": 7
+  },
+  "invariant": {
+    "expected": 8,
+    "lost": 1,
+    "duplicated": 0,
+    "attempts": 8,
+    "distinct_items": 8,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "running",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 8
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505665.57,
+      "exit_at": 1794505666.7708886,
+      "t_drain_s": 1.201,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 53.079
+}

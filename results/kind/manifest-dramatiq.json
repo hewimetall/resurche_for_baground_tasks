@@ -1,0 +1,100 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "bench-worker",
+    "labels": {
+      "app": "bench-worker",
+      "lib": "dramatiq"
+    }
+  },
+  "spec": {
+    "replicas": 1,
+    "strategy": {
+      "type": "RollingUpdate",
+      "rollingUpdate": {
+        "maxSurge": 1,
+        "maxUnavailable": 0
+      }
+    },
+    "selector": {
+      "matchLabels": {
+        "app": "bench-worker"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "bench-worker",
+          "lib": "dramatiq"
+        }
+      },
+      "spec": {
+        "terminationGracePeriodSeconds": 12,
+        "containers": [
+          {
+            "name": "worker",
+            "image": "bench-worker:local",
+            "imagePullPolicy": "IfNotPresent",
+            "command": [
+              "dramatiq",
+              "bench.dramatiq_app",
+              "--queues",
+              "bench",
+              "--processes",
+              "1",
+              "--threads",
+              "1",
+              "--worker-shutdown-timeout",
+              "12000"
+            ],
+            "env": [
+              {
+                "name": "REDIS_URL",
+                "value": "redis://172.18.0.1:6380/0"
+              },
+              {
+                "name": "PG_DSN",
+                "value": "postgresql://ubuntu@172.18.0.1:5432/bench_k8s"
+              },
+              {
+                "name": "MOCK_URL",
+                "value": "http://172.18.0.1:8090"
+              },
+              {
+                "name": "DRAIN_FLAG",
+                "value": "/tmp/draining"
+              },
+              {
+                "name": "PYTHONUNBUFFERED",
+                "value": "1"
+              },
+              {
+                "name": "PYTHONPATH",
+                "value": "/app"
+              },
+              {
+                "name": "PROBE_PATH",
+                "value": "/tmp/bench-probe"
+              },
+              {
+                "name": "DRAMATIQ_HEARTBEAT_MS",
+                "value": "15000"
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "100m",
+                "memory": "192Mi"
+              },
+              "limits": {
+                "cpu": "1",
+                "memory": "512Mi"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

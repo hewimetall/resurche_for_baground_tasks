@@ -1,0 +1,26 @@
+{
+  "library": "dramatiq",
+  "scenario": "boom",
+  "scale": "short",
+  "started_at": "2026-11-12T17:36:56.885670+00:00",
+  "measured": true,
+  "status": "failed",
+  "attempts": 3,
+  "notes": [
+    "failure_attempt:type=RuntimeError retries=1 max=2",
+    "failure_attempt:type=RuntimeError retries=2 max=2",
+    "failure_attempt:type=RuntimeError retries=3 max=2",
+    "failed:retries RuntimeError retries=3"
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794505019.1068597,
+      "exit_at": 1794505022.113091,
+      "t_drain_s": 3.006,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 5.227
+}

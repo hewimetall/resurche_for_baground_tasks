@@ -1,0 +1,45 @@
+{
+  "library": "arq",
+  "scenario": "five_kills",
+  "scale": "short",
+  "started_at": "2026-11-12T17:53:25.846624+00:00",
+  "measured": true,
+  "kills": [
+    {
+      "i": 0,
+      "saw_attempt": true,
+      "kill_at": 1794506006.7507617
+    },
+    {
+      "i": 1,
+      "saw_attempt": false,
+      "kill_at": 1794506047.2444124
+    },
+    {
+      "i": 2,
+      "saw_attempt": false,
+      "kill_at": 1794506087.76303
+    },
+    {
+      "i": 3,
+      "saw_attempt": false,
+      "kill_at": 1794506128.2928438
+    },
+    {
+      "i": 4,
+      "saw_attempt": false,
+      "kill_at": 1794506168.8325868
+    }
+  ],
+  "status": "running",
+  "fail_reason": null,
+  "attempt_notes": [
+    "long try=1 id=poison:five-arq-1794506005",
+    "long try=2 id=poison:five-arq-1794506005"
+  ],
+  "env": {
+    "ARQ_LONG_TIMEOUT": "30",
+    "ARQ_JOB_TIMEOUT": "30"
+  },
+  "duration_s": 162.992
+}

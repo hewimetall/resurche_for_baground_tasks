@@ -1,0 +1,23 @@
+{
+  "library": "taskiq",
+  "scenario": "limit",
+  "scale": "short",
+  "started_at": "2026-11-12T17:57:59.461265+00:00",
+  "measured": true,
+  "status": "failed",
+  "attempts": 2,
+  "notes": [
+    "failed:timeout TimeoutError retries=2"
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794506283.4568481,
+      "exit_at": 1794506285.6589556,
+      "t_drain_s": 2.202,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 6.198
+}

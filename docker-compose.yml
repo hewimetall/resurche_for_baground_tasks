@@ -1,0 +1,99 @@
+# Воспроизведение стенда в Docker. На этой VM Docker и kind не установлены,
+# прогоны шли процессами на Redis 7.0.15 и Postgres 16. Этот файл не исполнялся.
+# Одновременно поднимается одна библиотека: --scale <lib>=0 для остальных.
+
+services:
+  redis:
+    image: redis:7
+    command: ["redis-server", "--appendonly", "no", "--save", ""]
+    ports: ["6379:6379"]
+
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: bench
+      POSTGRES_PASSWORD: bench
+      POSTGRES_DB: bench
+    ports: ["5432:5432"]
+
+  mock:
+    image: python:3.12-slim
+    working_dir: /app
+    volumes: [".:/app"]
+    command: ["python", "-m", "bench.mock_http"]
+    environment:
+      MOCK_PORT: "8090"
+    ports: ["8090:8090"]
+
+  simpleq:
+    image: python:3.12-slim
+    mem_limit: 1536m
+    working_dir: /app
+    volumes: [".:/app"]
+    depends_on: [redis, postgres, mock]
+    environment: &worker_env
+      REDIS_URL: redis://redis:6379/0
+      PG_DSN: postgresql://bench:bench@postgres:5432/bench
+      MOCK_URL: http://mock:8090
+      PYTHONPATH: /app
+    command:
+      - agent-worker
+      - worker
+      - --app
+      - bench.simpleq_app:create_app
+      - --factory
+      - --queues
+      - bench
+      - --processes
+      - "2"
+      - --concurrency
+      - "2"
+
+  dramatiq:
+    image: python:3.12-slim
+    mem_limit: 1536m
+    working_dir: /app
+    volumes: [".:/app"]
+    depends_on: [redis, postgres, mock]
+    environment: *worker_env
+    command: ["dramatiq", "bench.dramatiq_app", "--queues", "bench", "--processes", "2", "--threads", "2"]
+
+  celery:
+    image: python:3.12-slim
+    mem_limit: 1536m
+    working_dir: /app
+    volumes: [".:/app"]
+    depends_on: [redis, postgres, mock]
+    environment: *worker_env
+    command: ["celery", "-A", "bench.celery_app", "worker", "-Q", "bench", "-c", "2", "--without-gossip", "--without-mingle"]
+
+  arq:
+    image: python:3.12-slim
+    mem_limit: 1536m
+    working_dir: /app
+    volumes: [".:/app"]
+    depends_on: [redis, postgres, mock]
+    environment: *worker_env
+    command: ["arq", "bench.arq_app.WorkerSettings"]
+
+  taskiq:
+    image: python:3.12-slim
+    mem_limit: 1536m
+    working_dir: /app
+    volumes: [".:/app"]
+    depends_on: [redis, postgres, mock]
+    environment:
+      <<: *worker_env
+      TASKIQ_METRICS: "1"
+    command:
+      - taskiq
+      - worker
+      - bench.taskiq_app:broker
+      - --workers
+      - "2"
+      - --max-async-tasks
+      - "4"
+      - --shutdown-timeout
+      - "30"
+      - --ack-type
+      - when_executed

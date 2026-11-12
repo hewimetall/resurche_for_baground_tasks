@@ -1,0 +1,51 @@
+{
+  "library": "arq",
+  "scenario": "dedup",
+  "scale": "short",
+  "started_at": "2026-11-12T17:50:41.722161+00:00",
+  "measured": true,
+  "first": {
+    "accepted": true,
+    "id": "item:dedup-arq-1794505841:1",
+    "native_dedup": true
+  },
+  "second": {
+    "accepted": false,
+    "id": "item:dedup-arq-1794505841:1",
+    "native_dedup": true
+  },
+  "after_ack": {
+    "accepted": false,
+    "id": "item:dedup-arq-1794505841:1",
+    "native_dedup": true
+  },
+  "invariant": {
+    "expected": 1,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 1,
+    "distinct_items": 1,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 1
+  },
+  "mock": {
+    "keys": 1,
+    "calls": 1,
+    "duplicated_keys": 0
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505846.1159744,
+      "exit_at": 1794505846.3161252,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 4.594
+}

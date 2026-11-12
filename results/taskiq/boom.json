@@ -1,0 +1,23 @@
+{
+  "library": "taskiq",
+  "scenario": "boom",
+  "scale": "short",
+  "started_at": "2026-11-12T17:57:56.252435+00:00",
+  "measured": true,
+  "status": "failed",
+  "attempts": 3,
+  "notes": [
+    "failed:retries RuntimeError retries=3"
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794506277.2428029,
+      "exit_at": 1794506279.4452326,
+      "t_drain_s": 2.202,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 3.193
+}

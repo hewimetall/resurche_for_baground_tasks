@@ -1,0 +1,54 @@
+{
+  "library": "celery",
+  "scenario": "shell_sigterm",
+  "scale": "short",
+  "started_at": "2026-11-12T17:46:43.993616+00:00",
+  "measured": true,
+  "rows": [
+    {
+      "shell": "bash",
+      "signal": "process_group",
+      "stop": {
+        "sigterm_at": 1794505605.204801,
+        "exit_at": 1794505605.8051417,
+        "t_drain_s": 0.6,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      }
+    },
+    {
+      "shell": "exec",
+      "signal": "process_group",
+      "stop": {
+        "sigterm_at": 1794505607.0255482,
+        "exit_at": 1794505607.6260147,
+        "t_drain_s": 0.6,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      }
+    },
+    {
+      "shell": "bash",
+      "signal": "pid1",
+      "stop": {
+        "sigterm_at": 1794505608.8494828,
+        "t_drain_s": 1.802,
+        "killed_after_grace": false,
+        "code": 0
+      }
+    },
+    {
+      "shell": "exec",
+      "signal": "pid1",
+      "stop": {
+        "sigterm_at": 1794505611.8720264,
+        "t_drain_s": 1.801,
+        "killed_after_grace": false,
+        "code": 0
+      }
+    }
+  ],
+  "duration_s": 9.68
+}

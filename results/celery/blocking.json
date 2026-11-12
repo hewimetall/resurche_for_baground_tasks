@@ -1,0 +1,35 @@
+{
+  "library": "celery",
+  "scenario": "blocking",
+  "scale": "short",
+  "started_at": "2026-11-12T17:47:49.226823+00:00",
+  "measured": true,
+  "elapsed_s": 12.273,
+  "block_s": 4,
+  "env": {
+    "CELERY_VISIBILITY_TIMEOUT": "8"
+  },
+  "attempts": [
+    {
+      "item": 0,
+      "note": "block-start",
+      "ts": "1794505670.051694"
+    },
+    {
+      "item": 1,
+      "note": "block-end",
+      "ts": "1794505674.054115"
+    }
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794505682.0645835,
+      "exit_at": 1794505682.6649806,
+      "t_drain_s": 0.6,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 13.438
+}

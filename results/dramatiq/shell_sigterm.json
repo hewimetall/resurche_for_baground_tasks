@@ -1,0 +1,54 @@
+{
+  "library": "dramatiq",
+  "scenario": "shell_sigterm",
+  "scale": "short",
+  "started_at": "2026-11-12T17:38:29.171299+00:00",
+  "measured": true,
+  "rows": [
+    {
+      "shell": "bash",
+      "signal": "process_group",
+      "stop": {
+        "sigterm_at": 1794505110.3847244,
+        "exit_at": 1794505116.390673,
+        "t_drain_s": 6.006,
+        "killed_after_grace": true,
+        "code": -9,
+        "already_exited": false
+      }
+    },
+    {
+      "shell": "exec",
+      "signal": "process_group",
+      "stop": {
+        "sigterm_at": 1794505117.6071637,
+        "exit_at": 1794505121.4102209,
+        "t_drain_s": 3.803,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      }
+    },
+    {
+      "shell": "bash",
+      "signal": "pid1",
+      "stop": {
+        "sigterm_at": 1794505122.6221943,
+        "t_drain_s": 3.603,
+        "killed_after_grace": false,
+        "code": 0
+      }
+    },
+    {
+      "shell": "exec",
+      "signal": "pid1",
+      "stop": {
+        "sigterm_at": 1794505127.4454372,
+        "t_drain_s": 3.603,
+        "killed_after_grace": false,
+        "code": 0
+      }
+    }
+  ],
+  "duration_s": 21.877
+}

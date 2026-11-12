@@ -1,0 +1,103 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "bench-worker",
+    "labels": {
+      "app": "bench-worker",
+      "lib": "taskiq"
+    }
+  },
+  "spec": {
+    "replicas": 1,
+    "strategy": {
+      "type": "RollingUpdate",
+      "rollingUpdate": {
+        "maxSurge": 1,
+        "maxUnavailable": 0
+      }
+    },
+    "selector": {
+      "matchLabels": {
+        "app": "bench-worker"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "bench-worker",
+          "lib": "taskiq"
+        }
+      },
+      "spec": {
+        "terminationGracePeriodSeconds": 12,
+        "containers": [
+          {
+            "name": "worker",
+            "image": "bench-worker:local",
+            "imagePullPolicy": "IfNotPresent",
+            "command": [
+              "taskiq",
+              "worker",
+              "bench.taskiq_app:broker",
+              "--workers",
+              "1",
+              "--max-async-tasks",
+              "1",
+              "--shutdown-timeout",
+              "12",
+              "--ack-type",
+              "when_executed",
+              "--max-prefetch",
+              "0"
+            ],
+            "env": [
+              {
+                "name": "REDIS_URL",
+                "value": "redis://172.18.0.1:6380/0"
+              },
+              {
+                "name": "PG_DSN",
+                "value": "postgresql://ubuntu@172.18.0.1:5432/bench_k8s"
+              },
+              {
+                "name": "MOCK_URL",
+                "value": "http://172.18.0.1:8090"
+              },
+              {
+                "name": "DRAIN_FLAG",
+                "value": "/tmp/draining"
+              },
+              {
+                "name": "PYTHONUNBUFFERED",
+                "value": "1"
+              },
+              {
+                "name": "PYTHONPATH",
+                "value": "/app"
+              },
+              {
+                "name": "PROBE_PATH",
+                "value": "/tmp/bench-probe"
+              },
+              {
+                "name": "TASKIQ_IDLE_MS",
+                "value": "25000"
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "100m",
+                "memory": "192Mi"
+              },
+              "limits": {
+                "cpu": "1",
+                "memory": "512Mi"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "library": "dramatiq",
+  "scenario": "sigterm_short",
+  "scale": "short",
+  "started_at": "2026-11-12T17:37:55.801986+00:00",
+  "measured": true,
+  "sigterm_at": 1794505076.4271631,
+  "stop": [
+    {
+      "sigterm_at": 1794505076.4271755,
+      "exit_at": 1794505082.8322198,
+      "t_drain_s": 6.405,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "attempts": 1,
+  "duration_s": 7.031
+}

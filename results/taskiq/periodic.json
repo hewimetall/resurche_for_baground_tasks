@@ -1,0 +1,54 @@
+{
+  "library": "taskiq",
+  "scenario": "periodic",
+  "scale": "short",
+  "started_at": "2026-11-12T17:58:05.685356+00:00",
+  "measured": true,
+  "sends": [
+    {
+      "accepted": true,
+      "id": "periodic:periodic-taskiq-1794506285",
+      "native_dedup": false
+    },
+    {
+      "accepted": true,
+      "id": "periodic:periodic-taskiq-1794506285",
+      "native_dedup": false
+    },
+    {
+      "accepted": true,
+      "id": "periodic:periodic-taskiq-1794506285",
+      "native_dedup": false
+    },
+    {
+      "accepted": true,
+      "id": "periodic:periodic-taskiq-1794506285",
+      "native_dedup": false
+    }
+  ],
+  "got": 1,
+  "invariant": {
+    "expected": 1,
+    "lost": 0,
+    "duplicated": 1,
+    "attempts": 4,
+    "distinct_items": 1,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 1
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794506288.2788281,
+      "exit_at": 1794506290.4805248,
+      "t_drain_s": 2.202,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 4.795
+}

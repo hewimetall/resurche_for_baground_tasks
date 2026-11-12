@@ -1,0 +1,24 @@
+{
+  "library": "taskiq",
+  "scenario": "prom",
+  "scale": "short",
+  "started_at": "2026-11-12T17:58:10.510637+00:00",
+  "measured": true,
+  "ready": true,
+  "port": 9000,
+  "tcp": true,
+  "tcp_error": "",
+  "http": 200,
+  "body": "# HELP execution_time Time of function execution\n# TYPE execution_time histogram\nexecution_time_sum{task_name=\"probe\"} 0.0\nexecution_time_bucket{le=\"0.005\",task_name=\"probe\"} 9.0\nexecution_time_bucket{le=\"0.01\",task_name=\"probe\"} 9.0\nexecution_time_bucket{le=\"0.025\",task_name=\"probe\"} 9.0\nexecution_",
+  "stop": [
+    {
+      "sigterm_at": 1794506292.5019174,
+      "exit_at": 1794506293.1025672,
+      "t_drain_s": 0.601,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 2.592
+}

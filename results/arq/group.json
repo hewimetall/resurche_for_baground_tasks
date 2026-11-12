@@ -1,0 +1,10 @@
+{
+  "library": "arq",
+  "scenario": "group",
+  "scale": "short",
+  "started_at": "2026-11-12T17:52:07.854011+00:00",
+  "measured": true,
+  "native_group": false,
+  "reason": "\u043d\u0435\u0442 group/chord",
+  "duration_s": 0.0
+}

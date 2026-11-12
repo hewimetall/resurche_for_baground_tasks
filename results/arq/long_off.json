@@ -1,0 +1,35 @@
+{
+  "library": "arq",
+  "scenario": "long_off",
+  "scale": "short",
+  "started_at": "2026-11-12T17:53:12.683071+00:00",
+  "measured": true,
+  "checkpoint": false,
+  "ready_new": true,
+  "stop": [
+    {
+      "sigterm_at": 1794505995.4985895,
+      "exit_at": 1794505998.100769,
+      "t_drain_s": 2.602,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "gap": {
+    "gap_s": null,
+    "starts_after": 0
+  },
+  "progress": 4,
+  "steps": 4,
+  "attempts": [
+    {
+      "note": "long try=1 id=long:long-off-arq-1794505992",
+      "ts": "1794505993.353134"
+    }
+  ],
+  "sigterm_at": 1794505995.4985607,
+  "rss_peak": 41136128,
+  "admin_log": "/workspace/results/admin-arq.jsonl",
+  "duration_s": 6.27
+}

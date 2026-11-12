@@ -1,0 +1,19 @@
+{
+  "library": "taskiq",
+  "scenario": "sigterm_infinite",
+  "scale": "short",
+  "started_at": "2026-11-12T18:00:16.497284+00:00",
+  "measured": true,
+  "grace_s": 6,
+  "stop": [
+    {
+      "sigterm_at": 1794506417.5172179,
+      "exit_at": 1794506423.537091,
+      "t_drain_s": 6.02,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 7.04
+}

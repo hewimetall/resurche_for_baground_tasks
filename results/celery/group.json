@@ -1,0 +1,40 @@
+{
+  "library": "celery",
+  "scenario": "group",
+  "scale": "short",
+  "started_at": "2026-11-12T17:45:51.310579+00:00",
+  "measured": true,
+  "send": {
+    "accepted": true,
+    "id": "chord",
+    "native_dedup": false,
+    "native_group": true
+  },
+  "got": 6,
+  "group_note": "celery n=6",
+  "invariant": {
+    "expected": 6,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 6,
+    "distinct_items": 6,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 6
+  },
+  "native_group": true,
+  "stop": [
+    {
+      "sigterm_at": 1794505554.4392066,
+      "exit_at": 1794505555.640155,
+      "t_drain_s": 1.201,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 4.33
+}

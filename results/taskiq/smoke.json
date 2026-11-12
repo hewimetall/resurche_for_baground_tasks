@@ -1,0 +1,44 @@
+{
+  "library": "taskiq",
+  "scenario": "smoke",
+  "scale": "short",
+  "started_at": "2026-11-12T17:57:32.969232+00:00",
+  "measured": true,
+  "ready": true,
+  "send": {
+    "accepted": true,
+    "id": "a54aa2f079bb4810812d647fba3102db",
+    "native_dedup": false
+  },
+  "got": 8,
+  "invariant": {
+    "expected": 8,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 8,
+    "distinct_items": 8,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 8
+  },
+  "mock": {
+    "keys": 8,
+    "calls": 8,
+    "duplicated_keys": 0
+  },
+  "rss": 194142208,
+  "stop": [
+    {
+      "sigterm_at": 1794506254.2993948,
+      "exit_at": 1794506256.3011422,
+      "t_drain_s": 2.002,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 3.332
+}

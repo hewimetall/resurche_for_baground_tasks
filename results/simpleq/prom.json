@@ -1,0 +1,24 @@
+{
+  "library": "simpleq",
+  "scenario": "prom",
+  "scale": "short",
+  "started_at": "2026-11-12T17:16:31.210323+00:00",
+  "measured": true,
+  "ready": true,
+  "port": 9191,
+  "tcp": true,
+  "tcp_error": "",
+  "http": 200,
+  "body": "# HELP dramatiq_message_duration_milliseconds The time spent processing messages.\n# TYPE dramatiq_message_duration_milliseconds histogram\ndramatiq_message_duration_milliseconds_sum{actor_name=\"probe\",queue_name=\"bench\"} 0.07749499991405173\ndramatiq_message_duration_milliseconds_bucket{actor_name=\"pr",
+  "stop": [
+    {
+      "sigterm_at": 1794503793.1306765,
+      "exit_at": 1794503793.3308556,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 2.121
+}

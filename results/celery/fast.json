@@ -1,0 +1,40 @@
+{
+  "library": "celery",
+  "scenario": "fast",
+  "scale": "short",
+  "started_at": "2026-11-12T17:50:34.224970+00:00",
+  "measured": true,
+  "sent": {
+    "accepted": 80,
+    "rejected": 0,
+    "seconds": 0.14,
+    "sample_ids": [
+      "bbb518ed-f7f9-4b8c-81d6-cde846a058f4",
+      "12f47c7b-66e9-4f55-956c-6b111a18dc40",
+      "2512b857-92cb-48f8-80a7-9da42289a6c9"
+    ],
+    "native_dedup": false
+  },
+  "done": 80,
+  "elapsed_s": 0.328,
+  "throughput_per_s": 244.12,
+  "latency_ms": {
+    "n": 80,
+    "p50": 17,
+    "p99": 25,
+    "max": 103
+  },
+  "idle_rss": 272412672,
+  "load_rss_peak": 276029440,
+  "stop": [
+    {
+      "sigterm_at": 1794505838.329813,
+      "exit_at": 1794505839.5306706,
+      "t_drain_s": 1.201,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 5.306
+}

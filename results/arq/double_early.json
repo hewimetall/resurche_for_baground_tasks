@@ -1,0 +1,24 @@
+{
+  "library": "arq",
+  "scenario": "double_early",
+  "scale": "short",
+  "started_at": "2026-11-12T17:56:08.855394+00:00",
+  "measured": true,
+  "first": {
+    "sigterm_at": 1794506171.157616,
+    "exit_at": 1794506171.3579988,
+    "t_drain_s": 0.2,
+    "killed_after_grace": false,
+    "code": 0,
+    "already_exited": false
+  },
+  "second": {
+    "sigterm_at": 1794506173.358201,
+    "exit_at": 1794506173.5584524,
+    "t_drain_s": 0.2,
+    "killed_after_grace": false,
+    "code": 0,
+    "already_exited": false
+  },
+  "duration_s": 4.703
+}

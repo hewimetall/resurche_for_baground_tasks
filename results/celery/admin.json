@@ -1,0 +1,20 @@
+{
+  "library": "celery",
+  "scenario": "admin",
+  "scale": "short",
+  "started_at": "2026-11-12T17:46:01.116971+00:00",
+  "measured": true,
+  "ready": true,
+  "admin_excerpt": "{\"active\": {\"celery@cursor\": []}, \"reserved\": {\"celery@cursor\": []}, \"stats\": {\"celery@cursor\": {\"total\": {\"probe\": 1}, \"pid\": 12010, \"clock\": \"6\", \"uptime\": 5, \"pool\": {\"implementation\": \"celery.concurrency.prefork:TaskPool\", \"max-concurrency\": 1, \"processes\": [12013], \"max-tasks-per-child\": \"N/A\", \"put-guarded-by-semaphore\": false, \"timeouts\": [0, 0], \"writes\": {\"total\": 1, \"avg\": \"1.00\", \"all\": \"1.00\", \"raw\": \"1\", \"strategy\": \"fair\", \"inqueues\": {\"total\": 1, \"active\": 0}}}, \"broker\": {\"hostname\": \"127.0.0.1\", \"userid\": null, \"virtual_host\": \"0\", \"port\": 6379, \"insist\": false, \"ssl\": false, \"transport\": \"redis\", \"connect_timeout\": 4, \"transport_options\": {\"visibility_timeout\": 2100}, \"login_method\": null, \"uri_prefix\": null, \"heartbeat\": 120.0, \"failover_strategy\": \"round-robin\", \"alternates\": [], \"credential_provider\": null}, \"prefetch_count\": 1, \"rusage\": {\"utime\": 0.27450199999999997, \"stime\": 0.043144999999999996, \"maxrss\": 59752, \"ixrss\": 0, \"idrss\": 0, \"isrss\": 0, \"minflt\": 15255, \"majflt\": 0, \"nswap\": 0, \"inblock\": 0, \"oublock\": 24, \"msgsnd\": 0, \"msgrcv\": 0, \"nsignals\": 0, \"nvcsw\": 83, \"nivcsw\": 4}}}, \"ping\": {\"celery@cursor\": {\"ok\": \"pong\"}}}",
+  "stop": [
+    {
+      "sigterm_at": 1794505570.320307,
+      "exit_at": 1794505570.920821,
+      "t_drain_s": 0.601,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 9.804
+}

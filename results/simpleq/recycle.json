@@ -1,0 +1,40 @@
+{
+  "library": "simpleq",
+  "scenario": "recycle",
+  "scale": "short",
+  "started_at": "2026-11-12T17:23:42.930545+00:00",
+  "measured": true,
+  "got": 12,
+  "pids": [
+    7850,
+    7882,
+    7894,
+    7906,
+    7918
+  ],
+  "invariant": {
+    "expected": 12,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 12,
+    "distinct_items": 12,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 12
+  },
+  "native": true,
+  "stop": [
+    {
+      "sigterm_at": 1794504239.7227175,
+      "exit_at": 1794504239.9228659,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 16.992
+}

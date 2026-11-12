@@ -1,0 +1,35 @@
+{
+  "library": "dramatiq",
+  "scenario": "long_off",
+  "scale": "short",
+  "started_at": "2026-11-12T17:40:05.049800+00:00",
+  "measured": true,
+  "checkpoint": false,
+  "ready_new": true,
+  "stop": [
+    {
+      "sigterm_at": 1794505207.6673257,
+      "exit_at": 1794505215.6765394,
+      "t_drain_s": 8.009,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "gap": {
+    "gap_s": null,
+    "starts_after": 0
+  },
+  "progress": 4,
+  "steps": 4,
+  "attempts": [
+    {
+      "note": "long retries=0 id=4b556039-8d4d-4e3e-9b19-b5e78c66950b",
+      "ts": "1794505205.473856"
+    }
+  ],
+  "sigterm_at": 1794505207.6673043,
+  "rss_peak": 92127232,
+  "admin_log": "/workspace/results/admin-dramatiq.jsonl",
+  "duration_s": 13.04
+}

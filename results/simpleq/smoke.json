@@ -1,0 +1,43 @@
+{
+  "library": "simpleq",
+  "scenario": "smoke",
+  "scale": "short",
+  "started_at": "2026-11-12T17:14:04.192915+00:00",
+  "measured": true,
+  "ready": true,
+  "send": {
+    "accepted": true,
+    "id": "2d2112c8-07a2-4573-9eec-6bb1bbfa7638"
+  },
+  "got": 8,
+  "invariant": {
+    "expected": 8,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 8,
+    "distinct_items": 8,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 8
+  },
+  "mock": {
+    "keys": 8,
+    "calls": 8,
+    "duplicated_keys": 0
+  },
+  "rss": 166727680,
+  "stop": [
+    {
+      "sigterm_at": 1794503659.8055649,
+      "exit_at": 1794503660.005851,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 15.813
+}

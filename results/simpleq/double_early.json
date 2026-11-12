@@ -1,0 +1,24 @@
+{
+  "library": "simpleq",
+  "scenario": "double_early",
+  "scale": "short",
+  "started_at": "2026-11-12T17:27:51.570906+00:00",
+  "measured": true,
+  "first": {
+    "sigterm_at": 1794504473.8727906,
+    "exit_at": 1794504474.0729885,
+    "t_drain_s": 0.2,
+    "killed_after_grace": false,
+    "code": 0,
+    "already_exited": false
+  },
+  "second": {
+    "sigterm_at": 1794504476.0731463,
+    "exit_at": 1794504476.2733433,
+    "t_drain_s": 0.2,
+    "killed_after_grace": false,
+    "code": 0,
+    "already_exited": false
+  },
+  "duration_s": 4.702
+}

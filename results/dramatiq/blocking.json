@@ -1,0 +1,35 @@
+{
+  "library": "dramatiq",
+  "scenario": "blocking",
+  "scale": "short",
+  "started_at": "2026-11-12T17:39:44.824308+00:00",
+  "measured": true,
+  "elapsed_s": 12.222,
+  "block_s": 4,
+  "env": {
+    "DRAMATIQ_HEARTBEAT_MS": "8000"
+  },
+  "attempts": [
+    {
+      "item": 0,
+      "note": "block-start",
+      "ts": "1794505185.290191"
+    },
+    {
+      "item": 1,
+      "note": "block-end",
+      "ts": "1794505189.291462"
+    }
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794505197.2582166,
+      "exit_at": 1794505200.2640152,
+      "t_drain_s": 3.006,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 15.44
+}

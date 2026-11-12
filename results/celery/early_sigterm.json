@@ -1,0 +1,46 @@
+{
+  "library": "celery",
+  "scenario": "early_sigterm",
+  "scale": "short",
+  "started_at": "2026-11-12T17:46:36.528349+00:00",
+  "measured": true,
+  "rows": [
+    {
+      "delay_s": 0.4,
+      "stop": {
+        "sigterm_at": 1794505596.9376876,
+        "exit_at": 1794505597.938508,
+        "t_drain_s": 1.001,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    },
+    {
+      "delay_s": 1.5,
+      "stop": {
+        "sigterm_at": 1794505599.4591024,
+        "exit_at": 1794505600.4596744,
+        "t_drain_s": 1.001,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    },
+    {
+      "delay_s": 2.5,
+      "stop": {
+        "sigterm_at": 1794505602.9761696,
+        "exit_at": 1794505603.9769049,
+        "t_drain_s": 1.001,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    }
+  ],
+  "duration_s": 7.449
+}

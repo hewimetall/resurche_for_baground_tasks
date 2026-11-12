@@ -1,0 +1,21 @@
+{
+  "library": "arq",
+  "scenario": "boom",
+  "scale": "short",
+  "started_at": "2026-11-12T17:50:56.023934+00:00",
+  "measured": true,
+  "status": "running",
+  "attempts": 1,
+  "notes": [],
+  "stop": [
+    {
+      "sigterm_at": 1794505886.7542,
+      "exit_at": 1794505886.954369,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 30.93
+}

@@ -1,0 +1,54 @@
+{
+  "library": "dramatiq",
+  "scenario": "dedup",
+  "scale": "short",
+  "started_at": "2026-11-12T17:36:32.555667+00:00",
+  "measured": true,
+  "first": {
+    "accepted": true,
+    "id": "84fb9176-f244-4022-84b9-32ac69b72dc3",
+    "native_dedup": false,
+    "duplicate_rejected": false
+  },
+  "second": {
+    "accepted": true,
+    "id": "aa823c9e-1105-453e-a4ae-25d87488b137",
+    "native_dedup": false,
+    "duplicate_rejected": false
+  },
+  "after_ack": {
+    "accepted": true,
+    "id": "e1120158-0583-48d9-892a-8a3957a7d22b",
+    "native_dedup": false,
+    "duplicate_rejected": false
+  },
+  "invariant": {
+    "expected": 1,
+    "lost": 0,
+    "duplicated": 1,
+    "attempts": 3,
+    "distinct_items": 1,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 1
+  },
+  "mock": {
+    "keys": 1,
+    "calls": 3,
+    "duplicated_keys": 1
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794504996.9001935,
+      "exit_at": 1794504999.905413,
+      "t_drain_s": 3.005,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 7.35
+}

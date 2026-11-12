@@ -1,0 +1,46 @@
+{
+  "library": "simpleq",
+  "scenario": "early_sigterm",
+  "scale": "short",
+  "started_at": "2026-11-12T17:16:26.136429+00:00",
+  "measured": true,
+  "rows": [
+    {
+      "delay_s": 0.4,
+      "stop": {
+        "sigterm_at": 1794503786.5482395,
+        "exit_at": 1794503786.7484138,
+        "t_drain_s": 0.2,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    },
+    {
+      "delay_s": 1.5,
+      "stop": {
+        "sigterm_at": 1794503788.2681222,
+        "exit_at": 1794503788.4683182,
+        "t_drain_s": 0.2,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    },
+    {
+      "delay_s": 2.5,
+      "stop": {
+        "sigterm_at": 1794503790.989259,
+        "exit_at": 1794503791.189424,
+        "t_drain_s": 0.2,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    }
+  ],
+  "duration_s": 5.053
+}

@@ -1,0 +1,40 @@
+{
+  "library": "celery",
+  "scenario": "five_kills",
+  "scale": "short",
+  "started_at": "2026-11-12T17:48:27.276749+00:00",
+  "measured": true,
+  "kills": [
+    {
+      "i": 0,
+      "saw_attempt": true,
+      "kill_at": 1794505708.402944
+    },
+    {
+      "i": 1,
+      "saw_attempt": false,
+      "kill_at": 1794505749.032036,
+      "restart_failed": "  . rated\n  . snooze\n\n[2026-11-12 17:46:36,844: INFO/MainProcess] Connected to redis://:**@127.0.0.1:6379/0\n[2026-11-12 17:46:36,852: INFO/MainProcess] celery@cursor ready.\n\nworker: Warm shutdown (MainProcess)\n \n -------------- celery@cursor v5.7.0 (collider)\n--- ***** ----- \n-- ******* ---- Linux-6.12.113+-x86_64-with-glibc2.39 2026-11-12 17:49:09\n- *** --- * --- \n- ** ---------- [config]\n- ** ---------- .> app:         bench:0x7f24655d1eb0\n- ** ---------- .> transport:   redis://:**@127.0.0.1:6379/0\n- ** ---------- .> results:     redis://127.0.0.1:6379/0\n- *** --- * --- .> concurrency: 1 (prefork)\n-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)\n--- ***** ----- \n -------------- [queues]\n                .> bench            exchange=bench(direct) key=bench\n                \n\n[tasks]\n  . blocker\n  . boom\n  . chain\n  . fanout\n  . fast\n  . grouped\n  . item\n  . limitjob\n  . longjob\n  . probe\n  . rated\n  . snooze\n\n[2026-11-12 17:49:09,345: INFO/MainProcess] Connected to redis://:**@127.0.0.1:6379/0\n[2026-11-12 17:49:09,353: INFO/MainProcess] celery@cursor ready.\n[2026-11-12 17:49:09,354: INFO/MainProcess] Task longjob[928d0889-06db-4c6b-9ba5-6bf58161a863] received"
+    }
+  ],
+  "status": "running",
+  "fail_reason": null,
+  "attempt_notes": [
+    "long retries=0",
+    "long retries=0"
+  ],
+  "env": {
+    "CELERY_VISIBILITY_TIMEOUT": "15"
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505789.2461534,
+      "exit_at": 1794505790.4472811,
+      "t_drain_s": 1.201,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 83.171
+}

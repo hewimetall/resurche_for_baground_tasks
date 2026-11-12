@@ -1,0 +1,44 @@
+{
+  "library": "arq",
+  "scenario": "blocking",
+  "scale": "short",
+  "started_at": "2026-11-12T17:52:56.683836+00:00",
+  "measured": true,
+  "elapsed_s": 12.164,
+  "block_s": 4,
+  "env": {
+    "ARQ_BLOCK_TIMEOUT": "34",
+    "ARQ_JOB_TIMEOUT": "34"
+  },
+  "attempts": [
+    {
+      "item": 0,
+      "note": "block-start try=1 id=2289278cb4724b9fb26757582c218398",
+      "ts": "1794505977.345793"
+    },
+    {
+      "item": 1,
+      "note": "block-end try=1 id=2289278cb4724b9fb26757582c218398",
+      "ts": "1794505981.347701"
+    }
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794505989.2936804,
+      "exit_at": 1794505989.4939368,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    },
+    {
+      "sigterm_at": 1794505989.4939513,
+      "exit_at": 1794505989.6941319,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 13.01
+}

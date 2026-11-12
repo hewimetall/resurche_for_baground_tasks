@@ -1,0 +1,35 @@
+{
+  "library": "arq",
+  "scenario": "sigkill",
+  "scale": "short",
+  "started_at": "2026-11-12T17:52:14.450247+00:00",
+  "measured": true,
+  "kill_at": 1794505935.2469757,
+  "gap": {
+    "gap_s": null,
+    "starts_after": 0
+  },
+  "attempts": [
+    {
+      "item": 0,
+      "note": "block-start try=1 id=79b885f48d2b44ed9d72f395646a83cb",
+      "ts": "1794505935.106645"
+    }
+  ],
+  "heartbeat_env": {
+    "ARQ_JOB_TIMEOUT": "20",
+    "ARQ_BLOCK_TIMEOUT": "20",
+    "ARQ_MAX_JOBS": "2"
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505949.7131882,
+      "exit_at": 1794505949.9134586,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 15.463
+}

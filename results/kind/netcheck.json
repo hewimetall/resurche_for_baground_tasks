@@ -1,0 +1,1 @@
+{"apiVersion": "v1", "kind": "Pod", "metadata": {"name": "netcheck"}, "spec": {"restartPolicy": "Never", "containers": [{"name": "netcheck", "image": "bench-worker:local", "imagePullPolicy": "IfNotPresent", "command": ["python", "-c", "import socket\nfor port in (6380, 5432, 8090):\n    socket.create_connection(('172.18.0.1', port), 4).close()\nprint('net_ok')\n"]}]}}

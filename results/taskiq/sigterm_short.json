@@ -1,0 +1,20 @@
+{
+  "library": "taskiq",
+  "scenario": "sigterm_short",
+  "scale": "short",
+  "started_at": "2026-11-12T18:00:10.299010+00:00",
+  "measured": true,
+  "sigterm_at": 1794506411.272171,
+  "stop": [
+    {
+      "sigterm_at": 1794506411.2721794,
+      "exit_at": 1794506416.4766767,
+      "t_drain_s": 5.204,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "attempts": 2,
+  "duration_s": 6.179
+}

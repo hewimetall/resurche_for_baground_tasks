@@ -1,0 +1,46 @@
+{
+  "library": "arq",
+  "scenario": "early_sigterm",
+  "scale": "short",
+  "started_at": "2026-11-12T17:52:43.172126+00:00",
+  "measured": true,
+  "rows": [
+    {
+      "delay_s": 0.4,
+      "stop": {
+        "sigterm_at": 1794505963.5837345,
+        "exit_at": 1794505963.7838626,
+        "t_drain_s": 0.2,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    },
+    {
+      "delay_s": 1.5,
+      "stop": {
+        "sigterm_at": 1794505965.2992787,
+        "exit_at": 1794505965.4995377,
+        "t_drain_s": 0.2,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    },
+    {
+      "delay_s": 2.5,
+      "stop": {
+        "sigterm_at": 1794505968.0145533,
+        "exit_at": 1794505968.2147424,
+        "t_drain_s": 0.2,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    }
+  ],
+  "duration_s": 5.043
+}

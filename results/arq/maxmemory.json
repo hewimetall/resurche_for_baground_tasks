@@ -1,0 +1,10 @@
+{
+  "library": "arq",
+  "scenario": "maxmemory",
+  "scale": "short",
+  "started_at": "2026-11-12T17:57:27.676978+00:00",
+  "measured": true,
+  "accepted": 0,
+  "errors": 1,
+  "duration_s": 0.166
+}

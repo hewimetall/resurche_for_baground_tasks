@@ -1,0 +1,34 @@
+{
+  "library": "dramatiq",
+  "scenario": "redis_down",
+  "scale": "short",
+  "started_at": "2026-11-12T17:43:56.850869+00:00",
+  "measured": true,
+  "down_s": 5,
+  "got": 6,
+  "worker_alive": true,
+  "invariant": {
+    "expected": 6,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 6,
+    "distinct_items": 6,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 6
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505444.7989264,
+      "exit_at": 1794505447.8046072,
+      "t_drain_s": 3.006,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 10.954
+}

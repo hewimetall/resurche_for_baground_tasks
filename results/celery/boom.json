@@ -1,0 +1,23 @@
+{
+  "library": "celery",
+  "scenario": "boom",
+  "scale": "short",
+  "started_at": "2026-11-12T17:45:39.195943+00:00",
+  "measured": true,
+  "status": "failed",
+  "attempts": 3,
+  "notes": [
+    "failed:retries RuntimeError retries=2"
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794505543.332272,
+      "exit_at": 1794505544.3331847,
+      "t_drain_s": 1.001,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 5.137
+}

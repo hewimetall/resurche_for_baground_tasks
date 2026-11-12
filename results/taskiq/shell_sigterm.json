@@ -1,0 +1,54 @@
+{
+  "library": "taskiq",
+  "scenario": "shell_sigterm",
+  "scale": "short",
+  "started_at": "2026-11-12T18:00:31.417405+00:00",
+  "measured": true,
+  "rows": [
+    {
+      "shell": "bash",
+      "signal": "process_group",
+      "stop": {
+        "sigterm_at": 1794506432.627613,
+        "exit_at": 1794506434.029546,
+        "t_drain_s": 1.402,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      }
+    },
+    {
+      "shell": "exec",
+      "signal": "process_group",
+      "stop": {
+        "sigterm_at": 1794506435.251079,
+        "exit_at": 1794506436.6523921,
+        "t_drain_s": 1.401,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      }
+    },
+    {
+      "shell": "bash",
+      "signal": "pid1",
+      "stop": {
+        "sigterm_at": 1794506437.8640037,
+        "t_drain_s": 1.401,
+        "killed_after_grace": false,
+        "code": 0
+      }
+    },
+    {
+      "shell": "exec",
+      "signal": "pid1",
+      "stop": {
+        "sigterm_at": 1794506440.4832456,
+        "t_drain_s": 1.401,
+        "killed_after_grace": false,
+        "code": 0
+      }
+    }
+  ],
+  "duration_s": 10.467
+}
