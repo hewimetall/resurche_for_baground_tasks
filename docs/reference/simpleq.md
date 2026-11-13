@@ -43,9 +43,15 @@ simple-q фабрику не вызывает и `emit_events` выключае�
 | Наблюдение | Значение |
 | --- | --- |
 | `pickup_ms` | 2484 |
-| `PSUBSCRIBE`, `SUBSCRIBE`, `BLPOP`, `BRPOP` | в `MONITOR` нет |
-| После send | `EVALSHA` постановки, внутри Lua `hsetnx` / `zadd` в `bench:scheduled`, затем `LPUSH` сигнала |
+| `PSUBSCRIBE`, `SUBSCRIBE`, `BLPOP`, `BRPOP`, `PUBLISH` | в `MONITOR` нет |
+| Постановка, клиент `46260`, `1794556948.068` | `hsetnx` в `bench:data`, `zadd` в `bench:scheduled`. `LPUSH` в этом вызове нет |
+| Следующая выборка воркера, клиент `46252`, `1794556950.433` | `zrangebyscore` по `bench:scheduled`, `rpush` в `bench:active`, `zrem` из scheduled, затем `lpush` сигнала уже внутри `fetch_next` |
+| Между постановкой и этой выборкой | у клиента `46252` команд нет |
 | Ребёнок, потоки | `tokio-rt-worker`, `python-asyncio` (`ep_poll`), `futures-timer` (`futex_wait_queue`) |
 | py-spy ребёнка | `EpollSelector.select` на потоке встроенного цикла. Кадра выборки очереди в Python нет |
+
+Пустая выборка того же клиента была в `1794556945.431` (`zrangebyscore` scheduled, `lrange` active, `del` signal). До следующей выборки 5.002 с. Супервизор на порту `46246` пишет свой hash в `1794556945.292` и `1794556950.292`. Это соседний таймер на те же 5 с. Очередь он не читает.
+
+После ack, в `1794556950.455`, воркер снова вызывает `fetch_next` и получает пустую пачку. Это 22 мс после взятия задачи, не следующий пятисекундный тик.
 
 Супервизор в этом окне: 0 переключений контекста за 0.4 с, потоки в `futex_wait_queue` и один `ep_poll`.
