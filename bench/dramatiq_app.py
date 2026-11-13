@@ -193,22 +193,37 @@ def enqueue(op: str, payload: dict) -> dict:
     }
 
 
-def admin_snapshot() -> dict:
-    import redis
+def _text(value: bytes | str) -> str:
+    if isinstance(value, bytes):
+        return value.decode()
+    return value
 
-    client = redis.Redis.from_url(REDIS_URL)
-    keys = [k.decode() for k in client.keys("dramatiq*")[:80]]
+
+def redis_snapshot(client) -> dict:
+    """Снимок ключей Dramatiq 2.2.
+
+    Типы из ``brokers/redis/dispatch.lua``: очередь и ``*.DQ`` — list,
+    ``*.msgs`` — hash, ``*.XQ`` и ``__heartbeats__`` — sorted set.
+    ``ZCARD`` по delay-очереди и ``HGETALL`` по heartbeats дают WRONGTYPE,
+    как только воркер жив или в очереди есть отложенное сообщение.
+    """
+    keys = [_text(key) for key in client.keys("dramatiq*")[:80]]
     queues = {}
     for name in ("bench", "default"):
         queues[name] = {
-            "msgs": client.hlen(f"dramatiq:{name}.msgs"),
-            "queue": client.llen(f"dramatiq:{name}"),
-            "dq": client.zcard(f"dramatiq:{name}.DQ"),
-            "xq": client.zcard(f"dramatiq:{name}.XQ"),
+            "msgs": int(client.hlen(f"dramatiq:{name}.msgs")),
+            "queue": int(client.llen(f"dramatiq:{name}")),
+            "dq": int(client.llen(f"dramatiq:{name}.DQ")),
+            "xq": int(client.zcard(f"dramatiq:{name}.XQ")),
         }
-    heartbeats = client.hgetall("dramatiq:__heartbeats__")
-    return {
-        "queues": queues,
-        "heartbeats": {k.decode(): v.decode() for k, v in heartbeats.items()},
-        "keys": keys,
+    heartbeats = {
+        _text(member): int(score)
+        for member, score in client.zrange("dramatiq:__heartbeats__", 0, -1, withscores=True)
     }
+    return {"queues": queues, "heartbeats": heartbeats, "keys": keys}
+
+
+def admin_snapshot() -> dict:
+    import redis
+
+    return redis_snapshot(redis.Redis.from_url(REDIS_URL))

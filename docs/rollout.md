@@ -1,6 +1,6 @@
 # Rollout
 
-Два слоя измерений. `docker-compose.yml` описывает Redis, Postgres, mock и воркеры, но числа в `results/` получены процессами на хосте и однонодовым kind, не этим compose.
+Два слоя измерений. `docker-compose.yml` поднимает Redis, Postgres, mock и один профиль воркера: зависимости ставятся в образ, порты слушаются на `127.0.0.1`, у Redis пароль `bench`. Числа в `results/` получены процессами на хосте и однонодовым kind, не этим compose.
 
 Процессы на хосте, шкала `short`: долгая задача — 4 шага по 1 с, grace сценария 8 с (`scripts/run_suite.py`, `scale_params`). Это не эмуляция 30 минут. JSON: `results/<lib>/long_on.json`, `long_off.json`, `early_sigterm.json`, `double_early.json`, `sigterm_infinite.json`, `shell_sigterm.json`, `five_kills.json`.
 

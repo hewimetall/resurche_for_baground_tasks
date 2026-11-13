@@ -150,8 +150,14 @@ async def mark_failed(job_id: str, reason: str) -> None:
     await note(job_id, "failed", reason)
 
 
+# job_id приходит из очереди. В путь файла он не подставляется:
+# иначе значение вида ``../..`` пишет за пределы каталога.
+_DEFAULT_LAT_PATH = "/tmp/bench-latency.txt"
+
+
 def fast_record(job_id: str, n: int, sent_ms: int) -> None:
-    path = os.environ.get("LAT_PATH", f"/tmp/lat-{job_id}.txt")
+    # Сигнатура общая для адаптеров. job_id в путь не входит.
+    path = os.environ.get("LAT_PATH") or _DEFAULT_LAT_PATH
     now = int(time.time() * 1000)
     with open(path, "a", encoding="utf-8") as handle:
         handle.write(f"{n},{sent_ms},{now}\n")
