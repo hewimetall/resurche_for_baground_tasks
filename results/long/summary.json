@@ -187,5 +187,32 @@
       "process_exited": 1
     },
     "dir": "/workspace/results/long/lr-20261113T121123Z-dramatiq-A1_control_40-scored"
+  },
+  {
+    "run_id": "lr-20261113T131427Z-celery-A1_control_40-scored",
+    "scenario_id": "A1_control_40",
+    "library": "celery",
+    "class": "scored",
+    "status": "incomplete",
+    "source_commit": "79250b37f3b3f7c81e2e30db802b62c81a0b232c",
+    "planned_s": 2400.0,
+    "span_s": 4812.751131381,
+    "time_limit_s": 3000,
+    "handler_starts": 3,
+    "handler_finishes": 2,
+    "progress": 489,
+    "effects_logged": 489,
+    "effect_duplicates": 0,
+    "event_counts": {
+      "run_started": 1,
+      "handler_started": 3,
+      "accepted": 1,
+      "external_effect_requested": 489,
+      "external_effect_recorded": 489,
+      "progress": 489,
+      "handler_finished": 2,
+      "process_exited": 1
+    },
+    "dir": "/workspace/results/long/lr-20261113T131427Z-celery-A1_control_40-scored"
   }
 ]
