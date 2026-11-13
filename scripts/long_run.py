@@ -52,7 +52,7 @@ def ensure_pg() -> None:
 def _versions(python: str) -> dict:
     script = (
         "import importlib.metadata as m, json\n"
-        "names=['simple-q','dramatiq','celery','kombu','arq','taskiq','taskiq-redis','redis']\n"
+        "names=['simple-q-runtime','simple-q-worker','dramatiq','celery','kombu','arq','taskiq','taskiq-redis','redis']\n"
         "out={}\n"
         "for n in names:\n"
         "    try: out[n]=m.version(n)\n"
@@ -176,7 +176,7 @@ def _stop_group(pid: int) -> dict:
         os.killpg(pid, signal.SIGTERM)
     except ProcessLookupError:
         return {"signal": "SIGTERM", "already_dead": True}
-    for _ in range(75):
+    for _ in range(300):
         try:
             os.kill(pid, 0)
         except ProcessLookupError:
