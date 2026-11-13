@@ -241,5 +241,32 @@
       "process_exited": 1
     },
     "dir": "/workspace/results/long/lr-20261113T144635Z-arq-A1_control_40-scored"
+  },
+  {
+    "run_id": "lr-20261113T154152Z-taskiq-A1_control_40-scored",
+    "scenario_id": "A1_control_40",
+    "library": "taskiq",
+    "class": "scored",
+    "status": "passed",
+    "source_commit": "aec72b6c3684e52713ce185dadc6677a4318f1b1",
+    "planned_s": 2400.0,
+    "span_s": 2406.302634214,
+    "time_limit_s": 3000,
+    "handler_starts": 1,
+    "handler_finishes": 1,
+    "progress": 240,
+    "effects_logged": 240,
+    "effect_duplicates": 0,
+    "event_counts": {
+      "run_started": 1,
+      "handler_started": 1,
+      "accepted": 1,
+      "external_effect_requested": 240,
+      "external_effect_recorded": 240,
+      "progress": 240,
+      "handler_finished": 1,
+      "process_exited": 1
+    },
+    "dir": "/workspace/results/long/lr-20261113T154152Z-taskiq-A1_control_40-scored"
   }
 ]

@@ -9,6 +9,7 @@
 | `lr-20261113T111921Z-simpleq-A1_control_40-scored` | simple-q 1.0.0rc7 | passed | 2404.835 | 1 | 240 | 240, дублей 0 |
 | `lr-20261113T121123Z-dramatiq-A1_control_40-scored` | Dramatiq 2.2.1 | passed | 2406.582 | 1 | 240 | 240, дублей 0 |
 | `lr-20261113T144635Z-arq-A1_control_40-scored` | arq 0.28.0 | passed | 2404.446 | 1 | 240 | 240, дублей 0 |
+| `lr-20261113T154152Z-taskiq-A1_control_40-scored` | taskiq 0.13.0 | passed | 2406.303 | 1 | 240 | 240, дублей 0 |
 
 `span` — монотонные часы между `handler_started` и `handler_finished`. У simple-q UTC этих событий `2026-11-13T11:19:36.902670+00:00` и `2026-11-13T12:09:19.442308+00:00`, `execution_id` `70806-20297248756482`, `message_id` `491b9dd2-9547-4415-b07a-e478b8908133`. У Dramatiq UTC `2026-11-13T12:11:26.841220+00:00` и `2026-11-13T13:10:38.210607+00:00`, `execution_id` `75911-22829479150586`, `message_id` `6e5e0ee5-834d-4572-bd97-8cfe4e98d3a8`. У arq UTC `2026-11-13T14:46:38.516706+00:00` и `2026-11-13T15:26:42.962963+00:00`, `execution_id` `92096-30984128208360`, `message_id` `fe7ae7e357124106b39ee608ff55d161`.
 
@@ -26,4 +27,6 @@ Celery `lr-20261113T131427Z-celery-A1_control_40-scored` закончился с
 
 Скачков UTC больше 30 с между соседними шагами arq не было.
 
-taskiq на `A1_control_40` не запускался. Остальные группы `bench/longrun/matrix.py` не запускались. Журналы наблюдателя: `results/long/watcher/lr-20261113T131427Z-celery-A1_control_40-scored.jsonl` и `results/long/watcher/lr-20261113T144635Z-arq-A1_control_40-scored.jsonl`.
+taskiq `lr-20261113T154152Z-taskiq-A1_control_40-scored` закончился со статусом `passed`. Один обработчик, `execution_id` `98407-33606459327293`, UTC `2026-11-13T15:41:55.604319+00:00` и `2026-11-13T16:22:01.906970+00:00`, span 2406.303 с. В событиях handler поле `message_id` пустое. Наблюдатель с 15:41:58 держал одну pending-запись стрима `1794584515560-0`. `idle_timeout` был 600000 мс, прогон шёл дольше, второго `handler_started` не было. На сэмпле 16:22:03, через две секунды после `handler_finished`, `XPENDING` стал 0, `XLEN` остался 1. Сама команда `XACK` в журнал не писалась: вывод про подтверждение косвенный. Скачков UTC больше 30 с между соседними шагами не было. Лимит задачи 3000 с, `retry_on_error` выключен. После завершения раннер снова не дождался SIGTERM за 60 с и послал SIGKILL в 16:23:06.
+
+Остальные группы `bench/longrun/matrix.py` не запускались. Журнал этого прогона: `results/long/watcher/lr-20261113T154152Z-taskiq-A1_control_40-scored.jsonl`.
