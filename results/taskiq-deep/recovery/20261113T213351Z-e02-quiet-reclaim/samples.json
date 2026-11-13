@@ -1,0 +1,552 @@
+[
+  {
+    "ts_mono": 736.223466065,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 10996,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 10997
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 736.725233451,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 11498,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 11499
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 737.226631534,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 12000,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 12000
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 737.727377501,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 12501,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 12501
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 738.229017307,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 13002,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 13002
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 738.730897309,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 13503,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 13504
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 739.231726815,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 14005,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 14005
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 739.734371654,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 14506,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 14507
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 740.235489811,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 15009,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 15009
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 740.73787981,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 15510,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 15511
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 741.239384256,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 16012,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 16013
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 741.741316464,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 16514,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 16514
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 742.243144685,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 17016,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 17017
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 742.74405916,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 17517,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 17518
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 743.245687228,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 18018,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 18019
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 743.7474419,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 18520,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 18521
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 744.24941451,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 19022,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 19022
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 744.751156327,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 19524,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 19525
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 745.251978649,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 20025,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 20026
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 745.75391895,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 20526,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 20527
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 746.255196598,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 21028,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 21029
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 746.756078525,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 21529,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 21530
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  }
+]

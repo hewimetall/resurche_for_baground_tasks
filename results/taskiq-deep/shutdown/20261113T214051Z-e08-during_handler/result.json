@@ -1,0 +1,70 @@
+{
+  "case": "during_handler",
+  "during": "handler",
+  "before": {
+    "ts_mono": 1145.359959485,
+    "stream": "e08:99d084fc2e",
+    "group": "g-99d084fc2e",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794606063013-0",
+        "consumer": "46d0fa98-8740-461c-886c-182c7961af46",
+        "idle_ms": 59,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "46d0fa98-8740-461c-886c-182c7961af46",
+        "pending": 1,
+        "idle": 60
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "after": {
+    "ts_mono": 1150.377907705,
+    "stream": "e08:99d084fc2e",
+    "group": "g-99d084fc2e",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794606063013-0",
+        "consumer": "46d0fa98-8740-461c-886c-182c7961af46",
+        "idle_ms": 5077,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "46d0fa98-8740-461c-886c-182c7961af46",
+        "pending": 1,
+        "idle": 5078
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "stop": {
+    "sigterm_at": 1145.359971422,
+    "exit_at": 1150.376605273,
+    "code": -9,
+    "killed_after_grace": true,
+    "t_drain_s": 5.017,
+    "already_exited": false,
+    "children_reaped": [
+      {
+        "pid": 3668,
+        "code": -9,
+        "reaped": true
+      }
+    ]
+  },
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/shutdown/20261113T214051Z-e08-during_handler"
+}

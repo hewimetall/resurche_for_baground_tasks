@@ -1,0 +1,21 @@
+{
+  "case": "brief_outage_sigstop",
+  "enqueue_error": null,
+  "finished_after_resume": true,
+  "worker_stop": {
+    "sigterm_at": 2038.970764667,
+    "exit_at": 2039.522070769,
+    "code": 0,
+    "killed_after_grace": false,
+    "t_drain_s": 0.551,
+    "already_exited": false,
+    "children_reaped": [
+      {
+        "pid": 5304,
+        "code": 0,
+        "reaped": true
+      }
+    ]
+  },
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/redis_fault/20261113T215542Z-e09-brief-outage"
+}

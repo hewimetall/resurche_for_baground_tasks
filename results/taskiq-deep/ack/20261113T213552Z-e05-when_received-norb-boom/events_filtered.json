@@ -1,0 +1,207 @@
+[
+  {
+    "ts_mono": 846.411810535,
+    "event": "pre_execute",
+    "task_id": "67081dba128b4a7091eca3c9dd2d878a",
+    "task_name": "boom",
+    "labels": {
+      "retry_on_error": true,
+      "max_retries": 3
+    },
+    "args": [
+      "j-when_received"
+    ],
+    "kwargs": {},
+    "pid": 3516,
+    "host": "cursor"
+  },
+  {
+    "ts_mono": 846.412755603,
+    "event": "handler_start",
+    "pid": 3516,
+    "host": "cursor",
+    "job_id": "j-when_received",
+    "task_kind": "boom"
+  },
+  {
+    "ts_mono": 846.413613077,
+    "event": "on_error",
+    "task_id": "67081dba128b4a7091eca3c9dd2d878a",
+    "task_name": "boom",
+    "labels": {
+      "retry_on_error": true,
+      "max_retries": 3
+    },
+    "args": [
+      "j-when_received"
+    ],
+    "kwargs": {},
+    "pid": 3516,
+    "host": "cursor",
+    "error": "RuntimeError('boom:j-when_received')"
+  },
+  {
+    "ts_mono": 846.414625774,
+    "event": "post_execute",
+    "task_id": "67081dba128b4a7091eca3c9dd2d878a",
+    "task_name": "boom",
+    "labels": {
+      "retry_on_error": true,
+      "max_retries": 3,
+      "_retries": 1
+    },
+    "args": [
+      "j-when_received"
+    ],
+    "kwargs": {},
+    "pid": 3516,
+    "host": "cursor",
+    "is_err": true,
+    "error": "taskiq.exceptions.NoResultError()",
+    "execution_time": 0.0
+  },
+  {
+    "ts_mono": 846.415432401,
+    "event": "pre_execute",
+    "task_id": "67081dba128b4a7091eca3c9dd2d878a",
+    "task_name": "boom",
+    "labels": {
+      "retry_on_error": true,
+      "max_retries": 3,
+      "_retries": 1
+    },
+    "args": [
+      "j-when_received"
+    ],
+    "kwargs": {},
+    "pid": 3516,
+    "host": "cursor"
+  },
+  {
+    "ts_mono": 846.415749291,
+    "event": "handler_start",
+    "pid": 3516,
+    "host": "cursor",
+    "job_id": "j-when_received",
+    "task_kind": "boom"
+  },
+  {
+    "ts_mono": 846.41607869,
+    "event": "on_error",
+    "task_id": "67081dba128b4a7091eca3c9dd2d878a",
+    "task_name": "boom",
+    "labels": {
+      "retry_on_error": true,
+      "max_retries": 3,
+      "_retries": 1
+    },
+    "args": [
+      "j-when_received"
+    ],
+    "kwargs": {},
+    "pid": 3516,
+    "host": "cursor",
+    "error": "RuntimeError('boom:j-when_received')"
+  },
+  {
+    "ts_mono": 846.418021603,
+    "event": "post_execute",
+    "task_id": "67081dba128b4a7091eca3c9dd2d878a",
+    "task_name": "boom",
+    "labels": {
+      "retry_on_error": true,
+      "max_retries": 3,
+      "_retries": 2
+    },
+    "args": [
+      "j-when_received"
+    ],
+    "kwargs": {},
+    "pid": 3516,
+    "host": "cursor",
+    "is_err": true,
+    "error": "taskiq.exceptions.NoResultError()",
+    "execution_time": 0.0
+  },
+  {
+    "ts_mono": 846.418740829,
+    "event": "pre_execute",
+    "task_id": "67081dba128b4a7091eca3c9dd2d878a",
+    "task_name": "boom",
+    "labels": {
+      "retry_on_error": true,
+      "max_retries": 3,
+      "_retries": 2
+    },
+    "args": [
+      "j-when_received"
+    ],
+    "kwargs": {},
+    "pid": 3516,
+    "host": "cursor"
+  },
+  {
+    "ts_mono": 846.419078616,
+    "event": "handler_start",
+    "pid": 3516,
+    "host": "cursor",
+    "job_id": "j-when_received",
+    "task_kind": "boom"
+  },
+  {
+    "ts_mono": 846.419354361,
+    "event": "on_error",
+    "task_id": "67081dba128b4a7091eca3c9dd2d878a",
+    "task_name": "boom",
+    "labels": {
+      "retry_on_error": true,
+      "max_retries": 3,
+      "_retries": 2
+    },
+    "args": [
+      "j-when_received"
+    ],
+    "kwargs": {},
+    "pid": 3516,
+    "host": "cursor",
+    "error": "RuntimeError('boom:j-when_received')"
+  },
+  {
+    "ts_mono": 846.419436331,
+    "event": "post_execute",
+    "task_id": "67081dba128b4a7091eca3c9dd2d878a",
+    "task_name": "boom",
+    "labels": {
+      "retry_on_error": true,
+      "max_retries": 3,
+      "_retries": 3
+    },
+    "args": [
+      "j-when_received"
+    ],
+    "kwargs": {},
+    "pid": 3516,
+    "host": "cursor",
+    "is_err": true,
+    "error": "RuntimeError('boom:j-when_received')",
+    "execution_time": 0.0
+  },
+  {
+    "ts_mono": 846.419471058,
+    "event": "post_save",
+    "task_id": "67081dba128b4a7091eca3c9dd2d878a",
+    "task_name": "boom",
+    "labels": {
+      "retry_on_error": true,
+      "max_retries": 3,
+      "_retries": 3
+    },
+    "args": [
+      "j-when_received"
+    ],
+    "kwargs": {},
+    "pid": 3516,
+    "host": "cursor",
+    "is_err": true
+  }
+]

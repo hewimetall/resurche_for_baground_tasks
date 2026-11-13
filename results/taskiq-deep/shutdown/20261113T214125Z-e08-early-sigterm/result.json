@@ -1,0 +1,19 @@
+{
+  "case": "early_sigterm",
+  "stop": {
+    "sigterm_at": 1168.058336101,
+    "exit_at": 1168.108552484,
+    "code": -15,
+    "killed_after_grace": false,
+    "t_drain_s": 0.05,
+    "already_exited": false,
+    "children_reaped": [
+      {
+        "pid": 3682,
+        "code": -15,
+        "reaped": true
+      }
+    ]
+  },
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/shutdown/20261113T214125Z-e08-early-sigterm"
+}

@@ -1,0 +1,29 @@
+{
+  "experiment": "e04_lock_death",
+  "scenario": "C_death_during_reclaim_lock",
+  "status": "pass",
+  "measured": {
+    "lock_key": "autoclaim:g-0f20d71d:e04:50f35756",
+    "set_ok": true,
+    "exists_immediate": 1,
+    "ttl_immediate": 2,
+    "exists_after_wait": 0,
+    "ttl_after_wait": -2,
+    "lock_timeout_s": 2.0,
+    "wait_s": 5.0
+  },
+  "source_default": {
+    "unacknowledged_lock_timeout_default": null,
+    "doc": "If not set, the lock can remain locked indefinitely.",
+    "file": "taskiq_redis/redis_broker.py",
+    "sha": "8f70bc85dd6a469cae7d3b467af7dea720c92434",
+    "issues": [
+      "https://github.com/taskiq-python/taskiq-redis/issues/87",
+      "https://github.com/taskiq-python/taskiq-redis/issues/131",
+      "https://github.com/taskiq-python/taskiq-redis/pull/107"
+    ],
+    "fix_released_in": "1.2.2 (optional timeout parameter; default still None)"
+  },
+  "evidence_class": "measured+source",
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/recovery/20261113T213426Z-e04-lock-death"
+}

@@ -1,0 +1,67 @@
+{
+  "experiment": "e03_traffic_reclaim",
+  "scenario": "B_death_with_new_messages",
+  "status": "pass",
+  "idle_ms": 3000,
+  "observe_s": 15.0,
+  "reclaimed_after_s": 9.91799993244058e-06,
+  "before": {
+    "ts_mono": 764.834957564,
+    "stream": "e03:2e1e59cf40",
+    "group": "g-2e1e59cf40",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605682485-0",
+        "consumer": "5f8f38d9-3e4b-4da6-885f-e623676a7e2c",
+        "idle_ms": 62,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "5f8f38d9-3e4b-4da6-885f-e623676a7e2c",
+        "pending": 1,
+        "idle": 63
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "final": {
+    "ts_mono": 791.245241619,
+    "stream": "e03:2e1e59cf40",
+    "group": "g-2e1e59cf40",
+    "xlen": 15,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605682485-0",
+        "consumer": "c5022a96-9743-48d5-a84f-063e75724db9",
+        "idle_ms": 15190,
+        "delivery_count": 2
+      }
+    ],
+    "consumers": [
+      {
+        "name": "5f8f38d9-3e4b-4da6-885f-e623676a7e2c",
+        "pending": 0,
+        "idle": 26473
+      },
+      {
+        "name": "c5022a96-9743-48d5-a84f-063e75724db9",
+        "pending": 1,
+        "idle": 15191
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "victim_starts_on_b": 1,
+  "traffic_enqueued": 13,
+  "evidence_class": "measured",
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/recovery/20261113T213431Z-e03-traffic-reclaim"
+}

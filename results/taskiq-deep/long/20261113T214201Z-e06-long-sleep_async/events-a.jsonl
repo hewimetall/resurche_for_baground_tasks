@@ -1,0 +1,4 @@
+{"ts_mono": 1214.351336925, "event": "pre_execute", "task_id": "3a4949bdb4d7492b8f4f6d1a9377b025", "task_name": "ready", "labels": {"retry_on_error": false}, "args": ["a177a6c2dbb54df4871501a8303a2b62"], "kwargs": {}, "pid": 3708, "host": "cursor"}
+{"ts_mono": 1214.351871987, "event": "handler_ready", "pid": 3708, "host": "cursor", "token": "a177a6c2dbb54df4871501a8303a2b62"}
+{"ts_mono": 1214.352755243, "event": "post_execute", "task_id": "3a4949bdb4d7492b8f4f6d1a9377b025", "task_name": "ready", "labels": {"retry_on_error": false}, "args": ["a177a6c2dbb54df4871501a8303a2b62"], "kwargs": {}, "pid": 3708, "host": "cursor", "is_err": false, "error": null, "execution_time": 0.0}
+{"ts_mono": 1214.3528404, "event": "post_save", "task_id": "3a4949bdb4d7492b8f4f6d1a9377b025", "task_name": "ready", "labels": {"retry_on_error": false}, "args": ["a177a6c2dbb54df4871501a8303a2b62"], "kwargs": {}, "pid": 3708, "host": "cursor", "is_err": false}

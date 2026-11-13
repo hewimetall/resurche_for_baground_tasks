@@ -1,0 +1,74 @@
+[
+  {
+    "ts_mono": 881.949410835,
+    "event": "pre_execute",
+    "task_id": "1b0cf393d0da42488b1bc4ca414e8872",
+    "task_name": "sleep_async",
+    "labels": {
+      "retry_on_error": false,
+      "timeout": 3600
+    },
+    "args": [
+      "j-when_executed",
+      0.3
+    ],
+    "kwargs": {},
+    "pid": 3535,
+    "host": "cursor"
+  },
+  {
+    "ts_mono": 881.949967248,
+    "event": "handler_start",
+    "pid": 3535,
+    "host": "cursor",
+    "job_id": "j-when_executed",
+    "task_kind": "sleep_async",
+    "seconds": 0.3
+  },
+  {
+    "ts_mono": 882.250645879,
+    "event": "handler_finish",
+    "pid": 3535,
+    "host": "cursor",
+    "job_id": "j-when_executed",
+    "task_kind": "sleep_async"
+  },
+  {
+    "ts_mono": 882.251514785,
+    "event": "post_execute",
+    "task_id": "1b0cf393d0da42488b1bc4ca414e8872",
+    "task_name": "sleep_async",
+    "labels": {
+      "retry_on_error": false,
+      "timeout": 3600
+    },
+    "args": [
+      "j-when_executed",
+      0.3
+    ],
+    "kwargs": {},
+    "pid": 3535,
+    "host": "cursor",
+    "is_err": false,
+    "error": null,
+    "execution_time": 0.3
+  },
+  {
+    "ts_mono": 882.251581903,
+    "event": "post_save",
+    "task_id": "1b0cf393d0da42488b1bc4ca414e8872",
+    "task_name": "sleep_async",
+    "labels": {
+      "retry_on_error": false,
+      "timeout": 3600
+    },
+    "args": [
+      "j-when_executed",
+      0.3
+    ],
+    "kwargs": {},
+    "pid": 3535,
+    "host": "cursor",
+    "is_err": false
+  }
+]

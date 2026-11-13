@@ -1,0 +1,178 @@
+{"ts_mono": 2156.684435695, "event": "pre_execute", "task_id": "553bc497d04b442196fea64a8e7e4a8b", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-2156", 0, 2156.683329206], "kwargs": {}, "pid": 5778, "host": "cursor"}
+{"ts_mono": 2156.68502904, "event": "handler_start", "pid": 5778, "host": "cursor", "job_id": "keepalive-2156", "task_kind": "fast", "n": 0, "sent_mono": 2156.683329206, "start_mono": 2156.685002617, "lag_s": 0.0016734109999561042}
+{"ts_mono": 2156.685078442, "event": "handler_finish", "pid": 5778, "host": "cursor", "job_id": "keepalive-2156", "task_kind": "fast", "n": 0, "finish_mono": 2156.685069096}
+{"ts_mono": 2156.685945628, "event": "post_execute", "task_id": "553bc497d04b442196fea64a8e7e4a8b", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-2156", 0, 2156.683329206], "kwargs": {}, "pid": 5778, "host": "cursor", "is_err": false, "error": null, "execution_time": 0.0}
+{"ts_mono": 2156.686031458, "event": "post_save", "task_id": "553bc497d04b442196fea64a8e7e4a8b", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-2156", 0, 2156.683329206], "kwargs": {}, "pid": 5778, "host": "cursor", "is_err": false}
+{"ts_mono": 2157.615581414, "event": "pre_execute", "task_id": "4dd2e8bf06c942efb2c46f9fe48123d0", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-2157", 0, 2157.61460527], "kwargs": {}, "pid": 5778, "host": "cursor"}
+{"ts_mono": 2157.615795915, "event": "handler_start", "pid": 5778, "host": "cursor", "job_id": "keepalive-2157", "task_kind": "fast", "n": 0, "sent_mono": 2157.61460527, "start_mono": 2157.615781299, "lag_s": 0.0011760289999074303}
+{"ts_mono": 2157.615831268, "event": "handler_finish", "pid": 5778, "host": "cursor", "job_id": "keepalive-2157", "task_kind": "fast", "n": 0, "finish_mono": 2157.615824226}
+{"ts_mono": 2157.616214326, "event": "post_execute", "task_id": "4dd2e8bf06c942efb2c46f9fe48123d0", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-2157", 0, 2157.61460527], "kwargs": {}, "pid": 5778, "host": "cursor", "is_err": false, "error": null, "execution_time": 0.0}
+{"ts_mono": 2157.616264888, "event": "post_save", "task_id": "4dd2e8bf06c942efb2c46f9fe48123d0", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-2157", 0, 2157.61460527], "kwargs": {}, "pid": 5778, "host": "cursor", "is_err": false}
+{"ts_mono": 2159.048304857, "event": "pre_execute", "task_id": "27f2d34ab72942178efcbe781561b5eb", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-2158", 0, 2159.047585065], "kwargs": {}, "pid": 5778, "host": "cursor"}
+{"ts_mono": 2159.04850028, "event": "handler_start", "pid": 5778, "host": "cursor", "job_id": "keepalive-2158", "task_kind": "fast", "n": 0, "sent_mono": 2159.047585065, "start_mono": 2159.048486126, "lag_s": 0.0009010610001496389}
+{"ts_mono": 2159.048535402, "event": "handler_finish", "pid": 5778, "host": "cursor", "job_id": "keepalive-2158", "task_kind": "fast", "n": 0, "finish_mono": 2159.048528107}
+{"ts_mono": 2159.048873287, "event": "post_execute", "task_id": "27f2d34ab72942178efcbe781561b5eb", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-2158", 0, 2159.047585065], "kwargs": {}, "pid": 5778, "host": "cursor", "is_err": false, "error": null, "execution_time": 0.0}
+{"ts_mono": 2159.048914988, "event": "post_save", "task_id": "27f2d34ab72942178efcbe781561b5eb", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-2158", 0, 2159.047585065], "kwargs": {}, "pid": 5778, "host": "cursor", "is_err": false}
+{"ts_mono": 2160.971551309, "event": "pre_execute", "task_id": "8ed4330a206049149ead2d72324a762b", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-2160", 0, 2160.970801484], "kwargs": {}, "pid": 5778, "host": "cursor"}
+{"ts_mono": 2160.971764675, "event": "handler_start", "pid": 5778, "host": "cursor", "job_id": "keepalive-2160", "task_kind": "fast", "n": 0, "sent_mono": 2160.970801484, "start_mono": 2160.971750242, "lag_s": 0.0009487580000495655}
+{"ts_mono": 2160.971809417, "event": "handler_finish", "pid": 5778, "host": "cursor", "job_id": "keepalive-2160", "task_kind": "fast", "n": 0, "finish_mono": 2160.971802224}
+{"ts_mono": 2160.972165565, "event": "post_execute", "task_id": "8ed4330a206049149ead2d72324a762b", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-2160", 0, 2160.970801484], "kwargs": {}, "pid": 5778, "host": "cursor", "is_err": false, "error": null, "execution_time": 0.0}
+{"ts_mono": 2160.972212616, "event": "post_save", "task_id": "8ed4330a206049149ead2d72324a762b", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-2160", 0, 2160.970801484], "kwargs": {}, "pid": 5778, "host": "cursor", "is_err": false}
+{"ts_mono": 2160.973067942, "event": "pre_execute", "task_id": "712c0b2ed48b40faa6d1e917408d91c3", "task_name": "tick", "labels": {"retry_on_error": false, "timeout": 690}, "args": ["long-tick", 180, 0.5], "kwargs": {}, "pid": 5778, "host": "cursor"}
+{"ts_mono": 2160.973291594, "event": "handler_start", "pid": 5778, "host": "cursor", "job_id": "long-tick", "task_kind": "tick", "steps": 180, "step_s": 0.5}
+{"ts_mono": 2161.47399706, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 0}
+{"ts_mono": 2161.974871432, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 1}
+{"ts_mono": 2162.475657753, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 2}
+{"ts_mono": 2162.976185438, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 3}
+{"ts_mono": 2163.476973258, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 4}
+{"ts_mono": 2163.977880751, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 5}
+{"ts_mono": 2164.478667571, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 6}
+{"ts_mono": 2164.979496646, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 7}
+{"ts_mono": 2165.480420996, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 8}
+{"ts_mono": 2165.981319011, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 9}
+{"ts_mono": 2166.482117754, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 10}
+{"ts_mono": 2166.982893992, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 11}
+{"ts_mono": 2167.483714124, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 12}
+{"ts_mono": 2167.98449502, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 13}
+{"ts_mono": 2168.485355138, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 14}
+{"ts_mono": 2168.986227634, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 15}
+{"ts_mono": 2169.486988566, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 16}
+{"ts_mono": 2169.987743087, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 17}
+{"ts_mono": 2170.488555962, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 18}
+{"ts_mono": 2170.989325845, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 19}
+{"ts_mono": 2171.490028134, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 20}
+{"ts_mono": 2171.99078786, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 21}
+{"ts_mono": 2172.491605527, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 22}
+{"ts_mono": 2172.992391702, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 23}
+{"ts_mono": 2173.493134381, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 24}
+{"ts_mono": 2173.993961712, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 25}
+{"ts_mono": 2174.49468773, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 26}
+{"ts_mono": 2174.995467189, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 27}
+{"ts_mono": 2175.496300399, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 28}
+{"ts_mono": 2175.997047998, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 29}
+{"ts_mono": 2176.497750759, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 30}
+{"ts_mono": 2176.998567702, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 31}
+{"ts_mono": 2177.499446178, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 32}
+{"ts_mono": 2178.000339926, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 33}
+{"ts_mono": 2178.501135962, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 34}
+{"ts_mono": 2179.002110726, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 35}
+{"ts_mono": 2179.503090002, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 36}
+{"ts_mono": 2180.003949687, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 37}
+{"ts_mono": 2180.504755995, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 38}
+{"ts_mono": 2181.005512812, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 39}
+{"ts_mono": 2181.506269339, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 40}
+{"ts_mono": 2182.00701377, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 41}
+{"ts_mono": 2182.507847194, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 42}
+{"ts_mono": 2183.008650625, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 43}
+{"ts_mono": 2183.509554641, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 44}
+{"ts_mono": 2184.010301482, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 45}
+{"ts_mono": 2184.51104278, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 46}
+{"ts_mono": 2185.011918533, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 47}
+{"ts_mono": 2185.512713328, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 48}
+{"ts_mono": 2186.01364488, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 49}
+{"ts_mono": 2186.514429106, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 50}
+{"ts_mono": 2187.015274269, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 51}
+{"ts_mono": 2187.516062106, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 52}
+{"ts_mono": 2188.016805661, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 53}
+{"ts_mono": 2188.517569316, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 54}
+{"ts_mono": 2189.018011422, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 55}
+{"ts_mono": 2189.518774548, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 56}
+{"ts_mono": 2190.019542745, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 57}
+{"ts_mono": 2190.520357536, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 58}
+{"ts_mono": 2191.021226871, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 59}
+{"ts_mono": 2191.521995146, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 60}
+{"ts_mono": 2192.022799095, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 61}
+{"ts_mono": 2192.523654545, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 62}
+{"ts_mono": 2193.024189111, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 63}
+{"ts_mono": 2193.524927101, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 64}
+{"ts_mono": 2194.025762205, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 65}
+{"ts_mono": 2194.526506436, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 66}
+{"ts_mono": 2195.027280415, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 67}
+{"ts_mono": 2195.52806672, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 68}
+{"ts_mono": 2196.028823281, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 69}
+{"ts_mono": 2196.529582885, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 70}
+{"ts_mono": 2197.030395615, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 71}
+{"ts_mono": 2197.531302737, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 72}
+{"ts_mono": 2198.032066465, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 73}
+{"ts_mono": 2198.532802188, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 74}
+{"ts_mono": 2199.03355625, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 75}
+{"ts_mono": 2199.534311045, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 76}
+{"ts_mono": 2200.035101704, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 77}
+{"ts_mono": 2200.535911602, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 78}
+{"ts_mono": 2201.036660139, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 79}
+{"ts_mono": 2201.537434997, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 80}
+{"ts_mono": 2202.038220418, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 81}
+{"ts_mono": 2202.538971243, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 82}
+{"ts_mono": 2203.03984104, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 83}
+{"ts_mono": 2203.540591791, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 84}
+{"ts_mono": 2204.041345914, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 85}
+{"ts_mono": 2204.542118986, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 86}
+{"ts_mono": 2205.042890862, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 87}
+{"ts_mono": 2205.543638533, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 88}
+{"ts_mono": 2206.044401869, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 89}
+{"ts_mono": 2206.545169295, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 90}
+{"ts_mono": 2207.045999369, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 91}
+{"ts_mono": 2207.546772072, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 92}
+{"ts_mono": 2208.047530008, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 93}
+{"ts_mono": 2208.548324799, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 94}
+{"ts_mono": 2209.049185009, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 95}
+{"ts_mono": 2209.549967587, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 96}
+{"ts_mono": 2210.050752672, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 97}
+{"ts_mono": 2210.551587592, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 98}
+{"ts_mono": 2211.052360824, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 99}
+{"ts_mono": 2211.553232417, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 100}
+{"ts_mono": 2212.054163116, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 101}
+{"ts_mono": 2212.554936178, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 102}
+{"ts_mono": 2213.055672888, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 103}
+{"ts_mono": 2213.556131592, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 104}
+{"ts_mono": 2214.05688899, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 105}
+{"ts_mono": 2214.557642411, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 106}
+{"ts_mono": 2215.058487337, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 107}
+{"ts_mono": 2215.559317341, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 108}
+{"ts_mono": 2216.060118454, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 109}
+{"ts_mono": 2216.560963239, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 110}
+{"ts_mono": 2217.061744318, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 111}
+{"ts_mono": 2217.562636187, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 112}
+{"ts_mono": 2218.063412208, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 113}
+{"ts_mono": 2218.56422326, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 114}
+{"ts_mono": 2219.065025206, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 115}
+{"ts_mono": 2219.565802945, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 116}
+{"ts_mono": 2220.06660272, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 117}
+{"ts_mono": 2220.567492963, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 118}
+{"ts_mono": 2221.068388266, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 119}
+{"ts_mono": 2221.569260913, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 120}
+{"ts_mono": 2222.070039576, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 121}
+{"ts_mono": 2222.570873703, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 122}
+{"ts_mono": 2223.0716438, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 123}
+{"ts_mono": 2223.572423822, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 124}
+{"ts_mono": 2224.073176764, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 125}
+{"ts_mono": 2224.573974437, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 126}
+{"ts_mono": 2225.074748457, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 127}
+{"ts_mono": 2225.575583525, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 128}
+{"ts_mono": 2226.076169647, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 129}
+{"ts_mono": 2226.576922024, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 130}
+{"ts_mono": 2227.077803281, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 131}
+{"ts_mono": 2227.578582012, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 132}
+{"ts_mono": 2228.079405739, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 133}
+{"ts_mono": 2228.580171027, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 134}
+{"ts_mono": 2229.080934141, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 135}
+{"ts_mono": 2229.581715392, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 136}
+{"ts_mono": 2230.082517937, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 137}
+{"ts_mono": 2230.583404297, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 138}
+{"ts_mono": 2231.084149398, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 139}
+{"ts_mono": 2231.584902448, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 140}
+{"ts_mono": 2232.085633079, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 141}
+{"ts_mono": 2232.586384484, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 142}
+{"ts_mono": 2233.087131878, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 143}
+{"ts_mono": 2233.587866408, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 144}
+{"ts_mono": 2234.088170236, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 145}
+{"ts_mono": 2234.588903594, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 146}
+{"ts_mono": 2235.089641846, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 147}
+{"ts_mono": 2235.590396163, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 148}
+{"ts_mono": 2236.091261922, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 149}
+{"ts_mono": 2236.592045064, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 150}
+{"ts_mono": 2237.092869292, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 151}
+{"ts_mono": 2237.594160516, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 152}
+{"ts_mono": 2238.09571327, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 153}
+{"ts_mono": 2238.596248952, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 154}
+{"ts_mono": 2239.097032712, "event": "handler_tick", "pid": 5778, "host": "cursor", "job_id": "long-tick", "step": 155}

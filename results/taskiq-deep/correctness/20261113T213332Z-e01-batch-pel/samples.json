@@ -1,0 +1,2615 @@
+[
+  {
+    "ts_mono": 708.799559112,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 36,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 36,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 36,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 36,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 36,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 36,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 36,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 36,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 37
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 708.851051112,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 88,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 88,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 88,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 88,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 88,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 88,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 88,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 88,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 88
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 708.902397994,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 139,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 139,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 139,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 139,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 139,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 139,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 139,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 139,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 140
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 708.95439754,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 191,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 191,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 191,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 191,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 191,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 191,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 191,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 191,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 192
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.005579058,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 243,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 243,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 243,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 243,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 243,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 243,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 243,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 243,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 243
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.057147496,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 294,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 294,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 294,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 294,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 294,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 294,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 294,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 294,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 295
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.1079948,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 345,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 345,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 345,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 345,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 345,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 345,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 345,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 345,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 346
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.159177311,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 396,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 396,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 396,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 396,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 396,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 396,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 396,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 396,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 397
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.210785148,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 447,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 447,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 447,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 447,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 447,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 447,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 447,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 447,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 448
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.262868846,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 499,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 499,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 499,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 499,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 499,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 499,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 499,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 499,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 500
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.313902894,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 551,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 551,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 551,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 551,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 551,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 551,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 551,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 551,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 552
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.365466368,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 602,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 602,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 602,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 602,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 602,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 602,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 602,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 602,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 603
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.417266509,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 654,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 654,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 654,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 654,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 654,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 654,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 654,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 654,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 654
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.467996259,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 705,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 705,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 705,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 705,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 705,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 705,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 705,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 705,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 706
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.518901368,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 756,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 756,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 756,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 756,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 756,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 756,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 756,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 756,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 757
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.570737699,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 807,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 807,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 807,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 807,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 807,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 807,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 807,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 807,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 808
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.622545041,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 859,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 859,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 859,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 859,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 859,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 859,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 859,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 859,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 860
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.674451262,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 911,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 911,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 911,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 911,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 911,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 911,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 911,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 911,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 912
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.725612614,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 963,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 963,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 963,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 963,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 963,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 963,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 963,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 963,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 963
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.777795986,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1014,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1014,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1014,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1014,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1014,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1014,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1014,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1014,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1015
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.830100551,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1066,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1066,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1066,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1066,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1066,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1066,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1066,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1066,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1067
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.882091085,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1118,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1118,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1118,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1118,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1118,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1118,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1118,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1118,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1119
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.933855278,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1170,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1170,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1170,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1170,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1170,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1170,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1170,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1170,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1171
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 709.985517149,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1222,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1222,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1222,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1222,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1222,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1222,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1222,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1222,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1223
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.037848235,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1274,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1274,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1274,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1274,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1274,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1274,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1274,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1274,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1275
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.090074597,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1326,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1326,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1326,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1326,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1326,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1326,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1326,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1326,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1327
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.141966232,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1378,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1378,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1378,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1378,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1378,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1378,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1378,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1378,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1379
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.1940683,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1430,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1430,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1430,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1430,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1430,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1430,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1430,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1430,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1431
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.245499656,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1482,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1482,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1482,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1482,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1482,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1482,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1482,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1482,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1483
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.296722882,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1534,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1534,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1534,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1534,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1534,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1534,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1534,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1534,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1534
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.347455347,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1585,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1585,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1585,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1585,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1585,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1585,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1585,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1585,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1585
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.401020957,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1636,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1636,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1636,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1636,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1636,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1636,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1636,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1636,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1637
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.451940931,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1689,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1689,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1689,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1689,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1689,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1689,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1689,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1689,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1690
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.503115769,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1740,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1740,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1740,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1740,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1740,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1740,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1740,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1740,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1741
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.554633464,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1791,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1791,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1791,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1791,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1791,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1791,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1791,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1791,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1792
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.605417334,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1843,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1843,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1843,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1843,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1843,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1843,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1843,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1843,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1843
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.657529576,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1894,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1894,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1894,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1894,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1894,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1894,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1894,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1894,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1894
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.709735023,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1946,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1946,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1946,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1946,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1946,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1946,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1946,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1946,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1947
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 710.761084707,
+    "stream": "e01:5172c876d7",
+    "group": "g-5172c876d7",
+    "xlen": 10,
+    "pending_count": 8,
+    "pending": [
+      {
+        "message_id": "1794605623883-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1998,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1998,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1998,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1998,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623884-3",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1998,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-0",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1998,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-1",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1998,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605623885-2",
+        "consumer": "f742cec4-a222-412a-97c0-ee9933323636",
+        "idle_ms": 1998,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "f742cec4-a222-412a-97c0-ee9933323636",
+        "pending": 8,
+        "idle": 1999
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  }
+]

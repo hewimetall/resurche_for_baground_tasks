@@ -1,0 +1,9 @@
+[2026-11-13 21:34:03,717][taskiq.worker][INFO   ][MainProcess] Pid of a main process: 3462
+[2026-11-13 21:34:03,717][taskiq.worker][INFO   ][MainProcess] Starting 1 worker processes.
+[2026-11-13 21:34:03,719][taskiq.process-manager][INFO   ][MainProcess] Started process worker-0 with pid 3463 
+[2026-11-13 21:34:03,792][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.
+[2026-11-13 21:34:24,971][taskiq.process-manager][INFO   ][MainProcess] Workers are scheduled for shutdown.
+[2026-11-13 21:34:25,236][taskiq.receiver.receiver][INFO   ][worker-0] Stopping prefetching messages...
+[2026-11-13 21:34:25,236][taskiq.receiver.receiver][INFO   ][worker-0] The runner is stopped.
+[2026-11-13 21:34:25,236][taskiq.worker][INFO   ][worker-0] Shutting down the broker.
+[2026-11-13 21:34:25,824][taskiq.process-manager][INFO   ][MainProcess] Stopped process worker-0 with pid 3463

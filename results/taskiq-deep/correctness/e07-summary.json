@@ -1,0 +1,211 @@
+{
+  "experiment": "e07",
+  "prefetch": {
+    "experiment": "e07_prefetch",
+    "status": "pass",
+    "enqueued_fast": 8,
+    "finished_fast_before_stop": 0,
+    "pending_mid": {
+      "ts_mono": 1043.463656946,
+      "stream": "e07p:ff211c39c1",
+      "group": "g-ff211c39c1",
+      "xlen": 10,
+      "pending_count": 1,
+      "pending": [
+        {
+          "message_id": "1794605959705-0",
+          "consumer": "c191e37f-f87c-461c-b921-653eb688ea04",
+          "idle_ms": 1471,
+          "delivery_count": 1
+        }
+      ],
+      "consumers": [
+        {
+          "name": "c191e37f-f87c-461c-b921-653eb688ea04",
+          "pending": 1,
+          "idle": 1471
+        }
+      ],
+      "lock_exists": false,
+      "lock_ttl_ms": -2,
+      "autoclaim_cursor_hint": null
+    },
+    "pending_after_sigterm": {
+      "ts_mono": 1045.974550848,
+      "stream": "e07p:ff211c39c1",
+      "group": "g-ff211c39c1",
+      "xlen": 10,
+      "pending_count": 1,
+      "pending": [
+        {
+          "message_id": "1794605959705-0",
+          "consumer": "c191e37f-f87c-461c-b921-653eb688ea04",
+          "idle_ms": 3981,
+          "delivery_count": 1
+        }
+      ],
+      "consumers": [
+        {
+          "name": "c191e37f-f87c-461c-b921-653eb688ea04",
+          "pending": 1,
+          "idle": 3981
+        }
+      ],
+      "lock_exists": false,
+      "lock_ttl_ms": -2,
+      "autoclaim_cursor_hint": null
+    },
+    "pending_after_restart_quiet": {
+      "ts_mono": 1059.000047705,
+      "stream": "e07p:ff211c39c1",
+      "group": "g-ff211c39c1",
+      "xlen": 10,
+      "pending_count": 1,
+      "pending": [
+        {
+          "message_id": "1794605959705-0",
+          "consumer": "c191e37f-f87c-461c-b921-653eb688ea04",
+          "idle_ms": 17007,
+          "delivery_count": 1
+        }
+      ],
+      "consumers": [
+        {
+          "name": "6cabe14e-c150-4fde-87ee-c1ab242cd553",
+          "pending": 0,
+          "idle": 12644
+        },
+        {
+          "name": "c191e37f-f87c-461c-b921-653eb688ea04",
+          "pending": 1,
+          "idle": 17008
+        }
+      ],
+      "lock_exists": false,
+      "lock_ttl_ms": -2,
+      "autoclaim_cursor_hint": null
+    },
+    "handler_starts_on_restart_quiet": 8,
+    "oracle_xautoclaim_count": 1,
+    "stop": {
+      "sigterm_at": 1043.463678083,
+      "exit_at": 1045.472303957,
+      "code": -9,
+      "killed_after_grace": true,
+      "t_drain_s": 2.009,
+      "already_exited": false,
+      "children_reaped": [
+        {
+          "pid": 3625,
+          "code": -9,
+          "reaped": true
+        }
+      ]
+    },
+    "root_cause": "Batch XREADGROUP assigns many IDs to consumer PEL; Taskiq local semaphore only gates generator pull/execute; SIGTERM leaves PEL entries; quiet restart skips XAUTOCLAIM.",
+    "evidence_class": "measured",
+    "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/correctness/20261113T213908Z-e07-prefetch"
+  },
+  "recycle": {
+    "experiment": "e07_recycle",
+    "status": "pass",
+    "enqueued": 12,
+    "finished": 1,
+    "lost_in_window": 11,
+    "final_pending": {
+      "ts_mono": 1111.019459253,
+      "stream": "e07r:25db3429f7",
+      "group": "g-25db3429f7",
+      "xlen": 13,
+      "pending_count": 11,
+      "pending": [
+        {
+          "message_id": "1794605988516-1",
+          "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+          "idle_ms": 39070,
+          "delivery_count": 1
+        },
+        {
+          "message_id": "1794605988517-0",
+          "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+          "idle_ms": 39070,
+          "delivery_count": 1
+        },
+        {
+          "message_id": "1794605988517-1",
+          "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+          "idle_ms": 39070,
+          "delivery_count": 1
+        },
+        {
+          "message_id": "1794605988518-0",
+          "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+          "idle_ms": 39070,
+          "delivery_count": 1
+        },
+        {
+          "message_id": "1794605988518-1",
+          "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+          "idle_ms": 39070,
+          "delivery_count": 1
+        },
+        {
+          "message_id": "1794605988518-2",
+          "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+          "idle_ms": 39070,
+          "delivery_count": 1
+        },
+        {
+          "message_id": "1794605988518-3",
+          "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+          "idle_ms": 39070,
+          "delivery_count": 1
+        },
+        {
+          "message_id": "1794605988518-4",
+          "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+          "idle_ms": 39070,
+          "delivery_count": 1
+        },
+        {
+          "message_id": "1794605988519-0",
+          "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+          "idle_ms": 39070,
+          "delivery_count": 1
+        },
+        {
+          "message_id": "1794605988519-1",
+          "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+          "idle_ms": 39070,
+          "delivery_count": 1
+        },
+        {
+          "message_id": "1794605988519-2",
+          "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+          "idle_ms": 39070,
+          "delivery_count": 1
+        }
+      ],
+      "consumers": [
+        {
+          "name": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+          "pending": 11,
+          "idle": 39071
+        },
+        {
+          "name": "802c0ba4-b4a7-4b59-9e5f-2c7a65dc64aa",
+          "pending": 0,
+          "idle": 40653
+        }
+      ],
+      "lock_exists": false,
+      "lock_ttl_ms": -2,
+      "autoclaim_cursor_hint": null
+    },
+    "max_tasks_per_child": 1,
+    "xread_count": 100,
+    "note": "Not calling unfinished tasks permanently lost; window may end with PEL leftovers until reclaim/traffic.",
+    "evidence_class": "measured",
+    "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/correctness/20261113T213937Z-e07-recycle"
+  }
+}

@@ -1,0 +1,5 @@
+[2026-11-13 21:55:30,588][taskiq.worker][INFO   ][MainProcess] Pid of a main process: 5270
+[2026-11-13 21:55:30,588][taskiq.worker][INFO   ][MainProcess] Starting 1 worker processes.
+[2026-11-13 21:55:30,590][taskiq.process-manager][INFO   ][MainProcess] Started process worker-0 with pid 5271 
+[2026-11-13 21:55:30,661][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.
+[2026-11-13 21:55:41,066][taskiq.receiver.receiver][INFO   ][worker-0] Executing task ready with ID: 4f04091fcce74bef87056dd0518c442b

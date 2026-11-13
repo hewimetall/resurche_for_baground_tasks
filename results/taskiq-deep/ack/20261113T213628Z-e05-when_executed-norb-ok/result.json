@@ -1,0 +1,15 @@
+{
+  "ack_type": "when_executed",
+  "with_result_backend": false,
+  "boom": false,
+  "event_order": [
+    "pre_execute",
+    "handler_start",
+    "handler_finish",
+    "post_execute",
+    "post_save"
+  ],
+  "pending_cleared": true,
+  "final_pending": 0,
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/ack/20261113T213628Z-e05-when_executed-norb-ok"
+}

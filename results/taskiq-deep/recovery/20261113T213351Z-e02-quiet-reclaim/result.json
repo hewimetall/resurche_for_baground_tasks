@@ -1,0 +1,94 @@
+{
+  "experiment": "e02_quiet_reclaim",
+  "scenario": "A_death_no_new_messages",
+  "status": "pass",
+  "idle_ms": 3000,
+  "observe_s": 11.0,
+  "killed_pids": [
+    3456
+  ],
+  "before_kill": {
+    "ts_mono": 725.291714482,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 65,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 65
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "after_kill": {
+    "ts_mono": 725.69696317,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 470,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 471
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "final": {
+    "ts_mono": 747.256858169,
+    "stream": "e02:dbe1b0d94d",
+    "group": "g-dbe1b0d94d",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605642939-0",
+        "consumer": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "idle_ms": 22030,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ed3e64a8-10e9-498a-8774-f8394efcd0ad",
+        "pending": 1,
+        "idle": 22031
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "reclaimed_by_b": false,
+  "evidence_class": "measured",
+  "source": {
+    "file": "taskiq_redis/redis_broker.py",
+    "lines": "287-288 continue before XAUTOCLAIM",
+    "sha": "8f70bc85dd6a469cae7d3b467af7dea720c92434",
+    "version": "1.2.4"
+  },
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/recovery/20261113T213351Z-e02-quiet-reclaim"
+}

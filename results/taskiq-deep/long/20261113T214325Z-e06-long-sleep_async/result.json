@@ -1,0 +1,21 @@
+{
+  "experiment": "e06_long_ownership",
+  "kind": "sleep_async",
+  "idle_ms": 4000,
+  "task_s": 12.0,
+  "status": "pass",
+  "starts_a": 1,
+  "starts_b": 1,
+  "finishes_a": 1,
+  "finishes_b": 0,
+  "overlap_while_a_unfinished": true,
+  "reclaim_delay_s": 10.75279122400002,
+  "idle_ms_min_max_while_sampled": [
+    557,
+    10388
+  ],
+  "ownership_extension_api": false,
+  "evidence_class": "measured",
+  "note": "Traffic keepalive used so XAUTOCLAIM is reachable; quiet-queue gating is covered by e02.",
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/long/20261113T214325Z-e06-long-sleep_async"
+}

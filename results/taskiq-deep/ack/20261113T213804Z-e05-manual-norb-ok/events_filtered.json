@@ -1,0 +1,66 @@
+[
+  {
+    "ts_mono": 978.175942665,
+    "event": "pre_execute",
+    "task_id": "792d271a3c8e40238e9c423c4daba3e8",
+    "task_name": "manual_ack",
+    "labels": {
+      "retry_on_error": false
+    },
+    "args": [
+      "j-manual"
+    ],
+    "kwargs": {},
+    "pid": 3585,
+    "host": "cursor"
+  },
+  {
+    "ts_mono": 978.176188453,
+    "event": "handler_start",
+    "pid": 3585,
+    "host": "cursor",
+    "job_id": "j-manual",
+    "task_kind": "manual_ack"
+  },
+  {
+    "ts_mono": 978.377459419,
+    "event": "handler_acked",
+    "pid": 3585,
+    "host": "cursor",
+    "job_id": "j-manual"
+  },
+  {
+    "ts_mono": 978.377584636,
+    "event": "post_execute",
+    "task_id": "792d271a3c8e40238e9c423c4daba3e8",
+    "task_name": "manual_ack",
+    "labels": {
+      "retry_on_error": false
+    },
+    "args": [
+      "j-manual"
+    ],
+    "kwargs": {},
+    "pid": 3585,
+    "host": "cursor",
+    "is_err": false,
+    "error": null,
+    "execution_time": 0.2
+  },
+  {
+    "ts_mono": 978.377626211,
+    "event": "post_save",
+    "task_id": "792d271a3c8e40238e9c423c4daba3e8",
+    "task_name": "manual_ack",
+    "labels": {
+      "retry_on_error": false
+    },
+    "args": [
+      "j-manual"
+    ],
+    "kwargs": {},
+    "pid": 3585,
+    "host": "cursor",
+    "is_err": false
+  }
+]

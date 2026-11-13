@@ -42,6 +42,7 @@ reference/dramatiq
 reference/celery
 reference/arq
 reference/taskiq
+reference/taskiq-deep
 reference/dramatiq-1.18
 reference/long-semantics
 reference/long-control

@@ -1,0 +1,8 @@
+[2026-11-13 21:43:37,365][taskiq.worker][INFO   ][MainProcess] Pid of a main process: 3748
+[2026-11-13 21:43:37,365][taskiq.worker][INFO   ][MainProcess] Starting 1 worker processes.
+[2026-11-13 21:43:37,366][taskiq.process-manager][INFO   ][MainProcess] Started process worker-0 with pid 3749 
+[2026-11-13 21:43:37,436][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.
+[2026-11-13 21:43:47,758][taskiq.receiver.receiver][INFO   ][worker-0] Executing task fast with ID: 797c77eb18ce419389680abce65ad342
+[2026-11-13 21:43:47,763][taskiq.receiver.receiver][INFO   ][worker-0] Executing task sleep_async with ID: b9f82abbd5404051a3da53477f1ae65f
+[2026-11-13 21:43:50,330][taskiq.process-manager][INFO   ][MainProcess] Workers are scheduled for shutdown.
+[2026-11-13 21:43:50,469][taskiq.process-manager][INFO   ][MainProcess] Stopped process worker-0 with pid 3749

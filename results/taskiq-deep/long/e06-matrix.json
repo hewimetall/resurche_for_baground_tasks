@@ -1,0 +1,89 @@
+{
+  "experiment": "e06_matrix",
+  "cases": [
+    {
+      "experiment": "e06_long_ownership",
+      "kind": "sleep_async",
+      "idle_ms": 4000,
+      "task_s": 12.0,
+      "status": "pass",
+      "starts_a": 1,
+      "starts_b": 1,
+      "finishes_a": 1,
+      "finishes_b": 0,
+      "overlap_while_a_unfinished": true,
+      "reclaim_delay_s": 10.75279122400002,
+      "idle_ms_min_max_while_sampled": [
+        557,
+        10388
+      ],
+      "ownership_extension_api": false,
+      "evidence_class": "measured",
+      "note": "Traffic keepalive used so XAUTOCLAIM is reachable; quiet-queue gating is covered by e02.",
+      "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/long/20261113T214325Z-e06-long-sleep_async"
+    },
+    {
+      "experiment": "e06_long_ownership",
+      "kind": "sleep_block",
+      "idle_ms": 4000,
+      "task_s": 12.0,
+      "status": "pass",
+      "starts_a": 1,
+      "starts_b": 1,
+      "finishes_a": 1,
+      "finishes_b": 0,
+      "overlap_while_a_unfinished": true,
+      "reclaim_delay_s": 10.757913203000044,
+      "idle_ms_min_max_while_sampled": [
+        554,
+        10390
+      ],
+      "ownership_extension_api": false,
+      "evidence_class": "measured",
+      "note": "Traffic keepalive used so XAUTOCLAIM is reachable; quiet-queue gating is covered by e02.",
+      "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/long/20261113T214352Z-e06-long-sleep_block"
+    },
+    {
+      "experiment": "e06_long_ownership",
+      "kind": "sleep_sync",
+      "idle_ms": 4000,
+      "task_s": 12.0,
+      "status": "pass",
+      "starts_a": 1,
+      "starts_b": 1,
+      "finishes_a": 1,
+      "finishes_b": 0,
+      "overlap_while_a_unfinished": true,
+      "reclaim_delay_s": 10.773286966000114,
+      "idle_ms_min_max_while_sampled": [
+        561,
+        10389
+      ],
+      "ownership_extension_api": false,
+      "evidence_class": "measured",
+      "note": "Traffic keepalive used so XAUTOCLAIM is reachable; quiet-queue gating is covered by e02.",
+      "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/long/20261113T214418Z-e06-long-sleep_sync"
+    },
+    {
+      "experiment": "e06_long_ownership",
+      "kind": "tick",
+      "idle_ms": 4000,
+      "task_s": 12.0,
+      "status": "pass",
+      "starts_a": 1,
+      "starts_b": 1,
+      "finishes_a": 1,
+      "finishes_b": 0,
+      "overlap_while_a_unfinished": true,
+      "reclaim_delay_s": 10.763249029000008,
+      "idle_ms_min_max_while_sampled": [
+        565,
+        10391
+      ],
+      "ownership_extension_api": false,
+      "evidence_class": "measured",
+      "note": "Traffic keepalive used so XAUTOCLAIM is reachable; quiet-queue gating is covered by e02.",
+      "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/long/20261113T214445Z-e06-long-tick"
+    }
+  ]
+}

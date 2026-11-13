@@ -1,0 +1,17 @@
+{
+  "profile": "short_burst",
+  "n": 50,
+  "completed_fast_starts": 50,
+  "wall_s": 0.412,
+  "throughput_per_s": 121.226,
+  "enqueue_to_handler_start_s": {
+    "p50": 0.009129394999945362,
+    "p95": 0.0161255699999856,
+    "p99": 0.016640641999856598,
+    "event_pair": "enqueue.sent_mono → handler_start.start_mono (lag_s)"
+  },
+  "workers": 1,
+  "max_async": 8,
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/performance/20261113T215628Z-e10-short_burst",
+  "evidence_class": "measured"
+}

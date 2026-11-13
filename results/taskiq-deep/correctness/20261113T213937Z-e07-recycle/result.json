@@ -1,0 +1,102 @@
+{
+  "experiment": "e07_recycle",
+  "status": "pass",
+  "enqueued": 12,
+  "finished": 1,
+  "lost_in_window": 11,
+  "final_pending": {
+    "ts_mono": 1111.019459253,
+    "stream": "e07r:25db3429f7",
+    "group": "g-25db3429f7",
+    "xlen": 13,
+    "pending_count": 11,
+    "pending": [
+      {
+        "message_id": "1794605988516-1",
+        "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+        "idle_ms": 39070,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605988517-0",
+        "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+        "idle_ms": 39070,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605988517-1",
+        "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+        "idle_ms": 39070,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605988518-0",
+        "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+        "idle_ms": 39070,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605988518-1",
+        "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+        "idle_ms": 39070,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605988518-2",
+        "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+        "idle_ms": 39070,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605988518-3",
+        "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+        "idle_ms": 39070,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605988518-4",
+        "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+        "idle_ms": 39070,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605988519-0",
+        "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+        "idle_ms": 39070,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605988519-1",
+        "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+        "idle_ms": 39070,
+        "delivery_count": 1
+      },
+      {
+        "message_id": "1794605988519-2",
+        "consumer": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+        "idle_ms": 39070,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "2cc7588b-d4c9-4872-aca3-a72dbaa846b1",
+        "pending": 11,
+        "idle": 39071
+      },
+      {
+        "name": "802c0ba4-b4a7-4b59-9e5f-2c7a65dc64aa",
+        "pending": 0,
+        "idle": 40653
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "max_tasks_per_child": 1,
+  "xread_count": 100,
+  "note": "Not calling unfinished tasks permanently lost; window may end with PEL leftovers until reclaim/traffic.",
+  "evidence_class": "measured",
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/correctness/20261113T213937Z-e07-recycle"
+}

@@ -25,7 +25,7 @@
 | Dramatiq 2.2.1 | Сервис уже на ней, чекпоинт и grace пода устраивают, а дедуп и poison закрываются своим кодом. На стенде второй `send` исполнился, лимита RSS нет, пять SIGKILL оставили job в `running`. |
 | Celery 5.7.0 | Важны короткая пачка и `inspect`. На тех же 80 задачах Celery дал 244/с и p50 17 мс. Handler синхронный, дедупа на send нет. Без переменной адаптер ставит `broker_transport_options.visibility_timeout` 2100. Прогоны kill с 12 и 15 с порог `ZRANGE` не записали. |
 | arq 0.28.0 | Нужны нативный async и отсечение по `_job_id`. Ключ остаётся занятым после успеха. Пакет требует `redis<6`, в один образ с taskiq-redis не встаёт. В kind этот воркер не запускался. |
-| taskiq 0.13.0 | Нужны нативный async и Redis Streams. Дедупа на send нет. `--ack-type when_executed` вызывает `XACK` после возврата handler. Kill во время сна на порту 6396 оставил запись в `XPENDING`: `XACK` 0, `XAUTOCLAIM` 0, второй воркер за 8 с её не забрал. `--max-tasks-per-child` на пачке из 12 доставил 1; где остались остальные 11, этот заход не устанавливал. |
+| taskiq 0.13.0 | Нужны нативный async и Redis Streams. Дедупа на send нет. `--ack-type when_executed` вызывает `XACK` после возврата handler. Kill во время сна на порту 6396 оставил запись в `XPENDING`: `XACK` 0, `XAUTOCLAIM` 0, второй воркер за 8 с её не забрал. `--max-tasks-per-child` на пачке из 12 доставил 1; где остались остальные 11, этот заход не устанавливал. Углублённое исследование только Taskiq: `docs/reference/taskiq-deep.md`, стенд `research/taskiq/`, артефакты `results/taskiq-deep/`. |
 
 ## Что измерялось
 

@@ -1,0 +1,245 @@
+{
+  "experiment": "e08_shutdown",
+  "status": "pass",
+  "cases": [
+    {
+      "case": "idle",
+      "during": "idle",
+      "before": {
+        "ts_mono": 1133.747669984,
+        "stream": "e08:62edecf779",
+        "group": "g-62edecf779",
+        "xlen": 1,
+        "pending_count": 0,
+        "pending": [],
+        "consumers": [
+          {
+            "name": "c7573592-6ef0-404e-b7f7-40c658a054a3",
+            "pending": 0,
+            "idle": 567
+          }
+        ],
+        "lock_exists": false,
+        "lock_ttl_ms": -2,
+        "autoclaim_cursor_hint": null
+      },
+      "after": {
+        "ts_mono": 1134.099596398,
+        "stream": "e08:62edecf779",
+        "group": "g-62edecf779",
+        "xlen": 1,
+        "pending_count": 0,
+        "pending": [],
+        "consumers": [
+          {
+            "name": "c7573592-6ef0-404e-b7f7-40c658a054a3",
+            "pending": 0,
+            "idle": 919
+          }
+        ],
+        "lock_exists": false,
+        "lock_ttl_ms": -2,
+        "autoclaim_cursor_hint": null
+      },
+      "stop": {
+        "sigterm_at": 1133.747686593,
+        "exit_at": 1134.098657603,
+        "code": 0,
+        "killed_after_grace": false,
+        "t_drain_s": 0.351,
+        "already_exited": false,
+        "children_reaped": [
+          {
+            "pid": 3663,
+            "code": 0,
+            "reaped": true
+          }
+        ]
+      },
+      "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/shutdown/20261113T214040Z-e08-idle"
+    },
+    {
+      "case": "during_handler",
+      "during": "handler",
+      "before": {
+        "ts_mono": 1145.359959485,
+        "stream": "e08:99d084fc2e",
+        "group": "g-99d084fc2e",
+        "xlen": 2,
+        "pending_count": 1,
+        "pending": [
+          {
+            "message_id": "1794606063013-0",
+            "consumer": "46d0fa98-8740-461c-886c-182c7961af46",
+            "idle_ms": 59,
+            "delivery_count": 1
+          }
+        ],
+        "consumers": [
+          {
+            "name": "46d0fa98-8740-461c-886c-182c7961af46",
+            "pending": 1,
+            "idle": 60
+          }
+        ],
+        "lock_exists": false,
+        "lock_ttl_ms": -2,
+        "autoclaim_cursor_hint": null
+      },
+      "after": {
+        "ts_mono": 1150.377907705,
+        "stream": "e08:99d084fc2e",
+        "group": "g-99d084fc2e",
+        "xlen": 2,
+        "pending_count": 1,
+        "pending": [
+          {
+            "message_id": "1794606063013-0",
+            "consumer": "46d0fa98-8740-461c-886c-182c7961af46",
+            "idle_ms": 5077,
+            "delivery_count": 1
+          }
+        ],
+        "consumers": [
+          {
+            "name": "46d0fa98-8740-461c-886c-182c7961af46",
+            "pending": 1,
+            "idle": 5078
+          }
+        ],
+        "lock_exists": false,
+        "lock_ttl_ms": -2,
+        "autoclaim_cursor_hint": null
+      },
+      "stop": {
+        "sigterm_at": 1145.359971422,
+        "exit_at": 1150.376605273,
+        "code": -9,
+        "killed_after_grace": true,
+        "t_drain_s": 5.017,
+        "already_exited": false,
+        "children_reaped": [
+          {
+            "pid": 3668,
+            "code": -9,
+            "reaped": true
+          }
+        ]
+      },
+      "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/shutdown/20261113T214051Z-e08-during_handler"
+    },
+    {
+      "case": "with_prefetched",
+      "during": "prefetched",
+      "before": {
+        "ts_mono": 1162.839504644,
+        "stream": "e08:bb407c0b97",
+        "group": "g-bb407c0b97",
+        "xlen": 8,
+        "pending_count": 1,
+        "pending": [
+          {
+            "message_id": "1794606079289-0",
+            "consumer": "6f953c33-207f-4fd8-b2a9-b3bf2ab72bea",
+            "idle_ms": 1263,
+            "delivery_count": 1
+          }
+        ],
+        "consumers": [
+          {
+            "name": "6f953c33-207f-4fd8-b2a9-b3bf2ab72bea",
+            "pending": 1,
+            "idle": 1263
+          }
+        ],
+        "lock_exists": false,
+        "lock_ttl_ms": -2,
+        "autoclaim_cursor_hint": null
+      },
+      "after": {
+        "ts_mono": 1167.855498165,
+        "stream": "e08:bb407c0b97",
+        "group": "g-bb407c0b97",
+        "xlen": 8,
+        "pending_count": 1,
+        "pending": [
+          {
+            "message_id": "1794606079289-0",
+            "consumer": "6f953c33-207f-4fd8-b2a9-b3bf2ab72bea",
+            "idle_ms": 6279,
+            "delivery_count": 1
+          }
+        ],
+        "consumers": [
+          {
+            "name": "6f953c33-207f-4fd8-b2a9-b3bf2ab72bea",
+            "pending": 1,
+            "idle": 6279
+          }
+        ],
+        "lock_exists": false,
+        "lock_ttl_ms": -2,
+        "autoclaim_cursor_hint": null
+      },
+      "stop": {
+        "sigterm_at": 1162.839516806,
+        "exit_at": 1167.854428362,
+        "code": -9,
+        "killed_after_grace": true,
+        "t_drain_s": 5.015,
+        "already_exited": false,
+        "children_reaped": [
+          {
+            "pid": 3675,
+            "code": -9,
+            "reaped": true
+          }
+        ]
+      },
+      "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/shutdown/20261113T214108Z-e08-with_prefetched"
+    },
+    {
+      "case": "early_sigterm",
+      "stop": {
+        "sigterm_at": 1168.058336101,
+        "exit_at": 1168.108552484,
+        "code": -15,
+        "killed_after_grace": false,
+        "t_drain_s": 0.05,
+        "already_exited": false,
+        "children_reaped": [
+          {
+            "pid": 3682,
+            "code": -15,
+            "reaped": true
+          }
+        ]
+      },
+      "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/shutdown/20261113T214125Z-e08-early-sigterm"
+    },
+    {
+      "case": "double_signal",
+      "exit_code": 0,
+      "elapsed_s": 11.001,
+      "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/shutdown/20261113T214125Z-e08-double-signal"
+    }
+  ],
+  "source_notes": {
+    "manager_settings": [
+      "--workers",
+      "reload",
+      "signal handlers on ProcessManager"
+    ],
+    "execution_worker_settings": [
+      "--shutdown-timeout",
+      "--wait-tasks-timeout",
+      "--hardkill-count",
+      "--max-tasks-per-child",
+      "--ack-type",
+      "--max-async-tasks",
+      "--max-prefetch"
+    ],
+    "process_manager": "taskiq/cli/worker/process_manager.py",
+    "receiver_listen": "taskiq/receiver/receiver.py listen/prefetcher"
+  }
+}

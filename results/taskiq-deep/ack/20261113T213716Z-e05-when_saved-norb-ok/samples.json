@@ -1,0 +1,95 @@
+[
+  {
+    "ts_mono": 930.223225983,
+    "stream": "e05whe:3397e85d4f",
+    "group": "g-3397e85d4f",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605847871-0",
+        "consumer": "888bdd89-c9a0-43ff-a30f-f2ba8f981865",
+        "idle_ms": 65,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "888bdd89-c9a0-43ff-a30f-f2ba8f981865",
+        "pending": 1,
+        "idle": 65
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 930.324737247,
+    "stream": "e05whe:3397e85d4f",
+    "group": "g-3397e85d4f",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605847871-0",
+        "consumer": "888bdd89-c9a0-43ff-a30f-f2ba8f981865",
+        "idle_ms": 165,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "888bdd89-c9a0-43ff-a30f-f2ba8f981865",
+        "pending": 1,
+        "idle": 166
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 930.425675444,
+    "stream": "e05whe:3397e85d4f",
+    "group": "g-3397e85d4f",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794605847871-0",
+        "consumer": "888bdd89-c9a0-43ff-a30f-f2ba8f981865",
+        "idle_ms": 267,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "888bdd89-c9a0-43ff-a30f-f2ba8f981865",
+        "pending": 1,
+        "idle": 267
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 930.526376455,
+    "stream": "e05whe:3397e85d4f",
+    "group": "g-3397e85d4f",
+    "xlen": 2,
+    "pending_count": 0,
+    "pending": [],
+    "consumers": [
+      {
+        "name": "888bdd89-c9a0-43ff-a30f-f2ba8f981865",
+        "pending": 0,
+        "idle": 368
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  }
+]

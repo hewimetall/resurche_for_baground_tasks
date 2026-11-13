@@ -1,0 +1,17 @@
+{
+  "profile": "mixed",
+  "n": 40,
+  "completed_fast_starts": 32,
+  "wall_s": 16.909,
+  "throughput_per_s": 1.893,
+  "enqueue_to_handler_start_s": {
+    "p50": 0.0010233989996777382,
+    "p95": 0.0013852909996785456,
+    "p99": 0.0027214669999011676,
+    "event_pair": "enqueue.sent_mono → handler_start.start_mono (lag_s)"
+  },
+  "workers": 1,
+  "max_async": 4,
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/performance/20261113T215653Z-e10-mixed",
+  "evidence_class": "measured"
+}
