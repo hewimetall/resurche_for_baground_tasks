@@ -1,0 +1,296 @@
+{
+  "lib": "dramatiq",
+  "redis": "redis://127.0.0.1:6391/0",
+  "heartbeat_s": null,
+  "idle_before_send_s": 9.225,
+  "enqueue_error": null,
+  "pickup_ms": 557,
+  "wall_after_send_s": 0.565,
+  "idle_processes": [
+    {
+      "pid": 51918,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/dramatiq bench.dramatiq_app --queues bench --processes 1 --threads 1 --worker-shutdown-timeout 3000",
+      "threads": [
+        {
+          "tid": 51918,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "do_poll.constprop.0"
+        },
+        {
+          "tid": 51926,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "do_poll.constprop.0"
+        }
+      ],
+      "voluntary_ctxt_switches": "15",
+      "nonvoluntary_ctxt_switches": "2",
+      "Threads": "2",
+      "switch_rate": {
+        "window_s": 0.4,
+        "voluntary": 1,
+        "nonvoluntary": 0,
+        "per_s": 2.5
+      },
+      "pyspy": "Process 51918: /workspace/.venv/bin/python3 /workspace/.venv/bin/dramatiq bench.dramatiq_app --queues bench --processes 1 --threads 1 --worker-shutdown-timeout 3000\nPython v3.12.3 (/usr/bin/python3.12)\n\nThread 51918 (idle): \"MainThread\"\n    _PollLikeSelector.select (selectors.py:415)\n    wait (multiprocessing/connection.py:1136)\n    Popen.wait (multiprocessing/popen_fork.py:40)\n    BaseProcess.join (multiprocessing/process.py:149)\n    main (dramatiq/cli.py:677)\n    <module> (dramatiq:6)\nThread 51926 (idle): \"Thread-1 (watch_logs)\"\n    _PollLikeSelector.select (selectors.py:415)\n    wait (multiprocessing/connection.py:1136)\n    watch_logs (dramatiq/cli.py:387)\n    Thread.run (threading.py:1010)\n    Thread._bootstrap_inner (threading.py:1073)\n    Thread._bootstrap (threading.py:1030)\n"
+    },
+    {
+      "pid": 51919,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/dramatiq bench.dramatiq_app --queues bench --processes 1 --threads 1 --worker-shutdown-timeout 3000",
+      "threads": [
+        {
+          "tid": 51919,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "hrtimer_nanosleep"
+        },
+        {
+          "tid": 51920,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "hrtimer_nanosleep"
+        },
+        {
+          "tid": 51921,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        },
+        {
+          "tid": 51922,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "hrtimer_nanosleep"
+        },
+        {
+          "tid": 51923,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "hrtimer_nanosleep"
+        },
+        {
+          "tid": 51924,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        }
+      ],
+      "voluntary_ctxt_switches": "28",
+      "nonvoluntary_ctxt_switches": "6",
+      "Threads": "6",
+      "switch_rate": {
+        "window_s": 0.4,
+        "voluntary": 0,
+        "nonvoluntary": 0,
+        "per_s": 0.0
+      },
+      "pyspy": "Process 51919: /workspace/.venv/bin/python3 /workspace/.venv/bin/dramatiq bench.dramatiq_app --queues bench --processes 1 --threads 1 --worker-shutdown-timeout 3000\nPython v3.12.3 (/usr/bin/python3.12)\n\nThread 51919 (idle): \"MainThread\"\n    worker_process (dramatiq/cli.py:476)\n    BaseProcess.run (multiprocessing/process.py:108)\n    BaseProcess._bootstrap (multiprocessing/process.py:314)\n    Popen._launch (multiprocessing/popen_fork.py:71)\n    Popen.__init__ (multiprocessing/popen_fork.py:19)\n    ForkProcess._Popen (multiprocessing/context.py:282)\n    Process._Popen (multiprocessing/context.py:224)\n    BaseProcess.start (multiprocessing/process.py:121)\n    main (dramatiq/cli.py:577)\n    <module> (dramatiq:6)\nThread 51920 (idle): \"Thread-1\"\n    _CtypesTimeoutManager.run (dramatiq/middleware/time_limit.py:131)\n    Thread._bootstrap_inner (threading.py:1073)\n    Thread._bootstrap (threading.py:1030)\nThread 51921 (idle): \"Thread-2\"\n    EpollSelector.select (selectors.py:468)\n    BaseEventLoop._run_once (asyncio/base_events.py:1949)\n    BaseEventLoop.run_forever (asyncio/base_events.py:641)\n    EventLoopThread.run (dramatiq/asyncio.py:90)\n    Thread._bootstrap_inner (threading.py:1073)\n    Thread._bootstrap (threading.py:1030)\nThread 51922 (idle): \"Thread-3\"\n    _RedisConsumer.__next__ (dramatiq/brokers/redis.py:370)\n    ConsumerThread.run (dramatiq/worker.py:314)\n    Thread._bootstrap_inner (threading.py:1073)\n    Thread._bootstrap (threading.py:1030)\nThread 51923 (idle): \"Thread-4\"\n    _RedisConsumer.__next__ (dramatiq/brokers/redis.py:370)\n    ConsumerThread.run (dramatiq/worker.py:314)\n    Thread._bootstrap_inner (threading.py:1073)\n    Thread._bootstrap (threading.py:1030)\nThread 51924 (idle): \"Thread-5\"\n    Condition.wait (threading.py:359)\n    Queue.get (queue.py:180)\n    WorkerThread.run (dramatiq/worker.py:534)\n    Thread._bootstrap_inner (threading.py:1073)\n    Thread._bootstrap (threading.py:1030)\n"
+    },
+    {
+      "pid": 51925,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/dramatiq bench.dramatiq_app --queues bench --processes 1 --threads 1 --worker-shutdown-timeout 3000",
+      "threads": [
+        {
+          "tid": 51925,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "do_poll.constprop.0"
+        }
+      ],
+      "voluntary_ctxt_switches": "18",
+      "nonvoluntary_ctxt_switches": "0",
+      "Threads": "1",
+      "switch_rate": {
+        "window_s": 0.4,
+        "voluntary": 0,
+        "nonvoluntary": 0,
+        "per_s": 0.0
+      },
+      "pyspy": "Process 51925: /workspace/.venv/bin/python3 /workspace/.venv/bin/dramatiq bench.dramatiq_app --queues bench --processes 1 --threads 1 --worker-shutdown-timeout 3000\nPython v3.12.3 (/usr/bin/python3.12)\n\nThread 51925 (idle): \"MainThread\"\n    _PollLikeSelector.select (selectors.py:415)\n    BaseServer.serve_forever (socketserver.py:235)\n    _run_exposition_server (dramatiq/middleware/prometheus.py:203)\n    fork_process (dramatiq/cli.py:521)\n    BaseProcess.run (multiprocessing/process.py:108)\n    BaseProcess._bootstrap (multiprocessing/process.py:314)\n    Popen._launch (multiprocessing/popen_fork.py:71)\n    Popen.__init__ (multiprocessing/popen_fork.py:19)\n    ForkProcess._Popen (multiprocessing/context.py:282)\n    Process._Popen (multiprocessing/context.py:224)\n    BaseProcess.start (multiprocessing/process.py:121)\n    main (dramatiq/cli.py:600)\n    <module> (dramatiq:6)\n"
+    }
+  ],
+  "waiting_processes": [
+    {
+      "pid": 51918,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/dramatiq bench.dramatiq_app --queues bench --processes 1 --threads 1 --worker-shutdown-timeout 3000",
+      "threads": [
+        {
+          "tid": 51918,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "do_poll.constprop.0"
+        },
+        {
+          "tid": 51926,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "do_poll.constprop.0"
+        }
+      ],
+      "voluntary_ctxt_switches": "17",
+      "nonvoluntary_ctxt_switches": "2",
+      "Threads": "2"
+    },
+    {
+      "pid": 51919,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/dramatiq bench.dramatiq_app --queues bench --processes 1 --threads 1 --worker-shutdown-timeout 3000",
+      "threads": [
+        {
+          "tid": 51919,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "hrtimer_nanosleep"
+        },
+        {
+          "tid": 51920,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "hrtimer_nanosleep"
+        },
+        {
+          "tid": 51921,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        },
+        {
+          "tid": 51922,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "hrtimer_nanosleep"
+        },
+        {
+          "tid": 51923,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "hrtimer_nanosleep"
+        },
+        {
+          "tid": 51924,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        }
+      ],
+      "voluntary_ctxt_switches": "29",
+      "nonvoluntary_ctxt_switches": "6",
+      "Threads": "6"
+    },
+    {
+      "pid": 51925,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/dramatiq bench.dramatiq_app --queues bench --processes 1 --threads 1 --worker-shutdown-timeout 3000",
+      "threads": [
+        {
+          "tid": 51925,
+          "comm": "dramatiq",
+          "state": "S (sleeping)",
+          "wchan": "do_poll.constprop.0"
+        }
+      ],
+      "voluntary_ctxt_switches": "20",
+      "nonvoluntary_ctxt_switches": "0",
+      "Threads": "1"
+    }
+  ],
+  "monitor": {
+    "command_counts": {
+      "HELLO\"": 3,
+      "EVALSHA\"": 73,
+      "SCRIPT\"": 2,
+      "ZADD\"": 69,
+      "LPOP\"": 68,
+      "HSET\"": 1,
+      "RPUSH\"": 1,
+      "SADD\"": 1,
+      "HMGET\"": 1,
+      "SREM\"": 1,
+      "HDEL\"": 1
+    },
+    "idle_sample": [
+      "1794556790.091414 [0 127.0.0.1:43582] \"HELLO\" \"3\"",
+      "1794556790.091841 [0 127.0.0.1:43582] \"EVALSHA\" \"63a257ff9edcee2888529b5d51c86f83444f91e4\" \"0\"",
+      "1794556790.092011 [0 127.0.0.1:43582] \"SCRIPT\" \"LOAD\" \"-- This file is a part of Dramatiq.\\n--\\n-- Copyright (C) 2020 CLEARTYPE SRL <bogdan@cleartype.io>\\n--\\n-- Dramatiq is free software; you can redistribute it and/or modify it\\n-- under ",
+      "1794556790.092236 [0 127.0.0.1:43582] \"EVALSHA\" \"63a257ff9edcee2888529b5d51c86f83444f91e4\" \"0\"",
+      "1794556790.093136 [0 127.0.0.1:43582] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556790088\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556790.094076 [0 127.0.0.1:43582] \"SCRIPT\" \"LOAD\" \"-- This file is a part of Dramatiq.\\n--\\n-- Copyright (C) 2017,2018,2019,2020 CLEARTYPE SRL <bogdan@cleartype.io>\\n--\\n-- Dramatiq is free software; you can redistribute it and/or modif",
+      "1794556790.094368 [0 127.0.0.1:43598] \"HELLO\" \"3\"",
+      "1794556790.094461 [0 127.0.0.1:43582] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556790088\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556790.094491 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556790088\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556790.094508 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556790.094765 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556790089\" \"bench.DQ\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"1000\"",
+      "1794556790.094786 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556790089\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556790.094795 [0 lua] \"lpop\" \"dramatiq:bench.DQ\"",
+      "1794556790.099911 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556790099\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556790.099933 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556790099\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556790.099941 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556790.104094 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556790103\" \"bench.DQ\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"1000\"",
+      "1794556790.104124 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556790103\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556790.104132 [0 lua] \"lpop\" \"dramatiq:bench.DQ\"",
+      "1794556790.114503 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556790114\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556790.114525 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556790114\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556790.114533 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556790.118579 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556790118\" \"bench.DQ\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"1000\"",
+      "1794556790.118602 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556790118\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556790.118609 [0 lua] \"lpop\" \"dramatiq:bench.DQ\"",
+      "1794556790.139081 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556790138\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556790.139103 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556790138\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556790.139111 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556790.153050 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556790152\" \"bench.DQ\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"1000\"",
+      "1794556790.153072 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556790152\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556790.153080 [0 lua] \"lpop\" \"dramatiq:bench.DQ\"",
+      "1794556790.196579 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556790196\" \"bench.DQ\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"1000\"",
+      "1794556790.196605 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556790196\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556790.196613 [0 lua] \"lpop\" \"dramatiq:bench.DQ\"",
+      "1794556790.208702 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556790208\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556790.208725 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556790208\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556790.208732 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556790.339239 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556790338\" \"bench.DQ\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"1000\"",
+      "1794556790.339265 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556790338\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556790.339274 [0 lua] \"lpop\" \"dramatiq:bench.DQ\""
+    ],
+    "after_send_sample": [
+      "1794556799.289251 [0 127.0.0.1:49368] \"HELLO\" \"3\"",
+      "1794556799.290302 [0 127.0.0.1:49368] \"EVALSHA\" \"63a257ff9edcee2888529b5d51c86f83444f91e4\" \"0\"",
+      "1794556799.291098 [0 127.0.0.1:49368] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"enqueue\" \"1794556799287\" \"bench\" \"1a67fd77-9be9-4f3d-a243-0a06fd247015\" \"60000\" \"604800000\" \"0\" \"3996\" \"171daa2b-33a3-493c-a211-4b6fb",
+      "1794556799.291165 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556799287\" \"1a67fd77-9be9-4f3d-a243-0a06fd247015\"",
+      "1794556799.291178 [0 lua] \"hset\" \"dramatiq:bench.msgs\" \"171daa2b-33a3-493c-a211-4b6fb02866eb\" \"{\\\"queue_name\\\":\\\"bench\\\",\\\"actor_name\\\":\\\"fast\\\",\\\"args\\\":[],\\\"kwargs\\\":{\\\"job_id\\\":\\\"trace-dramatiq\\\",\\\"n\\\":1,\\\"sent_ms\\\":1794556799118},\\\"opti",
+      "1794556799.291196 [0 lua] \"rpush\" \"dramatiq:bench\" \"171daa2b-33a3-493c-a211-4b6fb02866eb\"",
+      "1794556799.651256 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556799650\" \"bench.DQ\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"1000\"",
+      "1794556799.651300 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556799650\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556799.651313 [0 lua] \"lpop\" \"dramatiq:bench.DQ\"",
+      "1794556799.673513 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556799673\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556799.673540 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556799673\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556799.673563 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556799.673575 [0 lua] \"sadd\" \"dramatiq:__acks__.89b7ab2c-bad5-41ad-8a25-4bc638d69b69.bench\" \"171daa2b-33a3-493c-a211-4b6fb02866eb\"",
+      "1794556799.673581 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556799.673590 [0 lua] \"hmget\" \"dramatiq:bench.msgs\" \"171daa2b-33a3-493c-a211-4b6fb02866eb\"",
+      "1794556799.674364 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556799674\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"1\"",
+      "1794556799.674387 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556799674\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556799.674395 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556799.676166 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"ack\" \"1794556799676\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"171daa2b-33a3-493c-a211-4b6fb0286",
+      "1794556799.676189 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556799676\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556799.676201 [0 lua] \"srem\" \"dramatiq:__acks__.89b7ab2c-bad5-41ad-8a25-4bc638d69b69.bench\" \"171daa2b-33a3-493c-a211-4b6fb02866eb\"",
+      "1794556799.676209 [0 lua] \"hdel\" \"dramatiq:bench.msgs\" \"171daa2b-33a3-493c-a211-4b6fb02866eb\"",
+      "1794556799.684240 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556799684\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556799.684263 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556799684\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556799.684271 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556799.695769 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556799695\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556799.695791 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556799695\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556799.695799 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556799.722274 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556799721\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556799.722297 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556799721\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556799.722305 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556799.765945 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556799765\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556799.765968 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556799765\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556799.765976 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556799.885620 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556799885\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556799.885646 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556799885\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556799.885656 [0 lua] \"lpop\" \"dramatiq:bench\"",
+      "1794556800.047165 [0 127.0.0.1:43598] \"EVALSHA\" \"fdacc359c79a5adc3b8eeb53ff5772d7c42144e3\" \"1\" \"dramatiq\" \"fetch\" \"1794556800047\" \"bench\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\" \"60000\" \"604800000\" \"0\" \"3996\" \"2\"",
+      "1794556800.047196 [0 lua] \"zadd\" \"dramatiq:__heartbeats__\" \"1794556800047\" \"89b7ab2c-bad5-41ad-8a25-4bc638d69b69\"",
+      "1794556800.047207 [0 lua] \"lpop\" \"dramatiq:bench\""
+    ]
+  },
+  "worker_log_tail": "[2026-11-13 07:59:50,092] [PID 51918] [MainThread] [dramatiq.MainProcess] [INFO] Dramatiq '2.2.1' is booting up.\n[2026-11-13 07:59:50,087] [PID 51919] [Thread-2] [dramatiq.middleware.asyncio.AsyncIO] [INFO] Starting event loop...\n[2026-11-13 07:59:50,088] [PID 51919] [MainThread] [dramatiq.middleware.asyncio.AsyncIO] [INFO] Event loop is running.\n[2026-11-13 07:59:50,090] [PID 51919] [MainThread] [dramatiq.WorkerProcess(0)] [INFO] Worker process is ready for action.\n[2026-11-13 07:59:50,103] [PID 51925] [MainThread] [dramatiq.ForkProcess(0)] [INFO] Fork process 'dramatiq.middleware.prometheus:_run_exposition_server' is ready for action.\n[2026-11-13 07:59:59,684] [PID 51925] [MainThread] [dramatiq.ForkProcess(0)] [INFO] Stopping fork process...\n[2026-11-13 07:59:59,684] [PID 51918] [MainThread] [dramatiq.MainProcess] [INFO] Sending signal 'SIGTERM' to subprocesses...\n[2026-11-13 07:59:59,684] [PID 51919] [MainThread] [dramatiq.WorkerProcess(0)] [INFO] Stopping worker process...\n[2026-11-13 07:59:59,684] [PID 51919] [MainThread] [dramatiq.WorkerProcess(0)] [WARNING] Killing worker process...\n"
+}

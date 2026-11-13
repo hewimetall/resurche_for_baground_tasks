@@ -40,7 +40,14 @@
 | `docs/bench.md` | Короткая пачка: throughput, задержка, RSS |
 | `docs/extensibility.md` | Сколько дописывать и риск лицензии |
 | `docs/migration.md` | Переход с Dramatiq и обратный путь |
-| `results/` | JSON прогонов, включая `results/kind/rollout.json` |
+| `docs/index.md` | Как пустой воркер узнаёт о задаче: Diátaxis, трейсы, Dramatiq 1.18 |
+| `results/` | JSON прогонов, включая `results/kind/rollout.json` и `results/traces/` |
+
+## Как воркер ждёт задачу
+
+Подписки на очередь у simple-q нет. Пустой воркер спит до следующего heartbeat: при 5 с один замер дал 2484 мс, потому что сообщение ушло на 2.8 с жизни процесса. Celery в том же трейсе стоит в `BRPOP` с таймаутом 1 с (230 мс). Dramatiq делает `LPOP` и `time.sleep`; потолок сна на воркере — `worker_timeout` 1000 мс, не 5000 мс из сигнатуры `consume`. После 16 с простоя Dramatiq 1.18.0 и 2.2.1 оба уложились в 132–776 мс, оба через `LPOP`.
+
+Страницы фактов и причин: `docs/index.md`. Сборка: `sphinx-build -b html docs docs/_build/html`. Трейс: `scripts/wait_trace.py`. Сравнение 1.18: `scripts/dramatiq_118_gap.py`.
 
 Код стенда: `bench/core.py` и адаптеры `bench/simpleq_app.py`, `bench/dramatiq_app.py`, `bench/celery_app.py`, `bench/arq_app.py`, `bench/taskiq_app.py`. Образ kind — `deploy/kind/`.
 

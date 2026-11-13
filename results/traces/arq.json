@@ -1,0 +1,146 @@
+{
+  "lib": "arq",
+  "redis": "redis://127.0.0.1:6391/0",
+  "heartbeat_s": null,
+  "idle_before_send_s": 2.409,
+  "enqueue_error": null,
+  "pickup_ms": 261,
+  "wall_after_send_s": 0.515,
+  "idle_processes": [
+    {
+      "pid": 52635,
+      "cmdline": "/workspace/.venv-arq/bin/python3 /workspace/.venv-arq/bin/arq bench.arq_app.WorkerSettings",
+      "threads": [
+        {
+          "tid": 52635,
+          "comm": "arq",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        }
+      ],
+      "voluntary_ctxt_switches": "20",
+      "nonvoluntary_ctxt_switches": "3",
+      "Threads": "1",
+      "switch_rate": {
+        "window_s": 0.4,
+        "voluntary": 3,
+        "nonvoluntary": 0,
+        "per_s": 7.5
+      },
+      "pyspy": "Process 52635: /workspace/.venv-arq/bin/python3 /workspace/.venv-arq/bin/arq bench.arq_app.WorkerSettings\nPython v3.12.3 (/usr/bin/python3.12)\n\nThread 52635 (idle): \"MainThread\"\n    EpollSelector.select (selectors.py:468)\n    BaseEventLoop._run_once (asyncio/base_events.py:1949)\n    BaseEventLoop.run_forever (asyncio/base_events.py:641)\n    BaseEventLoop.run_until_complete (asyncio/base_events.py:674)\n    Worker.run (arq/worker.py:313)\n    run_worker (arq/worker.py:899)\n    cli (arq/cli.py:54)\n    Context.invoke (click/core.py:911)\n    Command.invoke (click/core.py:1414)\n    Command.main (click/core.py:1560)\n    Command.__call__ (click/core.py:1653)\n    <module> (arq:6)\n"
+    }
+  ],
+  "waiting_processes": [
+    {
+      "pid": 52635,
+      "cmdline": "/workspace/.venv-arq/bin/python3 /workspace/.venv-arq/bin/arq bench.arq_app.WorkerSettings",
+      "threads": [
+        {
+          "tid": 52635,
+          "comm": "arq",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        }
+      ],
+      "voluntary_ctxt_switches": "31",
+      "nonvoluntary_ctxt_switches": "3",
+      "Threads": "1"
+    }
+  ],
+  "monitor": {
+    "command_counts": {
+      "PING": 2,
+      "INFO\"": 3,
+      "DBSIZE": 1,
+      "ZRANGEBYSCORE\"": 6,
+      "MULTI": 11,
+      "ZRANGE\"": 7,
+      "ZREMRANGEBYSCORE\"": 7,
+      "EXEC": 11,
+      "ZCARD\"": 1,
+      "PSETEX\"": 3,
+      "WATCH\"": 2,
+      "EXISTS\"": 2,
+      "ZADD\"": 1,
+      "ZSCORE\"": 1,
+      "GET\"": 1,
+      "INCRBY\"": 1,
+      "EXPIRE\"": 1,
+      "ZREM\"": 3,
+      "SET\"": 1,
+      "DEL\"": 2
+    },
+    "idle_sample": [
+      "1794556950.656429 [0 127.0.0.1:36138] \"PING\"",
+      "1794556950.656962 [0 127.0.0.1:36138] \"INFO\" \"Server\"",
+      "1794556950.656988 [0 127.0.0.1:36138] \"INFO\" \"Memory\"",
+      "1794556950.656992 [0 127.0.0.1:36138] \"INFO\" \"Clients\"",
+      "1794556950.656997 [0 127.0.0.1:36138] \"DBSIZE\"",
+      "1794556950.691941 [0 127.0.0.1:36138] \"ZRANGEBYSCORE\" \"arq:queue\" \"-inf\" \"1794556950692\" \"LIMIT\" \"0\" \"100\"",
+      "1794556950.692400 [0 127.0.0.1:36138] \"MULTI\"",
+      "1794556950.692412 [0 127.0.0.1:36138] \"ZRANGE\" \"arq:abort\" \"0\" \"-1\"",
+      "1794556950.692429 [0 127.0.0.1:36138] \"ZREMRANGEBYSCORE\" \"arq:abort\" \"1794556950752\" \"inf\"",
+      "1794556950.692432 [0 127.0.0.1:36138] \"EXEC\"",
+      "1794556950.692844 [0 127.0.0.1:36138] \"ZCARD\" \"arq:queue\"",
+      "1794556950.693490 [0 127.0.0.1:36138] \"PSETEX\" \"arq:queue:health-check\" \"6000\" \"Nov-13 08:02:30 j_complete=0 j_failed=0 j_retried=0 j_ongoing=0 queued=0\"",
+      "1794556951.193122 [0 127.0.0.1:36138] \"ZRANGEBYSCORE\" \"arq:queue\" \"-inf\" \"1794556951193\" \"LIMIT\" \"0\" \"100\"",
+      "1794556951.193800 [0 127.0.0.1:36138] \"MULTI\"",
+      "1794556951.193816 [0 127.0.0.1:36138] \"ZRANGE\" \"arq:abort\" \"0\" \"-1\"",
+      "1794556951.193829 [0 127.0.0.1:36138] \"ZREMRANGEBYSCORE\" \"arq:abort\" \"1794556951254\" \"inf\"",
+      "1794556951.193832 [0 127.0.0.1:36138] \"EXEC\"",
+      "1794556951.694189 [0 127.0.0.1:36138] \"ZRANGEBYSCORE\" \"arq:queue\" \"-inf\" \"1794556951694\" \"LIMIT\" \"0\" \"100\"",
+      "1794556951.694857 [0 127.0.0.1:36138] \"MULTI\"",
+      "1794556951.694869 [0 127.0.0.1:36138] \"ZRANGE\" \"arq:abort\" \"0\" \"-1\"",
+      "1794556951.694873 [0 127.0.0.1:36138] \"ZREMRANGEBYSCORE\" \"arq:abort\" \"1794556951755\" \"inf\"",
+      "1794556951.694875 [0 127.0.0.1:36138] \"EXEC\"",
+      "1794556952.194929 [0 127.0.0.1:36138] \"ZRANGEBYSCORE\" \"arq:queue\" \"-inf\" \"1794556952195\" \"LIMIT\" \"0\" \"100\"",
+      "1794556952.195163 [0 127.0.0.1:36138] \"MULTI\"",
+      "1794556952.195170 [0 127.0.0.1:36138] \"ZRANGE\" \"arq:abort\" \"0\" \"-1\"",
+      "1794556952.195173 [0 127.0.0.1:36138] \"ZREMRANGEBYSCORE\" \"arq:abort\" \"1794556952255\" \"inf\"",
+      "1794556952.195181 [0 127.0.0.1:36138] \"EXEC\"",
+      "1794556952.696246 [0 127.0.0.1:36138] \"ZRANGEBYSCORE\" \"arq:queue\" \"-inf\" \"1794556952696\" \"LIMIT\" \"0\" \"100\"",
+      "1794556952.696523 [0 127.0.0.1:36138] \"MULTI\"",
+      "1794556952.696538 [0 127.0.0.1:36138] \"ZRANGE\" \"arq:abort\" \"0\" \"-1\"",
+      "1794556952.696542 [0 127.0.0.1:36138] \"ZREMRANGEBYSCORE\" \"arq:abort\" \"1794556952756\" \"inf\"",
+      "1794556952.696545 [0 127.0.0.1:36138] \"EXEC\""
+    ],
+    "after_send_sample": [
+      "1794556953.066910 [0 127.0.0.1:36148] \"PING\"",
+      "1794556953.067113 [0 127.0.0.1:36148] \"WATCH\" \"arq:job:6d66ae4394614094930cf6ad8fc4d59a\"",
+      "1794556953.067276 [0 127.0.0.1:36148] \"EXISTS\" \"arq:job:6d66ae4394614094930cf6ad8fc4d59a\" \"arq:result:6d66ae4394614094930cf6ad8fc4d59a\"",
+      "1794556953.067424 [0 127.0.0.1:36148] \"MULTI\"",
+      "1794556953.067436 [0 127.0.0.1:36148] \"PSETEX\" \"arq:job:6d66ae4394614094930cf6ad8fc4d59a\" \"86400000\" \"\\x80\\x04\\x95D\\x00\\x00\\x00\\x00\\x00\\x00\\x00}\\x94(\\x8c\\x01t\\x94N\\x8c\\x01f\\x94\\x8c\\x04fast\\x94\\x8c\\x01a\\x94\\x8c\\ttrace-arq\\x94K\\x01\\x8a\\x06k\\x",
+      "1794556953.067454 [0 127.0.0.1:36148] \"ZADD\" \"arq:queue\" \"1794556953067\" \"6d66ae4394614094930cf6ad8fc4d59a\"",
+      "1794556953.067458 [0 127.0.0.1:36148] \"EXEC\"",
+      "1794556953.197660 [0 127.0.0.1:36138] \"ZRANGEBYSCORE\" \"arq:queue\" \"-inf\" \"1794556953197\" \"LIMIT\" \"0\" \"100\"",
+      "1794556953.198106 [0 127.0.0.1:36138] \"WATCH\" \"arq:in-progress:6d66ae4394614094930cf6ad8fc4d59a\"",
+      "1794556953.198200 [0 127.0.0.1:36138] \"EXISTS\" \"arq:in-progress:6d66ae4394614094930cf6ad8fc4d59a\"",
+      "1794556953.198266 [0 127.0.0.1:36138] \"ZSCORE\" \"arq:queue\" \"6d66ae4394614094930cf6ad8fc4d59a\"",
+      "1794556953.198530 [0 127.0.0.1:36138] \"MULTI\"",
+      "1794556953.198568 [0 127.0.0.1:36138] \"PSETEX\" \"arq:in-progress:6d66ae4394614094930cf6ad8fc4d59a\" \"310000\" \"1\"",
+      "1794556953.198575 [0 127.0.0.1:36138] \"EXEC\"",
+      "1794556953.199023 [0 127.0.0.1:36138] \"MULTI\"",
+      "1794556953.199031 [0 127.0.0.1:36138] \"ZRANGE\" \"arq:abort\" \"0\" \"-1\"",
+      "1794556953.199038 [0 127.0.0.1:36138] \"ZREMRANGEBYSCORE\" \"arq:abort\" \"1794556953259\" \"inf\"",
+      "1794556953.199048 [0 127.0.0.1:36138] \"EXEC\"",
+      "1794556953.199702 [0 127.0.0.1:36162] \"MULTI\"",
+      "1794556953.199718 [0 127.0.0.1:36162] \"GET\" \"arq:job:6d66ae4394614094930cf6ad8fc4d59a\"",
+      "1794556953.199732 [0 127.0.0.1:36162] \"INCRBY\" \"arq:retry:6d66ae4394614094930cf6ad8fc4d59a\" \"1\"",
+      "1794556953.199792 [0 127.0.0.1:36162] \"EXPIRE\" \"arq:retry:6d66ae4394614094930cf6ad8fc4d59a\" \"88400\"",
+      "1794556953.199797 [0 127.0.0.1:36162] \"ZREM\" \"arq:abort\" \"6d66ae4394614094930cf6ad8fc4d59a\"",
+      "1794556953.199803 [0 127.0.0.1:36162] \"EXEC\"",
+      "1794556953.200643 [0 127.0.0.1:36162] \"MULTI\"",
+      "1794556953.200659 [0 127.0.0.1:36162] \"SET\" \"arq:result:6d66ae4394614094930cf6ad8fc4d59a\" \"\\x80\\x04\\x95\\xa1\\x00\\x00\\x00\\x00\\x00\\x00\\x00}\\x94(\\x8c\\x01t\\x94K\\x01\\x8c\\x01f\\x94\\x8c\\x04fast\\x94\\x8c\\x01a\\x94\\x8c\\ttrace-arq\\x94K\\x01\\x8a\\x06k\\x01\\x",
+      "1794556953.200688 [0 127.0.0.1:36162] \"ZREM\" \"arq:abort\" \"6d66ae4394614094930cf6ad8fc4d59a\"",
+      "1794556953.200707 [0 127.0.0.1:36162] \"ZREM\" \"arq:queue\" \"6d66ae4394614094930cf6ad8fc4d59a\"",
+      "1794556953.200711 [0 127.0.0.1:36162] \"DEL\" \"arq:in-progress:6d66ae4394614094930cf6ad8fc4d59a\" \"arq:retry:6d66ae4394614094930cf6ad8fc4d59a\" \"arq:job:6d66ae4394614094930cf6ad8fc4d59a\"",
+      "1794556953.200718 [0 127.0.0.1:36162] \"EXEC\"",
+      "1794556953.698062 [0 127.0.0.1:36162] \"MULTI\"",
+      "1794556953.698080 [0 127.0.0.1:36162] \"ZRANGE\" \"arq:abort\" \"0\" \"-1\"",
+      "1794556953.698085 [0 127.0.0.1:36162] \"ZREMRANGEBYSCORE\" \"arq:abort\" \"1794556953758\" \"inf\"",
+      "1794556953.698088 [0 127.0.0.1:36162] \"EXEC\"",
+      "1794556953.755786 [0 127.0.0.1:36162] \"DEL\" \"arq:queue:health-check\""
+    ]
+  },
+  "worker_log_tail": "08:02:30: Starting worker for 10 functions: probe, item, fanout, chain, longjob, boom, limitjob, snooze, blocker, fast\n08:02:30: redis_version=7.0.15 mem_usage=2.28M clients_connected=2 db_keys=0\n08:02:33:   0.13s → 6d66ae4394614094930cf6ad8fc4d59a:fast('trace-arq', 1, 1794556952939)\n08:02:33:   0.00s ← 6d66ae4394614094930cf6ad8fc4d59a:fast ● \n08:02:33: Setting allow_pick_jobs to `False`\n08:02:33: shutdown on SIGTERM ◆ 1 jobs complete ◆ 0 failed ◆ 0 retries ◆ 1 to be completed\n08:02:33: shutdown on SIGTERM, wait complete ◆ 1 jobs complete ◆ 0 failed ◆ 0 retries ◆ 0 ongoing to cancel\n"
+}

@@ -1,0 +1,36 @@
+ 
+ -------------- celery@cursor v5.7.0 (collider)
+--- ***** ----- 
+-- ******* ---- Linux-6.12.113+-x86_64-with-glibc2.39 2026-11-13 08:00:08
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         bench:0x7fa30695ee70
+- ** ---------- .> transport:   redis://:**@127.0.0.1:6391/0
+- ** ---------- .> results:     redis://127.0.0.1:6391/0
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> bench            exchange=bench(direct) key=bench
+                
+
+[tasks]
+  . blocker
+  . boom
+  . chain
+  . fanout
+  . fast
+  . grouped
+  . item
+  . limitjob
+  . longjob
+  . probe
+  . rated
+  . snooze
+
+[2026-11-13 08:00:08,058: INFO/MainProcess] Connected to redis://:**@127.0.0.1:6391/0
+[2026-11-13 08:00:08,068: INFO/MainProcess] celery@cursor ready.
+[2026-11-13 08:00:10,741: INFO/MainProcess] Task fast[37ef883b-9c06-45cd-867e-2650013f678f] received
+[2026-11-13 08:00:10,747: INFO/ForkPoolWorker-1] Task fast[37ef883b-9c06-45cd-867e-2650013f678f] succeeded in 0.0048892189988691825s: None
+
+worker: Warm shutdown (MainProcess)
