@@ -1,0 +1,67 @@
+{
+  "run_id": "lr-20261113T111730Z-arq-A0_wire-short",
+  "scenario_id": "A0_wire",
+  "class": "short",
+  "library": "arq",
+  "versions": {
+    "arq": "0.28.0",
+    "redis": "5.3.1"
+  },
+  "source_commit": "5901d111256bcee1b0c7c97c2f34864cea0054a4",
+  "planned_s": 3.0,
+  "steps": 3,
+  "step_s": 1.0,
+  "kind": "sleep",
+  "time_limit_s": 3000,
+  "max_retries": 0,
+  "workers": 1,
+  "fault": null,
+  "counts_as_2400": false,
+  "redis_port": 6410,
+  "redis_dir": "/workspace/results/long/redis-6410",
+  "effect_port": 6411,
+  "clock": {
+    "realtime": 1794568650.0186427,
+    "monotonic": 20170.364742931,
+    "offset_realtime_minus_mono": 1794548479.6538997
+  },
+  "resource_limits": "no cgroup and no RLIMIT_AS on the control worker; host is shared with kind",
+  "effective": {
+    "error": "Traceback (most recent call last):\n  File \"<string>\", line 26, in <module>\nAttributeError: 'Function' object has no attribute 'timeout'. Did you mean: 'timeout_s'?\n"
+  },
+  "status": "short_control",
+  "handler_starts": 1,
+  "handler_finishes": 1,
+  "progress_events": 3,
+  "span_s": 3.06562718,
+  "stop": {
+    "signal": "SIGKILL",
+    "reason": "sigterm_grace_exceeded"
+  },
+  "files_before_manifest": {
+    "effects.jsonl": {
+      "bytes": 795,
+      "sha256": "b9da55601c55af71e1e88873bf64b41adb3c94799cd3b543884625c53293fbb0"
+    },
+    "enqueue.json": {
+      "bytes": 140,
+      "sha256": "82c0a1436b63921d0a05b465fd841b9db73fc635198eb72714b2b7d9a8213ded"
+    },
+    "events.jsonl": {
+      "bytes": 5596,
+      "sha256": "5b7178dc1075ab116a6c1f9fe549a6d8b4ae57d4acea2d57f358b7d7f676b076"
+    },
+    "manifest.json": {
+      "bytes": 992,
+      "sha256": "1afe70ccdc41ef3950358b8a8ba4ae55cf6d1949e254e7dae0c1d664539a56a0"
+    },
+    "samples.jsonl": {
+      "bytes": 2648,
+      "sha256": "ca1b6cee12cf85dbcc18c3de4468a94e8f752d848b90a7219f18f44efed56617"
+    },
+    "worker.log": {
+      "bytes": 752,
+      "sha256": "7e47756377cd365a4083b1d8f898ed22205807e8ddcc728a232aec680eecf7c6"
+    }
+  }
+}

@@ -199,6 +199,21 @@ async def limitjob(job_id: str) -> None:
     await asyncio.sleep(30)
 
 
+@simple_q.actor(
+    name="hold",
+    queue="bench",
+    max_retries=int(os.environ.get("LONGRUN_MAX_RETRIES", "0")),
+    min_backoff=500,
+    max_backoff=2_000,
+    time_limit=int(os.environ.get("LONGRUN_TIME_LIMIT_S", "3000")) * 1000,
+    max_deliveries=int(os.environ.get("LONGRUN_MAX_DELIVERIES", "8")),
+)
+async def hold(job_id: str, steps: int, step_s: float, kind: str = "sleep") -> None:
+    from bench.longrun.workload import hold as run_hold
+
+    await run_hold(job_id, int(steps), float(step_s), kind)
+
+
 async def on_dead(letter: DeadLetter) -> None:
     job_id = letter.kwargs.get("job_id")
     if not job_id:
@@ -230,7 +245,7 @@ def _trace_header(actor_name: str, kwargs: dict, headers: dict) -> dict:
 def create_app() -> App:
     return App(
         client=client(),
-        actors=[probe, item, fanout, chain, longjob, poisonjob, boom, snooze, blocker, fast, limitjob],
+        actors=[probe, item, fanout, chain, longjob, poisonjob, boom, snooze, blocker, fast, limitjob, hold],
         on_start=[core.open_deps],
         on_stop=[core.close_deps],
         on_dead=[on_dead],
@@ -250,6 +265,7 @@ ACTORS = {
     "blocker": blocker,
     "fast": fast,
     "limitjob": limitjob,
+    "hold": hold,
 }
 
 

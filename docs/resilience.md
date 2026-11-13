@@ -31,10 +31,10 @@ simple-q: 12 элементов, pid сменились (5 значений), п
 | Библиотека | Попытки в JSON | Вывод по этому окну |
 | --- | --- | --- |
 | simple-q | `block-start` deliveries 1, затем deliveries 2 через ~10.2 с от kill | повтор есть, растёт `deliveries`, не `retries` |
-| Dramatiq | одна `block-start` | за окно сценария повтор не записан |
+| Dramatiq | одна `block-start` | повтор не записан. Heartbeat сценария 8 с, `maintenance_chance` остался 1000 |
 | Celery | одна `block-start` | за окно сценария повтор не записан |
 | arq | см. `results/arq/sigkill.json`: процессный stop после kill вышел с кодом 0, gap пустой | отдельного счётчика доставок нет |
-| taskiq | одна `block-start` | при `--ack-type when_executed` подтверждение уходит в момент старта |
+| taskiq | одна `block-start` | `when_executed` шлёт `XACK` после возврата handler. Это окно не показывает, осталась запись pending или была подтверждена |
 
 Пять SIGKILL подряд — в `docs/rollout.md`. Итог short: poison с хуком только у simple-q.
 
@@ -72,7 +72,7 @@ taskiq `limit`: `TimeoutError`, статус `failed`. Пять kill: четыр
 
 simple-q `block_lease`: одна доставка, есть `block-end`, повторной выдачи нет. `blocking` 4 с: start и end на `deliveries=1`.
 
-Dramatiq, Celery, arq, taskiq: блокировка 4 с завершилась одной парой start/end. Заданное окно в этих прогонах было длиннее 4 с: Celery переменная 8, arq timeout 34 с, taskiq idle 8 с. Задача длиннее этого окна на стенде не запускалась, поэтому повтор живой задачи у Celery не измерен. В kombu такой повтор делает `restore_visible`, когда score выдачи старше `channel.visibility_timeout`. У arq тот же развилка через TTL in-progress, у taskiq через `idle_timeout`. У simple-q heartbeat пишет супервизор, и измеренный 20-секундный `time.sleep` это подтвердил.
+Dramatiq, Celery, arq, taskiq: блокировка 4 с завершилась одной парой start/end. Заданное окно в этих прогонах было длиннее 4 с: Celery переменная 8, arq timeout 34 с, taskiq idle 8 с. Задача длиннее этого окна на стенде не запускалась, поэтому повтор живой задачи у Celery не измерен. В kombu такой повтор делает `restore_visible`, когда score выдачи старше `channel.visibility_timeout`. У arq та же развилка через TTL in-progress. У taskiq `idle_timeout` задаёт `min_idle_time` для `XAUTOCLAIM`, а пустой `XREADGROUP` до этого вызова не доходит. У simple-q heartbeat пишет супервизор, и измеренный 20-секундный `time.sleep` это подтвердил.
 
 12 минут asyncio и 12 минут `time.sleep` не запускались.
 

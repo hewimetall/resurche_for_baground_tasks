@@ -42,3 +42,15 @@
 `MONITOR`: десятки `LPOP` внутри `EVAL`. `BRPOP`, `BLPOP`, `SUBSCRIBE` у этого воркера нет. `RPUSH` появляется после send.
 
 Переключений контекста у процесса воркера за окно 0.4 с в этом снимке: 0. Окно попало в сон.
+
+## Heartbeat и maintenance
+
+Это две разные проверки. `DEFAULT_HEARTBEAT_TIMEOUT` в `dramatiq/brokers/redis.py` — 60000 мс. `DEFAULT_MAINTENANCE_CHANCE` — 1000. Розыгрыш идёт до `MAINTENANCE_SCALE` 1_000_000, то есть по умолчанию 1000 команд из миллиона. `ack` и `nack` в `MAINTENANCE_COMMAND_BLACKLIST` и maintenance не запускают.
+
+`bench/dramatiq_app.py` передаёт `heartbeat_timeout=DRAMATIQ_HEARTBEAT_MS` и не передаёт `maintenance_chance`. Без переменной heartbeat остаётся 60000, шанс остаётся 1000. `sigkill`, `five_kills` и `prefetch` ставят `DRAMATIQ_HEARTBEAT_MS=8000`. Kind ставит 15000. Шанс в этих командах не меняется.
+
+Каждый `dispatch` сначала делает `ZADD` heartbeat. Перекладка чужих сообщений в `dramatiq/brokers/redis/dispatch.lua` выполняется только при `do_maintenance == "1"`: `ZRANGEBYSCORE` по `dramatiq:__heartbeats__` до `timestamp - heartbeat_timeout`, затем `SMEMBERS` ключа `__acks__.<id>.<queue>` и `RPUSH` id обратно в очередь. Команда Lua `requeue` — другой путь: её вызывает живой воркер на остановке, возраст heartbeat она не смотрит.
+
+В `results/traces/dramatiq-2.2.1-idle.monitor.txt` все 56 `fetch` несут heartbeat `60000` и `do_maintenance` `0`.
+
+Один диагностический прогон на `127.0.0.1:6397`: `heartbeat_timeout=8000`, `maintenance_chance=1_000_000`. Это контроль, не настройка стенда. Задача спала 30 с. После SIGKILL score убитого воркера `4b9277f7-ec65-4abf-8c66-ff82fb76dc88` застыл на `1794567751880`. 33 maintenance-обхода имели cutoff ниже этого score и сообщение не двигали. Следующий `fetch` по очереди `diag` пришёл со штампом `1794567760341`, cutoff `1794567752341` (на 461 мс позже застывшего score). В том же скрипте: `SMEMBERS` ack-ключа, `HEXISTS`, `RPUSH dramatiq:diag`, `DEL` ack-ключа, `ZREM` heartbeat, `LPOP` уже новым воркером. `RPUSH` через 8.460 с после SIGKILL. Новый актор стартовал через 1.1 мс после `RPUSH`. Команды `requeue` в мониторе не было. Числа — `results/traces/dramatiq-maintenance.json`. Сырой `MONITOR` в репозиторий не положен. Серии с шансом 1000 этот прогон не заменяет: он показывает, что перекладка срабатывает на первом обходе после истечения heartbeat, когда обход вынужден на каждом `fetch`.

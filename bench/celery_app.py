@@ -167,6 +167,22 @@ def limitjob(job_id: str) -> None:
     time.sleep(30)
 
 
+_HOLD_OPTS = {
+    "name": "hold",
+    "max_retries": int(os.environ.get("LONGRUN_MAX_RETRIES", "0")),
+    "time_limit": int(os.environ.get("LONGRUN_TIME_LIMIT_S", "3000")),
+}
+if os.environ.get("LONGRUN_SOFT_LIMIT_S"):
+    _HOLD_OPTS["soft_time_limit"] = int(os.environ["LONGRUN_SOFT_LIMIT_S"])
+
+
+@app.task(**_HOLD_OPTS)
+def hold(job_id: str, steps: int, step_s: float, kind: str = "sleep") -> None:
+    from bench.longrun.workload import hold as run_hold
+
+    _run(run_hold(job_id, int(steps), float(step_s), kind))
+
+
 @app.task(name="snooze", max_retries=0, time_limit=600)
 def snooze(job_id: str, n: int, seconds: float) -> None:
     who, _meta = _who()
@@ -232,6 +248,7 @@ def enqueue(op: str, payload: dict) -> dict:
         "blocker": blocker,
         "fast": fast,
         "limitjob": limitjob,
+        "hold": hold,
     }[op]
     task = named
     message = task.apply_async(kwargs=kwargs, countdown=countdown, queue="bench")

@@ -48,7 +48,7 @@ Dramatiq на этом прогоне не уложился в grace и полу
 | simple-q | 12 | 137 | 13.755 | да, +14.6 с от SIGKILL, `deliveries=2`, `retries=0` |
 | Dramatiq | 12 | 137 | 13.236 | нет |
 | Celery | 12 | 137 | 13.409 | нет. В поде стоял `CELERY_VISIBILITY_TIMEOUT=30` |
-| taskiq | 12 | 137 | 13.067 | нет. Воркер запущен с `--ack-type when_executed`: сообщение подтверждается в момент старта |
+| taskiq | 12 | 137 | 13.067 | нет. `when_executed` подтверждает после возврата handler. Повтор за 75 с не записан. Что запись осталась pending, kind не смотрел |
 
 Пик памяти узла в этих секундах — до 932 МиБ при потолке 3 ГиБ. Два пода (старый и новый) помещались. `rollout status` без чекпоинта ждал grace и становился зелёным сразу после SIGKILL, потому что новый под к этому моменту уже был Ready.
 
@@ -68,9 +68,9 @@ Dramatiq на этом прогоне не уложился в grace и полу
 Чекпоинт между шагами уводит сообщение в retry, и старый под выходит за секунды, не дожидаясь grace. Без чекпоинта под живёт до `terminationGracePeriodSeconds`, затем kubelet шлёт SIGKILL. Дальше срок возврата задачи — окно владения брокера:
 
 - simple-q: heartbeat × пропущенные heartbeat после смерти процесса, и каждая такая смерть увеличивает `deliveries`;
-- Dramatiq: heartbeat воркера, а фактическая перекладка сообщения зависит от maintenance брокера (на kind за 75 с её не случилось);
+- Dramatiq: `heartbeat_timeout` решает, какой score считать мёртвым. Перекладку делает maintenance, на стенде `maintenance_chance` 1000 из 1_000_000. На kind за 75 с второго старта не было. Один прогон со шансом 1_000_000 вернул сообщение через 8.460 с, см. `docs/reference/dramatiq.md`;
 - Celery: один `visibility_timeout` от момента выдачи. В kind переменная была 30. Дубль живой задачи длиннее этого срока стенд не измерял. В `sigkill` и `five_kills` порог `ZRANGE` не записан, см. `docs/reference/celery.md`;
 - arq: TTL in-progress от `job_timeout`, та же развилка;
-- taskiq: `idle_timeout` для `XAUTOCLAIM`. С `--ack-type when_executed` kill после старта задачу не возвращает.
+- taskiq: `when_executed` делает `XACK` после возврата handler. За 75 с второго старта не было. Пустой `XREADGROUP` до `XAUTOCLAIM` не доходит. На порту 6396 запись после kill осталась в `XPENDING`, `XACK` был 0;
 
 Prefetch. На процессах simple-q вернул недовыполненные элементы за 0.26 с после SIGTERM, потерь 0 (`results/simpleq/prefetch.json`). Dramatiq потерял 2 элемента из пачки, Celery 1, taskiq 6. Это короткая шкала, не нагрузка на 1000 элементов.

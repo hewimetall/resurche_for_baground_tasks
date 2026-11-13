@@ -68,6 +68,12 @@ async def longjob(ctx, job_id: str, steps: int, step_s: float) -> None:
         raise Retry(defer=1)
 
 
+async def hold(ctx, job_id: str, steps: int, step_s: float, kind: str = "sleep") -> None:
+    from bench.longrun.workload import hold as run_hold
+
+    await run_hold(job_id, int(steps), float(step_s), kind, message_id=str(ctx.get("job_id")))
+
+
 async def boom(ctx, job_id: str) -> None:
     await core.note_attempt(job_id, 0, _who(ctx), "boom " + _meta(ctx))
     tries = int(ctx.get("job_try") or 1)
@@ -103,6 +109,8 @@ def _seconds(name: str, default: int) -> int:
     return int(os.environ.get(name, str(default)))
 
 
+_HOLD_TIMEOUT = _seconds("LONGRUN_TIME_LIMIT_S", 3000)
+_HOLD_TRIES = int(os.environ.get("LONGRUN_MAX_RETRIES", "0")) + 1
 _JOB_TIMEOUT = _seconds("ARQ_JOB_TIMEOUT", 300)
 _LONG_TIMEOUT = _seconds("ARQ_LONG_TIMEOUT", _JOB_TIMEOUT)
 _BLOCK_TIMEOUT = _seconds("ARQ_BLOCK_TIMEOUT", _JOB_TIMEOUT)
@@ -127,6 +135,7 @@ class WorkerSettings:
         func(fanout, name="fanout", timeout=120, max_tries=3),
         func(chain, name="chain", timeout=120, max_tries=4),
         func(longjob, name="longjob", timeout=_LONG_TIMEOUT, max_tries=20),
+        func(hold, name="hold", timeout=_HOLD_TIMEOUT, max_tries=_HOLD_TRIES),
         func(boom, name="boom", timeout=30, max_tries=3),
         func(limitjob, name="limitjob", timeout=2, max_tries=2),
         func(snooze, name="snooze", timeout=_JOB_TIMEOUT, max_tries=1),
@@ -202,6 +211,7 @@ def _args(op: str, kwargs: dict) -> tuple:
         "fanout": ("job_id", "n"),
         "chain": ("job_id", "step", "total"),
         "longjob": ("job_id", "steps", "step_s"),
+        "hold": ("job_id", "steps", "step_s", "kind"),
         "poisonjob": ("job_id", "steps", "step_s"),
         "boom": ("job_id",),
         "snooze": ("job_id", "n", "seconds"),

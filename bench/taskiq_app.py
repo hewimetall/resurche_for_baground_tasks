@@ -106,6 +106,21 @@ async def limitjob(job_id: str) -> None:
     await asyncio.sleep(30)
 
 
+_HOLD_RETRIES = int(os.environ.get("LONGRUN_MAX_RETRIES", "0"))
+
+
+@broker.task(
+    task_name="hold",
+    retry_on_error=_HOLD_RETRIES > 0,
+    max_retries=max(_HOLD_RETRIES, 1),
+    timeout=int(os.environ.get("LONGRUN_TIME_LIMIT_S", "3000")),
+)
+async def hold(job_id: str, steps: int, step_s: float, kind: str = "sleep") -> None:
+    from bench.longrun.workload import hold as run_hold
+
+    await run_hold(job_id, int(steps), float(step_s), kind)
+
+
 @broker.task(task_name="snooze", retry_on_error=False, max_retries=1, timeout=600)
 async def snooze(job_id: str, n: int, seconds: float) -> None:
     await core.note_attempt(job_id, int(n), _who(), "snooze-start")
@@ -139,6 +154,7 @@ TASKS = {
     "blocker": blocker,
     "fast": fast,
     "limitjob": limitjob,
+    "hold": hold,
 }
 
 

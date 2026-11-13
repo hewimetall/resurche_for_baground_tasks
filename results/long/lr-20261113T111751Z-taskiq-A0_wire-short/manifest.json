@@ -1,0 +1,86 @@
+{
+  "run_id": "lr-20261113T111751Z-taskiq-A0_wire-short",
+  "scenario_id": "A0_wire",
+  "class": "short",
+  "library": "taskiq",
+  "versions": {
+    "dramatiq": "2.2.1",
+    "celery": "5.7.0",
+    "kombu": "5.7.0",
+    "taskiq": "0.13.0",
+    "taskiq-redis": "1.2.4",
+    "redis": "8.1.0"
+  },
+  "source_commit": "5901d111256bcee1b0c7c97c2f34864cea0054a4",
+  "planned_s": 3.0,
+  "steps": 3,
+  "step_s": 1.0,
+  "kind": "sleep",
+  "time_limit_s": 3000,
+  "max_retries": 0,
+  "workers": 1,
+  "fault": null,
+  "counts_as_2400": false,
+  "redis_port": 6410,
+  "redis_dir": "/workspace/results/long/redis-6410",
+  "effect_port": 6411,
+  "clock": {
+    "realtime": 1794568671.1018682,
+    "monotonic": 20191.447967128,
+    "offset_realtime_minus_mono": 1794548479.653901
+  },
+  "resource_limits": "no cgroup and no RLIMIT_AS on the control worker; host is shared with kind",
+  "effective": {
+    "env": {
+      "LONGRUN_EFFECT_URL": "http://127.0.0.1:6411",
+      "LONGRUN_EVENTS": "/workspace/results/long/lr-20261113T111751Z-taskiq-A0_wire-short/events.jsonl",
+      "LONGRUN_LIB": "taskiq",
+      "LONGRUN_LIBRARY": "taskiq",
+      "LONGRUN_MAX_RETRIES": "0",
+      "LONGRUN_RUN_ID": "lr-20261113T111751Z-taskiq-A0_wire-short",
+      "LONGRUN_SCENARIO": "A0_wire",
+      "LONGRUN_TIME_LIMIT_S": "3000"
+    },
+    "idle_timeout_ms": 600000,
+    "labels": {
+      "retry_on_error": false,
+      "max_retries": 1,
+      "timeout": 3000
+    }
+  },
+  "status": "short_control",
+  "handler_starts": 1,
+  "handler_finishes": 1,
+  "progress_events": 3,
+  "span_s": 3.064411335,
+  "stop": {
+    "signal": "SIGKILL",
+    "reason": "sigterm_grace_exceeded"
+  },
+  "files_before_manifest": {
+    "effects.jsonl": {
+      "bytes": 804,
+      "sha256": "8f227eef34237b91186cd02f63a778324f482ed6b3aebb042c279c9102951519"
+    },
+    "enqueue.json": {
+      "bytes": 141,
+      "sha256": "611055e8b8ea64d9ec9c0ca1fd50805b3a12f2429766fe27736582945640b3cd"
+    },
+    "events.jsonl": {
+      "bytes": 5389,
+      "sha256": "aa9386c9f3e9d2b320d073a093068fe7e76b0dc3b8a625edf412e688a2282c9a"
+    },
+    "manifest.json": {
+      "bytes": 1464,
+      "sha256": "9a08da7a5cd87b1984348eba77ab72f3d7b3972e4c464ef011640fe0b7f0186a"
+    },
+    "samples.jsonl": {
+      "bytes": 4817,
+      "sha256": "b8c498fcebc4fbbdb4459e479e6499a77155cbc02366d4abef88bc4c74f54490"
+    },
+    "worker.log": {
+      "bytes": 1378,
+      "sha256": "1faba7a9bcee1e544ddde93863316ab69b2ad6fb097e4ceea140f96011567ce2"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "run": "maintenance-chance-forced",
+  "port": 6397,
+  "dramatiq": "2.2.1",
+  "heartbeat_timeout_ms": 8000,
+  "maintenance_chance": 1000000,
+  "note": "diagnostic control, not the bench default of 1000 per 1000000",
+  "raw_monitor_saved": false,
+  "message_id": "c283a11e-f5b2-467f-829f-7873ef16915c",
+  "killed_worker_id": "4b9277f7-ec65-4abf-8c66-ff82fb76dc88",
+  "frozen_heartbeat_score": 1794567751880,
+  "replacement_worker_id": "3644136a-6431-47f6-8185-a77a51b4f308",
+  "scans_before_cutoff": 33,
+  "requeue_fetch_timestamp": 1794567760341,
+  "requeue_cutoff": 1794567752341,
+  "cutoff_past_frozen_ms": 461,
+  "rpush_after_sigkill_s": 8.46,
+  "actor_restart_after_rpush_ms": 1.1,
+  "restart_pid": 67191,
+  "requeue_command_seen": false,
+  "default_chance_series": false
+}

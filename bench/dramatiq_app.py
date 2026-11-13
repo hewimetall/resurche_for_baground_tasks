@@ -105,6 +105,17 @@ async def limitjob(job_id: str) -> None:
     await asyncio.sleep(30)
 
 
+@dramatiq.actor(
+    queue_name="bench",
+    max_retries=int(os.environ.get("LONGRUN_MAX_RETRIES", "0")),
+    time_limit=int(os.environ.get("LONGRUN_TIME_LIMIT_S", "3000")) * 1000,
+)
+async def hold(job_id: str, steps: int, step_s: float, kind: str = "sleep") -> None:
+    from bench.longrun.workload import hold as run_hold
+
+    await run_hold(job_id, int(steps), float(step_s), kind)
+
+
 @dramatiq.actor(queue_name="bench", max_retries=0, time_limit=600_000)
 async def snooze(job_id: str, n: int, seconds: float) -> None:
     await core.note_attempt(job_id, int(n), _who(), "snooze-start")
@@ -165,6 +176,7 @@ OPS = {
     "blocker": blocker,
     "fast": fast,
     "limitjob": limitjob,
+    "hold": hold,
 }
 
 

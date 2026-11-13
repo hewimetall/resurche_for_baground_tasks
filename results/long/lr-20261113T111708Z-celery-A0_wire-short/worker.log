@@ -1,0 +1,40 @@
+ 
+ -------------- celery@cursor v5.7.0 (collider)
+--- ***** ----- 
+-- ******* ---- Linux-6.12.113+-x86_64-with-glibc2.39 2026-11-13 11:17:09
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         bench:0x7f860ef697c0
+- ** ---------- .> transport:   redis://:**@127.0.0.1:6410/0
+- ** ---------- .> results:     redis://127.0.0.1:6410/0
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> bench            exchange=bench(direct) key=bench
+                
+
+[tasks]
+  . blocker
+  . boom
+  . chain
+  . fanout
+  . fast
+  . grouped
+  . hold
+  . item
+  . limitjob
+  . longjob
+  . probe
+  . rated
+  . snooze
+
+[2026-11-13 11:17:09,425: INFO/MainProcess] Connected to redis://:**@127.0.0.1:6410/0
+[2026-11-13 11:17:09,433: INFO/MainProcess] celery@cursor ready.
+[2026-11-13 11:17:11,337: INFO/MainProcess] Task hold[8848190d-5f3b-4157-b3ba-45902889d924] received
+[2026-11-13 11:17:12,400: INFO/ForkPoolWorker-1] HTTP Request: POST http://127.0.0.1:6411/effect "HTTP/1.0 200 OK"
+[2026-11-13 11:17:13,418: INFO/ForkPoolWorker-1] HTTP Request: POST http://127.0.0.1:6411/effect "HTTP/1.0 200 OK"
+[2026-11-13 11:17:14,434: INFO/ForkPoolWorker-1] HTTP Request: POST http://127.0.0.1:6411/effect "HTTP/1.0 200 OK"
+[2026-11-13 11:17:14,437: INFO/ForkPoolWorker-1] Task hold[8848190d-5f3b-4157-b3ba-45902889d924] succeeded in 3.0991746920008154s: None
+
+worker: Warm shutdown (MainProcess)
