@@ -69,7 +69,7 @@ Dramatiq на этом прогоне не уложился в grace и полу
 
 - simple-q: heartbeat × пропущенные heartbeat после смерти процесса, и каждая такая смерть увеличивает `deliveries`;
 - Dramatiq: heartbeat воркера, а фактическая перекладка сообщения зависит от maintenance брокера (на kind за 75 с её не случилось);
-- Celery: `visibility_timeout` от момента выдачи. Короткий timeout при живой длинной задаче даёт второе исполнение. Длинный timeout после kill заставляет ждать почти всю длительность задачи;
+- Celery: один `visibility_timeout` от момента выдачи. В kind переменная была 30. Дубль живой задачи длиннее этого срока стенд не измерял. В `sigkill` и `five_kills` порог `ZRANGE` не записан, см. `docs/reference/celery.md`;
 - arq: TTL in-progress от `job_timeout`, та же развилка;
 - taskiq: `idle_timeout` для `XAUTOCLAIM`. С `--ack-type when_executed` kill после старта задачу не возвращает.
 

@@ -26,7 +26,7 @@ simple-q: 12 элементов, pid сменились (5 значений), п
 
 ## 4. SIGKILL посреди задачи
 
-Окно задавалось окружением (simple-q heartbeat 5 с × 2, Dramatiq 8 с, Celery visibility 12 с, taskiq idle 8 с).
+Сценарий просил окно окружением: simple-q heartbeat 5 с × 2, Dramatiq 8 с, Celery `CELERY_VISIBILITY_TIMEOUT` 12, taskiq idle 8 с. Для Celery JSON не содержит границы `ZRANGE` по `unacked_index`, а сценарий короче периода restore около 100 с. Какое число реально сравнивалось со score, см. `docs/reference/celery.md`.
 
 | Библиотека | Попытки в JSON | Вывод по этому окну |
 | --- | --- | --- |
@@ -72,7 +72,7 @@ taskiq `limit`: `TimeoutError`, статус `failed`. Пять kill: четыр
 
 simple-q `block_lease`: одна доставка, есть `block-end`, повторной выдачи нет. `blocking` 4 с: start и end на `deliveries=1`.
 
-Dramatiq, Celery, arq, taskiq: блокировка 4 с завершилась одной парой start/end. Окно владения в этих прогонах было длиннее 4 с (у arq timeout 34 с, у taskiq idle 8 с). Задача длиннее окна на стенде не запускалась. По коду брокера такая задача будет выдана повторно, пока первый исполнитель ещё работает: Celery `visibility_timeout`, arq TTL in-progress, taskiq `idle_timeout`. У simple-q heartbeat пишет супервизор, и измеренный 20-секундный `time.sleep` это подтвердил.
+Dramatiq, Celery, arq, taskiq: блокировка 4 с завершилась одной парой start/end. Заданное окно в этих прогонах было длиннее 4 с: Celery переменная 8, arq timeout 34 с, taskiq idle 8 с. Задача длиннее этого окна на стенде не запускалась, поэтому повтор живой задачи у Celery не измерен. В kombu такой повтор делает `restore_visible`, когда score выдачи старше `channel.visibility_timeout`. У arq тот же развилка через TTL in-progress, у taskiq через `idle_timeout`. У simple-q heartbeat пишет супервизор, и измеренный 20-секундный `time.sleep` это подтвердил.
 
 12 минут asyncio и 12 минут `time.sleep` не запускались.
 
