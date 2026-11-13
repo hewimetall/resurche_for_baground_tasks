@@ -1,0 +1,54 @@
+{
+  "run_id": "st-20261113T202915Z-celery-burst-5000",
+  "class": "stress",
+  "counts_as_2400": false,
+  "scenario_id": "S_burst_fast",
+  "library": "celery",
+  "count": 5000,
+  "slots": 8,
+  "command": [
+    "/workspace/.venv/bin/celery",
+    "-A",
+    "bench.celery_app",
+    "worker",
+    "-Q",
+    "bench",
+    "-c",
+    "8",
+    "--loglevel",
+    "info",
+    "--without-gossip",
+    "--without-mingle"
+  ],
+  "versions": {
+    "simple-q-runtime": "1.0.0rc7",
+    "simple-q-worker": "1.0.0rc7",
+    "dramatiq": "2.2.1",
+    "celery": "5.7.0",
+    "kombu": "5.7.0",
+    "taskiq": "0.13.0",
+    "taskiq-redis": "1.2.4",
+    "redis": "8.1.0"
+  },
+  "status": "passed",
+  "done_lines": 5000,
+  "unique_n": 5000,
+  "duplicate_lines": 0,
+  "enqueue": {
+    "code": 0,
+    "seconds": 2.846,
+    "stdout": "{\"accepted\": 5000, \"rejected\": 0, \"seconds\": 2.614, \"sample_ids\": [\"c1f4b006-9250-4674-8544-1a6d9c9519d4\", \"df6c9afb-a484-4f29-9da9-07d5fa775ca5\", \"4a179927-2923-44ff-8b9a-847e9b937c13\"], \"native_dedup\": false}\n",
+    "stderr": ""
+  },
+  "span_s": 4.089,
+  "throughput_per_s": 1222.79,
+  "latency_ms": {
+    "p50": 842,
+    "p95": 1400,
+    "max": 1476
+  },
+  "worker_exit_during_run": null,
+  "redis_port": 6412,
+  "redis_dir": "/workspace/results/long/stress-redis-6412",
+  "resource_limits": "no cgroup; host is shared"
+}

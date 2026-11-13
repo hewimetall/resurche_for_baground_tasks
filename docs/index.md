@@ -45,6 +45,7 @@ reference/taskiq
 reference/dramatiq-1.18
 reference/long-semantics
 reference/long-control
+reference/stress-burst
 reference/skills
 ```
 

@@ -1,0 +1,323 @@
+{
+  "class": "stress",
+  "counts_as_2400": false,
+  "bench_commit_at_run": "c81f29f",
+  "scenario_id": "S_burst_fast",
+  "redis_port": 6412,
+  "note": "fast_record appends one latency line. No HTTP and no Postgres write. Not a 2400-second control.",
+  "runs": [
+    {
+      "run_id": "st-20261113T202833Z-simpleq-burst-30",
+      "library": "simpleq",
+      "class": "stress",
+      "counts_as_2400": false,
+      "status": "passed",
+      "count": 30,
+      "done_lines": 30,
+      "unique_n": 30,
+      "duplicate_lines": 0,
+      "missing_n": 0,
+      "extra_n": [],
+      "span_s": 0.224,
+      "throughput_per_s": 133.93,
+      "latency_ms": {
+        "p50": 211,
+        "p95": 215,
+        "max": 216
+      },
+      "enqueue_s": 0.13,
+      "enqueue_window_ms": 9,
+      "complete_window_ms": 16,
+      "command": [
+        "/workspace/.venv-sq120/bin/agent-worker",
+        "worker",
+        "--app",
+        "bench.simpleq_app:create_app",
+        "--factory",
+        "--queues",
+        "bench",
+        "--processes",
+        "2",
+        "--concurrency",
+        "4",
+        "--max-tasks-per-process",
+        "20000"
+      ],
+      "versions": {
+        "simple-q-runtime": "1.2.0",
+        "simple-q-worker": "1.2.0",
+        "redis": "8.1.0"
+      },
+      "max_rss_kb": 158252,
+      "last_broker_sample": "0",
+      "worker_exit_during_run": null,
+      "sha256_latency": "6f5baf2500b6612f005a0d815a214479a4d787905807831589b32f3060f15939",
+      "sha256_manifest": "f5dc2812e32534c1aeef6d25b37826ad97b3d548aae8f94d020d67ce0429b888",
+      "log_counts": {
+        "lines": 42,
+        "deliveries_1": 30,
+        "deliveries_other": 0
+      }
+    },
+    {
+      "run_id": "st-20261113T202843Z-simpleq-burst-5000",
+      "library": "simpleq",
+      "class": "stress",
+      "counts_as_2400": false,
+      "status": "passed",
+      "count": 5000,
+      "done_lines": 5000,
+      "unique_n": 5000,
+      "duplicate_lines": 0,
+      "missing_n": 0,
+      "extra_n": [],
+      "span_s": 1.931,
+      "throughput_per_s": 2589.33,
+      "latency_ms": {
+        "p50": 622,
+        "p95": 788,
+        "max": 796
+      },
+      "enqueue_s": 1.259,
+      "enqueue_window_ms": 1141,
+      "complete_window_ms": 1752,
+      "command": [
+        "/workspace/.venv-sq120/bin/agent-worker",
+        "worker",
+        "--app",
+        "bench.simpleq_app:create_app",
+        "--factory",
+        "--queues",
+        "bench",
+        "--processes",
+        "2",
+        "--concurrency",
+        "4",
+        "--max-tasks-per-process",
+        "20000"
+      ],
+      "versions": {
+        "simple-q-runtime": "1.2.0",
+        "simple-q-worker": "1.2.0",
+        "redis": "8.1.0"
+      },
+      "max_rss_kb": 159588,
+      "last_broker_sample": "0",
+      "worker_exit_during_run": null,
+      "sha256_latency": "ccea1ea3c93d8ad9a60efcc6317905d4d21330171377fedc4c22debacecd6cbe",
+      "sha256_manifest": "30dd4985db031db003339bf29293190a74628753cc703081d4351dd2a775e761",
+      "log_counts": {
+        "lines": 5012,
+        "deliveries_1": 5000,
+        "deliveries_other": 0
+      }
+    },
+    {
+      "run_id": "st-20261113T202849Z-dramatiq-burst-5000",
+      "library": "dramatiq",
+      "class": "stress",
+      "counts_as_2400": false,
+      "status": "passed",
+      "count": 5000,
+      "done_lines": 5000,
+      "unique_n": 5000,
+      "duplicate_lines": 0,
+      "missing_n": 0,
+      "extra_n": [],
+      "span_s": 2.446,
+      "throughput_per_s": 2044.15,
+      "latency_ms": {
+        "p50": 934,
+        "p95": 1700,
+        "max": 1784
+      },
+      "enqueue_s": 0.896,
+      "enqueue_window_ms": 662,
+      "complete_window_ms": 2375,
+      "command": [
+        "/workspace/.venv/bin/dramatiq",
+        "bench.dramatiq_app",
+        "--queues",
+        "bench",
+        "--processes",
+        "2",
+        "--threads",
+        "4",
+        "--worker-shutdown-timeout",
+        "60000"
+      ],
+      "versions": {
+        "simple-q-runtime": "1.0.0rc7",
+        "simple-q-worker": "1.0.0rc7",
+        "dramatiq": "2.2.1",
+        "celery": "5.7.0",
+        "kombu": "5.7.0",
+        "taskiq": "0.13.0",
+        "taskiq-redis": "1.2.4",
+        "redis": "8.1.0"
+      },
+      "max_rss_kb": 132688,
+      "last_broker_sample": "0",
+      "worker_exit_during_run": null,
+      "sha256_latency": "59988f1e96b12de0728cf7bbab6868217a2e00c9f36616169f03d9d858ab66bf",
+      "sha256_manifest": "b2b432453408d3462f6b36d226ced70eaae8da283bd5f414360b5e6f662029da",
+      "log_counts": {
+        "lines": 15
+      }
+    },
+    {
+      "run_id": "st-20261113T202915Z-celery-burst-5000",
+      "library": "celery",
+      "class": "stress",
+      "counts_as_2400": false,
+      "status": "passed",
+      "count": 5000,
+      "done_lines": 5000,
+      "unique_n": 5000,
+      "duplicate_lines": 0,
+      "missing_n": 0,
+      "extra_n": [],
+      "span_s": 4.089,
+      "throughput_per_s": 1222.79,
+      "latency_ms": {
+        "p50": 842,
+        "p95": 1400,
+        "max": 1476
+      },
+      "enqueue_s": 2.846,
+      "enqueue_window_ms": 2614,
+      "complete_window_ms": 3978,
+      "command": [
+        "/workspace/.venv/bin/celery",
+        "-A",
+        "bench.celery_app",
+        "worker",
+        "-Q",
+        "bench",
+        "-c",
+        "8",
+        "--loglevel",
+        "info",
+        "--without-gossip",
+        "--without-mingle"
+      ],
+      "versions": {
+        "simple-q-runtime": "1.0.0rc7",
+        "simple-q-worker": "1.0.0rc7",
+        "dramatiq": "2.2.1",
+        "celery": "5.7.0",
+        "kombu": "5.7.0",
+        "taskiq": "0.13.0",
+        "taskiq-redis": "1.2.4",
+        "redis": "8.1.0"
+      },
+      "max_rss_kb": 487996,
+      "last_broker_sample": "0",
+      "worker_exit_during_run": null,
+      "sha256_latency": "3031cc224483960ff2d9c909f9dc85d036aefc69900557a4b1ad9722e9b7f6e9",
+      "sha256_manifest": "6f15ec65412d1aea5756e644219163266ff277e33fb59451012a9d4ec4e5eec4",
+      "log_counts": {
+        "lines": 10035,
+        "received": 5000,
+        "succeeded": 5000
+      }
+    },
+    {
+      "run_id": "st-20261113T202925Z-arq-burst-5000",
+      "library": "arq",
+      "class": "stress",
+      "counts_as_2400": false,
+      "status": "passed",
+      "count": 5000,
+      "done_lines": 5000,
+      "unique_n": 5000,
+      "duplicate_lines": 0,
+      "missing_n": 0,
+      "extra_n": [],
+      "span_s": 24.651,
+      "throughput_per_s": 202.83,
+      "latency_ms": {
+        "p50": 12062,
+        "p95": 22647,
+        "max": 23638
+      },
+      "enqueue_s": 1.191,
+      "enqueue_window_ms": 1014,
+      "complete_window_ms": 24605,
+      "command": [
+        "/workspace/.venv-arq/bin/arq",
+        "bench.arq_app.WorkerSettings"
+      ],
+      "versions": {
+        "arq": "0.28.0",
+        "redis": "5.3.1"
+      },
+      "max_rss_kb": 40576,
+      "last_broker_sample": "0",
+      "worker_exit_during_run": null,
+      "sha256_latency": "1e06ed717110ab23a6c8ca0920c7c6a8716b4da303cbc199f600733a424946af",
+      "sha256_manifest": "d5864a751e13a6cee2b6d6d571831852ae2e24befaff23bf6afb65038990ee80",
+      "log_counts": {
+        "lines": 10010,
+        "handler_done": 5000
+      }
+    },
+    {
+      "run_id": "st-20261113T202954Z-taskiq-burst-5000",
+      "library": "taskiq",
+      "class": "stress",
+      "counts_as_2400": false,
+      "status": "passed",
+      "count": 5000,
+      "done_lines": 5000,
+      "unique_n": 5000,
+      "duplicate_lines": 0,
+      "missing_n": 0,
+      "extra_n": [],
+      "span_s": 0.992,
+      "throughput_per_s": 5040.32,
+      "latency_ms": {
+        "p50": 4,
+        "p95": 8,
+        "max": 14
+      },
+      "enqueue_s": 1.469,
+      "enqueue_window_ms": 989,
+      "complete_window_ms": 990,
+      "command": [
+        "/workspace/.venv/bin/taskiq",
+        "worker",
+        "bench.taskiq_app:broker",
+        "--workers",
+        "2",
+        "--max-async-tasks",
+        "4",
+        "--shutdown-timeout",
+        "60",
+        "--ack-type",
+        "when_executed",
+        "--max-prefetch",
+        "8"
+      ],
+      "versions": {
+        "simple-q-runtime": "1.0.0rc7",
+        "simple-q-worker": "1.0.0rc7",
+        "dramatiq": "2.2.1",
+        "celery": "5.7.0",
+        "kombu": "5.7.0",
+        "taskiq": "0.13.0",
+        "taskiq-redis": "1.2.4",
+        "redis": "8.1.0"
+      },
+      "max_rss_kb": 176804,
+      "last_broker_sample": "5000",
+      "worker_exit_during_run": null,
+      "sha256_latency": "c69d3480e484306ead45d7522c22f52fadb5a218e488757840301ba7944c10ff",
+      "sha256_manifest": "00fa04e9bd5cdaf071640f4a068d4e11a549ac8c9333a9e70e0f398c8387b240",
+      "log_counts": {
+        "lines": 5015,
+        "executing": 5000
+      }
+    }
+  ]
+}

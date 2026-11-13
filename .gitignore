@@ -1,5 +1,7 @@
 .venv/
 .venv-arq/
+.venv-sq120/
+results/long/stress-redis-*/
 __pycache__/
 *.py[cod]
 .pytest_cache/
