@@ -1,0 +1,32 @@
+{
+  "class": "short_bench",
+  "counts_as_2400": false,
+  "old_kill0_on_process_that_exits": {
+    "before_poll": {
+      "kill0": true,
+      "state": "Z",
+      "poll": null
+    },
+    "after_poll": {
+      "kill0": false,
+      "state": null,
+      "poll": 0
+    }
+  },
+  "new_stop_on_process_that_exits": {
+    "signal": "SIGTERM",
+    "exited": true,
+    "wait": 0,
+    "live_group": [],
+    "elapsed_s": 0.204,
+    "state_after": null
+  },
+  "new_stop_on_process_that_ignores_sigterm": {
+    "signal": "SIGKILL",
+    "reason": "sigterm_grace_exceeded",
+    "wait": -9,
+    "live_group": [],
+    "elapsed_s": 0.654,
+    "state_after": null
+  }
+}

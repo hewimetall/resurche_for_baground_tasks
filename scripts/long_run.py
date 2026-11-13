@@ -171,22 +171,77 @@ def _ps(leader: int) -> list[dict]:
     return rows
 
 
-def _stop_group(pid: int) -> dict:
+def _proc_stat(pid: int) -> str | None:
+    try:
+        with open(f"/proc/{pid}/stat", encoding="utf-8") as handle:
+            text = handle.read()
+    except OSError:
+        return None
+    tail = text.rsplit(")", 1)[-1].split()
+    if not tail:
+        return None
+    return tail[0]
+
+
+def _live_group(pgid: int) -> list[int]:
+    live = []
+    for name in os.listdir("/proc"):
+        if not name.isdigit():
+            continue
+        pid = int(name)
+        try:
+            with open(f"/proc/{pid}/stat", encoding="utf-8") as handle:
+                text = handle.read()
+        except OSError:
+            continue
+        tail = text.rsplit(")", 1)[-1].split()
+        if len(tail) < 3:
+            continue
+        state = tail[0]
+        try:
+            pgrp = int(tail[2])
+        except ValueError:
+            continue
+        if pgrp == pgid and state not in {"Z", "X"}:
+            live.append(pid)
+    return live
+
+
+def _stop_group(proc: subprocess.Popen, grace_s: float = 60.0) -> dict:
+    """SIGTERM the session, reap the leader with poll, then look at the group.
+
+    ``kill(pid, 0)`` still succeeds for a zombie the parent has not waited on,
+    so it cannot decide that the leader is alive.
+    """
+    pid = proc.pid
     try:
         os.killpg(pid, signal.SIGTERM)
     except ProcessLookupError:
-        return {"signal": "SIGTERM", "already_dead": True}
-    for _ in range(300):
-        try:
-            os.kill(pid, 0)
-        except ProcessLookupError:
-            return {"signal": "SIGTERM", "exited": True}
-        time.sleep(0.2)
+        return {"signal": "SIGTERM", "already_dead": True, "wait": proc.poll()}
+    deadline = time.monotonic() + grace_s
+    while True:
+        waited = proc.poll()
+        live = _live_group(pid)
+        if waited is not None and not live:
+            return {"signal": "SIGTERM", "exited": True, "wait": waited, "live_group": []}
+        if time.monotonic() >= deadline:
+            break
+        time.sleep(min(0.2, max(0.0, deadline - time.monotonic())))
     try:
         os.killpg(pid, signal.SIGKILL)
     except ProcessLookupError:
-        return {"signal": "SIGKILL", "already_dead": True}
-    return {"signal": "SIGKILL", "reason": "sigterm_grace_exceeded"}
+        pass
+    kill_deadline = time.monotonic() + 2.0
+    while time.monotonic() < kill_deadline:
+        if proc.poll() is not None and not _live_group(pid):
+            break
+        time.sleep(0.05)
+    return {
+        "signal": "SIGKILL",
+        "reason": "sigterm_grace_exceeded",
+        "wait": proc.poll(),
+        "live_group": _live_group(pid),
+    }
 
 
 def run(args: argparse.Namespace) -> int:
@@ -362,7 +417,7 @@ def run(args: argparse.Namespace) -> int:
             pass
     finally:
         if worker.poll() is None:
-            stop_info = _stop_group(worker.pid)
+            stop_info = _stop_group(worker)
             emit(
                 str(events_path),
                 "process_exited",
