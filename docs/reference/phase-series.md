@@ -104,3 +104,38 @@
 1.18.0, три раза один и тот же порядок: 15, 0, 11, 4, 5, 1, 7, 2, 3, 6, 12, 10, 8, 9, 13, 14. Инверсий 39. `MessageProxy.__lt__` в `broker.py` 1.18.0 возвращает `True`.
 
 2.2.1, три раза порядок отправки 0…15. Инверсий 0.
+
+## Срок simple-q через задачу на 2 с
+
+`scripts/wait_mechanism.py`, порт 6395, heartbeat 5 с. Одна задача `snooze` на 2 с, затем `fast` через 2.4 с после строки `running actor`. Шкала — миллисекунды от первого `ZADD bench:workers` в этом окне. Файл: `results/traces/mechanism.json`.
+
+| мс | Команда | Что это |
+| --- | --- | --- |
+| 0.0 | `ZADD bench:workers` | heartbeat |
+| 0.6 | `ZRANGEBYSCORE bench:scheduled` | пустая выборка того же тика |
+| 1834.6 | `ZADD bench:scheduled` | постановка `snooze`, процесс постановки вернулся за 137 мс |
+| 5001.9 | `ZADD bench:workers` | следующий heartbeat, через 5001.9 мс |
+| 5002.2 | `ZRANGEBYSCORE` scheduled, `RPUSH` active, `LPUSH` signal | выборка забирает `snooze` |
+| 7028.5 | `ZADD bench:done` | ack через 2026 мс после выборки |
+| 7028.7 | `ZRANGEBYSCORE bench:scheduled` | пустая выборка, `ZADD bench:workers` перед ней нет |
+| 7515.2 | `ZADD bench:scheduled` | постановка `fast`, процесс вернулся за 114 мс |
+| 10002.9 | `ZADD bench:workers` | heartbeat, через 5001.0 мс после предыдущего |
+| 10003.3 | чтение scheduled, `RPUSH`, `LPUSH` | выборка забирает `fast` |
+| 10007.1 | `ZADD bench:done` | ack `fast` |
+| 10007.2 | `ZRANGEBYSCORE bench:scheduled` | пустая выборка, своего `ZADD bench:workers` нет |
+
+От выборки `snooze` до выборки `fast` 5001.1 мс. Пустая выборка на 7028.7 мс сидит между этими тиками и следующий `ZADD bench:workers` не сдвигает. `pickup_ms` у `fast` — 2586. `ZADD` этой задачи на 7515.2, выборка на 10003.3: в Redis задача пролежала 2488 мс.
+
+`Delay::new` в apalis-core 1.1.1 стоит в одном месте: `poll_ready`, когда завершается future `HeartBeat` (`persistence/mod.rs`, присваивание `heartbeat_timer`). Пустой `fetch_next` делает `register_waker` и возвращает `Pending`, таймер не трогает. `WorkerContext::wake` будит сохранённый waker. `LifecycleFuture::drop` зовёт `wake`, когда `task_count` упал до нуля.
+
+## Окно, когда блокирующей команды нет
+
+Тот же скрипт, воркер без задач.
+
+Celery, 22 старта `BRPOP` по `bench`. Первый интервал 1030.5 мс. Следующие 20: 1002.6–1003.8 мс. На соединении, которое шлёт `BRPOP`, между этими командами других команд нет. `PUBLISH` событий идёт с другого соединения. `_brpop_start` и `_brpop_read` — `kombu/transport/redis.py`. Таймаут — `brpop_timeout`, на транспорте по умолчанию 1.
+
+taskiq, 15 `XREADGROUP`, `XAUTOCLAIM` за это окно 0. Первый интервал 2012.3 мс. Следующие 13: 2004.1–2006.7 мс. Пустой `listen` в `taskiq_redis/redis_broker.py` на пустом `fetched` делает `continue` до `xautoclaim`.
+
+arq, 23 интервала `ZRANGEBYSCORE arq:queue`: 500.4–501.6 мс, p50 501.1. `poll` в `arq/utils.py` после шага спит `step - (after - before)`.
+
+Dramatiq, `LPOP` только по `dramatiq:bench`. Первые семь пауз от старта процесса: 7.6, 16.6, 25.7, 73.6, 129.8, 305.9, 439.7 мс. Дальше, 36 пауз: минимум 512.8, p50 767.2, максимум 990.0. По корзинам в 100 мс от 500: 8, 6, 7, 10, 5. `compute_backoff` при `backoff > max_backoff` берёт `max_backoff * uniform(0.5, 1)`. На воркере `max_backoff` этого вызова — `worker_timeout` 1000.

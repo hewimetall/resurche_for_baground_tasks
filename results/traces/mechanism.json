@@ -1,0 +1,412 @@
+{
+  "redis": "redis://127.0.0.1:6395/0",
+  "simpleq_hold": {
+    "client_hold_ms": 137.2,
+    "actor_after_enqueue_ms": 3164.9,
+    "client_fast_ms": 114.5,
+    "fast_pickup_ms": 2586,
+    "fast_sent_ms": 1794565638389,
+    "scheduled_reads": [
+      {
+        "ms": 0.6,
+        "workers_zadd_ms": 0.0,
+        "heartbeat_tick": true,
+        "moved_to_active": false
+      },
+      {
+        "ms": 5002.2,
+        "workers_zadd_ms": 5001.9,
+        "heartbeat_tick": true,
+        "moved_to_active": true
+      },
+      {
+        "ms": 7028.7,
+        "workers_zadd_ms": 5001.9,
+        "heartbeat_tick": false,
+        "moved_to_active": false
+      },
+      {
+        "ms": 10003.3,
+        "workers_zadd_ms": 10002.9,
+        "heartbeat_tick": true,
+        "moved_to_active": true
+      },
+      {
+        "ms": 10007.2,
+        "workers_zadd_ms": 10002.9,
+        "heartbeat_tick": false,
+        "moved_to_active": false
+      }
+    ],
+    "read_intervals_ms": [
+      5001.6,
+      2026.5,
+      2974.6,
+      3.9
+    ],
+    "events": [
+      {
+        "ms": 0.0,
+        "cmd": "ZADD",
+        "key": "bench:workers",
+        "who": "lua"
+      },
+      {
+        "ms": 0.6,
+        "cmd": "ZRANGEBYSCORE",
+        "key": "bench:scheduled",
+        "who": "lua"
+      },
+      {
+        "ms": 1834.6,
+        "cmd": "ZADD",
+        "key": "bench:scheduled",
+        "who": "lua"
+      },
+      {
+        "ms": 5001.9,
+        "cmd": "ZADD",
+        "key": "bench:workers",
+        "who": "lua"
+      },
+      {
+        "ms": 5002.1,
+        "cmd": "ZRANGEBYSCORE",
+        "key": "bench:workers",
+        "who": "lua"
+      },
+      {
+        "ms": 5002.2,
+        "cmd": "ZRANGEBYSCORE",
+        "key": "bench:scheduled",
+        "who": "lua"
+      },
+      {
+        "ms": 5002.2,
+        "cmd": "RPUSH",
+        "key": "bench:active",
+        "who": "lua"
+      },
+      {
+        "ms": 5002.3,
+        "cmd": "LPUSH",
+        "key": "bench:signal",
+        "who": "lua"
+      },
+      {
+        "ms": 7028.5,
+        "cmd": "ZADD",
+        "key": "bench:done",
+        "who": "lua"
+      },
+      {
+        "ms": 7028.7,
+        "cmd": "ZRANGEBYSCORE",
+        "key": "bench:scheduled",
+        "who": "lua"
+      },
+      {
+        "ms": 7515.2,
+        "cmd": "ZADD",
+        "key": "bench:scheduled",
+        "who": "lua"
+      },
+      {
+        "ms": 10002.9,
+        "cmd": "ZADD",
+        "key": "bench:workers",
+        "who": "lua"
+      },
+      {
+        "ms": 10003.1,
+        "cmd": "ZRANGEBYSCORE",
+        "key": "bench:workers",
+        "who": "lua"
+      },
+      {
+        "ms": 10003.3,
+        "cmd": "ZRANGEBYSCORE",
+        "key": "bench:scheduled",
+        "who": "lua"
+      },
+      {
+        "ms": 10003.3,
+        "cmd": "RPUSH",
+        "key": "bench:active",
+        "who": "lua"
+      },
+      {
+        "ms": 10003.3,
+        "cmd": "LPUSH",
+        "key": "bench:signal",
+        "who": "lua"
+      },
+      {
+        "ms": 10007.1,
+        "cmd": "ZADD",
+        "key": "bench:done",
+        "who": "lua"
+      },
+      {
+        "ms": 10007.2,
+        "cmd": "ZRANGEBYSCORE",
+        "key": "bench:scheduled",
+        "who": "lua"
+      }
+    ]
+  },
+  "celery_idle": {
+    "brpop_gaps_ms": [
+      1030.5,
+      1003.4,
+      1003.2,
+      1003.7,
+      1002.9,
+      1002.9,
+      1002.9,
+      1003.1,
+      1002.9,
+      1002.8,
+      1003.1,
+      1003.2,
+      1002.6,
+      1003.4,
+      1002.7,
+      1002.7,
+      1002.9,
+      1003.8,
+      1002.9,
+      1003.5,
+      1003.4
+    ],
+    "gap_stats": {
+      "n": 21,
+      "min": 1002.6,
+      "p50": 1003.1,
+      "p90": 1003.7,
+      "max": 1030.5
+    },
+    "between_same_client": [
+      {
+        "gap_ms": 1030.5,
+        "between": []
+      },
+      {
+        "gap_ms": 1003.4,
+        "between": []
+      },
+      {
+        "gap_ms": 1003.2,
+        "between": []
+      },
+      {
+        "gap_ms": 1003.7,
+        "between": []
+      },
+      {
+        "gap_ms": 1002.9,
+        "between": []
+      },
+      {
+        "gap_ms": 1002.9,
+        "between": []
+      },
+      {
+        "gap_ms": 1002.9,
+        "between": []
+      },
+      {
+        "gap_ms": 1003.1,
+        "between": []
+      }
+    ],
+    "excess_over_1000_ms": {
+      "n": 21,
+      "min": 2.6,
+      "p50": 3.1,
+      "p90": 3.7,
+      "max": 30.5
+    },
+    "after_first_gap_stats": {
+      "n": 20,
+      "min": 1002.6,
+      "max": 1003.8
+    }
+  },
+  "taskiq_idle": {
+    "xreadgroup_gaps_ms": [
+      2012.3,
+      2005.0,
+      2005.2,
+      2005.3,
+      2005.8,
+      2005.4,
+      2005.2,
+      2005.6,
+      2005.0,
+      2004.4,
+      2005.3,
+      2005.7,
+      2006.7,
+      2004.1
+    ],
+    "gap_stats": {
+      "n": 14,
+      "min": 2004.1,
+      "p50": 2005.3,
+      "p90": 2006.7,
+      "max": 2012.3
+    },
+    "excess_over_2000_ms": {
+      "n": 14,
+      "min": 4.1,
+      "p50": 5.3,
+      "p90": 6.7,
+      "max": 12.3
+    }
+  },
+  "dramatiq_idle": {
+    "bench_lpop_gaps_ms": [
+      7.6,
+      16.6,
+      25.7,
+      73.6,
+      129.8,
+      305.9,
+      439.7,
+      833.9,
+      784.0,
+      635.9,
+      634.8,
+      808.9,
+      771.0,
+      630.0,
+      604.8,
+      707.1,
+      528.9,
+      899.0,
+      547.0,
+      767.2,
+      835.8,
+      969.0,
+      722.7,
+      512.8,
+      528.7,
+      857.5,
+      989.9,
+      826.9,
+      838.9,
+      899.0,
+      772.9,
+      590.9,
+      652.9,
+      542.9,
+      652.1,
+      801.0,
+      770.9,
+      607.9,
+      820.1,
+      682.9,
+      572.9,
+      890.3,
+      762.9,
+      925.9,
+      568.9,
+      990.0,
+      881.7,
+      571.0,
+      632.1,
+      756.9,
+      729.9,
+      810.9,
+      980.8,
+      631.8
+    ],
+    "after_8s_gaps_ms": [
+      547.0,
+      767.2,
+      835.8,
+      969.0,
+      722.7,
+      512.8,
+      528.7,
+      857.5,
+      989.9,
+      826.9,
+      838.9,
+      899.0,
+      772.9,
+      590.9,
+      652.9,
+      542.9,
+      652.1,
+      801.0,
+      770.9,
+      607.9,
+      820.1,
+      682.9,
+      572.9,
+      890.3,
+      762.9,
+      925.9,
+      568.9,
+      990.0,
+      881.7,
+      571.0,
+      632.1,
+      756.9,
+      729.9,
+      810.9,
+      980.8,
+      631.8
+    ],
+    "after_8s_stats": {
+      "n": 36,
+      "min": 512.8,
+      "p50": 767.2,
+      "p90": 969.0,
+      "max": 990.0
+    },
+    "after_8s_bins_100ms_from_500": [
+      8,
+      6,
+      7,
+      10,
+      5
+    ]
+  },
+  "arq_idle": {
+    "zrange_gaps_ms": [
+      501.1,
+      500.8,
+      501.6,
+      501.2,
+      501.6,
+      501.1,
+      501.1,
+      500.7,
+      500.4,
+      501.4,
+      501.3,
+      500.6,
+      500.8,
+      501.4,
+      500.9,
+      501.5,
+      501.3,
+      501.5,
+      500.8,
+      500.9,
+      501.4,
+      500.9,
+      500.9
+    ],
+    "gap_stats": {
+      "n": 23,
+      "min": 500.4,
+      "p50": 501.1,
+      "p90": 501.5,
+      "max": 501.6
+    }
+  }
+}
