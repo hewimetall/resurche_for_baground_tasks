@@ -1,0 +1,41 @@
+{
+  "scenario_id": "proxy_self_test",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-13T22:31:26Z",
+  "contract_held": true,
+  "checks": [
+    {
+      "name": "pass_through",
+      "ok": true,
+      "detail": "SET through the proxy is visible on Redis"
+    },
+    {
+      "name": "request_not_applied",
+      "ok": true,
+      "detail": "SET dropped before forward left the old value"
+    },
+    {
+      "name": "response_applied",
+      "ok": true,
+      "detail": "INCR ran and the client did not receive the integer"
+    },
+    {
+      "name": "same_pid",
+      "ok": true,
+      "detail": "126504"
+    }
+  ],
+  "aaa": {
+    "arrange": "Redis is up. The proxy is a pass-through.",
+    "act": "SET through the proxy, drop the next SET before forward, drop the INCR reply after Redis runs it.",
+    "assert": "The first SET sticks. The dropped SET does not. The INCR changes the value without a client reply."
+  },
+  "redis_restarted": false,
+  "dropped_reply": "",
+  "incr_reply": "",
+  "redis_pid": 126504,
+  "finished_at": "2026-11-13T22:31:26Z"
+}
