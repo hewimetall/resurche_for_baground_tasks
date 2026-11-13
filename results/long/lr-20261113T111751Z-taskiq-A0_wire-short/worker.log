@@ -1,0 +1,13 @@
+[2026-11-13 11:17:51,970][taskiq.worker][INFO   ][MainProcess] Pid of a main process: 70198
+[2026-11-13 11:17:51,970][taskiq.worker][INFO   ][MainProcess] Starting 1 worker processes.
+[2026-11-13 11:17:51,972][taskiq.process-manager][INFO   ][MainProcess] Started process worker-0 with pid 70215 
+[2026-11-13 11:17:52,074][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.
+[2026-11-13 11:17:54,076][taskiq.receiver.receiver][INFO   ][worker-0] Executing task hold with ID: b5ff448cba784e2aa9a634da7be9b897
+[2026-11-13 11:17:55,140][httpx][INFO   ][worker-0] HTTP Request: POST http://127.0.0.1:6411/effect "HTTP/1.0 200 OK"
+[2026-11-13 11:17:56,157][httpx][INFO   ][worker-0] HTTP Request: POST http://127.0.0.1:6411/effect "HTTP/1.0 200 OK"
+[2026-11-13 11:17:57,174][httpx][INFO   ][worker-0] HTTP Request: POST http://127.0.0.1:6411/effect "HTTP/1.0 200 OK"
+[2026-11-13 11:17:57,213][taskiq.process-manager][INFO   ][MainProcess] Workers are scheduled for shutdown.
+[2026-11-13 11:17:58,074][taskiq.process-manager][INFO   ][MainProcess] Stopped process worker-0 with pid 70215
+[2026-11-13 11:17:59,190][taskiq.receiver.receiver][INFO   ][worker-0] Stopping prefetching messages...
+[2026-11-13 11:17:59,191][taskiq.receiver.receiver][INFO   ][worker-0] The runner is stopped.
+[2026-11-13 11:17:59,191][taskiq.worker][INFO   ][worker-0] Shutting down the broker.

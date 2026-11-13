@@ -1,0 +1,52 @@
+{
+  "run_id": "st-20261113T202849Z-dramatiq-burst-5000",
+  "class": "stress",
+  "counts_as_2400": false,
+  "scenario_id": "S_burst_fast",
+  "library": "dramatiq",
+  "count": 5000,
+  "slots": 8,
+  "command": [
+    "/workspace/.venv/bin/dramatiq",
+    "bench.dramatiq_app",
+    "--queues",
+    "bench",
+    "--processes",
+    "2",
+    "--threads",
+    "4",
+    "--worker-shutdown-timeout",
+    "60000"
+  ],
+  "versions": {
+    "simple-q-runtime": "1.0.0rc7",
+    "simple-q-worker": "1.0.0rc7",
+    "dramatiq": "2.2.1",
+    "celery": "5.7.0",
+    "kombu": "5.7.0",
+    "taskiq": "0.13.0",
+    "taskiq-redis": "1.2.4",
+    "redis": "8.1.0"
+  },
+  "status": "passed",
+  "done_lines": 5000,
+  "unique_n": 5000,
+  "duplicate_lines": 0,
+  "enqueue": {
+    "code": 0,
+    "seconds": 0.896,
+    "stdout": "{\"accepted\": 5000, \"rejected\": 0, \"seconds\": 0.662, \"sample_ids\": [\"5433e4a7-0d10-4003-b2f8-74daad458bf2\", \"22a8e979-2588-407b-8178-fd085668b793\", \"9aa68f45-76f5-4cf0-9607-02466d14a3f0\"], \"native_dedup\": false}\n",
+    "stderr": ""
+  },
+  "span_s": 2.446,
+  "throughput_per_s": 2044.15,
+  "latency_ms": {
+    "p50": 934,
+    "p95": 1700,
+    "max": 1784
+  },
+  "worker_exit_during_run": null,
+  "redis_port": 6412,
+  "redis_dir": "/workspace/results/long/stress-redis-6412",
+  "resource_limits": "no cgroup; host is shared"
+}

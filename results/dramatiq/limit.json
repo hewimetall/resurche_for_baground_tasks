@@ -1,0 +1,25 @@
+{
+  "library": "dramatiq",
+  "scenario": "limit",
+  "scale": "short",
+  "started_at": "2026-11-12T17:37:02.133217+00:00",
+  "measured": true,
+  "status": "failed",
+  "attempts": 2,
+  "notes": [
+    "failure_attempt:type=TimeLimitExceeded retries=1 max=1",
+    "failure_attempt:type=TimeLimitExceeded retries=2 max=1",
+    "failed:timeout TimeLimitExceeded retries=2"
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794505028.5747042,
+      "exit_at": 1794505031.5814052,
+      "t_drain_s": 3.007,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 9.448
+}

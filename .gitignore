@@ -1,0 +1,16 @@
+.venv/
+.venv-arq/
+.venv-sq120/
+results/long/stress-redis-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+results/logs/
+*.rdb
+.redis/
+.env
+*.egg-info/
+.coverage
+htmlcov/
+docs/_build/

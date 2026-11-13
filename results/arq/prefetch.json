@@ -1,0 +1,35 @@
+{
+  "library": "arq",
+  "scenario": "prefetch",
+  "scale": "short",
+  "started_at": "2026-11-12T17:52:53.914814+00:00",
+  "measured": true,
+  "gap": {
+    "gap_s": 0.15919419425964357,
+    "starts_after": 8
+  },
+  "invariant": {
+    "expected": 8,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 8,
+    "distinct_items": 8,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 8
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505976.0589914,
+      "exit_at": 1794505976.6595814,
+      "t_drain_s": 0.601,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 2.745
+}

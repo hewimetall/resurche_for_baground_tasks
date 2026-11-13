@@ -1,0 +1,34 @@
+{
+  "library": "taskiq",
+  "scenario": "fast",
+  "scale": "short",
+  "started_at": "2026-11-12T18:05:41.334336+00:00",
+  "measured": true,
+  "sent": {
+    "accepted": 80,
+    "rejected": 0,
+    "seconds": 0.019
+  },
+  "done": 80,
+  "elapsed_s": 0.498,
+  "throughput_per_s": 160.63,
+  "latency_ms": {
+    "n": 80,
+    "p50": 3,
+    "p99": 5,
+    "max": 5
+  },
+  "idle_rss": 181239808,
+  "load_rss_peak": 183287808,
+  "stop": [
+    {
+      "sigterm_at": 1794506745.510747,
+      "exit_at": 1794506747.7121973,
+      "t_drain_s": 2.201,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 6.378
+}

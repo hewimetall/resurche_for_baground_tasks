@@ -1,0 +1,21 @@
+{
+  "library": "simpleq",
+  "scenario": "trace",
+  "scale": "short",
+  "started_at": "2026-11-12T17:16:33.348346+00:00",
+  "measured": true,
+  "notes": [
+    "traceparent:00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01"
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794503808.6557865,
+      "exit_at": 1794503808.8559995,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 15.508
+}

@@ -1,0 +1,46 @@
+{
+  "library": "taskiq",
+  "scenario": "early_sigterm",
+  "scale": "short",
+  "started_at": "2026-11-12T18:00:23.553008+00:00",
+  "measured": true,
+  "rows": [
+    {
+      "delay_s": 0.4,
+      "stop": {
+        "sigterm_at": 1794506423.965199,
+        "exit_at": 1794506425.1661887,
+        "t_drain_s": 1.201,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    },
+    {
+      "delay_s": 1.5,
+      "stop": {
+        "sigterm_at": 1794506426.682611,
+        "exit_at": 1794506427.883586,
+        "t_drain_s": 1.201,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    },
+    {
+      "delay_s": 2.5,
+      "stop": {
+        "sigterm_at": 1794506430.3974152,
+        "exit_at": 1794506431.398185,
+        "t_drain_s": 1.001,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    }
+  ],
+  "duration_s": 7.845
+}

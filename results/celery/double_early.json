@@ -1,0 +1,24 @@
+{
+  "library": "celery",
+  "scenario": "double_early",
+  "scale": "short",
+  "started_at": "2026-11-12T17:49:50.469696+00:00",
+  "measured": true,
+  "first": {
+    "sigterm_at": 1794505792.77133,
+    "exit_at": 1794505793.371945,
+    "t_drain_s": 0.601,
+    "killed_after_grace": false,
+    "code": 0,
+    "already_exited": false
+  },
+  "second": {
+    "sigterm_at": 1794505795.3720949,
+    "exit_at": 1794505795.9725323,
+    "t_drain_s": 0.6,
+    "killed_after_grace": false,
+    "code": 0,
+    "already_exited": false
+  },
+  "duration_s": 5.503
+}

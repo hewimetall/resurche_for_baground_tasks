@@ -1,0 +1,19 @@
+{
+  "library": "arq",
+  "scenario": "sigterm_infinite",
+  "scale": "short",
+  "started_at": "2026-11-12T17:52:36.351937+00:00",
+  "measured": true,
+  "grace_s": 6,
+  "stop": [
+    {
+      "sigterm_at": 1794505957.1475809,
+      "exit_at": 1794505963.1558444,
+      "t_drain_s": 6.008,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 6.804
+}

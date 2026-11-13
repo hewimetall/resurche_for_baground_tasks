@@ -1,0 +1,25 @@
+{
+  "library": "simpleq",
+  "scenario": "limit",
+  "scale": "short",
+  "started_at": "2026-11-12T17:16:07.592372+00:00",
+  "measured": true,
+  "status": "failed",
+  "attempts": 2,
+  "notes": [
+    "traceparent:00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01",
+    "traceparent:00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01",
+    "failed:timeout deliveries=1 retries=1"
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794503785.9165645,
+      "exit_at": 1794503786.1167974,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 18.524
+}

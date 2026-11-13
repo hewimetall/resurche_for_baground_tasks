@@ -1,0 +1,680 @@
+{
+  "gateway": "172.18.0.1",
+  "image": "bench-worker:local",
+  "node_cap": "3Gi",
+  "redis": "127.0.0.1:6380 via socat on the kind bridge",
+  "postgres": "bench_k8s",
+  "arq": "\u043d\u0435 \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u043b\u0441\u044f \u0432 kind: arq 0.28 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 redis<6, \u043e\u0431\u0440\u0430\u0437 \u0441\u043e\u0431\u0440\u0430\u043d \u043d\u0430 redis 8",
+  "scenarios": [
+    {
+      "lib": "simpleq",
+      "scenario": "early",
+      "grace_s": 20,
+      "age_at_first_restart_s": 1.0,
+      "first": {
+        "t_drain_s": -19.0,
+        "deletion_at": 1794507201.0,
+        "finished_at": 1794507182.0,
+        "exit": 0,
+        "reason": "Completed",
+        "sigterm_at": 1794507201.0
+      },
+      "age_at_second_restart_s": 1.0,
+      "second": {
+        "t_drain_s": null,
+        "deletion_at": null,
+        "finished_at": null,
+        "exit": null,
+        "reason": null,
+        "sigterm_at": 1794507182.059055
+      },
+      "rollout_rc": 0,
+      "rollout_out": "deployment \"bench-worker\" successfully rolled out\n"
+    },
+    {
+      "lib": "simpleq",
+      "scenario": "checkpoint",
+      "grace_s": 40,
+      "steps": 6,
+      "started_before": 1,
+      "progress_after": 6,
+      "t_drain_s": -40.0,
+      "deletion_at": 1794507235.0,
+      "finished_at": 1794507195.0,
+      "exit": 0,
+      "reason": "Completed",
+      "sigterm_at": 1794507235.0,
+      "job": {
+        "progress": 6,
+        "attempts": [
+          {
+            "note": "long retries=0 deliveries=1 id=09a254c1-a812-4224-a9e5-73182769197b",
+            "worker": "agent-worker.bench.bench-worker-6b774f6f94-nlmtb.21.a1132daa",
+            "pid": 21,
+            "ts": "1794507191.379915"
+          },
+          {
+            "note": "long retries=1 deliveries=1 id=09a254c1-a812-4224-a9e5-73182769197b",
+            "worker": "agent-worker.bench.bench-worker-69465ff6d6-zfmwl.15.e8fb8395",
+            "pid": 15,
+            "ts": "1794507196.376262"
+          }
+        ],
+        "gap": {
+          "gap_s": null,
+          "starts_after": 0
+        }
+      },
+      "rollout": {
+        "restart_rc": 0,
+        "rollout_status_s": 2.175,
+        "rollout_rc": 0,
+        "rollout_out": "Waiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"bench-worker\" successfully rolled out\n",
+        "old": [
+          {
+            "name": "bench-worker-6b774f6f94-nlmtb",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:13:05Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ],
+        "old_last": [
+          {
+            "name": "bench-worker-6b774f6f94-nlmtb",
+            "phase": "Succeeded",
+            "deletion": "2026-11-12T18:13:55Z",
+            "started": null,
+            "finished": "2026-11-12T18:13:15Z",
+            "exit": 0,
+            "reason": "Completed"
+          }
+        ],
+        "new": [
+          {
+            "name": "bench-worker-69465ff6d6-zfmwl",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:13:15Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ]
+      }
+    },
+    {
+      "lib": "simpleq",
+      "scenario": "kill",
+      "grace_s": 12,
+      "started_before": 1,
+      "t_drain_s": 0.0,
+      "deletion_at": 1794507226.0,
+      "finished_at": 1794507226.0,
+      "exit": 137,
+      "reason": "Error",
+      "sigterm_at": 1794507226.0,
+      "job": {
+        "progress": 0,
+        "attempts": [
+          {
+            "note": "block-start retries=0 deliveries=1 id=84e6553c-7567-4cc2-b17c-6c75317ca001",
+            "worker": "agent-worker.bench.bench-worker-78879d666c-7rvbj.21.b621c0bc",
+            "pid": 21,
+            "ts": "1794507212.570441"
+          },
+          {
+            "note": "block-start retries=0 deliveries=2 id=84e6553c-7567-4cc2-b17c-6c75317ca001",
+            "worker": "agent-worker.bench.bench-worker-684d59cd7d-jnsd4.15.9eb25a45",
+            "pid": 15,
+            "ts": "1794507240.594342"
+          }
+        ],
+        "gap": {
+          "gap_s": 14.594342,
+          "starts_after": 1
+        }
+      },
+      "rollout": {
+        "restart_rc": 0,
+        "rollout_status_s": 13.755,
+        "rollout_rc": 0,
+        "rollout_out": "Waiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"bench-worker\" successfully rolled out\n",
+        "old": [
+          {
+            "name": "bench-worker-78879d666c-7rvbj",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:13:26Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ],
+        "old_last": [
+          {
+            "name": "bench-worker-78879d666c-7rvbj",
+            "phase": "Failed",
+            "deletion": "2026-11-12T18:13:46Z",
+            "started": null,
+            "finished": "2026-11-12T18:13:46Z",
+            "exit": 137,
+            "reason": "Error"
+          }
+        ],
+        "new": [
+          {
+            "name": "bench-worker-684d59cd7d-jnsd4",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:13:34Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ]
+      },
+      "node": "820.8MiB / 3GiB"
+    },
+    {
+      "lib": "dramatiq",
+      "scenario": "early",
+      "grace_s": 20,
+      "age_at_first_restart_s": 1.0,
+      "first": {
+        "t_drain_s": -17.0,
+        "deletion_at": 1794507264.0,
+        "finished_at": 1794507247.0,
+        "exit": 0,
+        "reason": "Completed",
+        "sigterm_at": 1794507264.0
+      },
+      "age_at_second_restart_s": 1.0,
+      "second": {
+        "t_drain_s": -17.0,
+        "deletion_at": 1794507265.0,
+        "finished_at": 1794507248.0,
+        "exit": 0,
+        "reason": "Completed",
+        "sigterm_at": 1794507265.0
+      },
+      "rollout_rc": 0,
+      "rollout_out": "deployment \"bench-worker\" successfully rolled out\n"
+    },
+    {
+      "lib": "dramatiq",
+      "scenario": "checkpoint",
+      "grace_s": 40,
+      "steps": 6,
+      "started_before": 1,
+      "progress_after": 6,
+      "t_drain_s": null,
+      "deletion_at": 1794507296.0,
+      "finished_at": null,
+      "exit": null,
+      "reason": null,
+      "sigterm_at": 1794507296.0,
+      "job": {
+        "progress": 6,
+        "attempts": [
+          {
+            "note": "long retries=0 id=f4f60781-2a2f-43f0-b1bc-6e7a44734dc7",
+            "worker": "bench-worker-775bd846f7-wzfl9:11",
+            "pid": 11,
+            "ts": "1794507252.468338"
+          },
+          {
+            "note": "long retries=1 id=f4f60781-2a2f-43f0-b1bc-6e7a44734dc7",
+            "worker": "bench-worker-6775499f65-4gjjm:11",
+            "pid": 11,
+            "ts": "1794507257.354946"
+          }
+        ],
+        "gap": {
+          "gap_s": null,
+          "starts_after": 0
+        }
+      },
+      "rollout": {
+        "restart_rc": 0,
+        "rollout_status_s": 3.896,
+        "rollout_rc": 0,
+        "rollout_out": "Waiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"bench-worker\" successfully rolled out\n",
+        "old": [
+          {
+            "name": "bench-worker-775bd846f7-wzfl9",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:14:11Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ],
+        "old_last": [
+          {
+            "name": "bench-worker-775bd846f7-wzfl9",
+            "phase": "Running",
+            "deletion": "2026-11-12T18:14:56Z",
+            "started": "2026-11-12T18:14:11Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ],
+        "new": [
+          {
+            "name": "bench-worker-6775499f65-4gjjm",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:14:16Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ]
+      }
+    },
+    {
+      "lib": "dramatiq",
+      "scenario": "kill",
+      "grace_s": 12,
+      "started_before": 1,
+      "t_drain_s": 0.0,
+      "deletion_at": 1794507282.0,
+      "finished_at": 1794507282.0,
+      "exit": 137,
+      "reason": "Error",
+      "sigterm_at": 1794507282.0,
+      "job": {
+        "progress": 0,
+        "attempts": [
+          {
+            "note": "block-start",
+            "worker": "bench-worker-7596b8754f-qmqhr:11",
+            "pid": 11,
+            "ts": "1794507268.240144"
+          }
+        ],
+        "gap": {
+          "gap_s": null,
+          "starts_after": 0
+        }
+      },
+      "rollout": {
+        "restart_rc": 0,
+        "rollout_status_s": 13.236,
+        "rollout_rc": 0,
+        "rollout_out": "Waiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"bench-worker\" successfully rolled out\n",
+        "old": [
+          {
+            "name": "bench-worker-7596b8754f-qmqhr",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:14:27Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ],
+        "old_last": [
+          {
+            "name": "bench-worker-7596b8754f-qmqhr",
+            "phase": "Failed",
+            "deletion": "2026-11-12T18:14:42Z",
+            "started": null,
+            "finished": "2026-11-12T18:14:42Z",
+            "exit": 137,
+            "reason": "Error"
+          }
+        ],
+        "new": [
+          {
+            "name": "bench-worker-76f9fb67cd-4kdx8",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:14:30Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ]
+      },
+      "node": "845.6MiB / 3GiB"
+    },
+    {
+      "lib": "celery",
+      "scenario": "early",
+      "grace_s": 20,
+      "age_at_first_restart_s": 1.0,
+      "first": {
+        "t_drain_s": -17.0,
+        "deletion_at": 1794507381.0,
+        "finished_at": 1794507364.0,
+        "exit": 0,
+        "reason": "Completed",
+        "sigterm_at": 1794507381.0
+      },
+      "age_at_second_restart_s": 1.0,
+      "second": {
+        "t_drain_s": -16.0,
+        "deletion_at": 1794507382.0,
+        "finished_at": 1794507366.0,
+        "exit": 0,
+        "reason": "Completed",
+        "sigterm_at": 1794507382.0
+      },
+      "rollout_rc": 0,
+      "rollout_out": "deployment \"bench-worker\" successfully rolled out\n"
+    },
+    {
+      "lib": "celery",
+      "scenario": "checkpoint",
+      "grace_s": 40,
+      "steps": 6,
+      "started_before": 1,
+      "progress_after": 6,
+      "t_drain_s": -38.0,
+      "deletion_at": 1794507413.0,
+      "finished_at": 1794507375.0,
+      "exit": 0,
+      "reason": "Completed",
+      "sigterm_at": 1794507413.0,
+      "job": {
+        "progress": 6,
+        "attempts": [
+          {
+            "note": "long retries=0",
+            "worker": "celery@bench-worker-6d974fcf6d-k9zr9:18",
+            "pid": 18,
+            "ts": "1794507369.833932"
+          },
+          {
+            "note": "long retries=1",
+            "worker": "celery@bench-worker-7fc9c876-7ksh4:12",
+            "pid": 12,
+            "ts": "1794507374.942271"
+          }
+        ],
+        "gap": {
+          "gap_s": null,
+          "starts_after": 0
+        }
+      },
+      "rollout": {
+        "restart_rc": 0,
+        "rollout_status_s": 2.857,
+        "rollout_rc": 0,
+        "rollout_out": "Waiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"bench-worker\" successfully rolled out\n",
+        "old": [
+          {
+            "name": "bench-worker-6d974fcf6d-k9zr9",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:16:08Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ],
+        "old_last": [
+          {
+            "name": "bench-worker-6d974fcf6d-k9zr9",
+            "phase": "Succeeded",
+            "deletion": "2026-11-12T18:16:53Z",
+            "started": null,
+            "finished": "2026-11-12T18:16:15Z",
+            "exit": 0,
+            "reason": "Completed"
+          }
+        ],
+        "new": [
+          {
+            "name": "bench-worker-7fc9c876-7ksh4",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:16:13Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ]
+      }
+    },
+    {
+      "lib": "celery",
+      "scenario": "kill",
+      "grace_s": 12,
+      "started_before": 1,
+      "t_drain_s": 0.0,
+      "deletion_at": 1794507399.0,
+      "finished_at": 1794507399.0,
+      "exit": 137,
+      "reason": "Error",
+      "sigterm_at": 1794507399.0,
+      "job": {
+        "progress": 0,
+        "attempts": [
+          {
+            "note": "block-start",
+            "worker": "celery@bench-worker-685c8d6d8f-tpf7x:18",
+            "pid": 18,
+            "ts": "1794507386.142906"
+          }
+        ],
+        "gap": {
+          "gap_s": null,
+          "starts_after": 0
+        }
+      },
+      "rollout": {
+        "restart_rc": 0,
+        "rollout_status_s": 13.409,
+        "rollout_rc": 0,
+        "rollout_out": "Waiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"bench-worker\" successfully rolled out\n",
+        "old": [
+          {
+            "name": "bench-worker-685c8d6d8f-tpf7x",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:16:24Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ],
+        "old_last": [
+          {
+            "name": "bench-worker-685c8d6d8f-tpf7x",
+            "phase": "Failed",
+            "deletion": "2026-11-12T18:16:39Z",
+            "started": null,
+            "finished": "2026-11-12T18:16:39Z",
+            "exit": 137,
+            "reason": "Error"
+          }
+        ],
+        "new": [
+          {
+            "name": "bench-worker-c97b886d8-2v6jr",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:16:27Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ]
+      },
+      "node": "857.4MiB / 3GiB"
+    },
+    {
+      "lib": "taskiq",
+      "scenario": "early",
+      "grace_s": 20,
+      "age_at_first_restart_s": 1.0,
+      "first": {
+        "t_drain_s": -18.0,
+        "deletion_at": 1794507499.0,
+        "finished_at": 1794507481.0,
+        "exit": 0,
+        "reason": "Completed",
+        "sigterm_at": 1794507499.0
+      },
+      "age_at_second_restart_s": 1.0,
+      "second": {
+        "t_drain_s": -18.0,
+        "deletion_at": 1794507500.0,
+        "finished_at": 1794507482.0,
+        "exit": 0,
+        "reason": "Completed",
+        "sigterm_at": 1794507500.0
+      },
+      "rollout_rc": 0,
+      "rollout_out": "deployment \"bench-worker\" successfully rolled out\n"
+    },
+    {
+      "lib": "taskiq",
+      "scenario": "checkpoint",
+      "grace_s": 40,
+      "steps": 6,
+      "started_before": 1,
+      "progress_after": 6,
+      "t_drain_s": null,
+      "deletion_at": 1794507530.0,
+      "finished_at": null,
+      "exit": null,
+      "reason": null,
+      "sigterm_at": 1794507530.0,
+      "job": {
+        "progress": 6,
+        "attempts": [
+          {
+            "note": "long",
+            "worker": "bench-worker-56b554b6d5-n6bzh:11",
+            "pid": 11,
+            "ts": "1794507486.555373"
+          },
+          {
+            "note": "long",
+            "worker": "bench-worker-768b59f6c6-z456g:11",
+            "pid": 11,
+            "ts": "1794507491.343985"
+          }
+        ],
+        "gap": {
+          "gap_s": null,
+          "starts_after": 0
+        }
+      },
+      "rollout": {
+        "restart_rc": 0,
+        "rollout_status_s": 1.145,
+        "rollout_rc": 0,
+        "rollout_out": "Waiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"bench-worker\" successfully rolled out\n",
+        "old": [
+          {
+            "name": "bench-worker-56b554b6d5-n6bzh",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:18:04Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ],
+        "old_last": [
+          {
+            "name": "bench-worker-56b554b6d5-n6bzh",
+            "phase": "Running",
+            "deletion": "2026-11-12T18:18:50Z",
+            "started": "2026-11-12T18:18:04Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ],
+        "new": [
+          {
+            "name": "bench-worker-768b59f6c6-z456g",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:18:10Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ]
+      }
+    },
+    {
+      "lib": "taskiq",
+      "scenario": "kill",
+      "grace_s": 12,
+      "started_before": 1,
+      "t_drain_s": 0.0,
+      "deletion_at": 1794507516.0,
+      "finished_at": 1794507516.0,
+      "exit": 137,
+      "reason": "Error",
+      "sigterm_at": 1794507516.0,
+      "job": {
+        "progress": 0,
+        "attempts": [
+          {
+            "note": "block-start",
+            "worker": "bench-worker-84f9f59989-6wmck:17",
+            "pid": 17,
+            "ts": "1794507502.877789"
+          }
+        ],
+        "gap": {
+          "gap_s": null,
+          "starts_after": 0
+        }
+      },
+      "rollout": {
+        "restart_rc": 0,
+        "rollout_status_s": 13.067,
+        "rollout_rc": 0,
+        "rollout_out": "Waiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"bench-worker\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"bench-worker\" successfully rolled out\n",
+        "old": [
+          {
+            "name": "bench-worker-84f9f59989-6wmck",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:18:21Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ],
+        "old_last": [
+          {
+            "name": "bench-worker-84f9f59989-6wmck",
+            "phase": "Failed",
+            "deletion": "2026-11-12T18:18:36Z",
+            "started": null,
+            "finished": "2026-11-12T18:18:36Z",
+            "exit": 137,
+            "reason": "Error"
+          }
+        ],
+        "new": [
+          {
+            "name": "bench-worker-6ddbc6559c-jw4qj",
+            "phase": "Running",
+            "deletion": null,
+            "started": "2026-11-12T18:18:24Z",
+            "finished": null,
+            "exit": null,
+            "reason": null
+          }
+        ]
+      },
+      "node": "901.1MiB / 3GiB"
+    }
+  ]
+}

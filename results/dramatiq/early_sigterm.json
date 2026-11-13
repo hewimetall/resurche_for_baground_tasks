@@ -1,0 +1,46 @@
+{
+  "library": "dramatiq",
+  "scenario": "early_sigterm",
+  "scale": "short",
+  "started_at": "2026-11-12T17:38:09.691553+00:00",
+  "measured": true,
+  "rows": [
+    {
+      "delay_s": 0.4,
+      "stop": {
+        "sigterm_at": 1794505090.103676,
+        "exit_at": 1794505095.1111832,
+        "t_drain_s": 5.008,
+        "killed_after_grace": true,
+        "code": -9,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    },
+    {
+      "delay_s": 1.5,
+      "stop": {
+        "sigterm_at": 1794505096.6260765,
+        "exit_at": 1794505101.6317954,
+        "t_drain_s": 5.006,
+        "killed_after_grace": true,
+        "code": -9,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    },
+    {
+      "delay_s": 2.5,
+      "stop": {
+        "sigterm_at": 1794505104.145791,
+        "exit_at": 1794505109.1508431,
+        "t_drain_s": 5.005,
+        "killed_after_grace": true,
+        "code": -9,
+        "already_exited": false
+      },
+      "alive_after_stop_call": false
+    }
+  ],
+  "duration_s": 19.459
+}

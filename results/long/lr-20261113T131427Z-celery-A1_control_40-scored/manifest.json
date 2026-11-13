@@ -1,0 +1,90 @@
+{
+  "run_id": "lr-20261113T131427Z-celery-A1_control_40-scored",
+  "scenario_id": "A1_control_40",
+  "class": "scored",
+  "library": "celery",
+  "versions": {
+    "simple-q-runtime": "1.0.0rc7",
+    "simple-q-worker": "1.0.0rc7",
+    "dramatiq": "2.2.1",
+    "celery": "5.7.0",
+    "kombu": "5.7.0",
+    "taskiq": "0.13.0",
+    "taskiq-redis": "1.2.4",
+    "redis": "8.1.0"
+  },
+  "source_commit": "79250b37f3b3f7c81e2e30db802b62c81a0b232c",
+  "planned_s": 2400.0,
+  "steps": 240,
+  "step_s": 10.0,
+  "kind": "sleep",
+  "time_limit_s": 3000,
+  "max_retries": 0,
+  "workers": 1,
+  "fault": null,
+  "counts_as_2400": true,
+  "redis_port": 6410,
+  "redis_dir": "/workspace/results/long/redis-6410",
+  "effect_port": 6411,
+  "clock": {
+    "realtime": 1794575667.282604,
+    "monotonic": 25452.894113031,
+    "offset_realtime_minus_mono": 1794550214.388491
+  },
+  "resource_limits": "no cgroup and no RLIMIT_AS on the control worker; host is shared with kind",
+  "effective": {
+    "env": {
+      "LONGRUN_EFFECT_URL": "http://127.0.0.1:6411",
+      "LONGRUN_EVENTS": "/workspace/results/long/lr-20261113T131427Z-celery-A1_control_40-scored/events.jsonl",
+      "LONGRUN_LIB": "celery",
+      "LONGRUN_LIBRARY": "celery",
+      "LONGRUN_MAX_RETRIES": "0",
+      "LONGRUN_RUN_ID": "lr-20261113T131427Z-celery-A1_control_40-scored",
+      "LONGRUN_SCENARIO": "A1_control_40",
+      "LONGRUN_TIME_LIMIT_S": "3000"
+    },
+    "time_limit": 3000,
+    "soft_time_limit": null,
+    "max_retries": 0,
+    "acks_late": true,
+    "broker_transport_options": {
+      "visibility_timeout": 2100
+    },
+    "result_backend_transport_options": {}
+  },
+  "status": "incomplete",
+  "handler_starts": 3,
+  "handler_finishes": 2,
+  "progress_events": 489,
+  "span_s": 4812.751131381,
+  "stop": {
+    "signal": "SIGKILL",
+    "reason": "sigterm_grace_exceeded"
+  },
+  "files_before_manifest": {
+    "effects.jsonl": {
+      "bytes": 135215,
+      "sha256": "7193266e714ae8549badd9e707464ea1b7a63805e13ecd3766914ad123cebaf5"
+    },
+    "enqueue.json": {
+      "bytes": 145,
+      "sha256": "4364548a8eaea5cf57eb44b94164aab573603e5589f26b2892286f4822f06a6c"
+    },
+    "events.jsonl": {
+      "bytes": 663732,
+      "sha256": "df31b1dac3aac33be385e40eaf96c779e8cde8a10ba125e83f35aedf86dffcc8"
+    },
+    "manifest.json": {
+      "bytes": 1658,
+      "sha256": "6c96ca5da1fb2db770a52c32570ef2a3eb449975fd5e489db8a935e2a8bd6661"
+    },
+    "samples.jsonl": {
+      "bytes": 619316,
+      "sha256": "21c406135a11f74451565dce7cabff8ae623c28e5d98d78c4eb1d8684b71bc94"
+    },
+    "worker.log": {
+      "bytes": 58074,
+      "sha256": "4198fdb19120d9cb81a2fdf77cb7b28fee57f0e0d693bbb89fa4d0d63d1bcd4f"
+    }
+  }
+}

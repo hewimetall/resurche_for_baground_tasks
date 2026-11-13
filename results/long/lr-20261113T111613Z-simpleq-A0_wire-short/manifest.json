@@ -1,0 +1,101 @@
+{
+  "run_id": "lr-20261113T111613Z-simpleq-A0_wire-short",
+  "scenario_id": "A0_wire",
+  "class": "short",
+  "library": "simpleq",
+  "versions": {
+    "dramatiq": "2.2.1",
+    "celery": "5.7.0",
+    "kombu": "5.7.0",
+    "taskiq": "0.13.0",
+    "taskiq-redis": "1.2.4",
+    "redis": "8.1.0"
+  },
+  "source_commit": "5901d111256bcee1b0c7c97c2f34864cea0054a4",
+  "planned_s": 3.0,
+  "steps": 3,
+  "step_s": 1.0,
+  "kind": "sleep",
+  "time_limit_s": 3000,
+  "max_retries": 0,
+  "workers": 1,
+  "fault": null,
+  "counts_as_2400": false,
+  "redis_port": 6410,
+  "redis_dir": "/workspace/results/long/redis-6410",
+  "effect_port": 6411,
+  "clock": {
+    "realtime": 1794568573.525806,
+    "monotonic": 20093.871905131,
+    "offset_realtime_minus_mono": 1794548479.6539009
+  },
+  "resource_limits": "no cgroup and no RLIMIT_AS on the control worker; host is shared with kind",
+  "effective": {
+    "env": {
+      "LONGRUN_EFFECT_URL": "http://127.0.0.1:6411",
+      "LONGRUN_EVENTS": "/workspace/results/long/lr-20261113T111613Z-simpleq-A0_wire-short/events.jsonl",
+      "LONGRUN_LIB": "simpleq",
+      "LONGRUN_LIBRARY": "simpleq",
+      "LONGRUN_MAX_RETRIES": "0",
+      "LONGRUN_RUN_ID": "lr-20261113T111613Z-simpleq-A0_wire-short",
+      "LONGRUN_SCENARIO": "A0_wire",
+      "LONGRUN_TIME_LIMIT_S": "3000"
+    },
+    "actor": {
+      "name": "hold",
+      "time_limit": 3000000,
+      "max_retries": 0,
+      "max_deliveries": 8,
+      "queue": "bench"
+    },
+    "config": {
+      "child_memory_hard": null,
+      "child_memory_soft": null,
+      "dead_ttl_secs": 604800,
+      "done_ttl_secs": 86400,
+      "from_env": "<built-in method from_env of type object at 0x23f7a4d0>",
+      "heartbeat_secs": 15,
+      "max_deliveries": 5,
+      "memory_hard_ratio": 0.95,
+      "memory_soft_ratio": 0.8,
+      "missed_heartbeats": 4,
+      "ping_budget_secs": 1860,
+      "unique_ttl_secs": 86400
+    }
+  },
+  "status": "short_control",
+  "handler_starts": 1,
+  "handler_finishes": 1,
+  "progress_events": 3,
+  "span_s": 3.072805271,
+  "stop": {
+    "signal": "SIGKILL",
+    "reason": "sigterm_grace_exceeded"
+  },
+  "files_before_manifest": {
+    "effects.jsonl": {
+      "bytes": 807,
+      "sha256": "bd99aba632a0b4099498ef902923e9074c4cd03443e4c7e89584ccd3091973e6"
+    },
+    "enqueue.json": {
+      "bytes": 120,
+      "sha256": "f1e07e6702268186fa6eb2d8b71832cfdfbc5b80284837f821aa7e32a6c5b5f8"
+    },
+    "events.jsonl": {
+      "bytes": 5812,
+      "sha256": "525358213ba576b7bafca5f9b6c8d5eda64cc4cb88d978a554c8fc6f9eae76f7"
+    },
+    "manifest.json": {
+      "bytes": 1926,
+      "sha256": "64363f4e54934bec23af89378cee0d125834c79d87cba2494ab9d5efa31a4088"
+    },
+    "samples.jsonl": {
+      "bytes": 26202,
+      "sha256": "c1a171857029035a99c59d2c275b1a874a1eb1797421db1aa8cbbf0bdbd4215e"
+    },
+    "worker.log": {
+      "bytes": 1143,
+      "sha256": "c6830a1725330ceb530fbbd74eff35eb5d8bbe10a45e94c718512552b03c8748"
+    }
+  }
+}

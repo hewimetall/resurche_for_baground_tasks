@@ -1,0 +1,8 @@
+11:17:30: Starting worker for 11 functions: probe, item, fanout, chain, longjob, hold, boom, limitjob, snooze, blocker, fast
+11:17:30: redis_version=7.0.15 mem_usage=990.28K clients_connected=1 db_keys=0
+11:17:32:   0.04s → 78ed759139fa4ccfadf769cb5481bb01:hold('lr-20261113T111730Z-arq-A0_wire-short-job', 3, 1.0, 'sleep')
+11:17:35: recording health: Nov-13 11:17:35 j_complete=0 j_failed=0 j_retried=0 j_ongoing=1 queued=1
+11:17:35:   3.07s ← 78ed759139fa4ccfadf769cb5481bb01:hold ● 
+11:17:36: Setting allow_pick_jobs to `False`
+11:17:36: shutdown on SIGTERM ◆ 1 jobs complete ◆ 0 failed ◆ 0 retries ◆ 0 to be completed
+11:17:36: shutdown on SIGTERM, wait complete ◆ 1 jobs complete ◆ 0 failed ◆ 0 retries ◆ 0 ongoing to cancel

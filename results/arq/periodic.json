@@ -1,0 +1,54 @@
+{
+  "library": "arq",
+  "scenario": "periodic",
+  "scale": "short",
+  "started_at": "2026-11-12T17:52:07.863572+00:00",
+  "measured": true,
+  "sends": [
+    {
+      "accepted": true,
+      "id": "periodic:periodic-arq-1794505927",
+      "native_dedup": true
+    },
+    {
+      "accepted": false,
+      "id": "periodic:periodic-arq-1794505927",
+      "native_dedup": true
+    },
+    {
+      "accepted": false,
+      "id": "periodic:periodic-arq-1794505927",
+      "native_dedup": true
+    },
+    {
+      "accepted": false,
+      "id": "periodic:periodic-arq-1794505927",
+      "native_dedup": true
+    }
+  ],
+  "got": 1,
+  "invariant": {
+    "expected": 1,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 1,
+    "distinct_items": 1,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 1
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505929.0862117,
+      "exit_at": 1794505929.286536,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 1.423
+}

@@ -1,0 +1,35 @@
+{
+  "library": "taskiq",
+  "scenario": "prefetch",
+  "scale": "short",
+  "started_at": "2026-11-12T18:00:41.902445+00:00",
+  "measured": true,
+  "gap": {
+    "gap_s": 0.4781182703857422,
+    "starts_after": 2
+  },
+  "invariant": {
+    "expected": 8,
+    "lost": 6,
+    "duplicated": 0,
+    "attempts": 3,
+    "distinct_items": 3,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "running",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 8
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794506493.709976,
+      "exit_at": 1794506495.7115097,
+      "t_drain_s": 2.002,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 53.809
+}

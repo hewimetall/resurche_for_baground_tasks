@@ -1,0 +1,35 @@
+{
+  "library": "simpleq",
+  "scenario": "prefetch",
+  "scale": "short",
+  "started_at": "2026-11-12T17:25:04.439380+00:00",
+  "measured": true,
+  "gap": {
+    "gap_s": 0.25930309582519534,
+    "starts_after": 8
+  },
+  "invariant": {
+    "expected": 8,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 9,
+    "distinct_items": 8,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 8
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794504330.202883,
+      "exit_at": 1794504330.4030674,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 25.964
+}

@@ -1,0 +1,34 @@
+{
+  "library": "simpleq",
+  "scenario": "block_lease",
+  "scale": "short",
+  "started_at": "2026-11-12T17:34:25.720774+00:00",
+  "measured": true,
+  "block_s": 20,
+  "window_s": 10,
+  "attempts": [
+    {
+      "item": 0,
+      "note": "block-start retries=0 deliveries=1 id=02fbd157-182f-45a3-a864-a319d6c42d8d"
+    },
+    {
+      "item": 1,
+      "note": "block-end retries=0 deliveries=1 id=02fbd157-182f-45a3-a864-a319d6c42d8d"
+    }
+  ],
+  "env": {
+    "SIMPLE_Q_HEARTBEAT_SECS": "5",
+    "SIMPLE_Q_MISSED_HEARTBEATS": "2"
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794504894.0972235,
+      "exit_at": 1794504894.2975082,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 28.577
+}

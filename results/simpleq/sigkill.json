@@ -1,0 +1,39 @@
+{
+  "library": "simpleq",
+  "scenario": "sigkill",
+  "scale": "short",
+  "started_at": "2026-11-12T17:23:59.934845+00:00",
+  "measured": true,
+  "kill_at": 1794504245.282037,
+  "gap": {
+    "gap_s": null,
+    "starts_after": 0
+  },
+  "attempts": [
+    {
+      "item": 0,
+      "note": "block-start retries=0 deliveries=1 id=27008280-5133-4e6b-b5c9-b6af6f08bc50",
+      "ts": "1794504245.182535"
+    },
+    {
+      "item": 0,
+      "note": "block-start retries=0 deliveries=2 id=27008280-5133-4e6b-b5c9-b6af6f08bc50",
+      "ts": "1794504255.527100"
+    }
+  ],
+  "heartbeat_env": {
+    "SIMPLE_Q_HEARTBEAT_SECS": "5",
+    "SIMPLE_Q_MISSED_HEARTBEATS": "2"
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794504256.7103238,
+      "exit_at": 1794504259.7155564,
+      "t_drain_s": 3.005,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 19.781
+}

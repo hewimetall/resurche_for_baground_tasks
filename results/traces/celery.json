@@ -1,0 +1,203 @@
+{
+  "lib": "celery",
+  "redis": "redis://127.0.0.1:6391/0",
+  "heartbeat_s": null,
+  "idle_before_send_s": 2.818,
+  "enqueue_error": null,
+  "pickup_ms": 230,
+  "wall_after_send_s": 0.666,
+  "idle_processes": [
+    {
+      "pid": 51982,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/celery -A bench.celery_app worker -Q bench -c 1 --loglevel info --without-gossip --without-mingle",
+      "threads": [
+        {
+          "tid": 51982,
+          "comm": "celery",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        }
+      ],
+      "voluntary_ctxt_switches": "60",
+      "nonvoluntary_ctxt_switches": "5",
+      "Threads": "1",
+      "switch_rate": {
+        "window_s": 0.4,
+        "voluntary": 3,
+        "nonvoluntary": 0,
+        "per_s": 7.5
+      },
+      "pyspy": "Process 51982: /workspace/.venv/bin/python3 /workspace/.venv/bin/celery -A bench.celery_app worker -Q bench -c 1 --loglevel info --without-gossip --without-mingle\nPython v3.12.3 (/usr/bin/python3.12)\n\nThread 51982 (idle): \"MainThread\"\n    _epoll.poll (kombu/utils/eventio.py:83)\n    Hub.create_loop (kombu/asynchronous/hub.py:406)\n    asynloop (celery/worker/loops.py:130)\n    Evloop.start (celery/worker/consumer/consumer.py:944)\n    Blueprint.start (celery/bootsteps.py:116)\n    Consumer.start (celery/worker/consumer/consumer.py:406)\n    StartStopStep.start (celery/bootsteps.py:365)\n    Blueprint.start (celery/bootsteps.py:116)\n    WorkController.start (celery/worker/worker.py:271)\n    worker (celery/bin/worker.py:400)\n    handle_preload_options.<locals>.caller (celery/bin/base.py:202)\n    pass_context.<locals>.new_func (click/decorators.py:34)\n    Context.invoke (click/core.py:911)\n    Command.invoke (click/core.py:1414)\n    Group.invoke (click/core.py:2054)\n    Command.main (click/core.py:1560)\n    Command.__call__ (click/core.py:1653)\n    main (celery/bin/celery.py:232)\n    main (celery/__main__.py:15)\n    <module> (celery:6)\n"
+    },
+    {
+      "pid": 51984,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/celery -A bench.celery_app worker -Q bench -c 1 --loglevel info --without-gossip --without-mingle",
+      "threads": [
+        {
+          "tid": 51984,
+          "comm": "celery",
+          "state": "S (sleeping)",
+          "wchan": "pipe_read"
+        }
+      ],
+      "voluntary_ctxt_switches": "1",
+      "nonvoluntary_ctxt_switches": "0",
+      "Threads": "1",
+      "switch_rate": {
+        "window_s": 0.4,
+        "voluntary": 0,
+        "nonvoluntary": 0,
+        "per_s": 0.0
+      },
+      "pyspy": "Process 51984: /workspace/.venv/bin/python3 /workspace/.venv/bin/celery -A bench.celery_app worker -Q bench -c 1 --loglevel info --without-gossip --without-mingle\nPython v3.12.3 (/usr/bin/python3.12)\n\nThread 51984 (idle): \"MainThread\"\n    Connection._recv (billiard/connection.py:425)\n    Connection._recv_bytes (billiard/connection.py:459)\n    _ConnectionBase.recv_bytes (billiard/connection.py:240)\n    _SimpleQueue.get_payload (billiard/queues.py:360)\n    Worker._make_recv_method.<locals>._recv (billiard/pool.py:506)\n    Worker._make_protected_receive.<locals>.receive (billiard/pool.py:534)\n    Worker.workloop (billiard/pool.py:357)\n    Worker.__call__ (billiard/pool.py:293)\n    BaseProcess.run (billiard/process.py:115)\n    BaseProcess._bootstrap (billiard/process.py:356)\n    Popen._launch (billiard/popen_fork.py:77)\n    Popen.__init__ (billiard/popen_fork.py:22)\n    ForkProcess._Popen (billiard/context.py:331)\n    BaseProcess.start (billiard/process.py:126)\n    Pool._create_worker_process (billiard/pool.py:1259)\n    AsynPool._create_worker_process (celery/concurrency/asynpool.py:568)\n    Pool.__init__ (billiard/pool.py:1147)\n    AsynPool.__init__ (celery/concurrency/asynpool.py:550)\n    TaskPool.on_start (celery/concurrency/prefork.py:182)\n    BasePool.start (celery/concurrency/base.py:130)\n    StartStopStep.start (celery/bootsteps.py:365)\n    Blueprint.start (celery/bootsteps.py:116)\n    WorkController.start (celery/worker/worker.py:271)\n    worker (celery/bin/worker.py:400)\n    handle_preload_options.<locals>.caller (celery/bin/base.py:202)\n    pass_context.<locals>.new_func (click/decorators.py:34)\n    Context.invoke (click/core.py:911)\n    Command.invoke (click/core.py:1414)\n    Group.invoke (click/core.py:2054)\n    Command.main (click/core.py:1560)\n    Command.__call__ (click/core.py:1653)\n    main (celery/bin/celery.py:232)\n    main (celery/__main__.py:15)\n    <module> (celery:6)\n"
+    }
+  ],
+  "waiting_processes": [
+    {
+      "pid": 51982,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/celery -A bench.celery_app worker -Q bench -c 1 --loglevel info --without-gossip --without-mingle",
+      "threads": [
+        {
+          "tid": 51982,
+          "comm": "celery",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        }
+      ],
+      "voluntary_ctxt_switches": "70",
+      "nonvoluntary_ctxt_switches": "5",
+      "Threads": "1"
+    },
+    {
+      "pid": 51984,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/celery -A bench.celery_app worker -Q bench -c 1 --loglevel info --without-gossip --without-mingle",
+      "threads": [
+        {
+          "tid": 51984,
+          "comm": "celery",
+          "state": "S (sleeping)",
+          "wchan": "pipe_read"
+        }
+      ],
+      "voluntary_ctxt_switches": "8",
+      "nonvoluntary_ctxt_switches": "0",
+      "Threads": "1"
+    }
+  ],
+  "monitor": {
+    "command_counts": {
+      "PING": 13,
+      "HELLO\"": 11,
+      "SET\"": 1,
+      "ZRANGE\"": 1,
+      "EVALSHA\"": 7,
+      "SCRIPT\"": 4,
+      "GET\"": 2,
+      "DEL\"": 5,
+      "MULTI": 10,
+      "LLEN\"": 12,
+      "EXEC": 10,
+      "SADD\"": 6,
+      "PUBLISH\"": 4,
+      "TIME": 3,
+      "ZADD\"": 3,
+      "BRPOP\"": 4,
+      "PSUBSCRIBE\"": 1,
+      "ZRANGEBYSCORE\"": 1,
+      "SUBSCRIBE\"": 1,
+      "LPUSH\"": 1,
+      "UNSUBSCRIBE\"": 1,
+      "HSET\"": 1,
+      "SETEX\"": 1,
+      "ZREM\"": 1,
+      "HDEL\"": 1,
+      "PUNSUBSCRIBE\"": 1,
+      "SREM\"": 2
+    },
+    "idle_sample": [
+      "1794556808.039568 [0 127.0.0.1:49390] \"PING\"",
+      "1794556808.039681 [0 127.0.0.1:49390] \"HELLO\" \"3\"",
+      "1794556808.040285 [0 127.0.0.1:49390] \"PING\"",
+      "1794556808.056878 [0 127.0.0.1:49394] \"PING\"",
+      "1794556808.056964 [0 127.0.0.1:49394] \"HELLO\" \"3\"",
+      "1794556808.057748 [0 127.0.0.1:49394] \"SET\" \"unacked_mutex\" \"3e3af533df3811f19c08822b383dbcd0\" \"NX\" \"PX\" \"300000\"",
+      "1794556808.057940 [0 127.0.0.1:49394] \"ZRANGE\" \"unacked_index\" \"1794554708.0407414\" \"0\" \"BYSCORE\" \"REV\" \"WITHSCORES\"",
+      "1794556808.058099 [0 127.0.0.1:49394] \"EVALSHA\" \"c3f8721cbb97f72bc19e972846bd7aaf91901658\" \"1\" \"unacked_mutex\" \"3e3af533df3811f19c08822b383dbcd0\"",
+      "1794556808.058226 [0 127.0.0.1:49394] \"SCRIPT\" \"LOAD\" \"\\n        local token = redis.call('get', KEYS[1])\\n        if not token or token ~= ARGV[1] then\\n            return 0\\n        end\\n        redis.call('del', KEYS[1])\\n        return ",
+      "1794556808.058293 [0 127.0.0.1:49394] \"EVALSHA\" \"c3f8721cbb97f72bc19e972846bd7aaf91901658\" \"1\" \"unacked_mutex\" \"3e3af533df3811f19c08822b383dbcd0\"",
+      "1794556808.058305 [0 lua] \"get\" \"unacked_mutex\"",
+      "1794556808.058315 [0 lua] \"del\" \"unacked_mutex\"",
+      "1794556808.060482 [0 127.0.0.1:49400] \"PING\"",
+      "1794556808.060524 [0 127.0.0.1:49400] \"HELLO\" \"3\"",
+      "1794556808.060716 [0 127.0.0.1:49400] \"PING\"",
+      "1794556808.063312 [0 127.0.0.1:49394] \"MULTI\"",
+      "1794556808.063320 [0 127.0.0.1:49394] \"LLEN\" \"bench\"",
+      "1794556808.063325 [0 127.0.0.1:49394] \"LLEN\" \"bench\\x06\\x163\"",
+      "1794556808.063326 [0 127.0.0.1:49394] \"LLEN\" \"bench\\x06\\x166\"",
+      "1794556808.063327 [0 127.0.0.1:49394] \"LLEN\" \"bench\\x06\\x169\"",
+      "1794556808.063329 [0 127.0.0.1:49394] \"EXEC\"",
+      "1794556808.063651 [0 127.0.0.1:49394] \"MULTI\"",
+      "1794556808.063656 [0 127.0.0.1:49394] \"SADD\" \"_kombu.binding.bench\" \"bench\\x06\\x16\\x06\\x16bench\"",
+      "1794556808.063659 [0 127.0.0.1:49394] \"SADD\" \"_kombu.binding_permanent.bench\" \"bench\\x06\\x16\\x06\\x16bench\"",
+      "1794556808.063661 [0 127.0.0.1:49394] \"EXEC\"",
+      "1794556808.065344 [0 127.0.0.1:49406] \"PING\"",
+      "1794556808.065425 [0 127.0.0.1:49406] \"HELLO\" \"3\"",
+      "1794556808.065636 [0 127.0.0.1:49406] \"PUBLISH\" \"/0.celeryev/worker.online\" \"{\\\"body\\\": \\\"eyJob3N0bmFtZSI6ICJjZWxlcnlAY3Vyc29yIiwgInV0Y29mZnNldCI6IDAuMCwgInBpZCI6IDUxOTgyLCAiY2xvY2siOiAxLCAiZnJlcSI6IDIuMCwgImFjdGl2ZSI6IDAsICJwcm9jZXNzZWQiOi",
+      "1794556808.066459 [0 127.0.0.1:49420] \"PING\"",
+      "1794556808.066492 [0 127.0.0.1:49420] \"HELLO\" \"3\"",
+      "1794556808.066663 [0 127.0.0.1:49420] \"PING\"",
+      "1794556808.067523 [0 127.0.0.1:49422] \"PING\"",
+      "1794556808.067555 [0 127.0.0.1:49422] \"HELLO\" \"3\"",
+      "1794556808.067751 [0 127.0.0.1:49422] \"MULTI\"",
+      "1794556808.067755 [0 127.0.0.1:49422] \"LLEN\" \"celery@cursor.celery.pidbox\"",
+      "1794556808.067759 [0 127.0.0.1:49422] \"LLEN\" \"celery@cursor.celery.pidbox\\x06\\x163\"",
+      "1794556808.067761 [0 127.0.0.1:49422] \"LLEN\" \"celery@cursor.celery.pidbox\\x06\\x166\"",
+      "1794556808.067762 [0 127.0.0.1:49422] \"LLEN\" \"celery@cursor.celery.pidbox\\x06\\x169\"",
+      "1794556808.067764 [0 127.0.0.1:49422] \"EXEC\"",
+      "1794556808.068064 [0 127.0.0.1:49422] \"EVALSHA\" \"ef7a9e205fbaf46bf959e1522ff796622fc676c7\" \"2\" \"_kombu.binding.celery.pidbox\" \"_kombu.binding_deadlines\" \"\\x06\\x16\\x06\\x16celery@cursor.celery.pidbox\" \"celery.pidbox\" \"3600000\""
+    ],
+    "after_send_sample": [
+      "1794556810.735647 [0 127.0.0.1:56382] \"HELLO\" \"3\"",
+      "1794556810.735999 [0 127.0.0.1:56382] \"SUBSCRIBE\" \"celery-task-meta-37ef883b-9c06-45cd-867e-2650013f678f\"",
+      "1794556810.738106 [0 127.0.0.1:56396] \"PING\"",
+      "1794556810.738338 [0 127.0.0.1:56396] \"HELLO\" \"3\"",
+      "1794556810.738577 [0 127.0.0.1:56396] \"PING\"",
+      "1794556810.739459 [0 127.0.0.1:56406] \"PING\"",
+      "1794556810.739501 [0 127.0.0.1:56406] \"HELLO\" \"3\"",
+      "1794556810.739710 [0 127.0.0.1:56406] \"MULTI\"",
+      "1794556810.739717 [0 127.0.0.1:56406] \"LLEN\" \"bench\"",
+      "1794556810.739719 [0 127.0.0.1:56406] \"LLEN\" \"bench\\x06\\x163\"",
+      "1794556810.739721 [0 127.0.0.1:56406] \"LLEN\" \"bench\\x06\\x166\"",
+      "1794556810.739722 [0 127.0.0.1:56406] \"LLEN\" \"bench\\x06\\x169\"",
+      "1794556810.739723 [0 127.0.0.1:56406] \"EXEC\"",
+      "1794556810.739945 [0 127.0.0.1:56406] \"MULTI\"",
+      "1794556810.739949 [0 127.0.0.1:56406] \"SADD\" \"_kombu.binding.bench\" \"bench\\x06\\x16\\x06\\x16bench\"",
+      "1794556810.739953 [0 127.0.0.1:56406] \"SADD\" \"_kombu.binding_permanent.bench\" \"bench\\x06\\x16\\x06\\x16bench\"",
+      "1794556810.739955 [0 127.0.0.1:56406] \"EXEC\"",
+      "1794556810.740184 [0 127.0.0.1:56406] \"LPUSH\" \"bench\" \"{\\\"body\\\": \\\"W1tdLCB7ImpvYl9pZCI6ICJ0cmFjZS1jZWxlcnkiLCAibiI6IDEsICJzZW50X21zIjogMTc5NDU1NjgxMDUxMn0sIHsiY2FsbGJhY2tzIjogbnVsbCwgImVycmJhY2tzIjogbnVsbCwgImNoYWluIjogbnVsbCwgImNob3JkIjog",
+      "1794556810.740550 [0 127.0.0.1:56382] \"UNSUBSCRIBE\" \"celery-task-meta-37ef883b-9c06-45cd-867e-2650013f678f\"",
+      "1794556810.740822 [0 127.0.0.1:49394] \"MULTI\"",
+      "1794556810.740835 [0 127.0.0.1:49394] \"ZADD\" \"unacked_index\" \"1794556810.7405207\" \"08e97e2c-0b1b-48a2-b6d0-5813a386a6fa\"",
+      "1794556810.740847 [0 127.0.0.1:49394] \"HSET\" \"unacked\" \"08e97e2c-0b1b-48a2-b6d0-5813a386a6fa\" \"[{\\\"body\\\": \\\"W1tdLCB7ImpvYl9pZCI6ICJ0cmFjZS1jZWxlcnkiLCAibiI6IDEsICJzZW50X21zIjogMTc5NDU1NjgxMDUxMn0sIHsiY2FsbGJhY2tzIjogbnVsbCwgImVycmJhY2tzIjo",
+      "1794556810.740880 [0 127.0.0.1:49394] \"EXEC\"",
+      "1794556810.744876 [0 127.0.0.1:56408] \"HELLO\" \"3\"",
+      "1794556810.746273 [0 127.0.0.1:56408] \"GET\" \"celery-task-meta-37ef883b-9c06-45cd-867e-2650013f678f\"",
+      "1794556810.746794 [0 127.0.0.1:56408] \"MULTI\"",
+      "1794556810.746811 [0 127.0.0.1:56408] \"SETEX\" \"celery-task-meta-37ef883b-9c06-45cd-867e-2650013f678f\" \"3600\" \"{\\\"status\\\": \\\"SUCCESS\\\", \\\"result\\\": null, \\\"traceback\\\": null, \\\"children\\\": [], \\\"date_done\\\": \\\"2026-11-13T08:00:10.742672+00:",
+      "1794556810.746828 [0 127.0.0.1:56408] \"PUBLISH\" \"celery-task-meta-37ef883b-9c06-45cd-867e-2650013f678f\" \"{\\\"status\\\": \\\"SUCCESS\\\", \\\"result\\\": null, \\\"traceback\\\": null, \\\"children\\\": [], \\\"date_done\\\": \\\"2026-11-13T08:00:10.742672+00:00\\\",",
+      "1794556810.746836 [0 127.0.0.1:56408] \"EXEC\"",
+      "1794556810.747873 [0 127.0.0.1:49394] \"MULTI\"",
+      "1794556810.747879 [0 127.0.0.1:49394] \"ZREM\" \"unacked_index\" \"08e97e2c-0b1b-48a2-b6d0-5813a386a6fa\"",
+      "1794556810.747883 [0 127.0.0.1:49394] \"HDEL\" \"unacked\" \"08e97e2c-0b1b-48a2-b6d0-5813a386a6fa\"",
+      "1794556810.747886 [0 127.0.0.1:49394] \"EXEC\"",
+      "1794556810.748455 [0 127.0.0.1:49390] \"BRPOP\" \"bench\" \"bench\\x06\\x163\" \"bench\\x06\\x166\" \"bench\\x06\\x169\" \"1\"",
+      "1794556811.179435 [0 127.0.0.1:49420] \"PUNSUBSCRIBE\" \"/0.celery.pidbox\"",
+      "1794556811.180288 [0 127.0.0.1:56414] \"PING\"",
+      "1794556811.180358 [0 127.0.0.1:56414] \"HELLO\" \"3\"",
+      "1794556811.180631 [0 127.0.0.1:56414] \"SREM\" \"_kombu.binding.celery.pidbox\" \"\\x06\\x16\\x06\\x16celery@cursor.celery.pidbox\"",
+      "1794556811.180721 [0 127.0.0.1:56414] \"SREM\" \"_kombu.binding_permanent.celery.pidbox\" \"\\x06\\x16\\x06\\x16celery@cursor.celery.pidbox\"",
+      "1794556811.181585 [0 127.0.0.1:56414] \"MULTI\""
+    ]
+  },
+  "worker_log_tail": " \n -------------- celery@cursor v5.7.0 (collider)\n--- ***** ----- \n-- ******* ---- Linux-6.12.113+-x86_64-with-glibc2.39 2026-11-13 08:00:08\n- *** --- * --- \n- ** ---------- [config]\n- ** ---------- .> app:         bench:0x7fa30695ee70\n- ** ---------- .> transport:   redis://:**@127.0.0.1:6391/0\n- ** ---------- .> results:     redis://127.0.0.1:6391/0\n- *** --- * --- .> concurrency: 1 (prefork)\n-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)\n--- ***** ----- \n -------------- [queues]\n                .> bench            exchange=bench(direct) key=bench\n                \n\n[tasks]\n  . blocker\n  . boom\n  . chain\n  . fanout\n  . fast\n  . grouped\n  . item\n  . limitjob\n  . longjob\n  . probe\n  . rated\n  . snooze\n\n[2026-11-13 08:00:08,058: INFO/MainProcess] Connected to redis://:**@127.0.0.1:6391/0\n[2026-11-13 08:00:08,068: INFO/MainProcess] celery@cursor ready.\n[2026-11-13 08:00:10,741: INFO/MainProcess] Task fast[37ef883b-9c06-45cd-867e-2650013f678f] received\n[2026-11-13 08:00:10,747: INFO/ForkPoolWorker-1] Task fast[37ef883b-9c06-45cd-867e-2650013f678f] succeeded in 0.0048892189988691825s: None\n\nworker: Warm shutdown (MainProcess)\n"
+}

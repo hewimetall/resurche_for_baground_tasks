@@ -1,0 +1,127 @@
+{
+  "lib": "taskiq",
+  "redis": "redis://127.0.0.1:6391/0",
+  "heartbeat_s": null,
+  "idle_before_send_s": 2.82,
+  "enqueue_error": null,
+  "pickup_ms": 405,
+  "wall_after_send_s": 0.867,
+  "idle_processes": [
+    {
+      "pid": 52010,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/taskiq worker bench.taskiq_app:broker --workers 1 --max-async-tasks 1 --shutdown-timeout 5 --ack-type when_executed --max-prefetch 0",
+      "threads": [
+        {
+          "tid": 52010,
+          "comm": "taskiq",
+          "state": "S (sleeping)",
+          "wchan": "hrtimer_nanosleep"
+        }
+      ],
+      "voluntary_ctxt_switches": "3",
+      "nonvoluntary_ctxt_switches": "17",
+      "Threads": "1",
+      "switch_rate": {
+        "window_s": 0.4,
+        "voluntary": 0,
+        "nonvoluntary": 0,
+        "per_s": 0.0
+      },
+      "pyspy": "Process 52010: /workspace/.venv/bin/python3 /workspace/.venv/bin/taskiq worker bench.taskiq_app:broker --workers 1 --max-async-tasks 1 --shutdown-timeout 5 --ack-type when_executed --max-prefetch 0\nPython v3.12.3 (/usr/bin/python3.12)\n\nThread 52010 (idle): \"MainThread\"\n    ProcessManager.start (taskiq/cli/worker/process_manager.py:269)\n    run_worker (taskiq/cli/worker/run.py:220)\n    WorkerCMD.exec (taskiq/cli/worker/cmd.py:27)\n    main (taskiq/__main__.py:71)\n    <module> (taskiq:6)\n"
+    },
+    {
+      "pid": 52011,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/taskiq worker bench.taskiq_app:broker --workers 1 --max-async-tasks 1 --shutdown-timeout 5 --ack-type when_executed --max-prefetch 0",
+      "threads": [
+        {
+          "tid": 52011,
+          "comm": "taskiq",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        }
+      ],
+      "voluntary_ctxt_switches": "3",
+      "nonvoluntary_ctxt_switches": "5",
+      "Threads": "1",
+      "switch_rate": {
+        "window_s": 0.4,
+        "voluntary": 1,
+        "nonvoluntary": 0,
+        "per_s": 2.5
+      },
+      "pyspy": "Process 52011: /workspace/.venv/bin/python3 /workspace/.venv/bin/taskiq worker bench.taskiq_app:broker --workers 1 --max-async-tasks 1 --shutdown-timeout 5 --ack-type when_executed --max-prefetch 0\nPython v3.12.3 (/usr/bin/python3.12)\n\nThread 52011 (idle): \"MainThread\"\n    EpollSelector.select (selectors.py:468)\n    BaseEventLoop._run_once (asyncio/base_events.py:1949)\n    BaseEventLoop.run_forever (asyncio/base_events.py:641)\n    BaseEventLoop.run_until_complete (asyncio/base_events.py:674)\n    start_listen (taskiq/cli/worker/run.py:176)\n    BaseProcess.run (multiprocessing/process.py:108)\n    BaseProcess._bootstrap (multiprocessing/process.py:314)\n    Popen._launch (multiprocessing/popen_fork.py:71)\n    Popen.__init__ (multiprocessing/popen_fork.py:19)\n    ForkProcess._Popen (multiprocessing/context.py:282)\n    Process._Popen (multiprocessing/context.py:224)\n    BaseProcess.start (multiprocessing/process.py:121)\n    ProcessManager.prepare_workers (taskiq/cli/worker/process_manager.py:208)\n    ProcessManager.start (taskiq/cli/worker/process_manager.py:267)\n    run_worker (taskiq/cli/worker/run.py:220)\n    WorkerCMD.exec (taskiq/cli/worker/cmd.py:27)\n    main (taskiq/__main__.py:71)\n    <module> (taskiq:6)\n"
+    }
+  ],
+  "waiting_processes": [
+    {
+      "pid": 52010,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/taskiq worker bench.taskiq_app:broker --workers 1 --max-async-tasks 1 --shutdown-timeout 5 --ack-type when_executed --max-prefetch 0",
+      "threads": [
+        {
+          "tid": 52010,
+          "comm": "taskiq",
+          "state": "S (sleeping)",
+          "wchan": "hrtimer_nanosleep"
+        }
+      ],
+      "voluntary_ctxt_switches": "5",
+      "nonvoluntary_ctxt_switches": "17",
+      "Threads": "1"
+    },
+    {
+      "pid": 52011,
+      "cmdline": "/workspace/.venv/bin/python3 /workspace/.venv/bin/taskiq worker bench.taskiq_app:broker --workers 1 --max-async-tasks 1 --shutdown-timeout 5 --ack-type when_executed --max-prefetch 0",
+      "threads": [
+        {
+          "tid": 52011,
+          "comm": "taskiq",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        }
+      ],
+      "voluntary_ctxt_switches": "10",
+      "nonvoluntary_ctxt_switches": "5",
+      "Threads": "1"
+    }
+  ],
+  "monitor": {
+    "command_counts": {
+      "HELLO\"": 2,
+      "XGROUP\"": 2,
+      "XREADGROUP\"": 4,
+      "XADD\"": 1,
+      "XACK\"": 1,
+      "SCRIPT\"": 1,
+      "MULTI": 1,
+      "SET\"": 1,
+      "XAUTOCLAIM\"": 1,
+      "EVALSHA\"": 1,
+      "GET\"": 1,
+      "DEL\"": 1,
+      "EXEC": 1
+    },
+    "idle_sample": [
+      "1794556823.340315 [0 127.0.0.1:57466] \"HELLO\" \"3\"",
+      "1794556823.340887 [0 127.0.0.1:57466] \"XGROUP\" \"CREATE\" \"bench\" \"taskiq\" \"$\" \"MKSTREAM\"",
+      "1794556823.350945 [0 127.0.0.1:57466] \"XREADGROUP\" \"GROUP\" \"taskiq\" \"3be644d0-f507-4571-bc37-a011e18dd586\" \"COUNT\" \"100\" \"BLOCK\" \"2000\" \"STREAMS\" \"bench\" \">\"",
+      "1794556825.366706 [0 127.0.0.1:57466] \"XREADGROUP\" \"GROUP\" \"taskiq\" \"3be644d0-f507-4571-bc37-a011e18dd586\" \"COUNT\" \"100\" \"BLOCK\" \"2000\" \"STREAMS\" \"bench\" \">\""
+    ],
+    "after_send_sample": [
+      "1794556826.121664 [0 127.0.0.1:57470] \"HELLO\" \"3\"",
+      "1794556826.122467 [0 127.0.0.1:57470] \"XGROUP\" \"CREATE\" \"bench\" \"taskiq\" \"$\" \"MKSTREAM\"",
+      "1794556826.122923 [0 127.0.0.1:57470] \"XADD\" \"bench\" \"*\" \"data\" \"{\\\"task_id\\\": \\\"458fd9f296dd4e659d5770eb6895ead4\\\", \\\"task_name\\\": \\\"fast\\\", \\\"labels\\\": {\\\"retry_on_error\\\": \\\"False\\\", \\\"max_retries\\\": \\\"1\\\", \\\"timeout\\\": \\\"60\\\"}, \\\"labels",
+      "1794556826.126079 [0 127.0.0.1:57466] \"XACK\" \"bench\" \"taskiq\" \"1794556826122-0\"",
+      "1794556826.129486 [0 127.0.0.1:57466] \"SCRIPT\" \"EXISTS\" \"c3f8721cbb97f72bc19e972846bd7aaf91901658\"",
+      "1794556826.130021 [0 127.0.0.1:57466] \"MULTI\"",
+      "1794556826.130048 [0 127.0.0.1:57466] \"SET\" \"autoclaim:taskiq:bench\" \"4902a081df3811f185ed822b383dbcd0\" \"NX\" \"PX\" \"5000\"",
+      "1794556826.130068 [0 127.0.0.1:57466] \"XAUTOCLAIM\" \"bench\" \"taskiq\" \"3be644d0-f507-4571-bc37-a011e18dd586\" \"600000\" \"0-0\" \"COUNT\" \"100\"",
+      "1794556826.130085 [0 127.0.0.1:57466] \"EVALSHA\" \"c3f8721cbb97f72bc19e972846bd7aaf91901658\" \"1\" \"autoclaim:taskiq:bench\" \"4902a081df3811f185ed822b383dbcd0\"",
+      "1794556826.130119 [0 lua] \"get\" \"autoclaim:taskiq:bench\"",
+      "1794556826.130130 [0 lua] \"del\" \"autoclaim:taskiq:bench\"",
+      "1794556826.130134 [0 127.0.0.1:57466] \"EXEC\"",
+      "1794556826.130622 [0 127.0.0.1:57466] \"XREADGROUP\" \"GROUP\" \"taskiq\" \"3be644d0-f507-4571-bc37-a011e18dd586\" \"COUNT\" \"100\" \"BLOCK\" \"2000\" \"STREAMS\" \"bench\" \">\"",
+      "1794556828.173274 [0 127.0.0.1:57466] \"XREADGROUP\" \"GROUP\" \"taskiq\" \"3be644d0-f507-4571-bc37-a011e18dd586\" \"COUNT\" \"100\" \"BLOCK\" \"2000\" \"STREAMS\" \"bench\" \">\""
+    ]
+  },
+  "worker_log_tail": "[2026-11-13 08:00:23,231][taskiq.worker][INFO   ][MainProcess] Pid of a main process: 52010\n[2026-11-13 08:00:23,232][taskiq.worker][INFO   ][MainProcess] Starting 1 worker processes.\n[2026-11-13 08:00:23,233][taskiq.process-manager][INFO   ][MainProcess] Started process worker-0 with pid 52011 \n[2026-11-13 08:00:23,341][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.\n[2026-11-13 08:00:26,124][taskiq.receiver.receiver][INFO   ][worker-0] Executing task fast with ID: 458fd9f296dd4e659d5770eb6895ead4\n[2026-11-13 08:00:26,588][taskiq.process-manager][INFO   ][MainProcess] Workers are scheduled for shutdown.\n[2026-11-13 08:00:27,335][taskiq.process-manager][INFO   ][MainProcess] Stopped process worker-0 with pid 52011\n[2026-11-13 08:00:28,173][taskiq.receiver.receiver][INFO   ][worker-0] Stopping prefetching messages...\n[2026-11-13 08:00:28,174][taskiq.receiver.receiver][INFO   ][worker-0] The runner is stopped.\n[2026-11-13 08:00:28,174][taskiq.worker][INFO   ][worker-0] Shutting down the broker.\n"
+}

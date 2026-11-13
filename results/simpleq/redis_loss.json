@@ -1,0 +1,50 @@
+{
+  "library": "simpleq",
+  "scenario": "redis_loss",
+  "scale": "short",
+  "started_at": "2026-11-12T17:34:00.398893+00:00",
+  "measured": true,
+  "rows": [
+    {
+      "aof": false,
+      "appendonly": "appendonly no",
+      "dbsize_before_worker": "0",
+      "ready": true,
+      "got": 0,
+      "invariant": {
+        "expected": 3,
+        "lost": 3,
+        "duplicated": 0,
+        "attempts": 0,
+        "distinct_items": 0,
+        "progress_steps": 0,
+        "skips": 0,
+        "status": "running",
+        "fail_reason": null,
+        "cancelled": false,
+        "expected_n": 3
+      }
+    },
+    {
+      "aof": true,
+      "appendonly": "appendonly yes",
+      "dbsize_before_worker": "8",
+      "ready": true,
+      "got": 3,
+      "invariant": {
+        "expected": 3,
+        "lost": 0,
+        "duplicated": 0,
+        "attempts": 3,
+        "distinct_items": 3,
+        "progress_steps": 0,
+        "skips": 0,
+        "status": "done",
+        "fail_reason": null,
+        "cancelled": false,
+        "expected_n": 3
+      }
+    }
+  ],
+  "duration_s": 25.305
+}

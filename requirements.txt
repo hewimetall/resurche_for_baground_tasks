@@ -1,0 +1,22 @@
+# Основной интерпретатор стенда: Python 3.12.
+# arq сюда не входит: arq 0.28 требует redis<6, taskiq-redis 1.2 — redis>=8.
+# Второй интерпретатор: requirements-arq.txt и requirements-arq.lock.
+
+simple-q-runtime==1.0.0rc7
+simple-q-worker==1.0.0rc7
+dramatiq==2.2.1
+dramatiq-abort==1.2.1
+celery==5.7.0
+redis>=8,<9
+taskiq==0.13.0
+taskiq-redis==1.2.4
+asyncpg==0.32.0
+httpx==0.28.1
+psutil==7.2.2
+pytest==9.2.0
+SQLAlchemy==2.1.8
+fastapi==0.162.5
+prometheus_client==0.26.0
+sentry-sdk==2.75.0
+opentelemetry-api==1.45.2
+opentelemetry-sdk==1.45.2

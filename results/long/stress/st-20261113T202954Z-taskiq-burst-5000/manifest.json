@@ -1,0 +1,55 @@
+{
+  "run_id": "st-20261113T202954Z-taskiq-burst-5000",
+  "class": "stress",
+  "counts_as_2400": false,
+  "scenario_id": "S_burst_fast",
+  "library": "taskiq",
+  "count": 5000,
+  "slots": 8,
+  "command": [
+    "/workspace/.venv/bin/taskiq",
+    "worker",
+    "bench.taskiq_app:broker",
+    "--workers",
+    "2",
+    "--max-async-tasks",
+    "4",
+    "--shutdown-timeout",
+    "60",
+    "--ack-type",
+    "when_executed",
+    "--max-prefetch",
+    "8"
+  ],
+  "versions": {
+    "simple-q-runtime": "1.0.0rc7",
+    "simple-q-worker": "1.0.0rc7",
+    "dramatiq": "2.2.1",
+    "celery": "5.7.0",
+    "kombu": "5.7.0",
+    "taskiq": "0.13.0",
+    "taskiq-redis": "1.2.4",
+    "redis": "8.1.0"
+  },
+  "status": "passed",
+  "done_lines": 5000,
+  "unique_n": 5000,
+  "duplicate_lines": 0,
+  "enqueue": {
+    "code": 0,
+    "seconds": 1.469,
+    "stdout": "{\"accepted\": 5000, \"rejected\": 0, \"seconds\": 0.99}\n",
+    "stderr": ""
+  },
+  "span_s": 0.992,
+  "throughput_per_s": 5040.32,
+  "latency_ms": {
+    "p50": 4,
+    "p95": 8,
+    "max": 14
+  },
+  "worker_exit_during_run": null,
+  "redis_port": 6412,
+  "redis_dir": "/workspace/results/long/stress-redis-6412",
+  "resource_limits": "no cgroup; host is shared"
+}

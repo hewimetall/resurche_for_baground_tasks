@@ -1,0 +1,34 @@
+{
+  "library": "arq",
+  "scenario": "redis_down",
+  "scale": "short",
+  "started_at": "2026-11-12T17:56:39.463060+00:00",
+  "measured": true,
+  "down_s": 5,
+  "got": 0,
+  "worker_alive": false,
+  "invariant": {
+    "expected": 6,
+    "lost": 6,
+    "duplicated": 0,
+    "attempts": 0,
+    "distinct_items": 0,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "running",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 6
+  },
+  "stop": [
+    {
+      "sigterm_at": null,
+      "exit_at": 1794506247.6626174,
+      "t_drain_s": 0,
+      "killed_after_grace": false,
+      "code": 1,
+      "already_exited": true
+    }
+  ],
+  "duration_s": 48.2
+}

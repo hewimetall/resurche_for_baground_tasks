@@ -1,0 +1,39 @@
+{
+  "library": "simpleq",
+  "scenario": "long_on",
+  "scale": "short",
+  "started_at": "2026-11-12T17:26:36.152672+00:00",
+  "measured": true,
+  "checkpoint": true,
+  "ready_new": true,
+  "stop": [
+    {
+      "sigterm_at": 1794504413.4316401,
+      "exit_at": 1794504414.6326032,
+      "t_drain_s": 1.201,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "gap": {
+    "gap_s": 1.4570326337890624,
+    "starts_after": 1
+  },
+  "progress": 4,
+  "steps": 4,
+  "attempts": [
+    {
+      "note": "long retries=0 deliveries=1 id=e15bfbf7-f3b9-4db2-b8d1-69feab09cfe7",
+      "ts": "1794504411.416443"
+    },
+    {
+      "note": "long retries=1 deliveries=1 id=e15bfbf7-f3b9-4db2-b8d1-69feab09cfe7",
+      "ts": "1794504414.888658"
+    }
+  ],
+  "sigterm_at": 1794504413.4316254,
+  "rss_peak": 118992896,
+  "admin_log": "/workspace/results/admin-simpleq.jsonl",
+  "duration_s": 19.994
+}

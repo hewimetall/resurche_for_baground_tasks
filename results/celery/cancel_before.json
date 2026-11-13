@@ -1,0 +1,37 @@
+{
+  "library": "celery",
+  "scenario": "cancel_before",
+  "scale": "short",
+  "started_at": "2026-11-12T17:45:31.722213+00:00",
+  "measured": true,
+  "skips": 5,
+  "invariant": {
+    "expected": 5,
+    "lost": 5,
+    "duplicated": 0,
+    "attempts": 5,
+    "distinct_items": 5,
+    "progress_steps": 0,
+    "skips": 5,
+    "status": "running",
+    "fail_reason": null,
+    "cancelled": true,
+    "expected_n": 5
+  },
+  "mock": {
+    "keys": 0,
+    "calls": 0,
+    "duplicated_keys": 0
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505532.9820821,
+      "exit_at": 1794505534.185965,
+      "t_drain_s": 1.204,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 2.464
+}

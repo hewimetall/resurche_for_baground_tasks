@@ -1,0 +1,51 @@
+{
+  "library": "celery",
+  "scenario": "dedup",
+  "scale": "short",
+  "started_at": "2026-11-12T17:45:20.818424+00:00",
+  "measured": true,
+  "first": {
+    "accepted": true,
+    "id": "d713861d-3886-472b-a680-5656ec9cb613",
+    "native_dedup": false
+  },
+  "second": {
+    "accepted": true,
+    "id": "cf08d4c5-bda8-4fa5-8d49-1c093967639a",
+    "native_dedup": false
+  },
+  "after_ack": {
+    "accepted": true,
+    "id": "49112631-dbf6-40a8-8078-446d067bb29f",
+    "native_dedup": false
+  },
+  "invariant": {
+    "expected": 1,
+    "lost": 0,
+    "duplicated": 1,
+    "attempts": 3,
+    "distinct_items": 1,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 1
+  },
+  "mock": {
+    "keys": 1,
+    "calls": 3,
+    "duplicated_keys": 1
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505525.651909,
+      "exit_at": 1794505526.8528252,
+      "t_drain_s": 1.201,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 6.034
+}

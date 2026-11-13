@@ -1,0 +1,50 @@
+{
+  "run_id": "st-20261113T202833Z-simpleq-burst-30",
+  "class": "stress",
+  "counts_as_2400": false,
+  "scenario_id": "S_burst_fast",
+  "library": "simpleq",
+  "count": 30,
+  "slots": 8,
+  "command": [
+    "/workspace/.venv-sq120/bin/agent-worker",
+    "worker",
+    "--app",
+    "bench.simpleq_app:create_app",
+    "--factory",
+    "--queues",
+    "bench",
+    "--processes",
+    "2",
+    "--concurrency",
+    "4",
+    "--max-tasks-per-process",
+    "20000"
+  ],
+  "versions": {
+    "simple-q-runtime": "1.2.0",
+    "simple-q-worker": "1.2.0",
+    "redis": "8.1.0"
+  },
+  "status": "passed",
+  "done_lines": 30,
+  "unique_n": 30,
+  "duplicate_lines": 0,
+  "enqueue": {
+    "code": 0,
+    "seconds": 0.13,
+    "stdout": "{\"accepted\": 30, \"rejected\": 0, \"seconds\": 0.009, \"sample_ids\": [\"3a882a97-01ce-4eac-99a9-29adab579411\", \"d155ec78-5929-4385-b98a-895e1a590e1e\", \"c31d1f05-4e27-49b0-ba46-ea1c5371786b\"], \"native_dedup\": false}\n",
+    "stderr": ""
+  },
+  "span_s": 0.224,
+  "throughput_per_s": 133.93,
+  "latency_ms": {
+    "p50": 211,
+    "p95": 215,
+    "max": 216
+  },
+  "worker_exit_during_run": null,
+  "redis_port": 6412,
+  "redis_dir": "/workspace/results/long/stress-redis-6412",
+  "resource_limits": "no cgroup; host is shared"
+}

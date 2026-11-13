@@ -1,0 +1,36 @@
+{
+  "library": "simpleq",
+  "scenario": "parallel",
+  "scale": "short",
+  "started_at": "2026-11-12T17:23:27.119245+00:00",
+  "measured": true,
+  "seconds": 15.173,
+  "got": 8,
+  "pids": [
+    7774
+  ],
+  "invariant": {
+    "expected": 8,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 8,
+    "distinct_items": 8,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 8
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794504222.7129686,
+      "exit_at": 1794504222.9131408,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 15.794
+}

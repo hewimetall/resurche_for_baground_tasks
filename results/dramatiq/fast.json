@@ -1,0 +1,40 @@
+{
+  "library": "dramatiq",
+  "scenario": "fast",
+  "scale": "short",
+  "started_at": "2026-11-12T17:44:08.198692+00:00",
+  "measured": true,
+  "sent": {
+    "accepted": 80,
+    "rejected": 0,
+    "seconds": 0.011,
+    "sample_ids": [
+      "d1d33f5c-4f71-4963-baaa-d4247f7393f9",
+      "931e7ec4-462f-4c7c-8c46-6d085382e872",
+      "7fefbcf9-2ce7-48ac-a2da-572aff0bfd23"
+    ],
+    "native_dedup": false
+  },
+  "done": 80,
+  "elapsed_s": 0.612,
+  "throughput_per_s": 130.69,
+  "latency_ms": {
+    "n": 80,
+    "p50": 119,
+    "p99": 150,
+    "max": 157
+  },
+  "idle_rss": 134864896,
+  "load_rss_peak": 135237632,
+  "stop": [
+    {
+      "sigterm_at": 1794505452.2197146,
+      "exit_at": 1794505455.2250926,
+      "t_drain_s": 3.005,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 7.026
+}

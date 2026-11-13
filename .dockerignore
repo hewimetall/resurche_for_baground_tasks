@@ -1,0 +1,10 @@
+.venv
+.venv-arq
+.git
+results
+docs
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+*.md
+deploy/kind/*.yaml

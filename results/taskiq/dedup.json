@@ -1,0 +1,51 @@
+{
+  "library": "taskiq",
+  "scenario": "dedup",
+  "scale": "short",
+  "started_at": "2026-11-12T17:57:36.325676+00:00",
+  "measured": true,
+  "first": {
+    "accepted": true,
+    "id": "item:dedup-taskiq-1794506256:1",
+    "native_dedup": false
+  },
+  "second": {
+    "accepted": true,
+    "id": "item:dedup-taskiq-1794506256:1",
+    "native_dedup": false
+  },
+  "after_ack": {
+    "accepted": true,
+    "id": "item:dedup-taskiq-1794506256:1",
+    "native_dedup": false
+  },
+  "invariant": {
+    "expected": 1,
+    "lost": 0,
+    "duplicated": 1,
+    "attempts": 3,
+    "distinct_items": 1,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 1
+  },
+  "mock": {
+    "keys": 1,
+    "calls": 3,
+    "duplicated_keys": 1
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794506261.8793166,
+      "exit_at": 1794506264.0812495,
+      "t_drain_s": 2.202,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 7.756
+}

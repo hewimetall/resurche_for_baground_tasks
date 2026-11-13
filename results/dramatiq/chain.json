@@ -1,0 +1,31 @@
+{
+  "library": "dramatiq",
+  "scenario": "chain",
+  "scale": "short",
+  "started_at": "2026-11-12T17:36:39.925016+00:00",
+  "measured": true,
+  "send": {
+    "accepted": true,
+    "id": "f9692524-fd32-43be-b5ac-5b68fa274c0c",
+    "native_dedup": false,
+    "duplicate_rejected": false
+  },
+  "steps": 4,
+  "rows": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794505003.9664226,
+      "exit_at": 1794505006.972063,
+      "t_drain_s": 3.006,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 7.047
+}

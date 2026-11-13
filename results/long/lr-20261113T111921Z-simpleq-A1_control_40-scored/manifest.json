@@ -1,0 +1,101 @@
+{
+  "run_id": "lr-20261113T111921Z-simpleq-A1_control_40-scored",
+  "scenario_id": "A1_control_40",
+  "class": "scored",
+  "library": "simpleq",
+  "versions": {
+    "dramatiq": "2.2.1",
+    "celery": "5.7.0",
+    "kombu": "5.7.0",
+    "taskiq": "0.13.0",
+    "taskiq-redis": "1.2.4",
+    "redis": "8.1.0"
+  },
+  "source_commit": "76239aa850d7c6bda805dc1614c4ad20d25aea66",
+  "planned_s": 2400.0,
+  "steps": 240,
+  "step_s": 10.0,
+  "kind": "sleep",
+  "time_limit_s": 3000,
+  "max_retries": 0,
+  "workers": 1,
+  "fault": null,
+  "counts_as_2400": true,
+  "redis_port": 6410,
+  "redis_dir": "/workspace/results/long/redis-6410",
+  "effect_port": 6411,
+  "clock": {
+    "realtime": 1794568761.3981805,
+    "monotonic": 20281.744279461,
+    "offset_realtime_minus_mono": 1794548479.653901
+  },
+  "resource_limits": "no cgroup and no RLIMIT_AS on the control worker; host is shared with kind",
+  "effective": {
+    "env": {
+      "LONGRUN_EFFECT_URL": "http://127.0.0.1:6411",
+      "LONGRUN_EVENTS": "/workspace/results/long/lr-20261113T111921Z-simpleq-A1_control_40-scored/events.jsonl",
+      "LONGRUN_LIB": "simpleq",
+      "LONGRUN_LIBRARY": "simpleq",
+      "LONGRUN_MAX_RETRIES": "0",
+      "LONGRUN_RUN_ID": "lr-20261113T111921Z-simpleq-A1_control_40-scored",
+      "LONGRUN_SCENARIO": "A1_control_40",
+      "LONGRUN_TIME_LIMIT_S": "3000"
+    },
+    "actor": {
+      "name": "hold",
+      "time_limit": 3000000,
+      "max_retries": 0,
+      "max_deliveries": 8,
+      "queue": "bench"
+    },
+    "config": {
+      "child_memory_hard": null,
+      "child_memory_soft": null,
+      "dead_ttl_secs": 604800,
+      "done_ttl_secs": 86400,
+      "from_env": "<built-in method from_env of type object at 0x20157ee0>",
+      "heartbeat_secs": 15,
+      "max_deliveries": 5,
+      "memory_hard_ratio": 0.95,
+      "memory_soft_ratio": 0.8,
+      "missed_heartbeats": 4,
+      "ping_budget_secs": 1860,
+      "unique_ttl_secs": 86400
+    }
+  },
+  "status": "passed",
+  "handler_starts": 1,
+  "handler_finishes": 1,
+  "progress_events": 240,
+  "span_s": 2404.834610106,
+  "stop": {
+    "signal": "SIGKILL",
+    "reason": "sigterm_grace_exceeded"
+  },
+  "files_before_manifest": {
+    "effects.jsonl": {
+      "bytes": 66610,
+      "sha256": "e6b29e299e0e24a11590a55a3dabd6d740cbb9fa6b1e9e17f56399f5379e1d80"
+    },
+    "enqueue.json": {
+      "bytes": 120,
+      "sha256": "ddfa193e039245650896c9df7bdc118775cff59b5cb2ede17c46458d553dbfae"
+    },
+    "events.jsonl": {
+      "bytes": 328331,
+      "sha256": "0435368683903820fe06de79f9914f43681b35ea4b65cec53a8a3c741cf907d4"
+    },
+    "manifest.json": {
+      "bytes": 1965,
+      "sha256": "1016dc45de95cf818e36e191cced123bd918926c5862b01805731fdea68c6d14"
+    },
+    "samples.jsonl": {
+      "bytes": 384296,
+      "sha256": "9bd3047a4926f8f35b7cd69197fe8ad97d35b3e22c0f6ac2f798d87e7633ac13"
+    },
+    "worker.log": {
+      "bytes": 1143,
+      "sha256": "07a24031f6a8e291f3e04490e7f0d047ecc1d6e329f7197bad2b1219b2974276"
+    }
+  }
+}

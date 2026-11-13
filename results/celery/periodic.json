@@ -1,0 +1,54 @@
+{
+  "library": "celery",
+  "scenario": "periodic",
+  "scale": "short",
+  "started_at": "2026-11-12T17:45:55.655183+00:00",
+  "measured": true,
+  "sends": [
+    {
+      "accepted": true,
+      "id": "b4fae778-60a7-47af-b7d2-d254824a6244",
+      "native_dedup": false
+    },
+    {
+      "accepted": true,
+      "id": "194abd25-bc55-428c-8f02-4a4952fc37b6",
+      "native_dedup": false
+    },
+    {
+      "accepted": true,
+      "id": "5b55f3a5-717e-462e-a15b-b00b33192db0",
+      "native_dedup": false
+    },
+    {
+      "accepted": true,
+      "id": "73a03307-ee90-48fe-bd18-55166cafe926",
+      "native_dedup": false
+    }
+  ],
+  "got": 1,
+  "invariant": {
+    "expected": 1,
+    "lost": 0,
+    "duplicated": 1,
+    "attempts": 4,
+    "distinct_items": 1,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 1
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505557.4014966,
+      "exit_at": 1794505558.4023783,
+      "t_drain_s": 1.001,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 2.747
+}

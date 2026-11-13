@@ -1,0 +1,36 @@
+{
+  "library": "dramatiq",
+  "scenario": "recycle",
+  "scale": "short",
+  "started_at": "2026-11-12T17:37:33.519962+00:00",
+  "measured": true,
+  "got": 12,
+  "pids": [
+    10935
+  ],
+  "invariant": {
+    "expected": 12,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 12,
+    "distinct_items": 12,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 12
+  },
+  "native": true,
+  "stop": [
+    {
+      "sigterm_at": 1794505054.5670152,
+      "exit_at": 1794505057.572741,
+      "t_drain_s": 3.006,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 4.053
+}

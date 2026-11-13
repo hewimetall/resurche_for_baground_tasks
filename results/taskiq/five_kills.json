@@ -1,0 +1,46 @@
+{
+  "library": "taskiq",
+  "scenario": "five_kills",
+  "scale": "short",
+  "started_at": "2026-11-12T18:02:10.465066+00:00",
+  "measured": true,
+  "kills": [
+    {
+      "i": 0,
+      "saw_attempt": true,
+      "kill_at": 1794506531.4895644
+    },
+    {
+      "i": 1,
+      "saw_attempt": false,
+      "kill_at": 1794506572.0650315
+    },
+    {
+      "i": 2,
+      "saw_attempt": false,
+      "kill_at": 1794506612.6373816
+    },
+    {
+      "i": 3,
+      "saw_attempt": false,
+      "kill_at": 1794506653.2050269
+    },
+    {
+      "i": 4,
+      "saw_attempt": false,
+      "kill_at": 1794506693.7436495
+    }
+  ],
+  "status": "running",
+  "fail_reason": null,
+  "attempt_notes": [
+    "long",
+    "long",
+    "long",
+    "long"
+  ],
+  "env": {
+    "TASKIQ_IDLE_MS": "8000"
+  },
+  "duration_s": 163.288
+}

@@ -1,0 +1,24 @@
+{
+  "library": "dramatiq",
+  "scenario": "prom",
+  "scale": "short",
+  "started_at": "2026-11-12T17:37:21.154263+00:00",
+  "measured": true,
+  "ready": true,
+  "port": 9191,
+  "tcp": true,
+  "tcp_error": "",
+  "http": 200,
+  "body": "# HELP dramatiq_messages_inprogress The number of messages in progress.\n# TYPE dramatiq_messages_inprogress gauge\ndramatiq_messages_inprogress{actor_name=\"fanout\",queue_name=\"bench\"} 0.0\ndramatiq_messages_inprogress{actor_name=\"item\",queue_name=\"bench\"} 0.0\ndramatiq_messages_inprogress{actor_name=\"p",
+  "stop": [
+    {
+      "sigterm_at": 1794505042.8809204,
+      "exit_at": 1794505045.886542,
+      "t_drain_s": 3.006,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 4.732
+}

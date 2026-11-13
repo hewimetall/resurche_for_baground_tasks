@@ -1,0 +1,29 @@
+{
+  "library": "taskiq",
+  "scenario": "async",
+  "scale": "short",
+  "started_at": "2026-11-12T18:01:50.370379+00:00",
+  "measured": true,
+  "sent": {
+    "accepted": 16,
+    "rejected": 0,
+    "seconds": 0.005
+  },
+  "ends": 16,
+  "elapsed_s": 1.686,
+  "work_span_s": 1.018,
+  "serial_s": 4.0,
+  "parallel_floor_s": 1.0,
+  "concurrency": 4,
+  "stop": [
+    {
+      "sigterm_at": 1794506512.5393112,
+      "exit_at": 1794506514.5410306,
+      "t_drain_s": 2.002,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 4.171
+}

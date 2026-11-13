@@ -1,0 +1,19 @@
+{
+  "library": "celery",
+  "scenario": "sigterm_infinite",
+  "scale": "short",
+  "started_at": "2026-11-12T17:46:34.288352+00:00",
+  "measured": true,
+  "grace_s": 6,
+  "stop": [
+    {
+      "sigterm_at": 1794505595.3123038,
+      "exit_at": 1794505596.513219,
+      "t_drain_s": 1.201,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 2.225
+}

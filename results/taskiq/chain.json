@@ -1,0 +1,30 @@
+{
+  "library": "taskiq",
+  "scenario": "chain",
+  "scale": "short",
+  "started_at": "2026-11-12T17:57:44.101750+00:00",
+  "measured": true,
+  "send": {
+    "accepted": true,
+    "id": "chain:chain-taskiq-1794506264:0",
+    "native_dedup": false
+  },
+  "steps": 4,
+  "rows": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794506267.156929,
+      "exit_at": 1794506269.3593073,
+      "t_drain_s": 2.202,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 5.258
+}

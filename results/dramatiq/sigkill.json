@@ -1,0 +1,33 @@
+{
+  "library": "dramatiq",
+  "scenario": "sigkill",
+  "scale": "short",
+  "started_at": "2026-11-12T17:37:37.591297+00:00",
+  "measured": true,
+  "kill_at": 1794505058.243847,
+  "gap": {
+    "gap_s": null,
+    "starts_after": 0
+  },
+  "attempts": [
+    {
+      "item": 0,
+      "note": "block-start",
+      "ts": "1794505058.092359"
+    }
+  ],
+  "heartbeat_env": {
+    "DRAMATIQ_HEARTBEAT_MS": "8000"
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505072.7780612,
+      "exit_at": 1794505075.783663,
+      "t_drain_s": 3.006,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 18.192
+}

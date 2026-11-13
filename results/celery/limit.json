@@ -1,0 +1,23 @@
+{
+  "library": "celery",
+  "scenario": "limit",
+  "scale": "short",
+  "started_at": "2026-11-12T17:45:44.349552+00:00",
+  "measured": true,
+  "status": "failed",
+  "attempts": 2,
+  "notes": [
+    "failed:timeout SoftTimeLimitExceeded retries=1"
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794505550.291089,
+      "exit_at": 1794505551.2918575,
+      "t_drain_s": 1.001,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 6.942
+}

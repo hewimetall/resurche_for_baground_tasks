@@ -1,0 +1,43 @@
+{
+  "library": "dramatiq",
+  "scenario": "five_kills",
+  "scale": "short",
+  "started_at": "2026-11-12T17:40:33.262651+00:00",
+  "measured": true,
+  "kills": [
+    {
+      "i": 0,
+      "saw_attempt": true,
+      "kill_at": 1794505233.9756992
+    },
+    {
+      "i": 1,
+      "saw_attempt": false,
+      "kill_at": 1794505274.244558
+    },
+    {
+      "i": 2,
+      "saw_attempt": false,
+      "kill_at": 1794505314.5344944
+    },
+    {
+      "i": 3,
+      "saw_attempt": false,
+      "kill_at": 1794505354.8145976
+    },
+    {
+      "i": 4,
+      "saw_attempt": false,
+      "kill_at": 1794505395.066326
+    }
+  ],
+  "status": "running",
+  "fail_reason": null,
+  "attempt_notes": [
+    "long retries=0 id=4d2c39d2-6a4a-47a5-bdc5-44dd3b3709f8"
+  ],
+  "env": {
+    "DRAMATIQ_HEARTBEAT_MS": "8000"
+  },
+  "duration_s": 161.81
+}

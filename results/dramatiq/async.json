@@ -1,0 +1,35 @@
+{
+  "library": "dramatiq",
+  "scenario": "async",
+  "scale": "short",
+  "started_at": "2026-11-12T17:40:00.281169+00:00",
+  "measured": true,
+  "sent": {
+    "accepted": 16,
+    "rejected": 0,
+    "seconds": 0.004,
+    "sample_ids": [
+      "39c6427f-a5e5-43da-940a-2af82d3e2974",
+      "d117439d-5e2d-483a-bbb2-a81d099dda69",
+      "b0b1020c-61ab-4b56-a262-a0f28c9ccd25"
+    ],
+    "native_dedup": false
+  },
+  "ends": 16,
+  "elapsed_s": 1.411,
+  "work_span_s": 1.023,
+  "serial_s": 4.0,
+  "parallel_floor_s": 1.0,
+  "concurrency": 4,
+  "stop": [
+    {
+      "sigterm_at": 1794505201.897687,
+      "exit_at": 1794505204.9013057,
+      "t_drain_s": 3.004,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 4.62
+}

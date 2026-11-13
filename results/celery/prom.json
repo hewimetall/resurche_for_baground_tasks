@@ -1,0 +1,21 @@
+{
+  "library": "celery",
+  "scenario": "prom",
+  "scale": "short",
+  "started_at": "2026-11-12T17:45:58.427877+00:00",
+  "measured": true,
+  "ready": true,
+  "tcp": false,
+  "reason": "\u043f\u043e\u0440\u0442 \u043c\u0435\u0442\u0440\u0438\u043a \u043d\u0435 \u043e\u0431\u044a\u044f\u0432\u043b\u0435\u043d",
+  "stop": [
+    {
+      "sigterm_at": 1794505560.4920783,
+      "exit_at": 1794505561.09251,
+      "t_drain_s": 0.6,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 2.665
+}

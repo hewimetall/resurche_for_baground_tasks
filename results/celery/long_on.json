@@ -1,0 +1,39 @@
+{
+  "library": "celery",
+  "scenario": "long_on",
+  "scale": "short",
+  "started_at": "2026-11-12T17:48:16.737073+00:00",
+  "measured": true,
+  "checkpoint": true,
+  "ready_new": true,
+  "stop": [
+    {
+      "sigterm_at": 1794505699.7755966,
+      "exit_at": 1794505700.976459,
+      "t_drain_s": 1.201,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "gap": {
+    "gap_s": 1.6030486006011964,
+    "starts_after": 1
+  },
+  "progress": 4,
+  "steps": 4,
+  "attempts": [
+    {
+      "note": "long retries=0",
+      "ts": "1794505697.576940"
+    },
+    {
+      "note": "long retries=0",
+      "ts": "1794505701.378624"
+    }
+  ],
+  "sigterm_at": 1794505699.7755754,
+  "rss_peak": 122568704,
+  "admin_log": "/workspace/results/admin-celery.jsonl",
+  "duration_s": 10.52
+}

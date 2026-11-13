@@ -1,0 +1,40 @@
+{
+  "library": "dramatiq",
+  "scenario": "group",
+  "scale": "short",
+  "started_at": "2026-11-12T17:37:11.598599+00:00",
+  "measured": true,
+  "send": {
+    "accepted": true,
+    "id": "group",
+    "native_dedup": false,
+    "native_group": true
+  },
+  "got": 6,
+  "group_note": "dramatiq",
+  "invariant": {
+    "expected": 6,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 6,
+    "distinct_items": 6,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 6
+  },
+  "native_group": true,
+  "stop": [
+    {
+      "sigterm_at": 1794505034.3300521,
+      "exit_at": 1794505037.3360682,
+      "t_drain_s": 3.006,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 5.738
+}

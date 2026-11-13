@@ -1,0 +1,83 @@
+{
+  "run_id": "lr-20261113T144635Z-arq-A1_control_40-scored",
+  "scenario_id": "A1_control_40",
+  "class": "scored",
+  "library": "arq",
+  "versions": {
+    "arq": "0.28.0",
+    "redis": "5.3.1"
+  },
+  "source_commit": "e452f47817c87c8d7676b9dabc9f8ccbc2460f7d",
+  "planned_s": 2400.0,
+  "steps": 240,
+  "step_s": 10.0,
+  "kind": "sleep",
+  "time_limit_s": 3000,
+  "max_retries": 0,
+  "workers": 1,
+  "fault": null,
+  "counts_as_2400": true,
+  "redis_port": 6410,
+  "redis_dir": "/workspace/results/long/redis-6410",
+  "effect_port": 6411,
+  "clock": {
+    "realtime": 1794581195.9373038,
+    "monotonic": 30981.548813246,
+    "offset_realtime_minus_mono": 1794550214.3884904
+  },
+  "resource_limits": "no cgroup and no RLIMIT_AS on the control worker; host is shared with kind",
+  "effective": {
+    "env": {
+      "LONGRUN_EFFECT_URL": "http://127.0.0.1:6411",
+      "LONGRUN_EVENTS": "/workspace/results/long/lr-20261113T144635Z-arq-A1_control_40-scored/events.jsonl",
+      "LONGRUN_LIB": "arq",
+      "LONGRUN_LIBRARY": "arq",
+      "LONGRUN_MAX_RETRIES": "0",
+      "LONGRUN_RUN_ID": "lr-20261113T144635Z-arq-A1_control_40-scored",
+      "LONGRUN_SCENARIO": "A1_control_40",
+      "LONGRUN_TIME_LIMIT_S": "3000"
+    },
+    "functions": [
+      {
+        "name": "hold",
+        "timeout_s": 3000,
+        "max_tries": 1
+      }
+    ]
+  },
+  "status": "passed",
+  "handler_starts": 1,
+  "handler_finishes": 1,
+  "progress_events": 240,
+  "span_s": 2404.446252366,
+  "stop": {
+    "signal": "SIGKILL",
+    "reason": "sigterm_grace_exceeded"
+  },
+  "files_before_manifest": {
+    "effects.jsonl": {
+      "bytes": 65650,
+      "sha256": "8f0a7c6b66e0b774e6dd09c096b0fcb6e0b5410fa7d1af77a00455d07f269dad"
+    },
+    "enqueue.json": {
+      "bytes": 140,
+      "sha256": "c09d413d882097086fd7af52de9df7487e6e18867c1fbf63e9616f1da3d68c86"
+    },
+    "events.jsonl": {
+      "bytes": 316739,
+      "sha256": "85311f71e20f26c7671788bbad91762703397b91e6470e0e3eaf0ef1e516c806"
+    },
+    "manifest.json": {
+      "bytes": 1369,
+      "sha256": "94f945195a77f5d6e69ba23444dd9625da8ee4f5515dae40e6c5b8f7b7ec8e66"
+    },
+    "samples.jsonl": {
+      "bytes": 159211,
+      "sha256": "19172723fe49cb4836221badb2d9ae87e9005c9c7937009a93f1d6ed6a38efb9"
+    },
+    "worker.log": {
+      "bytes": 763,
+      "sha256": "d6aa63431bc5eb6eed1ddcbed5a943293c30d9803d91cc9aba6e553f39802827"
+    }
+  }
+}

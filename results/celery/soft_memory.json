@@ -1,0 +1,36 @@
+{
+  "library": "celery",
+  "scenario": "soft_memory",
+  "scale": "short",
+  "started_at": "2026-11-12T17:47:46.784669+00:00",
+  "measured": true,
+  "ready": true,
+  "pids": [
+    12234,
+    12242
+  ],
+  "invariant": {
+    "expected": 6,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 6,
+    "distinct_items": 6,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 6
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505668.211103,
+      "exit_at": 1794505669.2118258,
+      "t_drain_s": 1.001,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 2.427
+}

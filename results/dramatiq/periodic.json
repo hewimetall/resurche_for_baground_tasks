@@ -1,0 +1,58 @@
+{
+  "library": "dramatiq",
+  "scenario": "periodic",
+  "scale": "short",
+  "started_at": "2026-11-12T17:37:17.352586+00:00",
+  "measured": true,
+  "sends": [
+    {
+      "accepted": true,
+      "id": "e9d411c4-36e5-48ad-8ab4-82afbf54fbae",
+      "native_dedup": false,
+      "duplicate_rejected": false
+    },
+    {
+      "accepted": true,
+      "id": "813c3c93-4681-4f7a-8de1-87c3f1e4c2f5",
+      "native_dedup": false,
+      "duplicate_rejected": false
+    },
+    {
+      "accepted": true,
+      "id": "9d6554b2-3f63-4ffb-bc8d-920aef72dc08",
+      "native_dedup": false,
+      "duplicate_rejected": false
+    },
+    {
+      "accepted": true,
+      "id": "95de5eaa-2b17-4bab-845c-7a814e972a90",
+      "native_dedup": false,
+      "duplicate_rejected": false
+    }
+  ],
+  "got": 1,
+  "invariant": {
+    "expected": 1,
+    "lost": 0,
+    "duplicated": 1,
+    "attempts": 4,
+    "distinct_items": 1,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 1
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505038.9190729,
+      "exit_at": 1794505041.121265,
+      "t_drain_s": 2.202,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 3.769
+}

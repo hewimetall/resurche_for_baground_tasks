@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "agent-lsp": {
+      "command": "agent-lsp",
+      "args": ["serve"],
+      "env": {
+        "PATH": "/home/ubuntu/.local/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    }
+  }
+}

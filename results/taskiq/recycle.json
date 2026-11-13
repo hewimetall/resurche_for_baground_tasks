@@ -1,0 +1,36 @@
+{
+  "library": "taskiq",
+  "scenario": "recycle",
+  "scale": "short",
+  "started_at": "2026-11-12T17:58:19.492097+00:00",
+  "measured": true,
+  "got": 1,
+  "pids": [
+    13140
+  ],
+  "invariant": {
+    "expected": 12,
+    "lost": 11,
+    "duplicated": 0,
+    "attempts": 1,
+    "distinct_items": 1,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "running",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 12
+  },
+  "native": true,
+  "stop": [
+    {
+      "sigterm_at": 1794506390.5890863,
+      "exit_at": 1794506392.5905323,
+      "t_drain_s": 2.001,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 93.098
+}

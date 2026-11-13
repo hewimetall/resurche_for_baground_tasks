@@ -1,0 +1,45 @@
+{
+  "library": "dramatiq",
+  "scenario": "smoke",
+  "scale": "short",
+  "started_at": "2026-11-12T17:36:28.810360+00:00",
+  "measured": true,
+  "ready": true,
+  "send": {
+    "accepted": true,
+    "id": "92b63d36-d34c-4153-9a9d-6d54f736bb72",
+    "native_dedup": false,
+    "duplicate_rejected": false
+  },
+  "got": 8,
+  "invariant": {
+    "expected": 8,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 8,
+    "distinct_items": 8,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 8
+  },
+  "mock": {
+    "keys": 8,
+    "calls": 8,
+    "duplicated_keys": 0
+  },
+  "rss": 150376448,
+  "stop": [
+    {
+      "sigterm_at": 1794504989.536587,
+      "exit_at": 1794504992.5400512,
+      "t_drain_s": 3.003,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 3.73
+}

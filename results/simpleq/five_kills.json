@@ -1,0 +1,58 @@
+{
+  "library": "simpleq",
+  "scenario": "five_kills",
+  "scale": "short",
+  "started_at": "2026-11-12T17:32:52.959504+00:00",
+  "measured": true,
+  "kills": [
+    {
+      "i": 0,
+      "saw_attempt": true,
+      "kill_at": 1794504778.3048477
+    },
+    {
+      "i": 1,
+      "saw_attempt": true,
+      "kill_at": 1794504788.665933
+    },
+    {
+      "i": 2,
+      "saw_attempt": true,
+      "kill_at": 1794504799.0224757
+    },
+    {
+      "i": 3,
+      "saw_attempt": true,
+      "kill_at": 1794504809.3860178
+    },
+    {
+      "i": 4,
+      "saw_attempt": true,
+      "kill_at": 1794504819.7448316
+    }
+  ],
+  "status": "failed",
+  "fail_reason": "poison deliveries=6 retries=0",
+  "attempt_notes": [
+    "poison retries=0 deliveries=1 id=98094734-e06c-42c7-ad02-a4fcdf749f7b",
+    "poison retries=0 deliveries=2 id=98094734-e06c-42c7-ad02-a4fcdf749f7b",
+    "poison retries=0 deliveries=3 id=98094734-e06c-42c7-ad02-a4fcdf749f7b",
+    "poison retries=0 deliveries=4 id=98094734-e06c-42c7-ad02-a4fcdf749f7b",
+    "poison retries=0 deliveries=5 id=98094734-e06c-42c7-ad02-a4fcdf749f7b"
+  ],
+  "env": {
+    "SIMPLE_Q_HEARTBEAT_SECS": "5",
+    "SIMPLE_Q_MISSED_HEARTBEATS": "2"
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794504840.1820602,
+      "exit_at": 1794504840.3824592,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 67.423
+}

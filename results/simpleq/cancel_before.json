@@ -1,0 +1,37 @@
+{
+  "library": "simpleq",
+  "scenario": "cancel_before",
+  "scale": "short",
+  "started_at": "2026-11-12T17:22:05.011353+00:00",
+  "measured": true,
+  "skips": 5,
+  "invariant": {
+    "expected": 5,
+    "lost": 5,
+    "duplicated": 0,
+    "attempts": 5,
+    "distinct_items": 5,
+    "progress_steps": 0,
+    "skips": 5,
+    "status": "running",
+    "fail_reason": null,
+    "cancelled": true,
+    "expected_n": 5
+  },
+  "mock": {
+    "keys": 0,
+    "calls": 0,
+    "duplicated_keys": 0
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794504140.4071453,
+      "exit_at": 1794504140.6073606,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 15.596
+}

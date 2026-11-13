@@ -1,0 +1,124 @@
+{
+  "1.18.0": {
+    "python": "/tmp/venv-d118/bin/python",
+    "backoff": {
+      "cold_ms": {
+        "n": 2000,
+        "min": 2,
+        "p50": 3,
+        "max": 4
+      },
+      "after_24_misses_ms": {
+        "n": 400,
+        "min": 2501,
+        "p50": 3675,
+        "max": 4993
+      }
+    },
+    "cold": [
+      {
+        "idle_s": 1.5,
+        "pickup_ms": 192.4,
+        "redis_commands": {},
+        "wall_send": 1794556946.795044
+      },
+      {
+        "idle_s": 1.5,
+        "pickup_ms": 393.4,
+        "redis_commands": {},
+        "wall_send": 1794556949.6908739
+      },
+      {
+        "idle_s": 1.5,
+        "pickup_ms": 623.7,
+        "redis_commands": {},
+        "wall_send": 1794556952.7676222
+      }
+    ],
+    "idle": [
+      {
+        "idle_s": 16.0,
+        "pickup_ms": 132.5,
+        "redis_commands": {
+          "EVALSHA": 65,
+          "LPOP": 62,
+          "RPUSH": 1
+        },
+        "wall_send": 1794556972.3701706
+      },
+      {
+        "idle_s": 16.0,
+        "pickup_ms": 254.8,
+        "redis_commands": {},
+        "wall_send": 1794556988.6529624
+      },
+      {
+        "idle_s": 16.0,
+        "pickup_ms": 563.1,
+        "redis_commands": {},
+        "wall_send": 1794557006.09215
+      }
+    ]
+  },
+  "2.2.1": {
+    "python": "/workspace/.venv/bin/python",
+    "backoff": {
+      "cold_ms": {
+        "n": 2000,
+        "min": 5,
+        "p50": 7,
+        "max": 9
+      },
+      "after_24_misses_ms": {
+        "n": 400,
+        "min": 2504,
+        "p50": 3665,
+        "max": 4994
+      }
+    },
+    "cold": [
+      {
+        "idle_s": 1.5,
+        "pickup_ms": 87.1,
+        "redis_commands": {},
+        "wall_send": 1794557008.3630967
+      },
+      {
+        "idle_s": 1.5,
+        "pickup_ms": 492.5,
+        "redis_commands": {},
+        "wall_send": 1794557011.168094
+      },
+      {
+        "idle_s": 1.5,
+        "pickup_ms": 368.1,
+        "redis_commands": {},
+        "wall_send": 1794557013.3313658
+      }
+    ],
+    "idle": [
+      {
+        "idle_s": 16.0,
+        "pickup_ms": 167.3,
+        "redis_commands": {
+          "EVALSHA": 60,
+          "LPOP": 57,
+          "RPUSH": 1
+        },
+        "wall_send": 1794557029.874684
+      },
+      {
+        "idle_s": 16.0,
+        "pickup_ms": 259.7,
+        "redis_commands": {},
+        "wall_send": 1794557047.2514148
+      },
+      {
+        "idle_s": 16.0,
+        "pickup_ms": 776.5,
+        "redis_commands": {},
+        "wall_send": 1794557063.6722786
+      }
+    ]
+  }
+}

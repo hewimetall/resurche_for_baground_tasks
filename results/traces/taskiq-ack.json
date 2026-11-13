@@ -1,0 +1,22 @@
+{
+  "run": "ack-when-executed-kill-during-sleep",
+  "port": 6396,
+  "packages": {"taskiq": "0.13.0", "taskiq-redis": "1.2.4"},
+  "ack_type": "when_executed",
+  "idle_timeout_ms": 600000,
+  "task": "asyncio.sleep(20) after ENTRY",
+  "raw_monitor_saved": false,
+  "xadd": 1,
+  "xack": 0,
+  "xautoclaim": 0,
+  "entry": {"pid": 67197, "t": 1794567753.042},
+  "end_logged": false,
+  "stream_id": "1794567753041-0",
+  "consumer": "6774e1bd-7f8e-49f6-8aec-f90e617e1e8f",
+  "xpending": [
+    {"when": "during_sleep", "count": 1, "deliveries": 1, "idle_ms": 72},
+    {"when": "after_sigkill_no_worker", "count": 1, "deliveries": 1, "idle_ms": 392},
+    {"when": "second_worker_8s", "count": 1, "deliveries": 1, "idle_ms": 8805, "xlen": 1, "executing_task_logged": false}
+  ],
+  "modes_not_killed": ["when_received", "when_saved", "manual", "recycle"]
+}

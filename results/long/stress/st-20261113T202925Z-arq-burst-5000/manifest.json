@@ -1,0 +1,38 @@
+{
+  "run_id": "st-20261113T202925Z-arq-burst-5000",
+  "class": "stress",
+  "counts_as_2400": false,
+  "scenario_id": "S_burst_fast",
+  "library": "arq",
+  "count": 5000,
+  "slots": 8,
+  "command": [
+    "/workspace/.venv-arq/bin/arq",
+    "bench.arq_app.WorkerSettings"
+  ],
+  "versions": {
+    "arq": "0.28.0",
+    "redis": "5.3.1"
+  },
+  "status": "passed",
+  "done_lines": 5000,
+  "unique_n": 5000,
+  "duplicate_lines": 0,
+  "enqueue": {
+    "code": 0,
+    "seconds": 1.191,
+    "stdout": "{\"accepted\": 5000, \"rejected\": 0, \"seconds\": 1.013}\n",
+    "stderr": ""
+  },
+  "span_s": 24.651,
+  "throughput_per_s": 202.83,
+  "latency_ms": {
+    "p50": 12062,
+    "p95": 22647,
+    "max": 23638
+  },
+  "worker_exit_during_run": null,
+  "redis_port": 6412,
+  "redis_dir": "/workspace/results/long/stress-redis-6412",
+  "resource_limits": "no cgroup; host is shared"
+}

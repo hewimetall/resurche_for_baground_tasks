@@ -1,0 +1,86 @@
+{
+  "run_id": "lr-20261113T111647Z-dramatiq-A0_wire-short",
+  "scenario_id": "A0_wire",
+  "class": "short",
+  "library": "dramatiq",
+  "versions": {
+    "dramatiq": "2.2.1",
+    "celery": "5.7.0",
+    "kombu": "5.7.0",
+    "taskiq": "0.13.0",
+    "taskiq-redis": "1.2.4",
+    "redis": "8.1.0"
+  },
+  "source_commit": "5901d111256bcee1b0c7c97c2f34864cea0054a4",
+  "planned_s": 3.0,
+  "steps": 3,
+  "step_s": 1.0,
+  "kind": "sleep",
+  "time_limit_s": 3000,
+  "max_retries": 0,
+  "workers": 1,
+  "fault": null,
+  "counts_as_2400": false,
+  "redis_port": 6410,
+  "redis_dir": "/workspace/results/long/redis-6410",
+  "effect_port": 6411,
+  "clock": {
+    "realtime": 1794568607.4646387,
+    "monotonic": 20127.810737531,
+    "offset_realtime_minus_mono": 1794548479.653901
+  },
+  "resource_limits": "no cgroup and no RLIMIT_AS on the control worker; host is shared with kind",
+  "effective": {
+    "env": {
+      "LONGRUN_EFFECT_URL": "http://127.0.0.1:6411",
+      "LONGRUN_EVENTS": "/workspace/results/long/lr-20261113T111647Z-dramatiq-A0_wire-short/events.jsonl",
+      "LONGRUN_LIB": "dramatiq",
+      "LONGRUN_LIBRARY": "dramatiq",
+      "LONGRUN_MAX_RETRIES": "0",
+      "LONGRUN_RUN_ID": "lr-20261113T111647Z-dramatiq-A0_wire-short",
+      "LONGRUN_SCENARIO": "A0_wire",
+      "LONGRUN_TIME_LIMIT_S": "3000"
+    },
+    "heartbeat_ms": 60000,
+    "maintenance_chance": 1000,
+    "actor_options": {
+      "max_retries": 0,
+      "time_limit": 3000000
+    }
+  },
+  "status": "short_control",
+  "handler_starts": 1,
+  "handler_finishes": 1,
+  "progress_events": 3,
+  "span_s": 3.082226894,
+  "stop": {
+    "signal": "SIGKILL",
+    "reason": "sigterm_grace_exceeded"
+  },
+  "files_before_manifest": {
+    "effects.jsonl": {
+      "bytes": 810,
+      "sha256": "8c2a8789734660a33fea35b0e6e587fb1fd3293dbbc2c2afa9da98639409f040"
+    },
+    "enqueue.json": {
+      "bytes": 176,
+      "sha256": "daacef5728d7187d5dea954a4794037d53bd21e762fb7633dc44d9a93eaec76d"
+    },
+    "events.jsonl": {
+      "bytes": 5853,
+      "sha256": "3e993e5d41fcc66d8d677f11628bf4b56e992324fba36e2d074840d0da088b4b"
+    },
+    "manifest.json": {
+      "bytes": 1486,
+      "sha256": "5aedec08d6db20485fdcd903615fe067203b49c15c0a90093b79ca3ed96a837e"
+    },
+    "samples.jsonl": {
+      "bytes": 7032,
+      "sha256": "f89ad185d1b9ac8c2921b681596b1d22b166802a3e343e7c520a08aad8b657b8"
+    },
+    "worker.log": {
+      "bytes": 1497,
+      "sha256": "02e1a845d2494e0b5a4d1936971fc3f2764ff18a4e1364ff52a017b7428a81bf"
+    }
+  }
+}

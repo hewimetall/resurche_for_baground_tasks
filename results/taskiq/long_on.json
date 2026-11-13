@@ -1,0 +1,39 @@
+{
+  "library": "taskiq",
+  "scenario": "long_on",
+  "scale": "short",
+  "started_at": "2026-11-12T18:02:02.562461+00:00",
+  "measured": true,
+  "checkpoint": true,
+  "ready_new": true,
+  "stop": [
+    {
+      "sigterm_at": 1794506525.5578818,
+      "exit_at": 1794506526.758746,
+      "t_drain_s": 1.201,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "gap": {
+    "gap_s": 1.660677757736206,
+    "starts_after": 1
+  },
+  "progress": 4,
+  "steps": 4,
+  "attempts": [
+    {
+      "note": "long",
+      "ts": "1794506523.512311"
+    },
+    {
+      "note": "long",
+      "ts": "1794506527.218546"
+    }
+  ],
+  "sigterm_at": 1794506525.5578682,
+  "rss_peak": 124383232,
+  "admin_log": "/workspace/results/admin-taskiq.jsonl",
+  "duration_s": 7.887
+}

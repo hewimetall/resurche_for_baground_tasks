@@ -1,0 +1,10 @@
+{
+  "library": "simpleq",
+  "scenario": "maxmemory",
+  "scale": "short",
+  "started_at": "2026-11-12T17:29:29.997591+00:00",
+  "measured": true,
+  "accepted": 0,
+  "errors": 1,
+  "duration_s": 0.133
+}

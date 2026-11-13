@@ -1,0 +1,20 @@
+{
+  "library": "simpleq",
+  "scenario": "sigterm_short",
+  "scale": "short",
+  "started_at": "2026-11-12T17:24:19.729039+00:00",
+  "measured": true,
+  "sigterm_at": 1794504275.1270552,
+  "stop": [
+    {
+      "sigterm_at": 1794504275.1270838,
+      "exit_at": 1794504280.1312423,
+      "t_drain_s": 5.004,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "attempts": 2,
+  "duration_s": 20.403
+}

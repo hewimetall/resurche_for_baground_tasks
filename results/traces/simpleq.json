@@ -1,0 +1,358 @@
+{
+  "lib": "simpleq",
+  "redis": "redis://127.0.0.1:6391/0",
+  "heartbeat_s": "5",
+  "idle_before_send_s": 2.796,
+  "enqueue_error": null,
+  "pickup_ms": 2484,
+  "wall_after_send_s": 2.52,
+  "idle_processes": [
+    {
+      "pid": 52560,
+      "cmdline": "/workspace/.venv/bin/agent-worker.bin worker --app bench.simpleq_app:create_app --factory --queues bench --processes 1 --concurrency 1 --max-tasks-per-process 500",
+      "threads": [
+        {
+          "tid": 52560,
+          "comm": "agent-worker.bi",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52579,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52580,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52581,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52582,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        }
+      ],
+      "voluntary_ctxt_switches": "12",
+      "nonvoluntary_ctxt_switches": "9",
+      "Threads": "5",
+      "switch_rate": {
+        "window_s": 0.4,
+        "voluntary": 0,
+        "nonvoluntary": 0,
+        "per_s": 0.0
+      },
+      "pyspy": "Process 52560: /workspace/.venv/bin/agent-worker.bin worker --app bench.simpleq_app:create_app --factory --queues bench --processes 1 --concurrency 1 --max-tasks-per-process 500\nPython v3.12.3 (/workspace/.venv/bin/agent-worker.bin)\n\nThread 52560 (idle): \"MainThread\"\n"
+    },
+    {
+      "pid": 52591,
+      "cmdline": "/workspace/.venv/bin/agent-worker.bin metrics",
+      "threads": [
+        {
+          "tid": 52591,
+          "comm": "agent-worker.bi",
+          "state": "S (sleeping)",
+          "wchan": "do_poll.constprop.0"
+        }
+      ],
+      "voluntary_ctxt_switches": "4",
+      "nonvoluntary_ctxt_switches": "140",
+      "Threads": "1",
+      "switch_rate": {
+        "window_s": 0.4,
+        "voluntary": 1,
+        "nonvoluntary": 0,
+        "per_s": 2.5
+      },
+      "pyspy": "Process 52591: /workspace/.venv/bin/agent-worker.bin metrics\nPython v3.12.3 (/workspace/.venv/bin/agent-worker.bin)\n\nThread 52591 (idle): \"MainThread\"\n    _PollLikeSelector.select (selectors.py:415)\n    BaseServer.serve_forever (socketserver.py:235)\n    serve (simple_q/exposition.py:110)\n"
+    },
+    {
+      "pid": 52592,
+      "cmdline": "/workspace/.venv/bin/agent-worker.bin worker --child --app bench.simpleq_app:create_app --factory --queues bench --concurrency 1 --max-tasks-per-process 500",
+      "threads": [
+        {
+          "tid": 52592,
+          "comm": "agent-worker.bi",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52595,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52596,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52597,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        },
+        {
+          "tid": 52598,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52599,
+          "comm": "python-asyncio",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        },
+        {
+          "tid": 52608,
+          "comm": "futures-timer",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52609,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        }
+      ],
+      "voluntary_ctxt_switches": "21",
+      "nonvoluntary_ctxt_switches": "2",
+      "Threads": "8",
+      "switch_rate": {
+        "window_s": 0.4,
+        "voluntary": 4,
+        "nonvoluntary": 0,
+        "per_s": 10.0
+      },
+      "pyspy": "Process 52592: /workspace/.venv/bin/agent-worker.bin worker --child --app bench.simpleq_app:create_app --factory --queues bench --concurrency 1 --max-tasks-per-process 500\nPython v3.12.3 (/workspace/.venv/bin/agent-worker.bin)\n\nThread 52592 (idle): \"MainThread\"\nThread 52599 (idle)\n    EpollSelector.select (selectors.py:468)\n    BaseEventLoop._run_once (asyncio/base_events.py:1949)\n    BaseEventLoop.run_forever (asyncio/base_events.py:641)\n"
+    }
+  ],
+  "waiting_processes": [
+    {
+      "pid": 52560,
+      "cmdline": "/workspace/.venv/bin/agent-worker.bin worker --app bench.simpleq_app:create_app --factory --queues bench --processes 1 --concurrency 1 --max-tasks-per-process 500",
+      "threads": [
+        {
+          "tid": 52560,
+          "comm": "agent-worker.bi",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52579,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52580,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52581,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52582,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        }
+      ],
+      "voluntary_ctxt_switches": "14",
+      "nonvoluntary_ctxt_switches": "9",
+      "Threads": "5"
+    },
+    {
+      "pid": 52591,
+      "cmdline": "/workspace/.venv/bin/agent-worker.bin metrics",
+      "threads": [
+        {
+          "tid": 52591,
+          "comm": "agent-worker.bi",
+          "state": "S (sleeping)",
+          "wchan": "do_poll.constprop.0"
+        }
+      ],
+      "voluntary_ctxt_switches": "7",
+      "nonvoluntary_ctxt_switches": "140",
+      "Threads": "1"
+    },
+    {
+      "pid": 52592,
+      "cmdline": "/workspace/.venv/bin/agent-worker.bin worker --child --app bench.simpleq_app:create_app --factory --queues bench --concurrency 1 --max-tasks-per-process 500",
+      "threads": [
+        {
+          "tid": 52592,
+          "comm": "agent-worker.bi",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52595,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52596,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52597,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        },
+        {
+          "tid": 52598,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52599,
+          "comm": "python-asyncio",
+          "state": "S (sleeping)",
+          "wchan": "ep_poll"
+        },
+        {
+          "tid": 52608,
+          "comm": "futures-timer",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        },
+        {
+          "tid": 52609,
+          "comm": "tokio-rt-worker",
+          "state": "S (sleeping)",
+          "wchan": "futex_wait_queue"
+        }
+      ],
+      "voluntary_ctxt_switches": "27",
+      "nonvoluntary_ctxt_switches": "2",
+      "Threads": "8"
+    }
+  ],
+  "monitor": {
+    "command_counts": {
+      "TIME": 6,
+      "HGETALL\"": 3,
+      "HSET\"": 11,
+      "EXPIRE\"": 3,
+      "ZADD\"": 7,
+      "ZREMRANGEBYSCORE\"": 2,
+      "EVALSHA\"": 12,
+      "ZSCORE\"": 8,
+      "TYPE\"": 3,
+      "HMSET\"": 2,
+      "SCAN\"": 1,
+      "ZRANGEBYSCORE\"": 4,
+      "LRANGE\"": 3,
+      "DEL\"": 6,
+      "HSETNX\"": 1,
+      "RPUSH\"": 1,
+      "ZREM\"": 3,
+      "LPUSH\"": 1,
+      "SADD\"": 2,
+      "LTRIM\"": 1,
+      "HMGET\"": 1,
+      "SISMEMBER\"": 1,
+      "LREM\"": 1,
+      "INCR\"": 1,
+      "SREM\"": 1,
+      "HGET\"": 1
+    },
+    "idle_sample": [
+      "1794556945.292551 [0 127.0.0.1:46246] \"TIME\"",
+      "1794556945.292707 [0 127.0.0.1:46246] \"TIME\"",
+      "1794556945.292718 [0 127.0.0.1:46246] \"HGETALL\" \"simple_q:supervisor:cursor.52560\"",
+      "1794556945.292842 [0 127.0.0.1:46246] \"HSET\" \"simple_q:supervisor:cursor.52560\" \"host\" \"cursor\" \"pid\" \"52560\" \"started_at\" \"1794556945\" \"version\" \"1.0.0-rc7\" \"queues\" \"bench\" \"processes\" \"1\" \"concurrency\" \"1\" \"max_tasks\" \"500\" \"child_soft\" ",
+      "1794556945.292871 [0 127.0.0.1:46246] \"EXPIRE\" \"simple_q:supervisor:cursor.52560\" \"40\"",
+      "1794556945.292889 [0 127.0.0.1:46246] \"ZADD\" \"simple_q:supervisors\" \"1794556945\" \"cursor.52560\"",
+      "1794556945.292904 [0 127.0.0.1:46246] \"ZREMRANGEBYSCORE\" \"simple_q:supervisors\" \"-inf\" \"(1794556925\"",
+      "1794556945.430986 [0 127.0.0.1:46252] \"EVALSHA\" \"6b6f3808de063cd4ca38e9e11b6968a6cc826069\" \"4\" \"bench:workers\" \"bench:active\" \"bench:signal\" \"bench:inflight\" \"1794556940\" \"agent-worker.bench.cursor.52592.edfa2954\"",
+      "1794556945.431024 [0 lua] \"zscore\" \"bench:workers\" \"agent-worker.bench.cursor.52592.edfa2954\"",
+      "1794556945.431043 [0 127.0.0.1:46252] \"TIME\"",
+      "1794556945.431480 [0 127.0.0.1:46252] \"TYPE\" \"bench:done\"",
+      "1794556945.431539 [0 127.0.0.1:46252] \"HSET\" \"bench:workers:metadata:agent-worker.bench.cursor.52592.edfa2954\" \"ppid\" \"52560\" \"started_at\" \"1794556945\" \"max_tasks\" \"500\" \"slot\" \"0\"",
+      "1794556945.431547 [0 127.0.0.1:46252] \"EVALSHA\" \"0d5fbce91e1dcff1121ece41f7169da3c0e39194\" \"2\" \"bench:workers\" \"bench:workers:metadata:agent-worker.bench.cursor.52592.edfa2954\" \"1794556945\" \"agent-worker.bench.cursor.52592.edfa2954\" \"20\" \"R",
+      "1794556945.431592 [0 lua] \"zscore\" \"bench:workers\" \"agent-worker.bench.cursor.52592.edfa2954\"",
+      "1794556945.431608 [0 lua] \"zadd\" \"bench:workers\" \"1794556945\" \"agent-worker.bench.cursor.52592.edfa2954\"",
+      "1794556945.431617 [0 lua] \"zadd\" \"core:apalis:queues:list\" \"GT\" \"1794556945\" \"bench:workers\"",
+      "1794556945.431629 [0 lua] \"hmset\" \"bench:workers:metadata:agent-worker.bench.cursor.52592.edfa2954\" \"backend_name\" \"RedisStorage\" \"service\" \"apalis_core::task::data::AddExtension<tower::limit::concurrency::service::ConcurrencyLimit<apalis_c",
+      "1794556945.431690 [0 127.0.0.1:46252] \"TYPE\" \"bench:dead\"",
+      "1794556945.431756 [0 127.0.0.1:46252] \"SCAN\" \"0\" \"MATCH\" \"bench:workers:metadata:*\" \"COUNT\" \"100\"",
+      "1794556945.431843 [0 127.0.0.1:46252] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.52592.edfa2954\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:schedule",
+      "1794556945.431875 [0 lua] \"zscore\" \"bench:workers\" \"agent-worker.bench.cursor.52592.edfa2954\"",
+      "1794556945.431888 [0 lua] \"zrangebyscore\" \"bench:scheduled\" \"0\" \"1794556945\"",
+      "1794556945.431898 [0 lua] \"lrange\" \"bench:active\" \"0\" \"0\"",
+      "1794556945.431905 [0 lua] \"del\" \"bench:signal\"",
+      "1794556945.431937 [0 127.0.0.1:46252] \"ZSCORE\" \"bench:workers\" \"agent-worker.bench.cursor.52592.edfa2954\"",
+      "1794556945.431986 [0 127.0.0.1:46252] \"HSET\" \"bench:workers:metadata:agent-worker.bench.cursor.52592.edfa2954\" \"tasks_done\" \"0\"",
+      "1794556945.432040 [0 127.0.0.1:46252] \"HSET\" \"simple_q:supervisor:cursor.52560\" \"tasks:52592\" \"0\""
+    ],
+    "after_send_sample": [
+      "1794556948.068067 [0 127.0.0.1:46260] \"EVALSHA\" \"3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\" \"6\" \"bench:data\" \"bench:active\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"bench:idempotency\" \"0\" \"0\" \"01M79YVVK38X2G4X1BMAP4BE95\" \"{\\\"version\\\":",
+      "1794556948.068157 [0 lua] \"hsetnx\" \"bench:data\" \"01M79YVVK38X2G4X1BMAP4BE95\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"b0ff6a57-9b02-4d02-a226-b07c77bfdf7e\\\",\\\"actor_name\\\":\\\"fast\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"job_id\\\":\\\"trace-simpleq\\\",\\\"n\\\":",
+      "1794556948.068203 [0 lua] \"hmset\" \"bench:meta:01M79YVVK38X2G4X1BMAP4BE95\" \"attempts\" \"0\" \"max_attempts\" \"1\" \"status\" \"Pending\" \"idempotency_key\" \"\"",
+      "1794556948.068221 [0 lua] \"zadd\" \"bench:scheduled\" \"1794556948\" \"01M79YVVK38X2G4X1BMAP4BE95\"",
+      "1794556950.291893 [0 127.0.0.1:46246] \"TIME\"",
+      "1794556950.292094 [0 127.0.0.1:46246] \"TIME\"",
+      "1794556950.292119 [0 127.0.0.1:46246] \"HGETALL\" \"simple_q:supervisor:cursor.52560\"",
+      "1794556950.292292 [0 127.0.0.1:46246] \"HSET\" \"simple_q:supervisor:cursor.52560\" \"host\" \"cursor\" \"pid\" \"52560\" \"started_at\" \"1794556945\" \"version\" \"1.0.0-rc7\" \"queues\" \"bench\" \"processes\" \"1\" \"concurrency\" \"1\" \"max_tasks\" \"500\" \"child_soft\" ",
+      "1794556950.292312 [0 127.0.0.1:46246] \"EXPIRE\" \"simple_q:supervisor:cursor.52560\" \"40\"",
+      "1794556950.292322 [0 127.0.0.1:46246] \"ZADD\" \"simple_q:supervisors\" \"1794556950\" \"cursor.52560\"",
+      "1794556950.292328 [0 127.0.0.1:46246] \"ZREMRANGEBYSCORE\" \"simple_q:supervisors\" \"-inf\" \"(1794556930\"",
+      "1794556950.432435 [0 127.0.0.1:46252] \"EVALSHA\" \"5c1d697dfa0d68de2954ceefa235f87162ecc839\" \"1\" \"bench:workers\" \"1794556950\" \"agent-worker.bench.cursor.52592.edfa2954\"",
+      "1794556950.432464 [0 lua] \"zscore\" \"bench:workers\" \"agent-worker.bench.cursor.52592.edfa2954\"",
+      "1794556950.432475 [0 lua] \"zadd\" \"bench:workers\" \"1794556950\" \"agent-worker.bench.cursor.52592.edfa2954\"",
+      "1794556950.432615 [0 127.0.0.1:46252] \"HSET\" \"bench:workers:metadata:agent-worker.bench.cursor.52592.edfa2954\" \"tasks_done\" \"0\"",
+      "1794556950.432983 [0 127.0.0.1:46252] \"HSET\" \"simple_q:supervisor:cursor.52560\" \"tasks:52592\" \"0\"",
+      "1794556950.433214 [0 127.0.0.1:46252] \"EVALSHA\" \"6b6f3808de063cd4ca38e9e11b6968a6cc826069\" \"4\" \"bench:workers\" \"bench:active\" \"bench:signal\" \"bench:inflight\" \"1794556930\"",
+      "1794556950.433240 [0 lua] \"zrangebyscore\" \"bench:workers\" \"0\" \"1794556930\"",
+      "1794556950.433778 [0 127.0.0.1:46252] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.52592.edfa2954\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:schedule",
+      "1794556950.433792 [0 lua] \"zscore\" \"bench:workers\" \"agent-worker.bench.cursor.52592.edfa2954\"",
+      "1794556950.433798 [0 lua] \"zrangebyscore\" \"bench:scheduled\" \"0\" \"1794556950\"",
+      "1794556950.433808 [0 lua] \"rpush\" \"bench:active\" \"01M79YVVK38X2G4X1BMAP4BE95\"",
+      "1794556950.433817 [0 lua] \"zrem\" \"bench:scheduled\" \"01M79YVVK38X2G4X1BMAP4BE95\"",
+      "1794556950.433823 [0 lua] \"del\" \"bench:signal\"",
+      "1794556950.433830 [0 lua] \"lpush\" \"bench:signal\" \"1\"",
+      "1794556950.433837 [0 lua] \"lrange\" \"bench:active\" \"0\" \"0\"",
+      "1794556950.433844 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.cursor.52592.edfa2954\" \"01M79YVVK38X2G4X1BMAP4BE95\"",
+      "1794556950.433855 [0 lua] \"ltrim\" \"bench:active\" \"1\" \"-1\"",
+      "1794556950.433863 [0 lua] \"hmget\" \"bench:data\" \"01M79YVVK38X2G4X1BMAP4BE95\"",
+      "1794556950.433872 [0 lua] \"hgetall\" \"bench:meta:01M79YVVK38X2G4X1BMAP4BE95\"",
+      "1794556950.434194 [0 127.0.0.1:46252] \"EVALSHA\" \"f84c79100c44c2348985e8bd49481807fb54d667\" \"1\" \"bench:meta:01M79YVVK38X2G4X1BMAP4BE95\"",
+      "1794556950.434213 [0 lua] \"TIME\"",
+      "1794556950.434227 [0 lua] \"HSET\" \"bench:meta:01M79YVVK38X2G4X1BMAP4BE95\" \"started_at\" \"1794556950\"",
+      "1794556950.434272 [0 127.0.0.1:46252] \"EVALSHA\" \"f7ff133460a6cd6a739e294b0f4f7a584599f1fc\" \"4\" \"bench:inflight:agent-worker.bench.cursor.52592.edfa2954\" \"bench:workers\" \"bench:meta\" \"bench:active\" \"agent-worker.bench.cursor.52592.edfa2954\" ",
+      "1794556950.434285 [0 lua] \"zscore\" \"bench:workers\" \"agent-worker.bench.cursor.52592.edfa2954\"",
+      "1794556950.434298 [0 lua] \"sismember\" \"bench:inflight:agent-worker.bench.cursor.52592.edfa2954\" \"01M79YVVK38X2G4X1BMAP4BE95\"",
+      "1794556950.434309 [0 lua] \"lrem\" \"bench:active\" \"1\" \"01M79YVVK38X2G4X1BMAP4BE95\"",
+      "1794556950.434315 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.cursor.52592.edfa2954\" \"01M79YVVK38X2G4X1BMAP4BE95\"",
+      "1794556950.434321 [0 lua] \"hset\" \"bench:meta:01M79YVVK38X2G4X1BMAP4BE95\" \"locked_at\" \"1794556950\" \"locked_by\" \"agent-worker.bench.cursor.52592.edfa2954\" \"status\" \"Running\"",
+      "1794556950.434367 [0 127.0.0.1:46252] \"EVALSHA\" \"8f290130ebe41d5d981486b7a1b8c3bfc152ea00\" \"1\" \"delivery:b0ff6a57-9b02-4d02-a226-b07c77bfdf7e:0\" \"604800\""
+    ]
+  },
+  "worker_log_tail": "2026-11-13T08:02:25.290264Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset\n2026-11-13T08:02:25.291487Z  INFO agent_worker::supervisor: worker process started index=0 pid=52592\n2026-11-13T08:02:25.430854Z  INFO apalis_core::worker::context: Worker agent-worker.bench.cursor.52592.edfa2954 started\n2026-11-13T08:02:30.434442Z  INFO process{otel.name=process fast otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=b0ff6a57-9b02-4d02-a226-b07c77bfdf7e actor_name=fast}: agent_worker::worker: running actor message_id=b0ff6a57-9b02-4d02-a226-b07c77bfdf7e actor_name=fast queue_name=bench retries=0 deliveries=1\n2026-11-13T08:02:30.491518Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes\n2026-11-13T08:02:30.491595Z  INFO agent_worker::child: drain requested\n2026-11-13T08:02:30.491607Z  INFO apalis_core::worker::context: Worker agent-worker.bench.cursor.52592.edfa2954 paused\n2026-11-13T08:02:30.491616Z  INFO apalis_core::worker::context: Worker agent-worker.bench.cursor.52592.edfa2954 stopped\n"
+}

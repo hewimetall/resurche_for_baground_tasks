@@ -1,0 +1,33 @@
+{
+  "library": "celery",
+  "scenario": "sigkill",
+  "scale": "short",
+  "started_at": "2026-11-12T17:46:15.395648+00:00",
+  "measured": true,
+  "kill_at": 1794505576.4196622,
+  "gap": {
+    "gap_s": null,
+    "starts_after": 0
+  },
+  "attempts": [
+    {
+      "item": 0,
+      "note": "block-start",
+      "ts": "1794505576.233870"
+    }
+  ],
+  "heartbeat_env": {
+    "CELERY_VISIBILITY_TIMEOUT": "12"
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794505591.0068085,
+      "exit_at": 1794505592.0076818,
+      "t_drain_s": 1.001,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 16.612
+}

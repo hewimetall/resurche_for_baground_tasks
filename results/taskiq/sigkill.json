@@ -1,0 +1,33 @@
+{
+  "library": "taskiq",
+  "scenario": "sigkill",
+  "scale": "short",
+  "started_at": "2026-11-12T17:59:52.608942+00:00",
+  "measured": true,
+  "kill_at": 1794506393.590674,
+  "gap": {
+    "gap_s": null,
+    "starts_after": 0
+  },
+  "attempts": [
+    {
+      "item": 0,
+      "note": "block-start",
+      "ts": "1794506393.552218"
+    }
+  ],
+  "heartbeat_env": {
+    "TASKIQ_IDLE_MS": "8000"
+  },
+  "stop": [
+    {
+      "sigterm_at": 1794506408.0810633,
+      "exit_at": 1794506410.2825458,
+      "t_drain_s": 2.201,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 17.674
+}

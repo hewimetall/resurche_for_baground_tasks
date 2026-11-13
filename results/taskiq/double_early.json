@@ -1,0 +1,24 @@
+{
+  "library": "taskiq",
+  "scenario": "double_early",
+  "scale": "short",
+  "started_at": "2026-11-12T18:04:53.774766+00:00",
+  "measured": true,
+  "first": {
+    "sigterm_at": 1794506696.0761614,
+    "exit_at": 1794506696.4764788,
+    "t_drain_s": 0.4,
+    "killed_after_grace": false,
+    "code": 0,
+    "already_exited": false
+  },
+  "second": {
+    "sigterm_at": 1794506698.4766247,
+    "exit_at": 1794506699.2770588,
+    "t_drain_s": 0.8,
+    "killed_after_grace": false,
+    "code": 0,
+    "already_exited": false
+  },
+  "duration_s": 5.502
+}

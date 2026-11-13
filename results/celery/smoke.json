@@ -1,0 +1,44 @@
+{
+  "library": "celery",
+  "scenario": "smoke",
+  "scale": "short",
+  "started_at": "2026-11-12T17:45:18.468140+00:00",
+  "measured": true,
+  "ready": true,
+  "send": {
+    "accepted": true,
+    "id": "8fd88619-c992-41ed-a571-b6d40a0c37c4",
+    "native_dedup": false
+  },
+  "got": 8,
+  "invariant": {
+    "expected": 8,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 8,
+    "distinct_items": 8,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 8
+  },
+  "mock": {
+    "keys": 8,
+    "calls": 8,
+    "duplicated_keys": 0
+  },
+  "rss": 186617856,
+  "stop": [
+    {
+      "sigterm_at": 1794505519.599639,
+      "exit_at": 1794505520.8004959,
+      "t_drain_s": 1.201,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 2.332
+}

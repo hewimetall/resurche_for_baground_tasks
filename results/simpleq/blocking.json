@@ -1,0 +1,36 @@
+{
+  "library": "simpleq",
+  "scenario": "blocking",
+  "scale": "short",
+  "started_at": "2026-11-12T17:25:46.345914+00:00",
+  "measured": true,
+  "elapsed_s": 12.124,
+  "block_s": 4,
+  "env": {
+    "SIMPLE_Q_HEARTBEAT_SECS": "5",
+    "SIMPLE_Q_MISSED_HEARTBEATS": "2"
+  },
+  "attempts": [
+    {
+      "item": 0,
+      "note": "block-start retries=0 deliveries=1 id=c0726e48-faac-47de-9765-c4017df15f4e",
+      "ts": "1794504351.593703"
+    },
+    {
+      "item": 1,
+      "note": "block-end retries=0 deliveries=1 id=c0726e48-faac-47de-9765-c4017df15f4e",
+      "ts": "1794504355.594973"
+    }
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794504358.8787627,
+      "exit_at": 1794504359.0789385,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 12.733
+}

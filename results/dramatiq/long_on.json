@@ -1,0 +1,51 @@
+{
+  "library": "dramatiq",
+  "scenario": "long_on",
+  "scale": "short",
+  "started_at": "2026-11-12T17:40:18.110037+00:00",
+  "measured": true,
+  "checkpoint": true,
+  "ready_new": true,
+  "stop": [
+    {
+      "sigterm_at": 1794505220.7873104,
+      "exit_at": 1794505228.7970302,
+      "t_drain_s": 8.01,
+      "killed_after_grace": true,
+      "code": -9,
+      "already_exited": false
+    }
+  ],
+  "gap": {
+    "gap_s": 2.259708751159668,
+    "starts_after": 4
+  },
+  "progress": 4,
+  "steps": 4,
+  "attempts": [
+    {
+      "note": "long retries=0 id=621f23b2-892a-4c15-8ba4-725199792616",
+      "ts": "1794505218.610275"
+    },
+    {
+      "note": "long retries=1 id=621f23b2-892a-4c15-8ba4-725199792616",
+      "ts": "1794505223.047006"
+    },
+    {
+      "note": "long retries=2 id=621f23b2-892a-4c15-8ba4-725199792616",
+      "ts": "1794505224.967087"
+    },
+    {
+      "note": "long retries=3 id=621f23b2-892a-4c15-8ba4-725199792616",
+      "ts": "1794505226.769716"
+    },
+    {
+      "note": "long retries=4 id=621f23b2-892a-4c15-8ba4-725199792616",
+      "ts": "1794505229.048385"
+    }
+  ],
+  "sigterm_at": 1794505220.7872972,
+  "rss_peak": 97779712,
+  "admin_log": "/workspace/results/admin-dramatiq.jsonl",
+  "duration_s": 15.133
+}

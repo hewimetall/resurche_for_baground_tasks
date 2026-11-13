@@ -1,0 +1,42 @@
+{
+  "library": "arq",
+  "scenario": "fast",
+  "scale": "short",
+  "started_at": "2026-11-12T17:57:27.986129+00:00",
+  "measured": true,
+  "sent": {
+    "accepted": 80,
+    "rejected": 0,
+    "seconds": 0.013
+  },
+  "done": 80,
+  "elapsed_s": 0.57,
+  "throughput_per_s": 140.47,
+  "latency_ms": {
+    "n": 80,
+    "p50": 386,
+    "p99": 392,
+    "max": 392
+  },
+  "idle_rss": 82481152,
+  "load_rss_peak": 82722816,
+  "stop": [
+    {
+      "sigterm_at": 1794506252.216954,
+      "exit_at": 1794506252.4171512,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    },
+    {
+      "sigterm_at": 1794506252.4171777,
+      "exit_at": 1794506252.8174295,
+      "t_drain_s": 0.4,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 4.831
+}

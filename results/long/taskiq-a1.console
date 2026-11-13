@@ -1,0 +1,15 @@
+psql:/workspace/bench/schema.sql:8: NOTICE:  relation "jobs" already exists, skipping
+CREATE TABLE
+psql:/workspace/bench/schema.sql:15: NOTICE:  relation "expected" already exists, skipping
+CREATE TABLE
+psql:/workspace/bench/schema.sql:25: NOTICE:  relation "attempts" already exists, skipping
+CREATE TABLE
+psql:/workspace/bench/schema.sql:33: NOTICE:  relation "results" already exists, skipping
+CREATE TABLE
+psql:/workspace/bench/schema.sql:39: NOTICE:  relation "progress" already exists, skipping
+CREATE TABLE
+psql:/workspace/bench/schema.sql:47: NOTICE:  relation "notes" already exists, skipping
+CREATE TABLE
+OK
+{"run_id": "lr-20261113T154152Z-taskiq-A1_control_40-scored", "status": "passed", "span_s": 2406.302634214, "dir": "/workspace/results/long/lr-20261113T154152Z-taskiq-A1_control_40-scored"}
+EXIT:0

@@ -1,0 +1,101 @@
+# Локальный стек на одной машине. Цифры в results/ сняты процессами и kind, не этим файлом.
+# Порты опубликованы только на 127.0.0.1. Пароль Redis и Postgres — bench.
+# Наружу эти порты не выставлять: пароль стендовый, mock без аутентификации.
+# Один воркер за раз:
+#   docker compose --profile simpleq up --build
+# Профили: simpleq, dramatiq, celery, taskiq, arq.
+# arq собирается отдельным образом: arq 0.28 требует redis<6.
+# Хостовый Redis сюиты тоже слушает 6379. Вместе с этим файлом его не поднимать.
+
+x-worker: &worker
+  image: bench-worker:local
+  build:
+    context: .
+    dockerfile: deploy/compose/Dockerfile
+  mem_limit: 1536m
+  working_dir: /app
+  volumes: [".:/app"]
+  depends_on: [redis, postgres, mock]
+  environment: &worker_env
+    REDIS_URL: redis://:bench@redis:6379/0
+    PG_DSN: postgresql://bench:bench@postgres:5432/bench
+    MOCK_URL: http://mock:8090
+    PYTHONPATH: /app
+    LAT_PATH: /tmp/bench-latency.txt
+
+services:
+  redis:
+    image: redis:7
+    command: ["redis-server", "--appendonly", "no", "--save", "", "--requirepass", "bench"]
+    ports: ["127.0.0.1:6379:6379"]
+
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: bench
+      POSTGRES_PASSWORD: bench
+      POSTGRES_DB: bench
+    ports: ["127.0.0.1:5432:5432"]
+
+  mock:
+    image: python:3.12-slim
+    working_dir: /app
+    volumes: [".:/app"]
+    command: ["python", "-m", "bench.mock_http"]
+    environment:
+      MOCK_PORT: "8090"
+    ports: ["127.0.0.1:8090:8090"]
+
+  simpleq:
+    <<: *worker
+    profiles: ["simpleq"]
+    command:
+      - agent-worker
+      - worker
+      - --app
+      - bench.simpleq_app:create_app
+      - --factory
+      - --queues
+      - bench
+      - --processes
+      - "2"
+      - --concurrency
+      - "2"
+
+  dramatiq:
+    <<: *worker
+    profiles: ["dramatiq"]
+    command: ["dramatiq", "bench.dramatiq_app", "--queues", "bench", "--processes", "2", "--threads", "2"]
+
+  celery:
+    <<: *worker
+    profiles: ["celery"]
+    command: ["celery", "-A", "bench.celery_app", "worker", "-Q", "bench", "-c", "2", "--without-gossip", "--without-mingle"]
+
+  taskiq:
+    <<: *worker
+    profiles: ["taskiq"]
+    environment:
+      <<: *worker_env
+      TASKIQ_METRICS: "1"
+    command:
+      - taskiq
+      - worker
+      - bench.taskiq_app:broker
+      - --workers
+      - "2"
+      - --max-async-tasks
+      - "4"
+      - --shutdown-timeout
+      - "30"
+      - --ack-type
+      - when_executed
+
+  arq:
+    <<: *worker
+    profiles: ["arq"]
+    image: bench-arq:local
+    build:
+      context: .
+      dockerfile: deploy/compose/Dockerfile.arq
+    command: ["arq", "bench.arq_app.WorkerSettings"]

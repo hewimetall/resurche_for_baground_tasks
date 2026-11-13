@@ -1,0 +1,30 @@
+{
+  "library": "arq",
+  "scenario": "chain",
+  "scale": "short",
+  "started_at": "2026-11-12T17:50:46.333648+00:00",
+  "measured": true,
+  "send": {
+    "accepted": true,
+    "id": "chain:chain-arq-1794505846:0",
+    "native_dedup": true
+  },
+  "steps": 4,
+  "rows": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1794505850.140193,
+      "exit_at": 1794505850.740767,
+      "t_drain_s": 0.601,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 4.407
+}

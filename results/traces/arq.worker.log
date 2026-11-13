@@ -1,0 +1,7 @@
+08:02:30: Starting worker for 10 functions: probe, item, fanout, chain, longjob, boom, limitjob, snooze, blocker, fast
+08:02:30: redis_version=7.0.15 mem_usage=2.28M clients_connected=2 db_keys=0
+08:02:33:   0.13s → 6d66ae4394614094930cf6ad8fc4d59a:fast('trace-arq', 1, 1794556952939)
+08:02:33:   0.00s ← 6d66ae4394614094930cf6ad8fc4d59a:fast ● 
+08:02:33: Setting allow_pick_jobs to `False`
+08:02:33: shutdown on SIGTERM ◆ 1 jobs complete ◆ 0 failed ◆ 0 retries ◆ 1 to be completed
+08:02:33: shutdown on SIGTERM, wait complete ◆ 1 jobs complete ◆ 0 failed ◆ 0 retries ◆ 0 ongoing to cancel

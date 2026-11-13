@@ -1,0 +1,42 @@
+{
+  "library": "simpleq",
+  "scenario": "idle_gap",
+  "scale": "short",
+  "started_at": "2026-11-12T17:22:36.375262+00:00",
+  "measured": true,
+  "rows": [
+    {
+      "heartbeat_s": 15,
+      "ready": true,
+      "immediate": {
+        "accepted": true,
+        "id": "996ae83b-fcc8-4bb3-b77b-3c5261f0d382"
+      },
+      "immediate_gap_s": 14.866,
+      "got": 1,
+      "delayed_send": {
+        "accepted": true,
+        "id": "392556ef-9389-44a5-aa64-582276f50603"
+      },
+      "delay_requested_s": 1.0,
+      "delay_gap_s": 14.69
+    },
+    {
+      "heartbeat_s": 5,
+      "ready": true,
+      "immediate": {
+        "accepted": true,
+        "id": "0a9e98d0-4665-4669-8dc2-c9b63a354be5"
+      },
+      "immediate_gap_s": 4.838,
+      "got": 1,
+      "delayed_send": {
+        "accepted": true,
+        "id": "e3d96d9d-2b19-4f4d-b8bc-cbfd841e7bcf"
+      },
+      "delay_requested_s": 1.0,
+      "delay_gap_s": 4.91
+    }
+  ],
+  "duration_s": 41.171
+}
