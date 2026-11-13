@@ -16,7 +16,8 @@ Redis 7.0.15, порт 6392. Интерпретатор 1.18: `/tmp/venv-d118`, 
 | `compute_backoff`, jitter | сначала `min(factor * 2**n, max)`, потом половина плюс `uniform(0, половина)` | база без потолка, jitter `uniform(1, 2)`, выше потолка — `uniform(0.5, 1) * max` |
 | `dispatch.lua` | в конце обслуживания переносит старый zset `.acks` в множество | этот блок удалён |
 | `RedisBroker.__init__` | принимает `requeue_deadline` и `requeue_interval` и ничего с ними не делает | аргументов нет |
-| `work_queue` | `PriorityQueue` по приоритету актора | `_WorkQueueItem` сравнивает `(priority, monotonic_ns)` |
+| `work_queue` | `(actor.priority, message)`. При равном приоритете `MessageProxy.__lt__` возвращает `True` | `_WorkQueueItem` сравнивает `(priority, monotonic_ns)`, сообщение из сравнения исключено |
+| `eta` | значение кладётся в delay-очередь как есть, включая `None` | `None` удаляется. Нечисло заменяется на `current_millis()`. Прогоном не проверялось |
 | `AsyncIO` / `EventLoopThread` | цикл в отдельном потоке | то же |
 
 `consume(timeout=5000)` — значение параметра метода. Воркер его не использует. Оба прогона шли с умолчанием 1000 мс.
