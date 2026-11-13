@@ -174,6 +174,7 @@ Failure boundaries (сжато):
 | sleep_sync | 4000 | 12 | 1/1 | да | ~10.8 |
 | tick | 4000 | 12 | 1/1 | да | ~10.8 |
 | tick diagnostic | 15000 | 90 | 1/1 | да | ~15.0 |
+| tick **full 2400** | 600000 | 2400 | 1/1 | да | **600.978** |
 
 ```text
 утверждение: второй consumer может забрать живую задачу после idle_timeout при наличии трафика; исполнения пересекаются
@@ -185,9 +186,17 @@ Failure boundaries (сжато):
 
 Полный контроль 2400 с при `idle_timeout=600000`, 2 worker × max_async=1, keepalive traffic: каталог `results/taskiq-deep/long/20261113T215617Z-e06-long-tick/`.
 
-Milestone reclaim (**измерено**): `reclaim_delay_s ≈ 600.98`, `starts_a=1`, `starts_b=1`, `delivery_count=2`, A продолжал tick (step≈1271+) в момент старта B → **overlap**. Файл: `milestone-reclaim.json` / `results/taskiq-deep/long/e11-full2400-milestone.json`. Полное завершение 2400 с на момент записи отчёта ещё шло.
+| Метрика | Значение |
+| --- | --- |
+| `span_a_s` | 2403.749 |
+| `reclaim_delay_s` | 600.978 |
+| `starts_a` / `starts_b` | 1 / 1 |
+| `finishes_a` / `finishes_b` | 1 / 0 (окно наблюдения закрылось после finish A) |
+| `overlap_while_a_unfinished` | true |
+| pending idle sampled | 562 … 3_074_111 ms |
+| pending после ACK A | 0 |
 
-Одноворкерный 2400 с из PR1 (`results/long/lr-20261113T154152Z-taskiq-A1_control_40-scored`) **не** проверяет reclaim другим consumer.
+Файлы: `result.json`, `final.json`, `milestone-reclaim.json`, `e11-full2400-final.json`. Одноворкерный 2400 с из PR1 **не** проверяет reclaim другим consumer.
 
 ---
 
@@ -310,7 +319,6 @@ Baseline → актуальна: **0.13.0 / 1.2.4 = latest stable на моме�
 
 ## 13. Непроверенное
 
-- Полный 2400 с two-worker контроль до `handler_finish` (reclaim/overlap уже измерены; прогон продолжался)
 - Outage во время set_result / retry.kiq
 - Длительная недоступность Redis + reconnect worker
 - Sentinel/Cluster brokers end-to-end

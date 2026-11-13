@@ -339,3 +339,7 @@
 [2026-11-13 22:06:27,701][taskiq.receiver.receiver][INFO   ][worker-0] Executing task fast with ID: d26bd9c534124f349d0edc5026e2f7a7
 [2026-11-13 22:06:29,649][taskiq.receiver.receiver][INFO   ][worker-0] Executing task fast with ID: 44d50d22b2164a9aa06a83391fd859ff
 [2026-11-13 22:06:29,651][taskiq.receiver.receiver][INFO   ][worker-0] Executing task tick with ID: d7836b59dbb64fe39a4e61f1c092356c
+[2026-11-13 22:57:45,946][taskiq.process-manager][INFO   ][MainProcess] Workers are scheduled for shutdown.
+[2026-11-13 22:57:46,076][taskiq.process-manager][INFO   ][MainProcess] Stopped process worker-0 with pid 5637
+[2026-11-13 22:57:46,432][taskiq.receiver.receiver][INFO   ][worker-0] Stopping prefetching messages...
+[2026-11-13 22:57:46,433][taskiq.receiver.receiver][INFO   ][worker-0] Waiting for 1 running tasks to complete...
