@@ -21,5 +21,13 @@ python3.12 -m venv /tmp/venv-d118
 Формула `compute_backoff` считается в том же интерпретаторе, без Redis: 2000 первых значений и 400 значений после 24 промахов при `max_backoff=5000`.
 
 Результат: `results/traces/dramatiq-118.json`.
+
+Порядок равного приоритета при prefetch 16:
+
+```bash
+.venv/bin/python scripts/fifo_order.py
+```
+
+Интерпретатор 1.18 — `/tmp/venv-d118`, 2.2.1 — `.venv`. Порт 6394. Результат: `results/traces/fifo-order.json`.
 Числа и то, чего прогон не покрывает, — в {doc}`/reference/dramatiq-1.18`.
 Почему потолок на живом воркере 1000 мс, а не аргумент по умолчанию у `consume`, — в {doc}`/explanation/dramatiq-1.18`.

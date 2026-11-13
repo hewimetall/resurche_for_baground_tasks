@@ -36,6 +36,7 @@ how-to/compare-dramatiq-1.18
 :caption: Reference — что
 
 reference/wait-traces
+reference/phase-series
 reference/simpleq
 reference/dramatiq
 reference/celery
@@ -49,6 +50,7 @@ reference/skills
 :maxdepth: 1
 :caption: Explanation — почему
 
+explanation/phase-series
 explanation/simpleq
 explanation/dramatiq
 explanation/celery

@@ -31,7 +31,8 @@ let backend = RedisStorage::<Job>::new(shared.redis.clone())
 | `Persisted::poll_next` | пустой `fetch_next` переводит состояние в `Ready`, зовёт `register_waker` и возвращает `Pending` |
 | `CallAll::poll_next` | на каждом проходе сначала `poll_ready`, потом `poll_next` |
 | `RedisStorageFactory::new` | делает `PSUBSCRIBE tasks:*:available` и будит воркер из push-callback |
-| `batch_push.lua` | `PUBLISH tasks:{queue}:available` только при `emit_events`. `LPUSH` в список сигнала выполняется всегда, если что-то положили в активный список |
+| `batch_push.lua` | `PUBLISH` и `RPUSH` в активный список только когда `schedule_time` не больше нуля. Положительное время — `ZADD` в scheduled. `LPUSH` сигнала только если в этом вызове был `RPUSH` |
+| `queries/push_tasks.rs` | `run_at` в прошлом или отсутствующий заменяется на `current_timestamp()` (unix-секунды). Ноль в скрипт не передаётся |
 | `fetch_next.lua` | читает активный список через `LRANGE`. Если пачка короче лимита, `DEL` списка сигнала. `BLPOP` в скрипте нет |
 
 simple-q фабрику не вызывает и `emit_events` выключает. `PSUBSCRIBE` в бинарник apalis входит, в этот путь запуска нет.
