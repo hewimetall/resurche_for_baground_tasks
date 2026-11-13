@@ -128,13 +128,13 @@
 
 `Delay::new` в apalis-core 1.1.1 стоит в одном месте: `poll_ready`, когда завершается future `HeartBeat` (`persistence/mod.rs`, присваивание `heartbeat_timer`). Пустой `fetch_next` делает `register_waker` и возвращает `Pending`, таймер не трогает. `WorkerContext::wake` будит сохранённый waker. `LifecycleFuture::drop` зовёт `wake`, когда `task_count` упал до нуля.
 
-## Окно, когда блокирующей команды нет
+## Интервалы повторной отправки команд
 
-Тот же скрипт, воркер без задач.
+Тот же скрипт, воркер без задач. Числа ниже — интервалы между штампами начала соседних команд. `MONITOR` пишет команду, когда Redis её принял, и не пишет момент возврата предыдущей. Прибавка сверх номинального таймаута `BRPOP` или `XREADGROUP` поэтому смешивает досиживание блока в Redis и повторную отправку клиента. Это не измеренная длина промежутка, в котором блокирующей команды не было.
 
 Celery, 22 старта `BRPOP` по `bench`. Первый интервал 1030.5 мс. Следующие 20: 1002.6–1003.8 мс. На соединении, которое шлёт `BRPOP`, между этими командами других команд нет. `PUBLISH` событий идёт с другого соединения. `_brpop_start` и `_brpop_read` — `kombu/transport/redis.py`. Таймаут — `brpop_timeout`, на транспорте по умолчанию 1.
 
-taskiq, 15 `XREADGROUP`, `XAUTOCLAIM` за это окно 0. Первый интервал 2012.3 мс. Следующие 13: 2004.1–2006.7 мс. Пустой `listen` в `taskiq_redis/redis_broker.py` на пустом `fetched` делает `continue` до `xautoclaim`.
+taskiq, 15 `XREADGROUP`, `XAUTOCLAIM` за этот простой 0. Первый интервал 2012.3 мс. Следующие 13: 2004.1–2006.7 мс. Пустой `listen` в `taskiq_redis/redis_broker.py` на пустом `fetched` делает `continue` до `xautoclaim`.
 
 arq, 23 интервала `ZRANGEBYSCORE arq:queue`: 500.4–501.6 мс, p50 501.1. `poll` в `arq/utils.py` после шага спит `step - (after - before)`.
 
