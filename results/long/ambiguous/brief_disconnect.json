@@ -1,0 +1,696 @@
+{
+  "scenario_id": "brief_disconnect",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-13T22:40:30Z",
+  "contract_held": false,
+  "checks": [
+    {
+      "name": "was_inflight",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ]
+    },
+    {
+      "name": "redis_pid_same",
+      "ok": true,
+      "detail": 126504
+    },
+    {
+      "name": "one_start",
+      "ok": true,
+      "detail": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "name": "one_end",
+      "ok": false,
+      "detail": []
+    },
+    {
+      "name": "done",
+      "ok": false,
+      "detail": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ]
+    }
+  ],
+  "aaa": {
+    "arrange": "Task 01M7BH21JKWV1XB5GS63DHJRWQ is running on one of two workers. Redis is not restarted.",
+    "act": "The proxy closes worker sockets and refuses new ones for 3s, then accepts again.",
+    "assert": "A gap shorter than the orphan window keeps one owner and one execution. A longer gap still finishes the task once after the link returns."
+  },
+  "redis_restarted": false,
+  "task_id": "01M7BH21JKWV1XB5GS63DHJRWQ",
+  "message_id": "e816fd68-99a3-4b3b-9ef9-ec8a029bd327",
+  "owner_alive_after_fault": null,
+  "owner_pid": 129826,
+  "other_pid": 129828,
+  "owner_exit": null,
+  "other_exit": null,
+  "before": null,
+  "immediate": {
+    "places": [
+      "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+    ],
+    "inflight": {
+      "bench:inflight:agent-worker.bench.cursor.129866.02439655": [
+        "01M7BH21JKWV1XB5GS63DHJRWQ"
+      ]
+    },
+    "workers": {
+      "agent-worker.bench.cursor.129866.02439655": "1794609579",
+      "agent-worker.bench.cursor.129867.1d5e6054": "1794609579"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1794609579",
+      "locked_at": "1794609579",
+      "locked_by": "agent-worker.bench.cursor.129866.02439655"
+    },
+    "data": true
+  },
+  "final": {
+    "places": [
+      "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+    ],
+    "workers": {
+      "agent-worker.bench.cursor.129866.02439655": "1794609579",
+      "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+      "agent-worker.bench.cursor.129914.33c78930": "1794609615",
+      "agent-worker.bench.cursor.129975.3882c34e": "1794609626"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1794609579",
+      "locked_at": "1794609579",
+      "locked_by": "agent-worker.bench.cursor.129866.02439655"
+    },
+    "data": true,
+    "t_s": 44.615,
+    "effects": [
+      "start brief_disconnect"
+    ]
+  },
+  "effects": [
+    "start brief_disconnect"
+  ],
+  "samples": [
+    {
+      "t_s": 0.033,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 2.061,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 4.089,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609585"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 6.115,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609585"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 8.143,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609585"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 10.17,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609585"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 12.197,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609585"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 14.222,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609585",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609596"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 16.249,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609585",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609596"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 18.274,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609596",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609600"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 20.301,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609596",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609600"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 22.326,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609596",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609600"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 24.353,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609596",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609600"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 26.379,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609596",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609600"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 28.405,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609600",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609611"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 30.43,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609600",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609611"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 32.457,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609611",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609615"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 34.482,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609611",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609615"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 36.509,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609611",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609615"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 38.535,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609611",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609615"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 40.562,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609611",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609615"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 42.588,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609615",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609626"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 44.615,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.129866.02439655"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.129866.02439655": "1794609579",
+        "agent-worker.bench.cursor.129867.1d5e6054": "1794609579",
+        "agent-worker.bench.cursor.129914.33c78930": "1794609615",
+        "agent-worker.bench.cursor.129975.3882c34e": "1794609626"
+      },
+      "locked_at": "1794609579",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    }
+  ],
+  "proxy": {
+    "armed": null,
+    "counts": {
+      "pass": 181,
+      "seen:reenqueue": 8,
+      "seen:register": 4,
+      "seen:fetch": 164,
+      "seen:acquire": 1,
+      "blackhole": 1,
+      "seen:keepalive": 4
+    },
+    "events": [
+      {
+        "t": 1794609580.0377574,
+        "mono": 48957.316118924,
+        "action": "blackhole",
+        "seconds": 3
+      }
+    ],
+    "commands": 296,
+    "ops": [
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.129828\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.129828\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.129828\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794609579\r\n$13\r\ncursor.129828\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1794609519"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.129826\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 36,
+        "prefix": "*36\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.129826\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.129826\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794609579\r\n$13\r\ncursor.129826\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1794609519"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.129866.0243"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:dead\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "SCAN",
+        "argc": 6,
+        "prefix": "*6\r\n$4\r\nSCAN\r\n$1\r\n0\r\n$5\r\nMATCH\r\n$24\r\nbench:workers:metadata:*\r\n$5\r\nCOUNT\r\n$3\r\n10"
+      },
+      {
+        "op": "ZSCORE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nZSCORE\r\n$13\r\nbench:workers\r\n$41\r\nagent-worker.bench.cursor.129866.024396"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 4,
+        "prefix": "*4\r\n$7\r\nEVALSHA\r\n$40\r\nf84c79100c44c2348985e8bd49481807fb54d667\r\n$1\r\n1\r\n$37\r\nbenc"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 11,
+        "prefix": "*11\r\n$7\r\nEVALSHA\r\n$40\r\nf7ff133460a6cd6a739e294b0f4f7a584599f1fc\r\n$1\r\n4\r\n$56\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.129866.02439"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 5,
+        "prefix": "*5\r\n$7\r\nEVALSHA\r\n$40\r\n8f290130ebe41d5d981486b7a1b8c3bfc152ea00\r\n$1\r\n1\r\n$47\r\ndeli"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.129828\r\n$12\r\ntasks:129866\r\n$1\r\n0\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.129867.1d5e"
+      }
+    ]
+  },
+  "owner_log": "2026-11-13T22:39:40.355618Z  WARN apalis_core::backend::persistence: poll_next: fetch_next failed -> Dead error=Database(broken pipe)\n2026-11-13T22:39:40.355661Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe\n2026-11-13T22:39:40.355671Z  WARN apalis_core::monitor: worker future ended with error name=\"agent-worker.bench.cursor.129867.1d5e6054\" error=BackendError(PollNextError(Database(broken pipe)))\nError: worker monitor failed: Worker errors:\nMonitoredErrors:\n - Worker `agent-worker.bench.cursor.129867.1d5e6054`: Failed to poll backend: PollNextError: broken pipe\n\n2026-11-13T22:39:44.706712Z  WARN agent_worker::supervisor: worker process exited index=0 pid=129867 code=ExitStatus(unix_wait_status(256))\n2026-11-13T22:39:54.706923Z  WARN agent_worker::supervisor: supervisor heartbeat failed error=failed to read Redis time",
+  "other_log": "2026-11-13T22:39:54.702774Z  WARN agent_worker::supervisor: supervisor heartbeat failed error=failed to read Redis time\n2026-11-13T22:39:54.845781Z  WARN apalis_core::backend::persistence: poll_ready: HeartBeat failed -> Dead error=Database(broken pipe)\n2026-11-13T22:39:54.845821Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe\n2026-11-13T22:39:54.845906Z  WARN apalis_core::monitor: worker future ended with error name=\"agent-worker.bench.cursor.129866.02439655\" error=BackendError(PollNextError(Database(broken pipe)))\nError: worker monitor failed: Worker errors:\nMonitoredErrors:\n - Worker `agent-worker.bench.cursor.129866.02439655`: Failed to poll backend: PollNextError: broken pipe\n\n2026-11-13T22:39:54.871784Z  WARN agent_worker::supervisor: worker process exited index=0 pid=129866 code=ExitStatus(unix_wait_status(256))",
+  "redis_pid": 126504,
+  "finished_at": "2026-11-13T22:40:30Z"
+}

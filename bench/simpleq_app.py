@@ -46,6 +46,45 @@ async def probe(token: str) -> None:
 
 
 @simple_q.actor(
+    name="pause",
+    queue="bench",
+    max_retries=0,
+    time_limit=180_000,
+    max_deliveries=3,
+)
+async def pause(token: str, seconds: float) -> None:
+    import asyncio
+
+    path = os.environ.get("EFFECT_PATH", "/tmp/bench-effect")
+    with open(path, "a", encoding="utf-8") as handle:
+        handle.write(f"start {token}\n")
+        handle.flush()
+    await asyncio.sleep(float(seconds))
+    with open(path, "a", encoding="utf-8") as handle:
+        handle.write(f"end {token}\n")
+        handle.flush()
+
+
+@simple_q.actor(
+    name="failonce",
+    queue="bench",
+    max_retries=1,
+    min_backoff=100,
+    max_backoff=300,
+    time_limit=30_000,
+    max_deliveries=3,
+)
+async def failonce(token: str) -> None:
+    path = os.environ.get("EFFECT_PATH", "/tmp/bench-effect")
+    with open(path, "a", encoding="utf-8") as handle:
+        handle.write(token + "\n")
+        handle.flush()
+    seen = [line.strip() for line in open(path, encoding="utf-8") if line.strip()]
+    if seen.count(token) == 1:
+        raise RuntimeError("fail once")
+
+
+@simple_q.actor(
     name="item",
     queue="bench",
     max_retries=3,
@@ -245,7 +284,22 @@ def _trace_header(actor_name: str, kwargs: dict, headers: dict) -> dict:
 def create_app() -> App:
     return App(
         client=client(),
-        actors=[probe, item, fanout, chain, longjob, poisonjob, boom, snooze, blocker, fast, limitjob, hold],
+        actors=[
+            probe,
+            pause,
+            failonce,
+            item,
+            fanout,
+            chain,
+            longjob,
+            poisonjob,
+            boom,
+            snooze,
+            blocker,
+            fast,
+            limitjob,
+            hold,
+        ],
         on_start=[core.open_deps],
         on_stop=[core.close_deps],
         on_dead=[on_dead],
@@ -255,6 +309,8 @@ def create_app() -> App:
 
 ACTORS = {
     "probe": probe,
+    "pause": pause,
+    "failonce": failonce,
     "item": item,
     "fanout": fanout,
     "chain": chain,

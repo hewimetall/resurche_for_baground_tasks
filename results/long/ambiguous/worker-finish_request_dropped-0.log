@@ -1,0 +1,8 @@
+2026-11-13T22:38:30.520972Z  WARN apalis_core::backend::persistence: poll_ready: ProcessEvents failed -> Dead error=Database(broken pipe)
+2026-11-13T22:38:30.521039Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe
+2026-11-13T22:38:30.521054Z  WARN apalis_core::monitor: worker future ended with error name="agent-worker.bench.cursor.129109.f75060dc" error=BackendError(PollNextError(Database(broken pipe)))
+Error: worker monitor failed: Worker errors:
+MonitoredErrors:
+ - Worker `agent-worker.bench.cursor.129109.f75060dc`: Failed to poll backend: PollNextError: broken pipe
+
+2026-11-13T22:38:30.542595Z  WARN agent_worker::supervisor: worker process exited index=0 pid=129109 code=ExitStatus(unix_wait_status(256))

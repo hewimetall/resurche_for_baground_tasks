@@ -1,0 +1,99 @@
+[
+  {
+    "source": "observer",
+    "t_s": 0.001,
+    "unix": 1794642756.9246447,
+    "tasks": [
+      {
+        "id": "01M7CGPH9RYF51CA7EYG0JDSDN",
+        "retries": 0,
+        "places": [
+          "scheduled"
+        ],
+        "status": "Pending",
+        "attempts": "0"
+      }
+    ]
+  },
+  {
+    "source": "observer",
+    "t_s": 0.417,
+    "unix": 1794642757.3407571,
+    "tasks": [
+      {
+        "id": "01M7CGPH9RYF51CA7EYG0JDSDN",
+        "retries": 0,
+        "places": [
+          "bench:inflight:agent-worker.bench.cursor.8531.dc094714"
+        ],
+        "status": "Running",
+        "attempts": "0"
+      }
+    ]
+  },
+  {
+    "source": "handler",
+    "unix": 1794642757.3432443,
+    "phase": "handler_start",
+    "execution_id": "c82b14c3-eaba-4da6-9516-09a67da4b794",
+    "retries": 0,
+    "result": null,
+    "worker": "agent-worker.bench.cursor.8531.dc094714",
+    "pid": 8531
+  },
+  {
+    "source": "handler",
+    "unix": 1794642757.3433106,
+    "phase": "handler_end",
+    "execution_id": "c82b14c3-eaba-4da6-9516-09a67da4b794",
+    "retries": 0,
+    "result": "retry",
+    "worker": "agent-worker.bench.cursor.8531.dc094714",
+    "pid": 8531
+  },
+  {
+    "source": "handler",
+    "unix": 1794642757.3459294,
+    "phase": "handler_start",
+    "execution_id": "491374d2-d873-4679-b724-c91f5cc24029",
+    "retries": 1,
+    "result": null,
+    "worker": "agent-worker.bench.cursor.8531.dc094714",
+    "pid": 8531
+  },
+  {
+    "source": "handler",
+    "unix": 1794642757.346002,
+    "phase": "handler_end",
+    "execution_id": "491374d2-d873-4679-b724-c91f5cc24029",
+    "retries": 1,
+    "result": "ok",
+    "worker": "agent-worker.bench.cursor.8531.dc094714",
+    "pid": 8531
+  },
+  {
+    "source": "observer",
+    "t_s": 0.468,
+    "unix": 1794642757.3924103,
+    "tasks": [
+      {
+        "id": "01M7CGPH9RYF51CA7EYG0JDSDN",
+        "retries": 0,
+        "places": [
+          "done"
+        ],
+        "status": "Done",
+        "attempts": "1"
+      },
+      {
+        "id": "01M7CGPHPZDSHAKGVD6HRT73MR",
+        "retries": 1,
+        "places": [
+          "done"
+        ],
+        "status": "Done",
+        "attempts": "1"
+      }
+    ]
+  }
+]

@@ -668,8 +668,13 @@ SCENARIOS: list[dict] = [
             "Drop the Redis connection while a retry is being written. "
             "max_retries is 2 so a retry exists to interrupt. The plan is "
             "still 2400s. "
-            "simple-q updates the same message for a retry. A lost write "
-            "can keep the old copy or drop the retry. "
+            "simple-q 1.2.0, measured with no fault on Redis pid 142603: "
+            "retry enqueues a new task id, same message_id, retries+1, "
+            "then handle_results marks the current id Done. The schedule "
+            "score in that run was the integer second of the enqueue. A "
+            "finish dropped before Redis sees it leaves the original id "
+            "inflight and the new id already scheduled. "
+            "See docs/reference/ambiguous-redis.md. "
             "Dramatiq re-enqueues on retry. A lost write can drop the "
             "message or leave the original. "
             "Celery publishes the retry as another message. The original "
@@ -680,6 +685,96 @@ SCENARIOS: list[dict] = [
             "middleware sends again. A drop can duplicate or lose that "
             "send. arq max_tries includes the first attempt, so max_retries "
             "2 maps to max_tries 3."
+        ),
+    ),
+    _row(
+        "redis_cmd_not_applied",
+        "redis",
+        planned_s=1,
+        steps=1,
+        step_s=1,
+        workers=2,
+        fault="redis_cmd_not_applied",
+        note=(
+            "Short fault test, not a 2400s run. Only simple-q 1.2.0 was "
+            "executed, on Redis 7.0.15 at 127.0.0.1:6415 via a proxy on "
+            "6414. The server process was not restarted. The proxy closed "
+            "the client before forwarding fetch_next, renew_leases, or "
+            "handle_results. A dropped fetch left the task in "
+            "bench:scheduled with status Pending and no handler line; a "
+            "later worker ran it once into done. A dropped renew did not "
+            "change locked_at and did not remove the inflight member. The "
+            "child exited, its worker score stayed put, and about 61s "
+            "later another worker name started the handler. A dropped "
+            "finish left the same inflight member; the handler had already "
+            "run, and about 61s later the same task id was done after a "
+            "second handler line. See docs/reference/ambiguous-redis.md."
+        ),
+    ),
+    _row(
+        "redis_cmd_applied_reply_lost",
+        "redis",
+        planned_s=1,
+        steps=1,
+        step_s=1,
+        workers=2,
+        fault="redis_cmd_applied_reply_lost",
+        note=(
+            "The proxy forwarded the command, read Redis's reply, then "
+            "closed the client. Redis pid 126504 stayed up. A dropped "
+            "fetch reply left the task only in bench:inflight:{worker}. "
+            "The handler did not run and that worker's score did not move. "
+            "At 60.8s another worker ran it once and it was done. A "
+            "dropped renew reply did change locked_at; the child still "
+            "exited on broken pipe, and about 61s later the handler "
+            "started under a different inflight key. A dropped finish "
+            "reply left the task done, attempts 1, with one handler line. "
+            "The child logged ProcessEvents failed and did not run the "
+            "body again. The live key is bench:inflight:{worker_name}, "
+            "with no generation suffix."
+        ),
+    ),
+    _row(
+        "redis_reconnect_same_owner",
+        "redis",
+        planned_s=1,
+        steps=1,
+        step_s=1,
+        workers=2,
+        fault="redis_reconnect_same_owner",
+        note=(
+            "Short gap, not a live reconnect of the same owner. The proxy "
+            "refused worker sockets for 3s and then accepted them again. "
+            "Redis was not restarted. Both children logged broken pipe and "
+            "exited. The owner score stayed at the pre-gap value for the "
+            "next 44.6s. The task remained in that inflight set, with one "
+            "start line and no end line. 44s is inside the 60s orphan "
+            "window, so this row stops before the reap. It shows that a "
+            "brief gap kills the child and leaves the task accounted for."
+        ),
+    ),
+    _row(
+        "redis_reconnect_after_transfer",
+        "redis",
+        planned_s=1,
+        steps=1,
+        step_s=1,
+        workers=2,
+        fault="redis_reconnect_after_transfer",
+        note=(
+            "Orphan recovery after the old child has exited, not a fence "
+            "against a live previous owner. After a lost fetch reply, a "
+            "lost renew, or a 70s proxy blackhole, a different worker name "
+            "held the task once the old score was about 60s old, and that "
+            "worker ran the handler. During the 70s blackhole the first "
+            "handler wrote its end line while Redis still showed the "
+            "original inflight member; the second worker then ran the body "
+            "again and the task reached done. A renew reply held for 75s "
+            "was written back after the child had already exited; the task "
+            "stayed on the new inflight key. The old process was already "
+            "gone, so this does not show a live owner sending renew or "
+            "finish after the transfer. A missing field named generation "
+            "is not, by itself, the defect under test."
         ),
     ),
     _row(

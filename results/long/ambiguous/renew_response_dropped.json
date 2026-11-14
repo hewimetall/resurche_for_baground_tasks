@@ -1,0 +1,1531 @@
+{
+  "scenario_id": "renew_response_dropped",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-13T22:36:29Z",
+  "contract_held": false,
+  "checks": [
+    {
+      "name": "fault_fired",
+      "ok": true,
+      "detail": [
+        {
+          "t": 1794609298.2966502,
+          "mono": 48675.575011817,
+          "action": "drop_response",
+          "kind": "renew",
+          "op": "EVALSHA",
+          "reply_len": 4
+        }
+      ]
+    },
+    {
+      "name": "held_before",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ]
+    },
+    {
+      "name": "redis_did_extend",
+      "ok": true,
+      "detail": {
+        "before": "1794609283",
+        "after": "1794609298"
+      }
+    },
+    {
+      "name": "transport_did_not_drop_ownership",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ]
+    },
+    {
+      "name": "one_local_start",
+      "ok": false,
+      "detail": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "name": "old_owner_stopped_after_budget",
+      "ok": true,
+      "detail": [
+        {
+          "t_s": 0.023,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 2.054,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 4.085,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 6.113,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 8.139,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 10.165,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 12.191,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 14.218,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 16.244,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 18.271,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 20.301,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 22.329,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 24.358,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 26.389,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 28.416,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 30.446,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609314",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 32.475,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 34.505,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 36.535,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 38.565,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 40.594,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 42.622,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 44.65,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 46.681,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 48.711,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 50.739,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 52.766,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 54.793,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 56.82,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 58.845,
+          "workers": {
+            "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+          ]
+        },
+        {
+          "t_s": 60.87,
+          "workers": {
+            "agent-worker.bench.cursor.127907.d3164008": "1794609344",
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 62.899,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 64.925,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 66.953,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 68.983,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 71.012,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 73.041,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 75.071,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 77.099,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 79.127,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 81.156,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 83.186,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 85.215,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 87.243,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        },
+        {
+          "t_s": 89.272,
+          "workers": {
+            "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+            "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+          ]
+        }
+      ]
+    }
+  ],
+  "aaa": {
+    "arrange": "Task 01M7BGRZYQ09C397HYH3T0YWTC is in a handler. Two workers. Renewal commands with task ids are the boundary.",
+    "act": "The next renew_leases is drop_response. The reply is not treated as a confirmed extension by the worker.",
+    "assert": "A lost request does not move locked_at. A lost reply can move locked_at. Neither by itself removes the inflight membership, and the old score does not stay fresh for the whole budget."
+  },
+  "redis_restarted": false,
+  "task_id": "01M7BGRZYQ09C397HYH3T0YWTC",
+  "message_id": "6627fb79-3c30-4485-b4ea-417d654d36fe",
+  "owner_alive_after_fault": null,
+  "owner_pid": 127815,
+  "other_pid": 127869,
+  "owner_exit": null,
+  "other_exit": null,
+  "before": {
+    "places": [
+      "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+    ],
+    "inflight": {
+      "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c": [
+        "01M7BGRZYQ09C397HYH3T0YWTC"
+      ]
+    },
+    "workers": {
+      "agent-worker.bench.cursor.127835.53fb7f9c": "1794609283"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1794609283",
+      "locked_at": "1794609283",
+      "locked_by": "agent-worker.bench.cursor.127835.53fb7f9c"
+    },
+    "data": true
+  },
+  "immediate": {
+    "places": [
+      "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+    ],
+    "inflight": {
+      "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c": [
+        "01M7BGRZYQ09C397HYH3T0YWTC"
+      ]
+    },
+    "workers": {
+      "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1794609283",
+      "locked_at": "1794609298",
+      "locked_by": "agent-worker.bench.cursor.127835.53fb7f9c"
+    },
+    "data": true
+  },
+  "final": {
+    "places": [
+      "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+    ],
+    "workers": {
+      "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+      "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1794609358",
+      "locked_at": "1794609373",
+      "locked_by": "agent-worker.bench.cursor.127898.99aa3ce4"
+    },
+    "data": true,
+    "t_s": 89.272,
+    "effects": [
+      "start renew_response_dropped",
+      "start renew_response_dropped"
+    ]
+  },
+  "effects": [
+    "start renew_response_dropped",
+    "start renew_response_dropped"
+  ],
+  "samples": [
+    {
+      "t_s": 0.023,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 2.054,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 4.085,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 6.113,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 8.139,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 10.165,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 12.191,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 14.218,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609298",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609299"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 16.244,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 18.271,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 20.301,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 22.329,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 24.358,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 26.389,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 28.416,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609313",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609314"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 30.446,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609314",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 32.475,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 34.505,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 36.535,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 38.565,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 40.594,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 42.622,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 44.65,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609328",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609329"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 46.681,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 48.711,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 50.739,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 52.766,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 54.793,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 56.82,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 58.845,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127835.53fb7f9c"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127835.53fb7f9c": "1794609298",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609343",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609344"
+      },
+      "locked_at": "1794609298",
+      "effects": [
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 60.87,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127907.d3164008": "1794609344",
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358"
+      },
+      "locked_at": "1794609358",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 62.899,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+      },
+      "locked_at": "1794609358",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 64.925,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+      },
+      "locked_at": "1794609358",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 66.953,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+      },
+      "locked_at": "1794609358",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 68.983,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+      },
+      "locked_at": "1794609358",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 71.012,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+      },
+      "locked_at": "1794609358",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 73.041,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+      },
+      "locked_at": "1794609358",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 75.071,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609358",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609359"
+      },
+      "locked_at": "1794609358",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 77.099,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+      },
+      "locked_at": "1794609373",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 79.127,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+      },
+      "locked_at": "1794609373",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 81.156,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+      },
+      "locked_at": "1794609373",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 83.186,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+      },
+      "locked_at": "1794609373",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 85.215,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+      },
+      "locked_at": "1794609373",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 87.243,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+      },
+      "locked_at": "1794609373",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    },
+    {
+      "t_s": 89.272,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.127898.99aa3ce4"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.127898.99aa3ce4": "1794609373",
+        "agent-worker.bench.cursor.127907.d3164008": "1794609374"
+      },
+      "locked_at": "1794609373",
+      "effects": [
+        "start renew_response_dropped",
+        "start renew_response_dropped"
+      ]
+    }
+  ],
+  "proxy": {
+    "armed": null,
+    "counts": {
+      "pass": 347,
+      "seen:reenqueue": 15,
+      "seen:register": 3,
+      "seen:fetch": 312,
+      "seen:acquire": 2,
+      "seen:keepalive": 13,
+      "drop_response": 1,
+      "seen:renew": 3
+    },
+    "events": [
+      {
+        "t": 1794609298.2966502,
+        "mono": 48675.575011817,
+        "action": "drop_response",
+        "kind": "renew",
+        "op": "EVALSHA",
+        "reply_len": 4
+      }
+    ],
+    "commands": 531,
+    "ops": [
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.127815\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.127815\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.127815\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794609283\r\n$13\r\ncursor.127815\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1794609223"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.127835.53fb"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:dead\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "SCAN",
+        "argc": 6,
+        "prefix": "*6\r\n$4\r\nSCAN\r\n$1\r\n0\r\n$5\r\nMATCH\r\n$24\r\nbench:workers:metadata:*\r\n$5\r\nCOUNT\r\n$3\r\n10"
+      },
+      {
+        "op": "ZSCORE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nZSCORE\r\n$13\r\nbench:workers\r\n$41\r\nagent-worker.bench.cursor.127835.53fb7f"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 4,
+        "prefix": "*4\r\n$7\r\nEVALSHA\r\n$40\r\nf84c79100c44c2348985e8bd49481807fb54d667\r\n$1\r\n1\r\n$37\r\nbenc"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 11,
+        "prefix": "*11\r\n$7\r\nEVALSHA\r\n$40\r\nf7ff133460a6cd6a739e294b0f4f7a584599f1fc\r\n$1\r\n4\r\n$56\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.127835.53fb7"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 5,
+        "prefix": "*5\r\n$7\r\nEVALSHA\r\n$40\r\n8f290130ebe41d5d981486b7a1b8c3bfc152ea00\r\n$1\r\n1\r\n$47\r\ndeli"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.127815\r\n$12\r\ntasks:127835\r\n$1\r\n0\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.127815\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.127815\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.127815\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794609298\r\n$13\r\ncursor.127815\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1794609238"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 6,
+        "prefix": "*6\r\n$7\r\nEVALSHA\r\n$40\r\n5c1d697dfa0d68de2954ceefa235f87162ecc839\r\n$1\r\n1\r\n$13\r\nbenc"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\nd30754a560d0f0ae884decdcb986ceb755020d07\r\n$1\r\n3\r\n$56\r\nben"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.127815\r\n$12\r\ntasks:127835\r\n$1\r\n0\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.127815\r\n$12\r\ntasks:127835\r\n$1\r\n0\r\n"
+      },
+      {
+        "op": "DEL",
+        "argc": 2,
+        "prefix": "*2\r\n$3\r\nDEL\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.127835.53fb7f"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      }
+    ]
+  },
+  "owner_log": "2026-11-13T22:34:58.297240Z  WARN agent_worker::worker: failed to write tasks_done error=failed to record tasks_done name=agent-worker.bench.cursor.127835.53fb7f9c\n2026-11-13T22:34:58.297234Z  WARN apalis_core::backend::persistence: poll_ready: HeartBeat failed -> Dead error=Database(broken pipe)\n2026-11-13T22:34:58.297458Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe\n2026-11-13T22:34:58.297545Z  WARN apalis_core::monitor: worker future ended with error name=\"agent-worker.bench.cursor.127835.53fb7f9c\" error=BackendError(PollNextError(Database(broken pipe)))\nError: worker monitor failed: Worker errors:\nMonitoredErrors:\n - Worker `agent-worker.bench.cursor.127835.53fb7f9c`: Failed to poll backend: PollNextError: broken pipe\n\n2026-11-13T22:34:58.330624Z  WARN agent_worker::supervisor: worker process exited index=0 pid=127835 code=ExitStatus(unix_wait_status(256))",
+  "other_log": "",
+  "redis_pid": 126504,
+  "finished_at": "2026-11-13T22:36:29Z"
+}

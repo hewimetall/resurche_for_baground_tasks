@@ -1,0 +1,10 @@
+2026-11-13T22:31:50.460165Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done name=agent-worker.bench.cursor.126749.aa250ffc
+2026-11-13T22:31:50.460210Z  WARN agent_worker::child: queue sweep failed error=failed to score a worker queue=bench
+2026-11-13T22:31:50.460169Z  WARN apalis_core::backend::persistence: poll_next: fetch_next failed -> Dead error=Database(broken pipe)
+2026-11-13T22:31:50.460236Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe
+2026-11-13T22:31:50.460306Z  WARN apalis_core::monitor: worker future ended with error name="agent-worker.bench.cursor.126749.aa250ffc" error=BackendError(PollNextError(Database(broken pipe)))
+Error: worker monitor failed: Worker errors:
+MonitoredErrors:
+ - Worker `agent-worker.bench.cursor.126749.aa250ffc`: Failed to poll backend: PollNextError: broken pipe
+
+2026-11-13T22:31:50.481007Z  WARN agent_worker::supervisor: worker process exited index=0 pid=126749 code=ExitStatus(unix_wait_status(256))

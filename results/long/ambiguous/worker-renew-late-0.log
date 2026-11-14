@@ -1,0 +1,13 @@
+2026-11-13T22:36:34.729006Z  WARN agent_worker::supervisor: failed to write simple_q_child_memory.prom error=No such file or directory (os error 2)
+2026-11-13T22:36:50.368120Z  WARN agent_worker::worker: failed to write tasks_done error=failed to record tasks_done name=agent-worker.bench.cursor.128501.031261c7
+2026-11-13T22:36:50.368274Z  WARN apalis_core::backend::persistence: poll_ready: HeartBeat failed -> Dead error=Database(timed out)
+2026-11-13T22:36:50.368319Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: timed out
+2026-11-13T22:36:50.368387Z  WARN apalis_core::monitor: worker future ended with error name="agent-worker.bench.cursor.128501.031261c7" error=BackendError(PollNextError(Database(timed out)))
+2026-11-13T22:36:50.869933Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done name=agent-worker.bench.cursor.128501.031261c7
+2026-11-13T22:36:51.372213Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done
+2026-11-13T22:36:51.873267Z  WARN agent_worker::worker: failed to delete worker metadata error=failed to delete worker metadata queue=bench name=agent-worker.bench.cursor.128501.031261c7
+Error: worker monitor failed: Worker errors:
+MonitoredErrors:
+ - Worker `agent-worker.bench.cursor.128501.031261c7`: Failed to poll backend: PollNextError: timed out
+
+2026-11-13T22:36:51.908468Z  WARN agent_worker::supervisor: worker process exited index=0 pid=128501 code=ExitStatus(unix_wait_status(256))

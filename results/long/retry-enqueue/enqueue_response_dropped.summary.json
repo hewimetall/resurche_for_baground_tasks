@@ -1,0 +1,305 @@
+{
+  "answers": {
+    "scenario_id": "enqueue_response_dropped",
+    "observe_status": "complete",
+    "B_appeared_in_redis": true,
+    "B_task_ids": [
+      "01M7CGX3WN6BB7FPEC5BBB58TC",
+      "01M7CGYYK8TYF1R05QCBMQGRBN"
+    ],
+    "rust_enqueue_result_observed": "error_leaving_attempt_inflight",
+    "enqueue_proxy_events": [
+      {
+        "t": 1794642972.566621,
+        "mono": 6578.341206061,
+        "action": "drop_response",
+        "kind": "enqueue",
+        "op": "EVALSHA",
+        "reply_len": 12,
+        "enqueue_task_id": "01M7CGX3WN6BB7FPEC5BBB58TC",
+        "message_id": "4673b9cf-c62b-4cdf-8f55-84d419c36d7e",
+        "retries": 1,
+        "actor_name": "retry_by_retries"
+      }
+    ],
+    "finish_A": {
+      "task_id": "01M7CGX3FESBC3CYFX7HMMZ0Y9",
+      "places": [
+        "done"
+      ],
+      "meta": {
+        "attempts": "1",
+        "max_attempts": "1",
+        "status": "Done",
+        "idempotency_key": "",
+        "started_at": "1794643032",
+        "locked_at": "1794643032",
+        "locked_by": "agent-worker.bench.cursor.9078.91a18ce8",
+        "result": "{\"Ok\":{\"delay_ms\":32,\"outcome\":\"retry\"}}",
+        "done_at": "1794643032"
+      }
+    },
+    "child_exited_hint": true,
+    "owner_log_excerpt": "2026-11-14T07:56:12.567028Z ERROR process{otel.name=process retry_by_retries otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=4673b9cf-c62b-4cdf-8f55-84d419c36d7e actor_name=retry_by_retries}: agent_worker::worker: retry enqueue failed; leaving the attempt inflight message_id=4673b9cf-c62b-4cdf-8f55-84d419c36d7e actor_name=retry_by_retries queue_name=bench retries=0 error=enqueue failed: Failed to push task: broken pipe",
+    "other_log_excerpt": "",
+    "A_recovered_after_orphan_window": true,
+    "C_created": true,
+    "C_task_ids": [
+      "01M7CGYYK8TYF1R05QCBMQGRBN"
+    ],
+    "retries_eq_1_task_id_count": 2,
+    "handler_entries_by_retries": {
+      "0": 2,
+      "1": 2
+    },
+    "unfinished_task_ids": [],
+    "final_workers": [
+      {
+        "name": "agent-worker.bench.cursor.9078.91a18ce8",
+        "score": 1794643032.0
+      },
+      {
+        "name": "agent-worker.bench.cursor.9086.4309cacd",
+        "score": 1794643033.0
+      }
+    ],
+    "A_handler_start_count": 2
+  },
+  "summary": {
+    "message_id": "4673b9cf-c62b-4cdf-8f55-84d419c36d7e",
+    "task_ids": [
+      "01M7CGX3FESBC3CYFX7HMMZ0Y9",
+      "01M7CGX3WN6BB7FPEC5BBB58TC",
+      "01M7CGYYK8TYF1R05QCBMQGRBN"
+    ],
+    "task_ids_by_retries": {
+      "0": [
+        "01M7CGX3FESBC3CYFX7HMMZ0Y9"
+      ],
+      "1": [
+        "01M7CGX3WN6BB7FPEC5BBB58TC",
+        "01M7CGYYK8TYF1R05QCBMQGRBN"
+      ]
+    },
+    "retries_eq_1_count": 2,
+    "handler_starts": 4,
+    "handler_ends": 4,
+    "execution_ids": [
+      "3a7203bd-d2f8-4d80-aa20-9d1f2b68bab6",
+      "73e18fcb-efd6-4614-ad0b-1285e1f512b4",
+      "c68133ba-4f7a-42a6-a3f2-2cb8bf251c85",
+      "de53e85f-7807-4de9-8a80-a4e23848b8ab"
+    ],
+    "per_task": {
+      "01M7CGX3FESBC3CYFX7HMMZ0Y9": {
+        "retries": 0,
+        "places": [
+          "done"
+        ],
+        "meta": {
+          "attempts": "1",
+          "max_attempts": "1",
+          "status": "Done",
+          "idempotency_key": "",
+          "started_at": "1794643032",
+          "locked_at": "1794643032",
+          "locked_by": "agent-worker.bench.cursor.9078.91a18ce8",
+          "result": "{\"Ok\":{\"delay_ms\":32,\"outcome\":\"retry\"}}",
+          "done_at": "1794643032"
+        },
+        "handler_starts_same_retries": 2,
+        "handler_ends_same_retries": 2,
+        "execution_ids_start": [
+          "3a7203bd-d2f8-4d80-aa20-9d1f2b68bab6",
+          "c68133ba-4f7a-42a6-a3f2-2cb8bf251c85"
+        ],
+        "execution_ids_end": [
+          "3a7203bd-d2f8-4d80-aa20-9d1f2b68bab6",
+          "c68133ba-4f7a-42a6-a3f2-2cb8bf251c85"
+        ],
+        "binding": "inferred_by_retries_not_direct_task_id"
+      },
+      "01M7CGX3WN6BB7FPEC5BBB58TC": {
+        "retries": 1,
+        "places": [
+          "done"
+        ],
+        "meta": {
+          "attempts": "1",
+          "max_attempts": "1",
+          "status": "Done",
+          "idempotency_key": "",
+          "started_at": "1794642972",
+          "locked_at": "1794642972",
+          "locked_by": "agent-worker.bench.cursor.9078.91a18ce8",
+          "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":\"ok\"}}",
+          "done_at": "1794642972"
+        },
+        "handler_starts_same_retries": 2,
+        "handler_ends_same_retries": 2,
+        "execution_ids_start": [
+          "73e18fcb-efd6-4614-ad0b-1285e1f512b4",
+          "de53e85f-7807-4de9-8a80-a4e23848b8ab"
+        ],
+        "execution_ids_end": [
+          "73e18fcb-efd6-4614-ad0b-1285e1f512b4",
+          "de53e85f-7807-4de9-8a80-a4e23848b8ab"
+        ],
+        "binding": "inferred_by_retries_not_direct_task_id"
+      },
+      "01M7CGYYK8TYF1R05QCBMQGRBN": {
+        "retries": 1,
+        "places": [
+          "done"
+        ],
+        "meta": {
+          "attempts": "1",
+          "max_attempts": "1",
+          "status": "Done",
+          "idempotency_key": "",
+          "started_at": "1794643032",
+          "locked_at": "1794643032",
+          "locked_by": "agent-worker.bench.cursor.9078.91a18ce8",
+          "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":\"ok\"}}",
+          "done_at": "1794643032"
+        },
+        "handler_starts_same_retries": 2,
+        "handler_ends_same_retries": 2,
+        "execution_ids_start": [
+          "73e18fcb-efd6-4614-ad0b-1285e1f512b4",
+          "de53e85f-7807-4de9-8a80-a4e23848b8ab"
+        ],
+        "execution_ids_end": [
+          "73e18fcb-efd6-4614-ad0b-1285e1f512b4",
+          "de53e85f-7807-4de9-8a80-a4e23848b8ab"
+        ],
+        "binding": "inferred_by_retries_not_direct_task_id"
+      }
+    },
+    "effects": [
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "3a7203bd-d2f8-4d80-aa20-9d1f2b68bab6",
+        "max_retries": 3,
+        "message_id": "4673b9cf-c62b-4cdf-8f55-84d419c36d7e",
+        "phase": "handler_start",
+        "pid": 9049,
+        "retries": 0,
+        "t": 1794642972.564767,
+        "token": "enqueue_response_dropped-b468bf98",
+        "utc": "2026-11-14T07:56:12.564Z",
+        "worker": "agent-worker.bench.cursor.9049.d0e46a47"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "3a7203bd-d2f8-4d80-aa20-9d1f2b68bab6",
+        "max_retries": 3,
+        "message_id": "4673b9cf-c62b-4cdf-8f55-84d419c36d7e",
+        "phase": "handler_end",
+        "pid": 9049,
+        "reason": "retries==0",
+        "result": "retry",
+        "retries": 0,
+        "t": 1794642972.5648355,
+        "token": "enqueue_response_dropped-b468bf98",
+        "utc": "2026-11-14T07:56:12.564Z",
+        "worker": "agent-worker.bench.cursor.9049.d0e46a47"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "73e18fcb-efd6-4614-ad0b-1285e1f512b4",
+        "max_retries": 3,
+        "message_id": "4673b9cf-c62b-4cdf-8f55-84d419c36d7e",
+        "phase": "handler_start",
+        "pid": 9078,
+        "retries": 1,
+        "t": 1794642972.6961534,
+        "token": "enqueue_response_dropped-b468bf98",
+        "utc": "2026-11-14T07:56:12.696Z",
+        "worker": "agent-worker.bench.cursor.9078.91a18ce8"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "73e18fcb-efd6-4614-ad0b-1285e1f512b4",
+        "max_retries": 3,
+        "message_id": "4673b9cf-c62b-4cdf-8f55-84d419c36d7e",
+        "phase": "handler_end",
+        "pid": 9078,
+        "reason": "retries>=1",
+        "result": "ok",
+        "retries": 1,
+        "t": 1794642972.6962132,
+        "token": "enqueue_response_dropped-b468bf98",
+        "utc": "2026-11-14T07:56:12.696Z",
+        "worker": "agent-worker.bench.cursor.9078.91a18ce8"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 2,
+        "execution_id": "c68133ba-4f7a-42a6-a3f2-2cb8bf251c85",
+        "max_retries": 3,
+        "message_id": "4673b9cf-c62b-4cdf-8f55-84d419c36d7e",
+        "phase": "handler_start",
+        "pid": 9078,
+        "retries": 0,
+        "t": 1794643032.679781,
+        "token": "enqueue_response_dropped-b468bf98",
+        "utc": "2026-11-14T07:57:12.679Z",
+        "worker": "agent-worker.bench.cursor.9078.91a18ce8"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 2,
+        "execution_id": "c68133ba-4f7a-42a6-a3f2-2cb8bf251c85",
+        "max_retries": 3,
+        "message_id": "4673b9cf-c62b-4cdf-8f55-84d419c36d7e",
+        "phase": "handler_end",
+        "pid": 9078,
+        "reason": "retries==0",
+        "result": "retry",
+        "retries": 0,
+        "t": 1794643032.6799119,
+        "token": "enqueue_response_dropped-b468bf98",
+        "utc": "2026-11-14T07:57:12.679Z",
+        "worker": "agent-worker.bench.cursor.9078.91a18ce8"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "de53e85f-7807-4de9-8a80-a4e23848b8ab",
+        "max_retries": 3,
+        "message_id": "4673b9cf-c62b-4cdf-8f55-84d419c36d7e",
+        "phase": "handler_start",
+        "pid": 9078,
+        "retries": 1,
+        "t": 1794643032.6828518,
+        "token": "enqueue_response_dropped-b468bf98",
+        "utc": "2026-11-14T07:57:12.682Z",
+        "worker": "agent-worker.bench.cursor.9078.91a18ce8"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "de53e85f-7807-4de9-8a80-a4e23848b8ab",
+        "max_retries": 3,
+        "message_id": "4673b9cf-c62b-4cdf-8f55-84d419c36d7e",
+        "phase": "handler_end",
+        "pid": 9078,
+        "reason": "retries>=1",
+        "result": "ok",
+        "retries": 1,
+        "t": 1794643032.6829417,
+        "token": "enqueue_response_dropped-b468bf98",
+        "utc": "2026-11-14T07:57:12.682Z",
+        "worker": "agent-worker.bench.cursor.9078.91a18ce8"
+      }
+    ],
+    "limitation": "CurrentMessage has no task_id; execution_id\u2194task_id is inferred from retries + worker + Redis timeline / proxy enqueue_task_id, not a direct bridge."
+  },
+  "fault_fired": true,
+  "observe_status": "complete"
+}

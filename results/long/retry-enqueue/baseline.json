@@ -1,0 +1,55 @@
+{
+  "repo_sha": "2828a095d79d123fc5400155bbb045e5afefee2d",
+  "simple_q_runtime": "1.2.0",
+  "simple_q_worker": "1.2.0",
+  "apalis_redis": "1.1.1",
+  "agent_worker": "/agent/repos/resurche_for_baground_tasks/.venv-sq120/bin/agent-worker",
+  "effective_config": {
+    "batch_size": 1,
+    "child_memory_hard": null,
+    "child_memory_soft": null,
+    "dead_ttl_secs": 604800,
+    "done_ttl_secs": 86400,
+    "heartbeat_secs": 15,
+    "idempotency_wait_max_ms": 5000,
+    "idempotency_wait_ms": 20,
+    "lifecycle_interval_ms": 200,
+    "max_deliveries": 5,
+    "memory_hard_ratio": 0.95,
+    "memory_soft_ratio": 0.8,
+    "missed_heartbeats": 4,
+    "ping_budget_secs": 1860,
+    "ping_interval_ms": 2000,
+    "ping_timeout_ms": 3000,
+    "poll_interval_ms": 500,
+    "sweep_batch": 100,
+    "sweep_interval_secs": 60,
+    "unique_ttl_secs": 86400
+  },
+  "orphan_window_s": 60,
+  "orphan_formula": "heartbeat_secs * missed_heartbeats = 15 * 4",
+  "redis": {
+    "port": 6420,
+    "pid": 8348,
+    "dir": "/workspace/results/long/retry-enqueue-6420",
+    "version": "7.0.15",
+    "timeout": {
+      "timeout": "0"
+    },
+    "appendonly": {
+      "appendonly": "yes"
+    },
+    "save": {
+      "save": ""
+    }
+  },
+  "proxy": {
+    "listen": 6421,
+    "upstream": 6420
+  },
+  "client_timeout_note": "Fault delay_response uses 10.0s hold; prior PR#5 renew delay showed Database(timed out) within ~2s.",
+  "enqueue_boundary": {
+    "observed": "Creating the retry task is one atomic EVALSHA enqueue script (HSETNX data + meta + scheduled|active + signal).",
+    "worker_followup_commands": "After a successful enqueue reply the worker also DELs delivery:{message}:{retries} and later runs handle_results/finish for A. Those are separate Redis ops. Losing the enqueue reply closes the proxy client socket, so follow-ups on that connection do not run. Do not call a dropped-reply case 'enqueue fully applied' for the whole retry path \u2014 only the enqueue script itself is atomic."
+  }
+}

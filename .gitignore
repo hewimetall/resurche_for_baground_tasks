@@ -2,6 +2,7 @@
 .venv-arq/
 .venv-sq120/
 results/long/stress-redis-*/
+results/long/ambiguous-redis-*/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -18,3 +19,6 @@ docs/_build/
 results/taskiq-deep/long/20261113T215617Z-e06-long-tick/events-a.jsonl
 results/taskiq-deep/long/20261113T215617Z-e06-long-tick/events-b.jsonl
 results/taskiq-deep/long/e11-full2400.log
+
+
+results/long/retry-enqueue-6420/

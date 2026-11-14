@@ -1,0 +1,360 @@
+{
+  "scenario_id": "claim_request_dropped",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-13T22:31:50Z",
+  "contract_held": true,
+  "checks": [
+    {
+      "name": "fault_fired",
+      "ok": true,
+      "detail": [
+        {
+          "t": 1794609109.7217722,
+          "mono": 48487.000133972,
+          "action": "drop_request",
+          "kind": "fetch",
+          "op": "EVALSHA"
+        }
+      ]
+    },
+    {
+      "name": "was_ready",
+      "ok": true,
+      "detail": [
+        "scheduled"
+      ]
+    },
+    {
+      "name": "command_not_applied",
+      "ok": true,
+      "detail": [
+        "scheduled"
+      ]
+    },
+    {
+      "name": "not_accepted_locally",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "still_present",
+      "ok": true,
+      "detail": {
+        "places": [
+          "scheduled"
+        ],
+        "inflight": {},
+        "workers": {
+          "agent-worker.bench.cursor.126668.cc5e32d1": "1794609109"
+        },
+        "meta": {
+          "attempts": "0",
+          "max_attempts": "1",
+          "status": "Pending",
+          "idempotency_key": ""
+        },
+        "data": true
+      }
+    },
+    {
+      "name": "runs_once_after_restore",
+      "ok": true,
+      "detail": [
+        "claim-request"
+      ]
+    },
+    {
+      "name": "terminal_done",
+      "ok": true,
+      "detail": [
+        "done"
+      ]
+    }
+  ],
+  "aaa": {
+    "arrange": "Task 01M7BGKPEMRVP5PG25ZGZ15NX1 is in the ready list. The proxy is armed to drop the next fetch before Redis sees it.",
+    "act": "Start the worker, let the fetch command die, stop that worker, then start a worker with the proxy open.",
+    "assert": "The task stays ready, the handler does not run, and one later execution finishes it."
+  },
+  "redis_restarted": false,
+  "task_id": "01M7BGKPEMRVP5PG25ZGZ15NX1",
+  "message_id": "8487dad0-fa3e-4aa2-b6fb-89004fa77ce2",
+  "owner_alive_after_fault": null,
+  "owner_pid": 126648,
+  "other_pid": 126686,
+  "owner_exit": 0,
+  "other_exit": null,
+  "before": null,
+  "immediate": {
+    "places": [
+      "scheduled"
+    ],
+    "inflight": {},
+    "workers": {
+      "agent-worker.bench.cursor.126668.cc5e32d1": "1794609109"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Pending",
+      "idempotency_key": ""
+    },
+    "data": true
+  },
+  "final": {
+    "places": [
+      "done"
+    ],
+    "workers": {
+      "agent-worker.bench.cursor.126668.cc5e32d1": "1794609109",
+      "agent-worker.bench.cursor.126706.b8b582b5": "1794609110"
+    },
+    "meta": {
+      "attempts": "1",
+      "max_attempts": "1",
+      "status": "Done",
+      "idempotency_key": "",
+      "started_at": "1794609110",
+      "locked_at": "1794609110",
+      "locked_by": "agent-worker.bench.cursor.126706.b8b582b5",
+      "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+      "done_at": "1794609110"
+    },
+    "data": true
+  },
+  "effects": [
+    "claim-request"
+  ],
+  "samples": [],
+  "proxy": {
+    "armed": null,
+    "counts": {
+      "pass": 8,
+      "seen:reenqueue": 2,
+      "seen:register": 2,
+      "drop_request": 1,
+      "seen:fetch": 3,
+      "seen:acquire": 1,
+      "seen:finish": 1
+    },
+    "events": [
+      {
+        "t": 1794609109.7217722,
+        "mono": 48487.000133972,
+        "action": "drop_request",
+        "kind": "fetch",
+        "op": "EVALSHA"
+      }
+    ],
+    "commands": 52,
+    "ops": [
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.126648\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.126648\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.126648\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794609109\r\n$13\r\ncursor.126648\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1794609049"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.126668.cc5e"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.126648\r\n$12\r\ntasks:126668\r\n$1\r\n0\r\n"
+      },
+      {
+        "op": "DEL",
+        "argc": 2,
+        "prefix": "*2\r\n$3\r\nDEL\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.126668.cc5e32"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "DEL",
+        "argc": 2,
+        "prefix": "*2\r\n$3\r\nDEL\r\n$33\r\nsimple_q:supervisor:cursor.126648\r\n"
+      },
+      {
+        "op": "ZREM",
+        "argc": 3,
+        "prefix": "*3\r\n$4\r\nZREM\r\n$20\r\nsimple_q:supervisors\r\n$13\r\ncursor.126648\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.126686\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.126686\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.126686\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794609109\r\n$13\r\ncursor.126686\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1794609049"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.126706.b8b5"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+      }
+    ]
+  },
+  "owner_log": "",
+  "other_log": "",
+  "redis_pid": 126504,
+  "finished_at": "2026-11-13T22:31:50Z"
+}

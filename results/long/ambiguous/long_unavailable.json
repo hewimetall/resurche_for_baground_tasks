@@ -1,0 +1,687 @@
+{
+  "scenario_id": "long_unavailable",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-13T22:42:19Z",
+  "contract_held": false,
+  "checks": [
+    {
+      "name": "was_inflight",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.cursor.130214.02eb0378"
+      ]
+    },
+    {
+      "name": "redis_pid_same",
+      "ok": true,
+      "detail": 126504
+    },
+    {
+      "name": "one_start",
+      "ok": false,
+      "detail": [
+        "start long_unavailable",
+        "start long_unavailable"
+      ]
+    },
+    {
+      "name": "one_end",
+      "ok": false,
+      "detail": [
+        "end long_unavailable",
+        "end long_unavailable"
+      ]
+    },
+    {
+      "name": "done",
+      "ok": true,
+      "detail": [
+        "done"
+      ]
+    },
+    {
+      "name": "recovered_after_long_gap",
+      "ok": false,
+      "detail": {
+        "starts": [
+          "start long_unavailable",
+          "start long_unavailable"
+        ],
+        "places": [
+          "done"
+        ]
+      }
+    }
+  ],
+  "aaa": {
+    "arrange": "Task 01M7BH3K02VGTNZ5BS0SKAK30T is running on one of two workers. Redis is not restarted.",
+    "act": "The proxy closes worker sockets and refuses new ones for 70s, then accepts again.",
+    "assert": "A gap shorter than the orphan window keeps one owner and one execution. A longer gap still finishes the task once after the link returns."
+  },
+  "redis_restarted": false,
+  "task_id": "01M7BH3K02VGTNZ5BS0SKAK30T",
+  "message_id": "915a72c3-4864-48bf-a812-181b2fdcfacf",
+  "owner_alive_after_fault": null,
+  "owner_pid": 130173,
+  "other_pid": 130174,
+  "owner_exit": null,
+  "other_exit": null,
+  "before": null,
+  "immediate": {
+    "places": [
+      "bench:inflight:agent-worker.bench.cursor.130214.02eb0378"
+    ],
+    "inflight": {
+      "bench:inflight:agent-worker.bench.cursor.130214.02eb0378": [
+        "01M7BH3K02VGTNZ5BS0SKAK30T"
+      ]
+    },
+    "workers": {
+      "agent-worker.bench.cursor.130213.d207d3c7": "1794609630",
+      "agent-worker.bench.cursor.130214.02eb0378": "1794609630"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1794609630",
+      "locked_at": "1794609630",
+      "locked_by": "agent-worker.bench.cursor.130214.02eb0378"
+    },
+    "data": true
+  },
+  "final": {
+    "places": [
+      "done"
+    ],
+    "workers": {
+      "agent-worker.bench.cursor.130352.0ff46bd1": "1794609733",
+      "agent-worker.bench.cursor.130430.3b007efe": "1794609738"
+    },
+    "meta": {
+      "attempts": "1",
+      "max_attempts": "1",
+      "status": "Done",
+      "idempotency_key": "",
+      "started_at": "1794609718",
+      "locked_at": "1794609733",
+      "locked_by": "agent-worker.bench.cursor.130352.0ff46bd1",
+      "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+      "done_at": "1794609738"
+    },
+    "data": true,
+    "t_s": 38.548,
+    "effects": [
+      "start long_unavailable",
+      "end long_unavailable",
+      "start long_unavailable",
+      "end long_unavailable"
+    ]
+  },
+  "effects": [
+    "start long_unavailable",
+    "end long_unavailable",
+    "start long_unavailable",
+    "end long_unavailable"
+  ],
+  "samples": [
+    {
+      "t_s": 0.026,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130214.02eb0378"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130213.d207d3c7": "1794609630",
+        "agent-worker.bench.cursor.130214.02eb0378": "1794609630"
+      },
+      "locked_at": "1794609630",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable"
+      ]
+    },
+    {
+      "t_s": 2.053,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130214.02eb0378"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130213.d207d3c7": "1794609630",
+        "agent-worker.bench.cursor.130214.02eb0378": "1794609630",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609703"
+      },
+      "locked_at": "1794609630",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable"
+      ]
+    },
+    {
+      "t_s": 4.079,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130214.02eb0378"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130213.d207d3c7": "1794609630",
+        "agent-worker.bench.cursor.130214.02eb0378": "1794609630",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609703"
+      },
+      "locked_at": "1794609630",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable"
+      ]
+    },
+    {
+      "t_s": 6.106,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130214.02eb0378"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130213.d207d3c7": "1794609630",
+        "agent-worker.bench.cursor.130214.02eb0378": "1794609630",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609703"
+      },
+      "locked_at": "1794609630",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable"
+      ]
+    },
+    {
+      "t_s": 8.13,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130214.02eb0378"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130213.d207d3c7": "1794609630",
+        "agent-worker.bench.cursor.130214.02eb0378": "1794609630",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609703",
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609708"
+      },
+      "locked_at": "1794609630",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable"
+      ]
+    },
+    {
+      "t_s": 10.157,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130214.02eb0378"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130213.d207d3c7": "1794609630",
+        "agent-worker.bench.cursor.130214.02eb0378": "1794609630",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609703",
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609708"
+      },
+      "locked_at": "1794609630",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable"
+      ]
+    },
+    {
+      "t_s": 12.184,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130214.02eb0378"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130213.d207d3c7": "1794609630",
+        "agent-worker.bench.cursor.130214.02eb0378": "1794609630",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609703",
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609708"
+      },
+      "locked_at": "1794609630",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable"
+      ]
+    },
+    {
+      "t_s": 14.209,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130214.02eb0378"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130213.d207d3c7": "1794609630",
+        "agent-worker.bench.cursor.130214.02eb0378": "1794609630",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609703",
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609708"
+      },
+      "locked_at": "1794609630",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable"
+      ]
+    },
+    {
+      "t_s": 16.235,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130214.02eb0378"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130213.d207d3c7": "1794609630",
+        "agent-worker.bench.cursor.130214.02eb0378": "1794609630",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609703",
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609708"
+      },
+      "locked_at": "1794609630",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable"
+      ]
+    },
+    {
+      "t_s": 18.263,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130352.0ff46bd1"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609708",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609718"
+      },
+      "locked_at": "1794609718",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable",
+        "start long_unavailable"
+      ]
+    },
+    {
+      "t_s": 20.291,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130352.0ff46bd1"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609708",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609718"
+      },
+      "locked_at": "1794609718",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable",
+        "start long_unavailable"
+      ]
+    },
+    {
+      "t_s": 22.318,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130352.0ff46bd1"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609718",
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609723"
+      },
+      "locked_at": "1794609718",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable",
+        "start long_unavailable"
+      ]
+    },
+    {
+      "t_s": 24.346,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130352.0ff46bd1"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609718",
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609723"
+      },
+      "locked_at": "1794609718",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable",
+        "start long_unavailable"
+      ]
+    },
+    {
+      "t_s": 26.376,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130352.0ff46bd1"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609718",
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609723"
+      },
+      "locked_at": "1794609718",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable",
+        "start long_unavailable"
+      ]
+    },
+    {
+      "t_s": 28.403,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130352.0ff46bd1"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609718",
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609723"
+      },
+      "locked_at": "1794609718",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable",
+        "start long_unavailable"
+      ]
+    },
+    {
+      "t_s": 30.433,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130352.0ff46bd1"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609718",
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609723"
+      },
+      "locked_at": "1794609718",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable",
+        "start long_unavailable"
+      ]
+    },
+    {
+      "t_s": 32.462,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130352.0ff46bd1"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609723",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609733"
+      },
+      "locked_at": "1794609733",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable",
+        "start long_unavailable"
+      ]
+    },
+    {
+      "t_s": 34.492,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130352.0ff46bd1"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609723",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609733"
+      },
+      "locked_at": "1794609733",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable",
+        "start long_unavailable"
+      ]
+    },
+    {
+      "t_s": 36.52,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.130352.0ff46bd1"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609723",
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609733"
+      },
+      "locked_at": "1794609733",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable",
+        "start long_unavailable"
+      ]
+    },
+    {
+      "t_s": 38.548,
+      "places": [
+        "done"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.130352.0ff46bd1": "1794609733",
+        "agent-worker.bench.cursor.130430.3b007efe": "1794609738"
+      },
+      "locked_at": "1794609733",
+      "effects": [
+        "start long_unavailable",
+        "end long_unavailable",
+        "start long_unavailable",
+        "end long_unavailable"
+      ]
+    }
+  ],
+  "proxy": {
+    "armed": null,
+    "counts": {
+      "pass": 123,
+      "seen:reenqueue": 8,
+      "seen:register": 4,
+      "seen:fetch": 103,
+      "seen:acquire": 2,
+      "blackhole": 1,
+      "seen:keepalive": 4,
+      "seen:renew": 1,
+      "seen:finish": 1
+    },
+    "events": [
+      {
+        "t": 1794609630.6416302,
+        "mono": 49007.919991732,
+        "action": "blackhole",
+        "seconds": 70
+      }
+    ],
+    "commands": 246,
+    "ops": [
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.130174\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.130173\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.130174\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+      },
+      {
+        "op": "HSET",
+        "argc": 36,
+        "prefix": "*36\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.130173\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.130174\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.130173\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794609630\r\n$13\r\ncursor.130174\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794609630\r\n$13\r\ncursor.130173\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1794609570"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1794609570"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.130214.02eb"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:dead\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "SCAN",
+        "argc": 6,
+        "prefix": "*6\r\n$4\r\nSCAN\r\n$1\r\n0\r\n$5\r\nMATCH\r\n$24\r\nbench:workers:metadata:*\r\n$5\r\nCOUNT\r\n$3\r\n10"
+      },
+      {
+        "op": "ZSCORE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nZSCORE\r\n$13\r\nbench:workers\r\n$41\r\nagent-worker.bench.cursor.130214.02eb03"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 4,
+        "prefix": "*4\r\n$7\r\nEVALSHA\r\n$40\r\nf84c79100c44c2348985e8bd49481807fb54d667\r\n$1\r\n1\r\n$37\r\nbenc"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 11,
+        "prefix": "*11\r\n$7\r\nEVALSHA\r\n$40\r\nf7ff133460a6cd6a739e294b0f4f7a584599f1fc\r\n$1\r\n4\r\n$56\r\nben"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 5,
+        "prefix": "*5\r\n$7\r\nEVALSHA\r\n$40\r\n8f290130ebe41d5d981486b7a1b8c3bfc152ea00\r\n$1\r\n1\r\n$47\r\ndeli"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.130214.02eb0"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.130174\r\n$12\r\ntasks:130214\r\n$1\r\n0\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.130213.d207"
+      }
+    ]
+  },
+  "owner_log": "2026-11-13T22:40:30.947156Z  WARN apalis_core::backend::persistence: poll_next: fetch_next failed -> Dead error=Database(broken pipe)\n2026-11-13T22:40:30.947199Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe\n2026-11-13T22:40:30.947211Z  WARN apalis_core::monitor: worker future ended with error name=\"agent-worker.bench.cursor.130213.d207d3c7\" error=BackendError(PollNextError(Database(broken pipe)))\n2026-11-13T22:40:40.400632Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done\n2026-11-13T22:40:45.312258Z  WARN agent_worker::supervisor: supervisor heartbeat failed error=failed to read Redis time\n2026-11-13T22:40:49.854590Z  WARN agent_worker::worker: failed to delete worker metadata error=failed to delete worker metadata queue=bench name=agent-worker.bench.cursor.130213.d207d3c7\nError: worker monitor failed: Worker errors:\nMonitoredErrors:\n - Worker `agent-worker.bench.cursor.130213.d207d3c7`: Failed to poll backend: PollNextError: broken pipe\n\n2026-11-13T22:40:49.879003Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130213 code=ExitStatus(unix_wait_status(256))\nError: failed to connect to Redis\n\nCaused by:\n    0: Connection reset by peer (os error 104)\n    1: Connection reset by peer (os error 104)\n2026-11-13T22:41:00.432063Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130279 code=ExitStatus(unix_wait_status(256))\n2026-11-13T22:41:09.765341Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis\nError: failed to connect to Redis\n\nCaused by:\n    0: Connection reset by peer (os error 104)\n    1: Connection reset by peer (os error 104)\n2026-11-13T22:41:11.985595Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130286 code=ExitStatus(unix_wait_status(256))\n2026-11-13T22:41:24.764201Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis\nError: failed to connect to Redis\n\nCaused by:\n    0: Connection reset by peer (os error 104)\n    1: Connection reset by peer (os error 104)\n2026-11-13T22:41:25.541432Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130330 code=ExitStatus(unix_wait_status(256))\n2026-11-13T22:41:39.766857Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis",
+  "other_log": "2026-11-13T22:40:45.312259Z  WARN agent_worker::supervisor: supervisor heartbeat failed error=failed to read Redis time\n2026-11-13T22:40:45.441795Z  WARN apalis_core::backend::persistence: poll_ready: HeartBeat failed -> Dead error=Database(broken pipe)\n2026-11-13T22:40:45.441820Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe\n2026-11-13T22:40:45.441869Z  WARN apalis_core::monitor: worker future ended with error name=\"agent-worker.bench.cursor.130214.02eb0378\" error=BackendError(PollNextError(Database(broken pipe)))\n2026-11-13T22:40:54.896214Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done\n2026-11-13T22:41:04.348394Z  WARN agent_worker::worker: failed to delete worker metadata error=failed to delete worker metadata queue=bench name=agent-worker.bench.cursor.130214.02eb0378\nError: worker monitor failed: Worker errors:\nMonitoredErrors:\n - Worker `agent-worker.bench.cursor.130214.02eb0378`: Failed to poll backend: PollNextError: broken pipe\n\n2026-11-13T22:41:04.373120Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130214 code=ExitStatus(unix_wait_status(256))\n2026-11-13T22:41:09.765308Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis\nError: failed to connect to Redis\n\nCaused by:\n    0: broken pipe\n    1: broken pipe\n2026-11-13T22:41:14.926643Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130322 code=ExitStatus(unix_wait_status(256))\n2026-11-13T22:41:24.764054Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis\nError: failed to connect to Redis\n\nCaused by:\n    0: Connection reset by peer (os error 104)\n    1: Connection reset by peer (os error 104)\n2026-11-13T22:41:26.483469Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130336 code=ExitStatus(unix_wait_status(256))\n2026-11-13T22:41:39.763802Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis\nError: failed to connect to Redis\n\nCaused by:\n    0: broken pipe\n    1: broken pipe\n2026-11-13T22:41:40.038801Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130346 code=ExitStatus(unix_wait_status(256))",
+  "redis_pid": 126504,
+  "finished_at": "2026-11-13T22:42:19Z"
+}

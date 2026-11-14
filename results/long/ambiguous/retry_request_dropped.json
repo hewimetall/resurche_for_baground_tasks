@@ -1,0 +1,882 @@
+{
+  "scenario_id": "retry_request_dropped",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-13T22:48:06Z",
+  "contract_held": false,
+  "checks": [
+    {
+      "name": "fault_fired",
+      "ok": true,
+      "detail": [
+        {
+          "t": 1794610025.9143937,
+          "mono": 49403.192755172,
+          "action": "drop_request",
+          "kind": "finish",
+          "op": "EVALSHA"
+        }
+      ]
+    },
+    {
+      "name": "first_execution_recorded",
+      "ok": true,
+      "detail": {
+        "lines": [
+          "retry_request_dropped",
+          "retry_request_dropped",
+          "retry_request_dropped"
+        ],
+        "places": [
+          "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+        ]
+      }
+    },
+    {
+      "name": "continuation_not_applied",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ]
+    },
+    {
+      "name": "present",
+      "ok": true,
+      "detail": {
+        "places": [
+          "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+        ],
+        "inflight": {
+          "bench:inflight:agent-worker.bench.cursor.131282.2deef856": [
+            "01M7BHFN4EDC6JNR9V923J9XVY"
+          ]
+        },
+        "workers": {
+          "agent-worker.bench.cursor.131282.2deef856": "1794610025"
+        },
+        "meta": {
+          "attempts": "0",
+          "max_attempts": "1",
+          "status": "Running",
+          "idempotency_key": "",
+          "started_at": "1794610025",
+          "locked_at": "1794610025",
+          "locked_by": "agent-worker.bench.cursor.131282.2deef856"
+        },
+        "data": true
+      }
+    },
+    {
+      "name": "retries_once",
+      "ok": false,
+      "detail": [
+        "retry_request_dropped",
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "name": "ends_done",
+      "ok": true,
+      "detail": [
+        "done"
+      ]
+    }
+  ],
+  "aaa": {
+    "arrange": "Task 01M7BHFN4EDC6JNR9V923J9XVY fails its first execution and would schedule one retry inside handle_results.",
+    "act": "That handle_results is drop_request. The link is then restored and a second worker can take whatever remains.",
+    "assert": "If the script ran, the retry exists once and a repeated finish does not add another copy. If it did not run, the original task is still recoverable and is not deleted."
+  },
+  "redis_restarted": false,
+  "task_id": "01M7BHFN4EDC6JNR9V923J9XVY",
+  "message_id": "65296753-2fb8-4ae2-9cb1-8fcb89d0b723",
+  "owner_alive_after_fault": null,
+  "owner_pid": 131262,
+  "other_pid": 131300,
+  "owner_exit": null,
+  "other_exit": null,
+  "before": null,
+  "immediate": {
+    "places": [
+      "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+    ],
+    "inflight": {
+      "bench:inflight:agent-worker.bench.cursor.131282.2deef856": [
+        "01M7BHFN4EDC6JNR9V923J9XVY"
+      ]
+    },
+    "workers": {
+      "agent-worker.bench.cursor.131282.2deef856": "1794610025"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1794610025",
+      "locked_at": "1794610025",
+      "locked_by": "agent-worker.bench.cursor.131282.2deef856"
+    },
+    "data": true
+  },
+  "final": {
+    "places": [
+      "done"
+    ],
+    "workers": {
+      "agent-worker.bench.cursor.131341.7514a3a0": "1794610072",
+      "agent-worker.bench.cursor.131330.0c0098cb": "1794610086"
+    },
+    "meta": {
+      "attempts": "1",
+      "max_attempts": "1",
+      "status": "Done",
+      "idempotency_key": "",
+      "started_at": "1794610086",
+      "locked_at": "1794610086",
+      "locked_by": "agent-worker.bench.cursor.131330.0c0098cb",
+      "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+      "done_at": "1794610086"
+    },
+    "data": true,
+    "t_s": 60.973,
+    "effects": [
+      "retry_request_dropped",
+      "retry_request_dropped",
+      "retry_request_dropped"
+    ]
+  },
+  "effects": [
+    "retry_request_dropped",
+    "retry_request_dropped",
+    "retry_request_dropped"
+  ],
+  "samples": [
+    {
+      "t_s": 0.026,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 2.065,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610026",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610027"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 4.1,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610026",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610027"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 6.132,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610026",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610027"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 8.164,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610026",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610027"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 10.196,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610026",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610027"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 12.226,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610026",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610027"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 14.256,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610026",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610027"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 16.286,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610041",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610042"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 18.318,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610041",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610042"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 20.351,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610041",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610042"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 22.382,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610041",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610042"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 24.415,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610041",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610042"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 26.446,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610041",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610042"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 28.478,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610041",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610042"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 30.508,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610042",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610056"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 32.538,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610056",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610057"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 34.569,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610056",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610057"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 36.6,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610056",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610057"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 38.636,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610056",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610057"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 40.666,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610056",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610057"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 42.697,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610056",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610057"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 44.728,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610056",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610057"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 46.76,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610071",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610072"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 48.79,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610071",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610072"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 50.822,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610071",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610072"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 52.855,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610071",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610072"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 54.885,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610071",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610072"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 56.916,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610071",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610072"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 58.946,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.131282.2deef856"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131282.2deef856": "1794610025",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610071",
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610072"
+      },
+      "locked_at": "1794610025",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    },
+    {
+      "t_s": 60.973,
+      "places": [
+        "done"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.131341.7514a3a0": "1794610072",
+        "agent-worker.bench.cursor.131330.0c0098cb": "1794610086"
+      },
+      "locked_at": "1794610086",
+      "effects": [
+        "retry_request_dropped",
+        "retry_request_dropped",
+        "retry_request_dropped"
+      ]
+    }
+  ],
+  "proxy": {
+    "armed": null,
+    "counts": {
+      "pass": 284,
+      "seen:reenqueue": 11,
+      "seen:register": 4,
+      "seen:fetch": 253,
+      "seen:acquire": 4,
+      "seen:enqueue": 1,
+      "drop_request": 1,
+      "seen:finish": 4,
+      "seen:keepalive": 8
+    },
+    "events": [
+      {
+        "t": 1794610025.9143937,
+        "mono": 49403.192755172,
+        "action": "drop_request",
+        "kind": "finish",
+        "op": "EVALSHA"
+      }
+    ],
+    "commands": 437,
+    "ops": [
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.131262\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.131262\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.131262\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794610025\r\n$13\r\ncursor.131262\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1794609965"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+      },
+      {
+        "op": "SCRIPT",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nSCRIPT\r\n$4\r\nLOAD\r\n$1231\r\n-- KEYS[1]: the worker set\n-- KEYS[2]: the acti"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.131282.2dee"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:dead\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "SCAN",
+        "argc": 6,
+        "prefix": "*6\r\n$4\r\nSCAN\r\n$1\r\n0\r\n$5\r\nMATCH\r\n$24\r\nbench:workers:metadata:*\r\n$5\r\nCOUNT\r\n$3\r\n10"
+      },
+      {
+        "op": "ZSCORE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nZSCORE\r\n$13\r\nbench:workers\r\n$41\r\nagent-worker.bench.cursor.131282.2deef8"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "DEL",
+        "argc": 2,
+        "prefix": "*2\r\n$3\r\nDEL\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.131282.2deef8"
+      },
+      {
+        "op": "SCRIPT",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nSCRIPT\r\n$4\r\nLOAD\r\n$893\r\n-- KEYS[1]: the active workers set\n-- KEYS[2]: w"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.131282.2deef"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.131262\r\n$12\r\ntasks:131282\r\n$1\r\n0\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "SCRIPT",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nSCRIPT\r\n$4\r\nLOAD\r\n$2076\r\n-- KEYS[1]: the active workers sorted set\n-- KE"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 4,
+        "prefix": "*4\r\n$7\r\nEVALSHA\r\n$40\r\nf84c79100c44c2348985e8bd49481807fb54d667\r\n$1\r\n1\r\n$37\r\nbenc"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 11,
+        "prefix": "*11\r\n$7\r\nEVALSHA\r\n$40\r\nf7ff133460a6cd6a739e294b0f4f7a584599f1fc\r\n$1\r\n4\r\n$56\r\nben"
+      },
+      {
+        "op": "SCRIPT",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nSCRIPT\r\n$4\r\nLOAD\r\n$106\r\n\nlocal secs = tonumber(redis.call(\"TIME\")[1])\nre"
+      },
+      {
+        "op": "SCRIPT",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nSCRIPT\r\n$4\r\nLOAD\r\n$1558\r\n-- KEYS[1]: this worker's inflight set\n-- KEYS["
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 4,
+        "prefix": "*4\r\n$7\r\nEVALSHA\r\n$40\r\nf84c79100c44c2348985e8bd49481807fb54d667\r\n$1\r\n1\r\n$37\r\nbenc"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 11,
+        "prefix": "*11\r\n$7\r\nEVALSHA\r\n$40\r\nf7ff133460a6cd6a739e294b0f4f7a584599f1fc\r\n$1\r\n4\r\n$56\r\nben"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 5,
+        "prefix": "*5\r\n$7\r\nEVALSHA\r\n$40\r\n8f290130ebe41d5d981486b7a1b8c3bfc152ea00\r\n$1\r\n1\r\n$47\r\ndeli"
+      },
+      {
+        "op": "SCRIPT",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nSCRIPT\r\n$4\r\nLOAD\r\n$87\r\n\nlocal n = redis.call('INCR', KEYS[1])\nredis.call"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 5,
+        "prefix": "*5\r\n$7\r\nEVALSHA\r\n$40\r\n8f290130ebe41d5d981486b7a1b8c3bfc152ea00\r\n$1\r\n1\r\n$47\r\ndeli"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 18,
+        "prefix": "*18\r\n$7\r\nEVALSHA\r\n$40\r\n3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\r\n$1\r\n6\r\n$10\r\nben"
+      },
+      {
+        "op": "DEL",
+        "argc": 2,
+        "prefix": "*2\r\n$3\r\nDEL\r\n$47\r\ndelivery:65296753-2fb8-4ae2-9cb1-8fcb89d0b723:0\r\n"
+      }
+    ]
+  },
+  "owner_log": "2026-11-13T22:47:05.914844Z  WARN apalis_core::backend::persistence: poll_ready: ProcessEvents failed -> Dead error=Database(broken pipe)\n2026-11-13T22:47:05.914921Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe\n2026-11-13T22:47:05.914947Z  WARN apalis_core::monitor: worker future ended with error name=\"agent-worker.bench.cursor.131282.2deef856\" error=BackendError(PollNextError(Database(broken pipe)))\nError: worker monitor failed: Worker errors:\nMonitoredErrors:\n - Worker `agent-worker.bench.cursor.131282.2deef856`: Failed to poll backend: PollNextError: broken pipe\n\n2026-11-13T22:47:05.940065Z  WARN agent_worker::supervisor: worker process exited index=0 pid=131282 code=ExitStatus(unix_wait_status(256))",
+  "other_log": "",
+  "redis_pid": 131242,
+  "finished_at": "2026-11-13T22:48:06Z"
+}
