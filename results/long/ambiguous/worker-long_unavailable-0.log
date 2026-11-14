@@ -1,0 +1,32 @@
+2026-11-13T22:40:30.947156Z  WARN apalis_core::backend::persistence: poll_next: fetch_next failed -> Dead error=Database(broken pipe)
+2026-11-13T22:40:30.947199Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe
+2026-11-13T22:40:30.947211Z  WARN apalis_core::monitor: worker future ended with error name="agent-worker.bench.cursor.130213.d207d3c7" error=BackendError(PollNextError(Database(broken pipe)))
+2026-11-13T22:40:40.400632Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done
+2026-11-13T22:40:45.312258Z  WARN agent_worker::supervisor: supervisor heartbeat failed error=failed to read Redis time
+2026-11-13T22:40:49.854590Z  WARN agent_worker::worker: failed to delete worker metadata error=failed to delete worker metadata queue=bench name=agent-worker.bench.cursor.130213.d207d3c7
+Error: worker monitor failed: Worker errors:
+MonitoredErrors:
+ - Worker `agent-worker.bench.cursor.130213.d207d3c7`: Failed to poll backend: PollNextError: broken pipe
+
+2026-11-13T22:40:49.879003Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130213 code=ExitStatus(unix_wait_status(256))
+Error: failed to connect to Redis
+
+Caused by:
+    0: Connection reset by peer (os error 104)
+    1: Connection reset by peer (os error 104)
+2026-11-13T22:41:00.432063Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130279 code=ExitStatus(unix_wait_status(256))
+2026-11-13T22:41:09.765341Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis
+Error: failed to connect to Redis
+
+Caused by:
+    0: Connection reset by peer (os error 104)
+    1: Connection reset by peer (os error 104)
+2026-11-13T22:41:11.985595Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130286 code=ExitStatus(unix_wait_status(256))
+2026-11-13T22:41:24.764201Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis
+Error: failed to connect to Redis
+
+Caused by:
+    0: Connection reset by peer (os error 104)
+    1: Connection reset by peer (os error 104)
+2026-11-13T22:41:25.541432Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130330 code=ExitStatus(unix_wait_status(256))
+2026-11-13T22:41:39.766857Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis

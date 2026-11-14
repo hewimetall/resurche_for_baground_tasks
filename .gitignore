@@ -2,6 +2,7 @@
 .venv-arq/
 .venv-sq120/
 results/long/stress-redis-*/
+results/long/ambiguous-redis-*/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -14,3 +15,5 @@ results/logs/
 .coverage
 htmlcov/
 docs/_build/
+
+results/long/retry-enqueue-6420/

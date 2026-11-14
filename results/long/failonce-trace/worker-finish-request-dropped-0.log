@@ -1,0 +1,14 @@
+2026-11-14T07:05:04.440972Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-14T07:05:04.442805Z  INFO agent_worker::supervisor: worker process started index=0 pid=142821
+2026-11-14T07:05:04.590616Z  INFO process{otel.name=process failonce otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=cbef47a6-ab41-418d-8e8c-3aa5d2fb705e actor_name=failonce}: agent_worker::worker: running actor message_id=cbef47a6-ab41-418d-8e8c-3aa5d2fb705e actor_name=failonce queue_name=bench retries=0 deliveries=1
+2026-11-14T07:05:04.606937Z  WARN apalis_core::backend::persistence: poll_ready: ProcessEvents failed -> Dead error=Database(broken pipe)
+2026-11-14T07:05:04.606962Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe
+2026-11-14T07:05:04.606981Z  WARN apalis_core::monitor: worker future ended with error name="agent-worker.bench.cursor.142821.52da4781" error=BackendError(PollNextError(Database(broken pipe)))
+Error: worker monitor failed: Worker errors:
+MonitoredErrors:
+ - Worker `agent-worker.bench.cursor.142821.52da4781`: Failed to poll backend: PollNextError: broken pipe
+
+2026-11-14T07:05:04.632431Z  WARN agent_worker::supervisor: worker process exited index=0 pid=142821 code=ExitStatus(unix_wait_status(256))
+2026-11-14T07:05:05.635511Z  INFO agent_worker::supervisor: worker process started index=0 pid=142858
+2026-11-14T07:06:04.918905Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-14T07:06:04.919397Z  INFO agent_worker::child: drain requested

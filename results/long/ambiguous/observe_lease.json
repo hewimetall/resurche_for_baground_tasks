@@ -1,0 +1,178 @@
+{
+  "scenario_id": "observe_lease",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-13T22:31:49Z",
+  "contract_held": true,
+  "checks": [
+    {
+      "name": "handler_once",
+      "ok": true,
+      "detail": [
+        "start observe-lease",
+        "end observe-lease"
+      ]
+    },
+    {
+      "name": "one_place_while_running",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.cursor.126555.4a6f019b"
+      ]
+    },
+    {
+      "name": "finished_in_done",
+      "ok": true,
+      "detail": [
+        "done"
+      ]
+    },
+    {
+      "name": "renew_seen",
+      "ok": true,
+      "detail": {
+        "pass": 16,
+        "seen:reenqueue": 3,
+        "seen:register": 2,
+        "seen:fetch": 3,
+        "seen:acquire": 2,
+        "seen:keepalive": 2,
+        "seen:renew": 2,
+        "seen:finish": 2
+      }
+    },
+    {
+      "name": "locked_at_moved",
+      "ok": true,
+      "detail": {
+        "before": {
+          "attempts": "0",
+          "max_attempts": "1",
+          "status": "Running",
+          "idempotency_key": "",
+          "started_at": "1794609087",
+          "locked_at": "1794609087",
+          "locked_by": "agent-worker.bench.cursor.126555.4a6f019b"
+        },
+        "after": {
+          "attempts": "0",
+          "max_attempts": "1",
+          "status": "Running",
+          "idempotency_key": "",
+          "started_at": "1794609087",
+          "locked_at": "1794609102",
+          "locked_by": "agent-worker.bench.cursor.126555.4a6f019b"
+        }
+      }
+    },
+    {
+      "name": "no_generation_suffix",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.cursor.126555.4a6f019b"
+      ]
+    }
+  ],
+  "aaa": {
+    "arrange": "One known task id, one worker, no injected fault.",
+    "act": "Hold the handler for 22s so a 15s heartbeat can run.",
+    "assert": "The task sits in one inflight set, renew_leases is sent with the task id, and done is the only terminal place."
+  },
+  "redis_restarted": false,
+  "task_id": "01M7BGK0CVXKXZH2DQNZVKVTV6",
+  "message_id": "f10cc1a7-6e9e-4493-925b-622415eb0fe5",
+  "worker_pid": 126535,
+  "names_before": [],
+  "inflight_keys": [
+    "bench:inflight:agent-worker.bench.cursor.126555.4a6f019b"
+  ],
+  "keys": [
+    "bench:meta:01M7BGK0CVXKXZH2DQNZVKVTV6",
+    "bench:data",
+    "bench:workers:metadata:agent-worker.bench.cursor.126555.4a6f019b",
+    "bench:done",
+    "bench:workers"
+  ],
+  "counts": {
+    "pass": 16,
+    "seen:reenqueue": 3,
+    "seen:register": 2,
+    "seen:fetch": 3,
+    "seen:acquire": 2,
+    "seen:keepalive": 2,
+    "seen:renew": 2,
+    "seen:finish": 2
+  },
+  "first": {
+    "places": [
+      "bench:inflight:agent-worker.bench.cursor.126555.4a6f019b"
+    ],
+    "inflight": {
+      "bench:inflight:agent-worker.bench.cursor.126555.4a6f019b": [
+        "01M7BGK0CVXKXZH2DQNZVKVTV6"
+      ]
+    },
+    "workers": {
+      "agent-worker.bench.cursor.126555.4a6f019b": "1794609087"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1794609087",
+      "locked_at": "1794609087",
+      "locked_by": "agent-worker.bench.cursor.126555.4a6f019b"
+    },
+    "data": true
+  },
+  "second": {
+    "places": [
+      "bench:inflight:agent-worker.bench.cursor.126555.4a6f019b"
+    ],
+    "inflight": {
+      "bench:inflight:agent-worker.bench.cursor.126555.4a6f019b": [
+        "01M7BGK0CVXKXZH2DQNZVKVTV6"
+      ]
+    },
+    "workers": {
+      "agent-worker.bench.cursor.126555.4a6f019b": "1794609102"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1794609087",
+      "locked_at": "1794609102",
+      "locked_by": "agent-worker.bench.cursor.126555.4a6f019b"
+    },
+    "data": true
+  },
+  "final": {
+    "places": [
+      "done"
+    ],
+    "inflight": {},
+    "workers": {
+      "agent-worker.bench.cursor.126555.4a6f019b": "1794609102"
+    },
+    "meta": {
+      "attempts": "1",
+      "max_attempts": "1",
+      "status": "Done",
+      "idempotency_key": "",
+      "started_at": "1794609087",
+      "locked_at": "1794609102",
+      "locked_by": "agent-worker.bench.cursor.126555.4a6f019b",
+      "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+      "done_at": "1794609109"
+    },
+    "data": true
+  },
+  "log_tail": "",
+  "redis_pid": 126504,
+  "finished_at": "2026-11-13T22:31:49Z"
+}

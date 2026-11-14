@@ -1,0 +1,316 @@
+{
+  "answers": {
+    "scenario_id": "enqueue_response_delayed",
+    "observe_status": "complete",
+    "B_appeared_in_redis": true,
+    "B_task_ids": [
+      "01M7CGZ0F46RAGB2E9MKJPMYTX",
+      "01M7CH0V5JKEEHBZHBJWC119TR"
+    ],
+    "rust_enqueue_result_observed": "error_leaving_attempt_inflight",
+    "enqueue_proxy_events": [
+      {
+        "t": 1794643034.597476,
+        "mono": 6640.372061005,
+        "action": "delay_response",
+        "kind": "enqueue",
+        "op": "EVALSHA",
+        "delay_s": 10.0,
+        "enqueue_task_id": "01M7CGZ0F46RAGB2E9MKJPMYTX",
+        "message_id": "fc745055-7d74-458a-af6e-5886114987bd",
+        "retries": 1,
+        "actor_name": "retry_by_retries"
+      },
+      {
+        "t": 1794643044.598802,
+        "mono": 6650.373386982,
+        "action": "release_response",
+        "kind": "enqueue",
+        "op": "EVALSHA",
+        "enqueue_task_id": "01M7CGZ0F46RAGB2E9MKJPMYTX",
+        "message_id": "fc745055-7d74-458a-af6e-5886114987bd",
+        "retries": 1,
+        "actor_name": "retry_by_retries"
+      }
+    ],
+    "finish_A": {
+      "task_id": "01M7CGZ01W4XE2JNGD64E8QNC9",
+      "places": [
+        "done"
+      ],
+      "meta": {
+        "attempts": "1",
+        "max_attempts": "1",
+        "status": "Done",
+        "idempotency_key": "",
+        "started_at": "1794643094",
+        "locked_at": "1794643094",
+        "locked_by": "agent-worker.bench.cursor.9154.1ab3f243",
+        "result": "{\"Ok\":{\"delay_ms\":34,\"outcome\":\"retry\"}}",
+        "done_at": "1794643094"
+      }
+    },
+    "child_exited_hint": true,
+    "owner_log_excerpt": "2026-11-14T07:57:15.097944Z ERROR process{otel.name=process retry_by_retries otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=fc745055-7d74-458a-af6e-5886114987bd actor_name=retry_by_retries}: agent_worker::worker: retry enqueue failed; leaving the attempt inflight message_id=fc745055-7d74-458a-af6e-5886114987bd actor_name=retry_by_retries queue_name=bench retries=0 error=enqueue failed: Failed to push task: timed out",
+    "other_log_excerpt": "",
+    "A_recovered_after_orphan_window": true,
+    "C_created": true,
+    "C_task_ids": [
+      "01M7CH0V5JKEEHBZHBJWC119TR"
+    ],
+    "retries_eq_1_task_id_count": 2,
+    "handler_entries_by_retries": {
+      "0": 2,
+      "1": 2
+    },
+    "unfinished_task_ids": [],
+    "final_workers": [
+      {
+        "name": "agent-worker.bench.cursor.9162.1ecf6d7e",
+        "score": 1794643081.0
+      },
+      {
+        "name": "agent-worker.bench.cursor.9154.1ab3f243",
+        "score": 1794643094.0
+      }
+    ],
+    "A_handler_start_count": 2
+  },
+  "summary": {
+    "message_id": "fc745055-7d74-458a-af6e-5886114987bd",
+    "task_ids": [
+      "01M7CGZ01W4XE2JNGD64E8QNC9",
+      "01M7CGZ0F46RAGB2E9MKJPMYTX",
+      "01M7CH0V5JKEEHBZHBJWC119TR"
+    ],
+    "task_ids_by_retries": {
+      "0": [
+        "01M7CGZ01W4XE2JNGD64E8QNC9"
+      ],
+      "1": [
+        "01M7CGZ0F46RAGB2E9MKJPMYTX",
+        "01M7CH0V5JKEEHBZHBJWC119TR"
+      ]
+    },
+    "retries_eq_1_count": 2,
+    "handler_starts": 4,
+    "handler_ends": 4,
+    "execution_ids": [
+      "260fb0b7-e187-48fa-9645-3522571fb1a9",
+      "2a06a9c0-b761-469b-b053-de5d93ea7f72",
+      "5d457982-24d3-4b20-a3aa-8d38cd0a9302",
+      "c082a53c-15e5-479e-b239-0039a5d40a7c"
+    ],
+    "per_task": {
+      "01M7CGZ01W4XE2JNGD64E8QNC9": {
+        "retries": 0,
+        "places": [
+          "done"
+        ],
+        "meta": {
+          "attempts": "1",
+          "max_attempts": "1",
+          "status": "Done",
+          "idempotency_key": "",
+          "started_at": "1794643094",
+          "locked_at": "1794643094",
+          "locked_by": "agent-worker.bench.cursor.9154.1ab3f243",
+          "result": "{\"Ok\":{\"delay_ms\":34,\"outcome\":\"retry\"}}",
+          "done_at": "1794643094"
+        },
+        "handler_starts_same_retries": 2,
+        "handler_ends_same_retries": 2,
+        "execution_ids_start": [
+          "2a06a9c0-b761-469b-b053-de5d93ea7f72",
+          "5d457982-24d3-4b20-a3aa-8d38cd0a9302"
+        ],
+        "execution_ids_end": [
+          "2a06a9c0-b761-469b-b053-de5d93ea7f72",
+          "5d457982-24d3-4b20-a3aa-8d38cd0a9302"
+        ],
+        "binding": "inferred_by_retries_not_direct_task_id"
+      },
+      "01M7CGZ0F46RAGB2E9MKJPMYTX": {
+        "retries": 1,
+        "places": [
+          "done"
+        ],
+        "meta": {
+          "attempts": "1",
+          "max_attempts": "1",
+          "status": "Done",
+          "idempotency_key": "",
+          "started_at": "1794643034",
+          "locked_at": "1794643034",
+          "locked_by": "agent-worker.bench.cursor.9154.1ab3f243",
+          "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":\"ok\"}}",
+          "done_at": "1794643034"
+        },
+        "handler_starts_same_retries": 2,
+        "handler_ends_same_retries": 2,
+        "execution_ids_start": [
+          "260fb0b7-e187-48fa-9645-3522571fb1a9",
+          "c082a53c-15e5-479e-b239-0039a5d40a7c"
+        ],
+        "execution_ids_end": [
+          "260fb0b7-e187-48fa-9645-3522571fb1a9",
+          "c082a53c-15e5-479e-b239-0039a5d40a7c"
+        ],
+        "binding": "inferred_by_retries_not_direct_task_id"
+      },
+      "01M7CH0V5JKEEHBZHBJWC119TR": {
+        "retries": 1,
+        "places": [
+          "done"
+        ],
+        "meta": {
+          "attempts": "1",
+          "max_attempts": "1",
+          "status": "Done",
+          "idempotency_key": "",
+          "started_at": "1794643094",
+          "locked_at": "1794643094",
+          "locked_by": "agent-worker.bench.cursor.9154.1ab3f243",
+          "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":\"ok\"}}",
+          "done_at": "1794643094"
+        },
+        "handler_starts_same_retries": 2,
+        "handler_ends_same_retries": 2,
+        "execution_ids_start": [
+          "260fb0b7-e187-48fa-9645-3522571fb1a9",
+          "c082a53c-15e5-479e-b239-0039a5d40a7c"
+        ],
+        "execution_ids_end": [
+          "260fb0b7-e187-48fa-9645-3522571fb1a9",
+          "c082a53c-15e5-479e-b239-0039a5d40a7c"
+        ],
+        "binding": "inferred_by_retries_not_direct_task_id"
+      }
+    },
+    "effects": [
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "2a06a9c0-b761-469b-b053-de5d93ea7f72",
+        "max_retries": 3,
+        "message_id": "fc745055-7d74-458a-af6e-5886114987bd",
+        "phase": "handler_start",
+        "pid": 9125,
+        "retries": 0,
+        "t": 1794643034.5961058,
+        "token": "enqueue_response_delayed-1f3ab0d3",
+        "utc": "2026-11-14T07:57:14.596Z",
+        "worker": "agent-worker.bench.cursor.9125.71f3c76c"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "2a06a9c0-b761-469b-b053-de5d93ea7f72",
+        "max_retries": 3,
+        "message_id": "fc745055-7d74-458a-af6e-5886114987bd",
+        "phase": "handler_end",
+        "pid": 9125,
+        "reason": "retries==0",
+        "result": "retry",
+        "retries": 0,
+        "t": 1794643034.5961754,
+        "token": "enqueue_response_delayed-1f3ab0d3",
+        "utc": "2026-11-14T07:57:14.596Z",
+        "worker": "agent-worker.bench.cursor.9125.71f3c76c"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "260fb0b7-e187-48fa-9645-3522571fb1a9",
+        "max_retries": 3,
+        "message_id": "fc745055-7d74-458a-af6e-5886114987bd",
+        "phase": "handler_start",
+        "pid": 9154,
+        "retries": 1,
+        "t": 1794643034.7262347,
+        "token": "enqueue_response_delayed-1f3ab0d3",
+        "utc": "2026-11-14T07:57:14.726Z",
+        "worker": "agent-worker.bench.cursor.9154.1ab3f243"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "260fb0b7-e187-48fa-9645-3522571fb1a9",
+        "max_retries": 3,
+        "message_id": "fc745055-7d74-458a-af6e-5886114987bd",
+        "phase": "handler_end",
+        "pid": 9154,
+        "reason": "retries>=1",
+        "result": "ok",
+        "retries": 1,
+        "t": 1794643034.726297,
+        "token": "enqueue_response_delayed-1f3ab0d3",
+        "utc": "2026-11-14T07:57:14.726Z",
+        "worker": "agent-worker.bench.cursor.9154.1ab3f243"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 2,
+        "execution_id": "5d457982-24d3-4b20-a3aa-8d38cd0a9302",
+        "max_retries": 3,
+        "message_id": "fc745055-7d74-458a-af6e-5886114987bd",
+        "phase": "handler_start",
+        "pid": 9154,
+        "retries": 0,
+        "t": 1794643094.7057638,
+        "token": "enqueue_response_delayed-1f3ab0d3",
+        "utc": "2026-11-14T07:58:14.705Z",
+        "worker": "agent-worker.bench.cursor.9154.1ab3f243"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 2,
+        "execution_id": "5d457982-24d3-4b20-a3aa-8d38cd0a9302",
+        "max_retries": 3,
+        "message_id": "fc745055-7d74-458a-af6e-5886114987bd",
+        "phase": "handler_end",
+        "pid": 9154,
+        "reason": "retries==0",
+        "result": "retry",
+        "retries": 0,
+        "t": 1794643094.7058935,
+        "token": "enqueue_response_delayed-1f3ab0d3",
+        "utc": "2026-11-14T07:58:14.705Z",
+        "worker": "agent-worker.bench.cursor.9154.1ab3f243"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "c082a53c-15e5-479e-b239-0039a5d40a7c",
+        "max_retries": 3,
+        "message_id": "fc745055-7d74-458a-af6e-5886114987bd",
+        "phase": "handler_start",
+        "pid": 9154,
+        "retries": 1,
+        "t": 1794643094.7082224,
+        "token": "enqueue_response_delayed-1f3ab0d3",
+        "utc": "2026-11-14T07:58:14.708Z",
+        "worker": "agent-worker.bench.cursor.9154.1ab3f243"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "c082a53c-15e5-479e-b239-0039a5d40a7c",
+        "max_retries": 3,
+        "message_id": "fc745055-7d74-458a-af6e-5886114987bd",
+        "phase": "handler_end",
+        "pid": 9154,
+        "reason": "retries>=1",
+        "result": "ok",
+        "retries": 1,
+        "t": 1794643094.7082963,
+        "token": "enqueue_response_delayed-1f3ab0d3",
+        "utc": "2026-11-14T07:58:14.708Z",
+        "worker": "agent-worker.bench.cursor.9154.1ab3f243"
+      }
+    ],
+    "limitation": "CurrentMessage has no task_id; execution_id\u2194task_id is inferred from retries + worker + Redis timeline / proxy enqueue_task_id, not a direct bridge."
+  },
+  "fault_fired": true,
+  "observe_status": "complete"
+}

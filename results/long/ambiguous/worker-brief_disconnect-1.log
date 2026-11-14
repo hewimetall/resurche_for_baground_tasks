@@ -1,0 +1,9 @@
+2026-11-13T22:39:54.702774Z  WARN agent_worker::supervisor: supervisor heartbeat failed error=failed to read Redis time
+2026-11-13T22:39:54.845781Z  WARN apalis_core::backend::persistence: poll_ready: HeartBeat failed -> Dead error=Database(broken pipe)
+2026-11-13T22:39:54.845821Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe
+2026-11-13T22:39:54.845906Z  WARN apalis_core::monitor: worker future ended with error name="agent-worker.bench.cursor.129866.02439655" error=BackendError(PollNextError(Database(broken pipe)))
+Error: worker monitor failed: Worker errors:
+MonitoredErrors:
+ - Worker `agent-worker.bench.cursor.129866.02439655`: Failed to poll backend: PollNextError: broken pipe
+
+2026-11-13T22:39:54.871784Z  WARN agent_worker::supervisor: worker process exited index=0 pid=129866 code=ExitStatus(unix_wait_status(256))

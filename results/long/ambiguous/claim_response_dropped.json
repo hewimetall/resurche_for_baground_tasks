@@ -1,0 +1,1128 @@
+{
+  "scenario_id": "claim_response_dropped",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-13T22:32:51Z",
+  "contract_held": true,
+  "checks": [
+    {
+      "name": "fault_fired",
+      "ok": true,
+      "detail": [
+        {
+          "t": 1794609110.4599972,
+          "mono": 48487.738358674,
+          "action": "drop_response",
+          "kind": "fetch",
+          "op": "EVALSHA",
+          "reply_len": 549
+        }
+      ]
+    },
+    {
+      "name": "moved_to_inflight",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ]
+    },
+    {
+      "name": "not_accepted_locally",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "not_in_two_places",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ]
+    },
+    {
+      "name": "data_kept",
+      "ok": true,
+      "detail": {
+        "places": [
+          "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+        ],
+        "inflight": {
+          "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc": [
+            "01M7BGKQ6QZFFSJG3C14DZA7DN"
+          ]
+        },
+        "workers": {
+          "agent-worker.bench.cursor.126749.aa250ffc": "1794609110"
+        },
+        "meta": {
+          "attempts": "0",
+          "max_attempts": "1",
+          "status": "Pending",
+          "idempotency_key": ""
+        },
+        "data": true
+      }
+    },
+    {
+      "name": "no_infinite_renew",
+      "ok": true,
+      "detail": [
+        {
+          "t_s": 0.022,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 2.052,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 4.08,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 6.106,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 8.134,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 10.161,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 12.187,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 14.213,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 16.24,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 18.267,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 20.296,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 22.322,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 24.349,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 26.376,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 28.405,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 30.433,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609126",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609140"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 32.461,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 34.488,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 36.518,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 38.545,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 40.573,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 42.599,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 44.629,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 46.657,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 48.683,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 50.711,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 52.737,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 54.765,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 56.791,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 58.82,
+          "workers": {
+            "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+          },
+          "places": [
+            "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+          ]
+        },
+        {
+          "t_s": 60.846,
+          "workers": {
+            "agent-worker.bench.cursor.126804.a6ad3632": "1794609156",
+            "agent-worker.bench.cursor.126795.632fa60b": "1794609170"
+          },
+          "places": [
+            "done"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "recovered_within_budget",
+      "ok": true,
+      "detail": {
+        "lines": [
+          "claim-response"
+        ],
+        "places": [
+          "done"
+        ],
+        "wait_s": 60.846
+      }
+    },
+    {
+      "name": "single_execution",
+      "ok": true,
+      "detail": [
+        "claim-response"
+      ]
+    }
+  ],
+  "aaa": {
+    "arrange": "Task 01M7BGKQ6QZFFSJG3C14DZA7DN is ready. Two workers. The proxy drops a non-empty fetch reply after Redis has moved the batch.",
+    "act": "The first worker's fetch reply is discarded. A second worker stays up through the orphan window.",
+    "assert": "The handler does not run on the lost reply. The task remains stored. Heartbeats do not keep refreshing an invisible hold. One execution completes inside the recovery budget."
+  },
+  "redis_restarted": false,
+  "task_id": "01M7BGKQ6QZFFSJG3C14DZA7DN",
+  "message_id": "839292c6-6851-47ab-88ad-9a7349507f7c",
+  "owner_alive_after_fault": null,
+  "owner_pid": 126729,
+  "other_pid": 126766,
+  "owner_exit": null,
+  "other_exit": null,
+  "before": null,
+  "immediate": {
+    "places": [
+      "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+    ],
+    "inflight": {
+      "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc": [
+        "01M7BGKQ6QZFFSJG3C14DZA7DN"
+      ]
+    },
+    "workers": {
+      "agent-worker.bench.cursor.126749.aa250ffc": "1794609110"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Pending",
+      "idempotency_key": ""
+    },
+    "data": true
+  },
+  "final": {
+    "places": [
+      "done"
+    ],
+    "workers": {
+      "agent-worker.bench.cursor.126804.a6ad3632": "1794609156",
+      "agent-worker.bench.cursor.126795.632fa60b": "1794609170"
+    },
+    "meta": {
+      "attempts": "1",
+      "max_attempts": "1",
+      "status": "Done",
+      "idempotency_key": "",
+      "started_at": "1794609170",
+      "locked_at": "1794609170",
+      "locked_by": "agent-worker.bench.cursor.126795.632fa60b",
+      "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+      "done_at": "1794609170"
+    },
+    "data": true,
+    "t_s": 60.846,
+    "effects": [
+      "claim-response"
+    ]
+  },
+  "effects": [
+    "claim-response"
+  ],
+  "samples": [
+    {
+      "t_s": 0.022,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 2.052,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 4.08,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 6.106,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 8.134,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 10.161,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 12.187,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 14.213,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609110",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609111"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 16.24,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 18.267,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 20.296,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 22.322,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 24.349,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 26.376,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 28.405,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609125",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609126"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 30.433,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609126",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609140"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 32.461,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 34.488,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 36.518,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 38.545,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 40.573,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 42.599,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 44.629,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609140",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609141"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 46.657,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 48.683,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 50.711,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 52.737,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 54.765,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 56.791,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 58.82,
+      "places": [
+        "bench:inflight:agent-worker.bench.cursor.126749.aa250ffc"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126749.aa250ffc": "1794609110",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609155",
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609156"
+      },
+      "locked_at": null,
+      "effects": []
+    },
+    {
+      "t_s": 60.846,
+      "places": [
+        "done"
+      ],
+      "workers": {
+        "agent-worker.bench.cursor.126804.a6ad3632": "1794609156",
+        "agent-worker.bench.cursor.126795.632fa60b": "1794609170"
+      },
+      "locked_at": "1794609170",
+      "effects": [
+        "claim-response"
+      ]
+    }
+  ],
+  "proxy": {
+    "armed": null,
+    "counts": {
+      "pass": 271,
+      "seen:reenqueue": 10,
+      "seen:register": 3,
+      "drop_response": 1,
+      "seen:fetch": 250,
+      "seen:keepalive": 7,
+      "seen:acquire": 1,
+      "seen:finish": 1
+    },
+    "events": [
+      {
+        "t": 1794609110.4599972,
+        "mono": 48487.738358674,
+        "action": "drop_response",
+        "kind": "fetch",
+        "op": "EVALSHA",
+        "reply_len": 549
+      }
+    ],
+    "commands": 401,
+    "ops": [
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.126729\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.126729\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.126729\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794609110\r\n$13\r\ncursor.126729\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1794609050"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.126749.aa25"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:dead\r\n"
+      },
+      {
+        "op": "SCAN",
+        "argc": 6,
+        "prefix": "*6\r\n$4\r\nSCAN\r\n$1\r\n0\r\n$5\r\nMATCH\r\n$24\r\nbench:workers:metadata:*\r\n$5\r\nCOUNT\r\n$3\r\n10"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.126749.aa250"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.126729\r\n$12\r\ntasks:126749\r\n$1\r\n0\r\n"
+      },
+      {
+        "op": "DEL",
+        "argc": 2,
+        "prefix": "*2\r\n$3\r\nDEL\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.126749.aa250f"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.126766\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.126766\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.126766\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794609110\r\n$13\r\ncursor.126766\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1794609050"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.126795.632f"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+      }
+    ]
+  },
+  "owner_log": "2026-11-13T22:31:50.460165Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done name=agent-worker.bench.cursor.126749.aa250ffc\n2026-11-13T22:31:50.460210Z  WARN agent_worker::child: queue sweep failed error=failed to score a worker queue=bench\n2026-11-13T22:31:50.460169Z  WARN apalis_core::backend::persistence: poll_next: fetch_next failed -> Dead error=Database(broken pipe)\n2026-11-13T22:31:50.460236Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe\n2026-11-13T22:31:50.460306Z  WARN apalis_core::monitor: worker future ended with error name=\"agent-worker.bench.cursor.126749.aa250ffc\" error=BackendError(PollNextError(Database(broken pipe)))\nError: worker monitor failed: Worker errors:\nMonitoredErrors:\n - Worker `agent-worker.bench.cursor.126749.aa250ffc`: Failed to poll backend: PollNextError: broken pipe\n\n2026-11-13T22:31:50.481007Z  WARN agent_worker::supervisor: worker process exited index=0 pid=126749 code=ExitStatus(unix_wait_status(256))",
+  "other_log": "",
+  "redis_pid": 126504,
+  "finished_at": "2026-11-13T22:32:51Z"
+}

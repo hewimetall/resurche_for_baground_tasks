@@ -1,0 +1,32 @@
+2026-11-13T22:40:45.312259Z  WARN agent_worker::supervisor: supervisor heartbeat failed error=failed to read Redis time
+2026-11-13T22:40:45.441795Z  WARN apalis_core::backend::persistence: poll_ready: HeartBeat failed -> Dead error=Database(broken pipe)
+2026-11-13T22:40:45.441820Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe
+2026-11-13T22:40:45.441869Z  WARN apalis_core::monitor: worker future ended with error name="agent-worker.bench.cursor.130214.02eb0378" error=BackendError(PollNextError(Database(broken pipe)))
+2026-11-13T22:40:54.896214Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done
+2026-11-13T22:41:04.348394Z  WARN agent_worker::worker: failed to delete worker metadata error=failed to delete worker metadata queue=bench name=agent-worker.bench.cursor.130214.02eb0378
+Error: worker monitor failed: Worker errors:
+MonitoredErrors:
+ - Worker `agent-worker.bench.cursor.130214.02eb0378`: Failed to poll backend: PollNextError: broken pipe
+
+2026-11-13T22:41:04.373120Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130214 code=ExitStatus(unix_wait_status(256))
+2026-11-13T22:41:09.765308Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis
+Error: failed to connect to Redis
+
+Caused by:
+    0: broken pipe
+    1: broken pipe
+2026-11-13T22:41:14.926643Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130322 code=ExitStatus(unix_wait_status(256))
+2026-11-13T22:41:24.764054Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis
+Error: failed to connect to Redis
+
+Caused by:
+    0: Connection reset by peer (os error 104)
+    1: Connection reset by peer (os error 104)
+2026-11-13T22:41:26.483469Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130336 code=ExitStatus(unix_wait_status(256))
+2026-11-13T22:41:39.763802Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis
+Error: failed to connect to Redis
+
+Caused by:
+    0: broken pipe
+    1: broken pipe
+2026-11-13T22:41:40.038801Z  WARN agent_worker::supervisor: worker process exited index=0 pid=130346 code=ExitStatus(unix_wait_status(256))
