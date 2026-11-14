@@ -1,0 +1,17 @@
+{
+  "experiment": "e01_batch_pel",
+  "status": "pass",
+  "measured": {
+    "pending_during_hold": 1,
+    "max_pending_after_batch_start": 8,
+    "batch_starts_in_2s": 1,
+    "xread_count": 10,
+    "max_async_tasks": 1,
+    "max_prefetch": 0
+  },
+  "claim": "После освобождения слота один XREADGROUP COUNT зачисляет batch в PEL; --max-async-tasks=1 держит только одно исполнение, остальные pending остаются у consumer до yield/ACK.",
+  "evidence_class": "measured",
+  "artifacts": {
+    "run_dir": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/correctness/20261113T213332Z-e01-batch-pel"
+  }
+}

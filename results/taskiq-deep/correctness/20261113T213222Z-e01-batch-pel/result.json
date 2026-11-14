@@ -1,0 +1,16 @@
+{
+  "experiment": "e01_batch_pel",
+  "status": "fail",
+  "measured": {
+    "max_pending": 1,
+    "handler_starts_in_window": 1,
+    "xread_count": 10,
+    "max_async_tasks": 1,
+    "max_prefetch": 0
+  },
+  "claim": "XREADGROUP COUNT зачисляет batch в PEL сразу; --max-async-tasks=1 ограничивает исполнение/локальную выдачу, но не число already-fetched pending entries.",
+  "evidence_class": "measured",
+  "artifacts": {
+    "run_dir": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/correctness/20261113T213222Z-e01-batch-pel"
+  }
+}

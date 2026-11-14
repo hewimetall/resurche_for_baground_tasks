@@ -1,0 +1,40 @@
+[2026-11-13 21:35:53,231][taskiq.worker][INFO   ][MainProcess] Pid of a main process: 3515
+[2026-11-13 21:35:53,232][taskiq.worker][INFO   ][MainProcess] Starting 1 worker processes.
+[2026-11-13 21:35:53,233][taskiq.process-manager][INFO   ][MainProcess] Started process worker-0 with pid 3516 
+[2026-11-13 21:35:53,304][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.
+[2026-11-13 21:36:03,708][taskiq.receiver.receiver][INFO   ][worker-0] Executing task ready with ID: 3de934d447224b46ac7cc2cbeb36d3cb
+[2026-11-13 21:36:04,125][taskiq.receiver.receiver][INFO   ][worker-0] Executing task boom with ID: 67081dba128b4a7091eca3c9dd2d878a
+[2026-11-13 21:36:04,126][taskiq.receiver.receiver][ERROR  ][worker-0] Exception found while executing function.
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/taskiq/receiver/receiver.py", line 362, in run_task
+    target_future = await target_future
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/agent/repos/resurche_for_baground_tasks/research/taskiq/app/broker.py", line 177, in boom
+    raise RuntimeError(f"boom:{job_id}")
+RuntimeError: boom:j-when_received
+[2026-11-13 21:36:04,126][taskiq.retry_middleware][INFO   ][worker-0] Task 'boom' invocation failed. Retrying.
+[2026-11-13 21:36:04,128][taskiq.receiver.receiver][INFO   ][worker-0] Executing task boom with ID: 67081dba128b4a7091eca3c9dd2d878a
+[2026-11-13 21:36:04,129][taskiq.receiver.receiver][ERROR  ][worker-0] Exception found while executing function.
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/taskiq/receiver/receiver.py", line 362, in run_task
+    target_future = await target_future
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/agent/repos/resurche_for_baground_tasks/research/taskiq/app/broker.py", line 177, in boom
+    raise RuntimeError(f"boom:{job_id}")
+RuntimeError: boom:j-when_received
+[2026-11-13 21:36:04,129][taskiq.retry_middleware][INFO   ][worker-0] Task 'boom' invocation failed. Retrying.
+[2026-11-13 21:36:04,132][taskiq.receiver.receiver][INFO   ][worker-0] Executing task boom with ID: 67081dba128b4a7091eca3c9dd2d878a
+[2026-11-13 21:36:04,132][taskiq.receiver.receiver][ERROR  ][worker-0] Exception found while executing function.
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/taskiq/receiver/receiver.py", line 362, in run_task
+    target_future = await target_future
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/agent/repos/resurche_for_baground_tasks/research/taskiq/app/broker.py", line 177, in boom
+    raise RuntimeError(f"boom:{job_id}")
+RuntimeError: boom:j-when_received
+[2026-11-13 21:36:04,132][taskiq.retry_middleware][WARNING][worker-0] Task 'boom' invocation failed. Maximum retries count is reached.
+[2026-11-13 21:36:04,188][taskiq.process-manager][INFO   ][MainProcess] Workers are scheduled for shutdown.
+[2026-11-13 21:36:04,336][taskiq.process-manager][INFO   ][MainProcess] Stopped process worker-0 with pid 3516
+[2026-11-13 21:36:04,372][taskiq.receiver.receiver][INFO   ][worker-0] Stopping prefetching messages...
+[2026-11-13 21:36:04,372][taskiq.receiver.receiver][INFO   ][worker-0] The runner is stopped.
+[2026-11-13 21:36:04,372][taskiq.worker][INFO   ][worker-0] Shutting down the broker.

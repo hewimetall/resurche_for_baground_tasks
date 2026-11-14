@@ -1,0 +1,70 @@
+{
+  "case": "with_prefetched",
+  "during": "prefetched",
+  "before": {
+    "ts_mono": 1162.839504644,
+    "stream": "e08:bb407c0b97",
+    "group": "g-bb407c0b97",
+    "xlen": 8,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794606079289-0",
+        "consumer": "6f953c33-207f-4fd8-b2a9-b3bf2ab72bea",
+        "idle_ms": 1263,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "6f953c33-207f-4fd8-b2a9-b3bf2ab72bea",
+        "pending": 1,
+        "idle": 1263
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "after": {
+    "ts_mono": 1167.855498165,
+    "stream": "e08:bb407c0b97",
+    "group": "g-bb407c0b97",
+    "xlen": 8,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794606079289-0",
+        "consumer": "6f953c33-207f-4fd8-b2a9-b3bf2ab72bea",
+        "idle_ms": 6279,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "6f953c33-207f-4fd8-b2a9-b3bf2ab72bea",
+        "pending": 1,
+        "idle": 6279
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "stop": {
+    "sigterm_at": 1162.839516806,
+    "exit_at": 1167.854428362,
+    "code": -9,
+    "killed_after_grace": true,
+    "t_drain_s": 5.015,
+    "already_exited": false,
+    "children_reaped": [
+      {
+        "pid": 3675,
+        "code": -9,
+        "reaped": true
+      }
+    ]
+  },
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/shutdown/20261113T214108Z-e08-with_prefetched"
+}

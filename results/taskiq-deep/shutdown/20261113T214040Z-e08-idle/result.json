@@ -1,0 +1,56 @@
+{
+  "case": "idle",
+  "during": "idle",
+  "before": {
+    "ts_mono": 1133.747669984,
+    "stream": "e08:62edecf779",
+    "group": "g-62edecf779",
+    "xlen": 1,
+    "pending_count": 0,
+    "pending": [],
+    "consumers": [
+      {
+        "name": "c7573592-6ef0-404e-b7f7-40c658a054a3",
+        "pending": 0,
+        "idle": 567
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "after": {
+    "ts_mono": 1134.099596398,
+    "stream": "e08:62edecf779",
+    "group": "g-62edecf779",
+    "xlen": 1,
+    "pending_count": 0,
+    "pending": [],
+    "consumers": [
+      {
+        "name": "c7573592-6ef0-404e-b7f7-40c658a054a3",
+        "pending": 0,
+        "idle": 919
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "stop": {
+    "sigterm_at": 1133.747686593,
+    "exit_at": 1134.098657603,
+    "code": 0,
+    "killed_after_grace": false,
+    "t_drain_s": 0.351,
+    "already_exited": false,
+    "children_reaped": [
+      {
+        "pid": 3663,
+        "code": 0,
+        "reaped": true
+      }
+    ]
+  },
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/shutdown/20261113T214040Z-e08-idle"
+}

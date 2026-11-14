@@ -1,0 +1,82 @@
+[2026-11-13 21:31:16,194][taskiq.worker][INFO   ][MainProcess] Pid of a main process: 3318
+[2026-11-13 21:31:16,195][taskiq.worker][INFO   ][MainProcess] Starting 1 worker processes.
+[2026-11-13 21:31:16,197][taskiq.process-manager][INFO   ][MainProcess] Started process worker-0 with pid 3319 
+[2026-11-13 21:31:16,285][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.
+[2026-11-13 21:31:26,666][taskiq.receiver.receiver][INFO   ][worker-0] Executing task ready with ID: 80ec85bac7264e4e96f2566e3c10c995
+[2026-11-13 21:31:27,130][taskiq.receiver.receiver][INFO   ][worker-0] Executing task sleep_async with ID: 74a713539a6f438a854494bf823e44c2
+[2026-11-13 21:31:27,130][taskiq.receiver.receiver][ERROR  ][worker-0] Exception found while executing function.
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/taskiq/receiver/receiver.py", line 357, in run_task
+    target_future = await target_future
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/agent/repos/resurche_for_baground_tasks/research/taskiq/app/broker.py", line 125, in sleep_async
+    _note("handler_start", job_id=job_id, kind="sleep_async", seconds=seconds)
+TypeError: _note() got multiple values for argument 'kind'
+[2026-11-13 21:31:27,132][taskiq.receiver.receiver][INFO   ][worker-0] Executing task sleep_async with ID: fc899c8f8ef4480a84515219f61c0b91
+[2026-11-13 21:31:27,133][taskiq.receiver.receiver][ERROR  ][worker-0] Exception found while executing function.
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/taskiq/receiver/receiver.py", line 357, in run_task
+    target_future = await target_future
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/agent/repos/resurche_for_baground_tasks/research/taskiq/app/broker.py", line 125, in sleep_async
+    _note("handler_start", job_id=job_id, kind="sleep_async", seconds=seconds)
+TypeError: _note() got multiple values for argument 'kind'
+[2026-11-13 21:31:27,135][taskiq.receiver.receiver][INFO   ][worker-0] Executing task sleep_async with ID: 2f1e4c863d864017a6aa89f0c0afdf12
+[2026-11-13 21:31:27,135][taskiq.receiver.receiver][ERROR  ][worker-0] Exception found while executing function.
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/taskiq/receiver/receiver.py", line 357, in run_task
+    target_future = await target_future
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/agent/repos/resurche_for_baground_tasks/research/taskiq/app/broker.py", line 125, in sleep_async
+    _note("handler_start", job_id=job_id, kind="sleep_async", seconds=seconds)
+TypeError: _note() got multiple values for argument 'kind'
+[2026-11-13 21:31:27,136][taskiq.receiver.receiver][INFO   ][worker-0] Executing task sleep_async with ID: d000d99c01f949c4816a4730ad4ede75
+[2026-11-13 21:31:27,136][taskiq.receiver.receiver][ERROR  ][worker-0] Exception found while executing function.
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/taskiq/receiver/receiver.py", line 357, in run_task
+    target_future = await target_future
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/agent/repos/resurche_for_baground_tasks/research/taskiq/app/broker.py", line 125, in sleep_async
+    _note("handler_start", job_id=job_id, kind="sleep_async", seconds=seconds)
+TypeError: _note() got multiple values for argument 'kind'
+[2026-11-13 21:31:27,137][taskiq.receiver.receiver][INFO   ][worker-0] Executing task sleep_async with ID: 4b4a91ab40814b5384045ca273a45f43
+[2026-11-13 21:31:27,137][taskiq.receiver.receiver][ERROR  ][worker-0] Exception found while executing function.
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/taskiq/receiver/receiver.py", line 357, in run_task
+    target_future = await target_future
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/agent/repos/resurche_for_baground_tasks/research/taskiq/app/broker.py", line 125, in sleep_async
+    _note("handler_start", job_id=job_id, kind="sleep_async", seconds=seconds)
+TypeError: _note() got multiple values for argument 'kind'
+[2026-11-13 21:31:27,138][taskiq.receiver.receiver][INFO   ][worker-0] Executing task sleep_async with ID: 42550d7462834a47b43da43716b117e4
+[2026-11-13 21:31:27,138][taskiq.receiver.receiver][ERROR  ][worker-0] Exception found while executing function.
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/taskiq/receiver/receiver.py", line 357, in run_task
+    target_future = await target_future
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/agent/repos/resurche_for_baground_tasks/research/taskiq/app/broker.py", line 125, in sleep_async
+    _note("handler_start", job_id=job_id, kind="sleep_async", seconds=seconds)
+TypeError: _note() got multiple values for argument 'kind'
+[2026-11-13 21:31:27,139][taskiq.receiver.receiver][INFO   ][worker-0] Executing task sleep_async with ID: f439ed172a6a456aab9fdf932dbba987
+[2026-11-13 21:31:27,139][taskiq.receiver.receiver][ERROR  ][worker-0] Exception found while executing function.
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/taskiq/receiver/receiver.py", line 357, in run_task
+    target_future = await target_future
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/agent/repos/resurche_for_baground_tasks/research/taskiq/app/broker.py", line 125, in sleep_async
+    _note("handler_start", job_id=job_id, kind="sleep_async", seconds=seconds)
+TypeError: _note() got multiple values for argument 'kind'
+[2026-11-13 21:31:27,140][taskiq.receiver.receiver][INFO   ][worker-0] Executing task sleep_async with ID: 38754602f10d412b9e5dc9ac32bcc762
+[2026-11-13 21:31:27,140][taskiq.receiver.receiver][ERROR  ][worker-0] Exception found while executing function.
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/taskiq/receiver/receiver.py", line 357, in run_task
+    target_future = await target_future
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/agent/repos/resurche_for_baground_tasks/research/taskiq/app/broker.py", line 125, in sleep_async
+    _note("handler_start", job_id=job_id, kind="sleep_async", seconds=seconds)
+TypeError: _note() got multiple values for argument 'kind'
+[2026-11-13 21:31:42,240][taskiq.process-manager][INFO   ][MainProcess] Workers are scheduled for shutdown.
+[2026-11-13 21:31:42,303][taskiq.process-manager][INFO   ][MainProcess] Stopped process worker-0 with pid 3319
+[2026-11-13 21:31:42,413][taskiq.receiver.receiver][INFO   ][worker-0] Stopping prefetching messages...
+[2026-11-13 21:31:42,413][taskiq.receiver.receiver][INFO   ][worker-0] The runner is stopped.
+[2026-11-13 21:31:42,414][taskiq.worker][INFO   ][worker-0] Shutting down the broker.

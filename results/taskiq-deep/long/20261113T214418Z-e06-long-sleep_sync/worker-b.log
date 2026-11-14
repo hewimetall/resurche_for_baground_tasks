@@ -1,0 +1,9 @@
+[2026-11-13 21:44:30,412][taskiq.worker][INFO   ][MainProcess] Pid of a main process: 3774
+[2026-11-13 21:44:30,412][taskiq.worker][INFO   ][MainProcess] Starting 1 worker processes.
+[2026-11-13 21:44:30,414][taskiq.process-manager][INFO   ][MainProcess] Started process worker-0 with pid 3775 
+[2026-11-13 21:44:30,481][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.
+[2026-11-13 21:44:40,813][taskiq.receiver.receiver][INFO   ][worker-0] Executing task fast with ID: 779ebeb1ff264a3f8de9c9535d4024e5
+[2026-11-13 21:44:40,818][taskiq.receiver.receiver][INFO   ][worker-0] Executing task sleep_sync with ID: 49362b5393144659a567ba623359a4dc
+[2026-11-13 21:44:40,818][taskiq.receiver.receiver][WARNING][worker-0] Timeouts for sync tasks don't work in python well.
+[2026-11-13 21:44:43,322][taskiq.process-manager][INFO   ][MainProcess] Workers are scheduled for shutdown.
+[2026-11-13 21:44:43,518][taskiq.process-manager][INFO   ][MainProcess] Stopped process worker-0 with pid 3775

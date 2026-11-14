@@ -1,0 +1,97 @@
+{
+  "experiment": "e09_redis_fault",
+  "brief_outage": {
+    "case": "brief_outage_sigstop",
+    "enqueue_error": null,
+    "finished_after_resume": true,
+    "worker_stop": {
+      "sigterm_at": 2038.970764667,
+      "exit_at": 2039.522070769,
+      "code": 0,
+      "killed_after_grace": false,
+      "t_drain_s": 0.551,
+      "already_exited": false,
+      "children_reaped": [
+        {
+          "pid": 5304,
+          "code": 0,
+          "reaped": true
+        }
+      ]
+    },
+    "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/redis_fault/20261113T215542Z-e09-brief-outage"
+  },
+  "data_loss_restart": {
+    "case": "restart_with_data_loss",
+    "before": {
+      "ts_mono": 2051.083684979,
+      "stream": "e09r:f21ff523b6",
+      "group": "g-f21ff523b6",
+      "xlen": 2,
+      "pending_count": 1,
+      "pending": [
+        {
+          "message_id": "1794606968732-0",
+          "consumer": "575bccfe-93df-46db-a5a3-e3611ee7262f",
+          "idle_ms": 64,
+          "delivery_count": 1
+        }
+      ],
+      "consumers": [
+        {
+          "name": "575bccfe-93df-46db-a5a3-e3611ee7262f",
+          "pending": 1,
+          "idle": 64
+        }
+      ],
+      "lock_exists": false,
+      "lock_ttl_ms": -2,
+      "autoclaim_cursor_hint": null
+    },
+    "after_loss": {
+      "ts_mono": 2051.400091869,
+      "stream": "e09r:f21ff523b6",
+      "group": "g-f21ff523b6",
+      "xlen": 0,
+      "pending_count": 0,
+      "pending": [],
+      "consumers": [],
+      "lock_exists": false,
+      "lock_ttl_ms": -2,
+      "autoclaim_cursor_hint": null
+    },
+    "stream_empty_after_loss": true,
+    "worker_stop": {
+      "sigterm_at": 2051.40010076,
+      "exit_at": 2054.410789621,
+      "code": -9,
+      "killed_after_grace": true,
+      "t_drain_s": 3.011,
+      "already_exited": false,
+      "children_reaped": [
+        {
+          "pid": 5316,
+          "code": -9,
+          "reaped": true
+        }
+      ]
+    },
+    "note": "Separated from network outage: SHUTDOWN NOSAVE drops stream/PEL.",
+    "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/redis_fault/20261113T215557Z-e09-restart"
+  },
+  "maxmemory": {
+    "case": "maxmemory_noeviction",
+    "accepted_before_error": 12,
+    "errors": [
+      "server:OutOfMemoryError"
+    ],
+    "note": "Direct XADD against stream; producer-side failure under noeviction.",
+    "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/redis_fault/20261113T215612Z-e09-maxmemory"
+  },
+  "untested_here": [
+    "long unavailability with worker reconnect semantics under load",
+    "outage during result save specifically",
+    "outage during retry publication specifically"
+  ],
+  "evidence_class": "measured"
+}

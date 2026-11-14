@@ -1,0 +1,17 @@
+{
+  "profile": "sustained",
+  "n": 100,
+  "completed_fast_starts": 100,
+  "wall_s": 2.36,
+  "throughput_per_s": 42.367,
+  "enqueue_to_handler_start_s": {
+    "p50": 0.004188281000097049,
+    "p95": 0.00791653199985376,
+    "p99": 0.009144595999714511,
+    "event_pair": "enqueue.sent_mono → handler_start.start_mono (lag_s)"
+  },
+  "workers": 1,
+  "max_async": 8,
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/performance/20261113T215640Z-e10-sustained",
+  "evidence_class": "measured"
+}

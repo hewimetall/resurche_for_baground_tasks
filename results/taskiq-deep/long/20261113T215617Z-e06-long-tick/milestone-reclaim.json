@@ -1,0 +1,48 @@
+{
+  "experiment": "e11_full_2400_milestone_reclaim",
+  "status": "in_progress_after_reclaim",
+  "control_class": "full_2400_two_workers",
+  "idle_ms": 600000,
+  "task_s": 2400.0,
+  "starts_a": 1,
+  "starts_b": 1,
+  "finishes_a": 0,
+  "finishes_b": 0,
+  "overlap_while_a_unfinished": true,
+  "reclaim_delay_s": 600.9783957140003,
+  "ticks_a_at_milestone": 1301,
+  "last_tick_a": 1300,
+  "pending_snapshot": {
+    "ts_mono": 2723.006195528,
+    "stream": "e06:aa8eb5eea4",
+    "group": "g-aa8eb5eea4",
+    "xlen": 366,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794606988672-0",
+        "consumer": "415baf5e-58f1-49f8-aed3-5d7109b0dd28",
+        "idle_ms": 51068,
+        "delivery_count": 2
+      }
+    ],
+    "consumers": [
+      {
+        "name": "18615ee8-63be-43b4-9d3a-a3b433a88ac7",
+        "pending": 0,
+        "idle": 652047
+      },
+      {
+        "name": "415baf5e-58f1-49f8-aed3-5d7109b0dd28",
+        "pending": 1,
+        "idle": 51068
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "evidence_class": "measured",
+  "artifacts": "results/taskiq-deep/long/20261113T215617Z-e06-long-tick",
+  "note": "Reclaim at ~idle_timeout with keepalive traffic; both handlers live → duplicate execution. Full 2400s still running."
+}

@@ -1,0 +1,9 @@
+{
+  "case": "maxmemory_noeviction",
+  "accepted_before_error": 12,
+  "errors": [
+    "server:OutOfMemoryError"
+  ],
+  "note": "Direct XADD against stream; producer-side failure under noeviction.",
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/redis_fault/20261113T215612Z-e09-maxmemory"
+}

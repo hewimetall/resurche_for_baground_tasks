@@ -1,0 +1,58 @@
+{
+  "case": "restart_with_data_loss",
+  "before": {
+    "ts_mono": 1430.978544087,
+    "stream": "e09r:d1a6251608",
+    "group": "g-d1a6251608",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794606348625-0",
+        "consumer": "ddfa9b9c-58e9-4d81-815c-fe7fe41816b6",
+        "idle_ms": 64,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "ddfa9b9c-58e9-4d81-815c-fe7fe41816b6",
+        "pending": 1,
+        "idle": 65
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "after_loss": {
+    "ts_mono": 1431.294751366,
+    "stream": "e09r:d1a6251608",
+    "group": "g-d1a6251608",
+    "xlen": 0,
+    "pending_count": 0,
+    "pending": [],
+    "consumers": [],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  "stream_empty_after_loss": true,
+  "worker_stop": {
+    "sigterm_at": 1431.294762787,
+    "exit_at": 1434.305515754,
+    "code": -9,
+    "killed_after_grace": true,
+    "t_drain_s": 3.011,
+    "already_exited": false,
+    "children_reaped": [
+      {
+        "pid": 3831,
+        "code": -9,
+        "reaped": true
+      }
+    ]
+  },
+  "note": "Separated from network outage: SHUTDOWN NOSAVE drops stream/PEL.",
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/redis_fault/20261113T214537Z-e09-restart"
+}

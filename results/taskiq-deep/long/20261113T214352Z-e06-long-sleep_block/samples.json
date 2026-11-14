@@ -1,0 +1,80 @@
+[
+  {
+    "ts_mono": 1336.225719689,
+    "stream": "e06:a9bf928a30",
+    "group": "g-a9bf928a30",
+    "xlen": 2,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794606243548-0",
+        "consumer": "303ad7e9-7469-4855-8cad-df238a1c41da",
+        "idle_ms": 10390,
+        "delivery_count": 1
+      }
+    ],
+    "consumers": [
+      {
+        "name": "303ad7e9-7469-4855-8cad-df238a1c41da",
+        "pending": 1,
+        "idle": 10390
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 1337.150607383,
+    "stream": "e06:a9bf928a30",
+    "group": "g-a9bf928a30",
+    "xlen": 3,
+    "pending_count": 1,
+    "pending": [
+      {
+        "message_id": "1794606243548-0",
+        "consumer": "04862040-c5b2-4571-b0c6-7fde697d3ccf",
+        "idle_ms": 554,
+        "delivery_count": 2
+      }
+    ],
+    "consumers": [
+      {
+        "name": "04862040-c5b2-4571-b0c6-7fde697d3ccf",
+        "pending": 1,
+        "idle": 555
+      },
+      {
+        "name": "303ad7e9-7469-4855-8cad-df238a1c41da",
+        "pending": 0,
+        "idle": 11314
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 1338.059018217,
+    "stream": "e06:a9bf928a30",
+    "group": "g-a9bf928a30",
+    "xlen": 4,
+    "pending_count": 0,
+    "pending": [],
+    "consumers": [
+      {
+        "name": "04862040-c5b2-4571-b0c6-7fde697d3ccf",
+        "pending": 0,
+        "idle": 1464
+      },
+      {
+        "name": "303ad7e9-7469-4855-8cad-df238a1c41da",
+        "pending": 0,
+        "idle": 218
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  }
+]

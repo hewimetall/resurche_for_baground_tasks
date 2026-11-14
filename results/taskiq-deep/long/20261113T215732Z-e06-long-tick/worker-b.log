@@ -1,0 +1,13 @@
+[2026-11-13 21:57:44,002][taskiq.worker][INFO   ][MainProcess] Pid of a main process: 5777
+[2026-11-13 21:57:44,002][taskiq.worker][INFO   ][MainProcess] Starting 1 worker processes.
+[2026-11-13 21:57:44,003][taskiq.process-manager][INFO   ][MainProcess] Started process worker-0 with pid 5778 
+[2026-11-13 21:57:44,071][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.
+[2026-11-13 21:57:54,397][taskiq.receiver.receiver][INFO   ][worker-0] Executing task fast with ID: 553bc497d04b442196fea64a8e7e4a8b
+[2026-11-13 21:57:55,328][taskiq.receiver.receiver][INFO   ][worker-0] Executing task fast with ID: 4dd2e8bf06c942efb2c46f9fe48123d0
+[2026-11-13 21:57:56,761][taskiq.receiver.receiver][INFO   ][worker-0] Executing task fast with ID: 27f2d34ab72942178efcbe781561b5eb
+[2026-11-13 21:57:58,684][taskiq.receiver.receiver][INFO   ][worker-0] Executing task fast with ID: 8ed4330a206049149ead2d72324a762b
+[2026-11-13 21:57:58,686][taskiq.receiver.receiver][INFO   ][worker-0] Executing task tick with ID: 712c0b2ed48b40faa6d1e917408d91c3
+[2026-11-13 21:59:14,981][taskiq.process-manager][INFO   ][MainProcess] Workers are scheduled for shutdown.
+[2026-11-13 21:59:15,121][taskiq.process-manager][INFO   ][MainProcess] Stopped process worker-0 with pid 5778
+[2026-11-13 21:59:15,307][taskiq.receiver.receiver][INFO   ][worker-0] Stopping prefetching messages...
+[2026-11-13 21:59:15,308][taskiq.receiver.receiver][INFO   ][worker-0] Waiting for 1 running tasks to complete...

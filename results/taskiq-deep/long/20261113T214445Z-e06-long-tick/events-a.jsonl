@@ -1,0 +1,38 @@
+{"ts_mono": 1378.411352337, "event": "pre_execute", "task_id": "df62ea6ccf7841758a027bdd1942d3e5", "task_name": "ready", "labels": {"retry_on_error": false}, "args": ["f0961688f0734c0690a17e9bce7c7f4d"], "kwargs": {}, "pid": 3783, "host": "cursor"}
+{"ts_mono": 1378.411905663, "event": "handler_ready", "pid": 3783, "host": "cursor", "token": "f0961688f0734c0690a17e9bce7c7f4d"}
+{"ts_mono": 1378.412772323, "event": "post_execute", "task_id": "df62ea6ccf7841758a027bdd1942d3e5", "task_name": "ready", "labels": {"retry_on_error": false}, "args": ["f0961688f0734c0690a17e9bce7c7f4d"], "kwargs": {}, "pid": 3783, "host": "cursor", "is_err": false, "error": null, "execution_time": 0.0}
+{"ts_mono": 1378.412861663, "event": "post_save", "task_id": "df62ea6ccf7841758a027bdd1942d3e5", "task_name": "ready", "labels": {"retry_on_error": false}, "args": ["f0961688f0734c0690a17e9bce7c7f4d"], "kwargs": {}, "pid": 3783, "host": "cursor", "is_err": false}
+{"ts_mono": 1378.832467815, "event": "pre_execute", "task_id": "cc74e0981cfe4ea5945a734459d941a0", "task_name": "tick", "labels": {"retry_on_error": false, "timeout": 612}, "args": ["long-tick", 24, 0.5], "kwargs": {}, "pid": 3783, "host": "cursor"}
+{"ts_mono": 1378.832845418, "event": "handler_start", "pid": 3783, "host": "cursor", "job_id": "long-tick", "task_kind": "tick", "steps": 24, "step_s": 0.5}
+{"ts_mono": 1379.333557976, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 0}
+{"ts_mono": 1379.834401821, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 1}
+{"ts_mono": 1380.335165229, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 2}
+{"ts_mono": 1380.835894977, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 3}
+{"ts_mono": 1381.336728946, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 4}
+{"ts_mono": 1381.837438632, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 5}
+{"ts_mono": 1382.338242679, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 6}
+{"ts_mono": 1382.839039088, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 7}
+{"ts_mono": 1383.339870969, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 8}
+{"ts_mono": 1383.840180022, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 9}
+{"ts_mono": 1384.340985315, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 10}
+{"ts_mono": 1384.841797609, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 11}
+{"ts_mono": 1385.342619973, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 12}
+{"ts_mono": 1385.843455385, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 13}
+{"ts_mono": 1386.344284779, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 14}
+{"ts_mono": 1386.845058127, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 15}
+{"ts_mono": 1387.345817591, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 16}
+{"ts_mono": 1387.846625335, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 17}
+{"ts_mono": 1388.347348603, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 18}
+{"ts_mono": 1388.848330502, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 19}
+{"ts_mono": 1389.349073333, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 20}
+{"ts_mono": 1389.849839364, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 21}
+{"ts_mono": 1390.350738512, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 22}
+{"ts_mono": 1390.851518469, "event": "handler_tick", "pid": 3783, "host": "cursor", "job_id": "long-tick", "step": 23}
+{"ts_mono": 1390.851659114, "event": "handler_finish", "pid": 3783, "host": "cursor", "job_id": "long-tick", "task_kind": "tick"}
+{"ts_mono": 1390.852681328, "event": "post_execute", "task_id": "cc74e0981cfe4ea5945a734459d941a0", "task_name": "tick", "labels": {"retry_on_error": false, "timeout": 612}, "args": ["long-tick", 24, 0.5], "kwargs": {}, "pid": 3783, "host": "cursor", "is_err": false, "error": null, "execution_time": 12.02}
+{"ts_mono": 1390.852758187, "event": "post_save", "task_id": "cc74e0981cfe4ea5945a734459d941a0", "task_name": "tick", "labels": {"retry_on_error": false, "timeout": 612}, "args": ["long-tick", 24, 0.5], "kwargs": {}, "pid": 3783, "host": "cursor", "is_err": false}
+{"ts_mono": 1390.854845754, "event": "pre_execute", "task_id": "33d9535944d94311bf1e43d68de77030", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-1390", 0, 1390.539814057], "kwargs": {}, "pid": 3783, "host": "cursor"}
+{"ts_mono": 1390.855023583, "event": "handler_start", "pid": 3783, "host": "cursor", "job_id": "keepalive-1390", "task_kind": "fast", "n": 0, "sent_mono": 1390.539814057, "start_mono": 1390.855009078, "lag_s": 0.3151950209999086}
+{"ts_mono": 1390.855056418, "event": "handler_finish", "pid": 3783, "host": "cursor", "job_id": "keepalive-1390", "task_kind": "fast", "n": 0, "finish_mono": 1390.855049215}
+{"ts_mono": 1390.855517096, "event": "post_execute", "task_id": "33d9535944d94311bf1e43d68de77030", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-1390", 0, 1390.539814057], "kwargs": {}, "pid": 3783, "host": "cursor", "is_err": false, "error": null, "execution_time": 0.0}
+{"ts_mono": 1390.855560977, "event": "post_save", "task_id": "33d9535944d94311bf1e43d68de77030", "task_name": "fast", "labels": {"retry_on_error": false}, "args": ["keepalive-1390", 0, 1390.539814057], "kwargs": {}, "pid": 3783, "host": "cursor", "is_err": false}

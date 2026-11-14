@@ -1,0 +1,29 @@
+[2026-11-13 21:39:37,470][taskiq.worker][INFO   ][MainProcess] Pid of a main process: 3637
+[2026-11-13 21:39:37,470][taskiq.worker][INFO   ][MainProcess] Starting 1 worker processes.
+[2026-11-13 21:39:37,471][taskiq.process-manager][INFO   ][MainProcess] Started process worker-0 with pid 3638 
+[2026-11-13 21:39:37,544][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.
+[2026-11-13 21:39:48,080][taskiq.receiver.receiver][INFO   ][worker-0] Max number of tasks executed.
+[2026-11-13 21:39:48,080][taskiq.receiver.receiver][INFO   ][worker-0] Stopping prefetching messages...
+[2026-11-13 21:39:48,081][taskiq.receiver.receiver][INFO   ][worker-0] Executing task ready with ID: 58f3c468d52a4a1087329dbb3d91fd91
+[2026-11-13 21:39:48,082][taskiq.receiver.receiver][INFO   ][worker-0] Waiting for 1 running tasks to complete...
+[2026-11-13 21:39:48,082][taskiq.receiver.receiver][INFO   ][worker-0] No more tasks to wait for. Shutting down.
+[2026-11-13 21:39:48,082][taskiq.receiver.receiver][INFO   ][worker-0] The runner is stopped.
+[2026-11-13 21:39:48,082][taskiq.worker][INFO   ][worker-0] Shutting down the broker.
+[2026-11-13 21:39:48,574][taskiq.process-manager][INFO   ][MainProcess] worker-0 is dead. Scheduling reload.
+[2026-11-13 21:39:49,577][taskiq.process-manager][INFO   ][MainProcess] Process worker-0 restarted with pid 3642
+[2026-11-13 21:39:49,653][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.
+[2026-11-13 21:39:49,662][taskiq.receiver.receiver][INFO   ][worker-0] Max number of tasks executed.
+[2026-11-13 21:39:49,662][taskiq.receiver.receiver][INFO   ][worker-0] Stopping prefetching messages...
+[2026-11-13 21:39:49,663][taskiq.receiver.receiver][INFO   ][worker-0] Executing task fast with ID: 4cfe6b5e452f44caba001a079d49f5bb
+[2026-11-13 21:39:49,663][taskiq.receiver.receiver][INFO   ][worker-0] Waiting for 1 running tasks to complete...
+[2026-11-13 21:39:49,664][taskiq.receiver.receiver][INFO   ][worker-0] No more tasks to wait for. Shutting down.
+[2026-11-13 21:39:49,664][taskiq.receiver.receiver][INFO   ][worker-0] The runner is stopped.
+[2026-11-13 21:39:49,664][taskiq.worker][INFO   ][worker-0] Shutting down the broker.
+[2026-11-13 21:39:49,677][taskiq.process-manager][INFO   ][MainProcess] worker-0 is dead. Scheduling reload.
+[2026-11-13 21:39:50,680][taskiq.process-manager][INFO   ][MainProcess] Process worker-0 restarted with pid 3643
+[2026-11-13 21:39:50,753][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.
+[2026-11-13 21:40:28,737][taskiq.process-manager][INFO   ][MainProcess] Workers are scheduled for shutdown.
+[2026-11-13 21:40:28,788][taskiq.process-manager][INFO   ][MainProcess] Stopped process worker-0 with pid 3643
+[2026-11-13 21:40:28,954][taskiq.receiver.receiver][INFO   ][worker-0] Stopping prefetching messages...
+[2026-11-13 21:40:28,955][taskiq.receiver.receiver][INFO   ][worker-0] The runner is stopped.
+[2026-11-13 21:40:28,955][taskiq.worker][INFO   ][worker-0] Shutting down the broker.

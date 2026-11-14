@@ -1,0 +1,6 @@
+{"ts_mono": 764.35729575, "event": "pre_execute", "task_id": "701aff3619974a9a970d07194033a2f5", "task_name": "ready", "labels": {"retry_on_error": false}, "args": ["a103a3621d29475a98c0df551dc4d65c"], "kwargs": {}, "pid": 3468, "host": "cursor"}
+{"ts_mono": 764.358059236, "event": "handler_ready", "pid": 3468, "host": "cursor", "token": "a103a3621d29475a98c0df551dc4d65c"}
+{"ts_mono": 764.358991263, "event": "post_execute", "task_id": "701aff3619974a9a970d07194033a2f5", "task_name": "ready", "labels": {"retry_on_error": false}, "args": ["a103a3621d29475a98c0df551dc4d65c"], "kwargs": {}, "pid": 3468, "host": "cursor", "is_err": false, "error": null, "execution_time": 0.0}
+{"ts_mono": 764.359121302, "event": "post_save", "task_id": "701aff3619974a9a970d07194033a2f5", "task_name": "ready", "labels": {"retry_on_error": false}, "args": ["a103a3621d29475a98c0df551dc4d65c"], "kwargs": {}, "pid": 3468, "host": "cursor", "is_err": false}
+{"ts_mono": 764.772504263, "event": "pre_execute", "task_id": "7917d39cffb6419d99952d1db57822d4", "task_name": "sleep_async", "labels": {"retry_on_error": false, "timeout": 3600}, "args": ["victim", 120.0], "kwargs": {}, "pid": 3468, "host": "cursor"}
+{"ts_mono": 764.772901153, "event": "handler_start", "pid": 3468, "host": "cursor", "job_id": "victim", "task_kind": "sleep_async", "seconds": 120.0}

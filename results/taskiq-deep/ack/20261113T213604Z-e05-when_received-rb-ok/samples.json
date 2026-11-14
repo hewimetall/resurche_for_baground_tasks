@@ -1,0 +1,74 @@
+[
+  {
+    "ts_mono": 857.989937343,
+    "stream": "e05whe:07e98e2fab",
+    "group": "g-07e98e2fab",
+    "xlen": 2,
+    "pending_count": 0,
+    "pending": [],
+    "consumers": [
+      {
+        "name": "61b28ce7-13a1-4bbd-8085-66fe2eb835ba",
+        "pending": 0,
+        "idle": 64
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 858.091197989,
+    "stream": "e05whe:07e98e2fab",
+    "group": "g-07e98e2fab",
+    "xlen": 2,
+    "pending_count": 0,
+    "pending": [],
+    "consumers": [
+      {
+        "name": "61b28ce7-13a1-4bbd-8085-66fe2eb835ba",
+        "pending": 0,
+        "idle": 165
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 858.192100915,
+    "stream": "e05whe:07e98e2fab",
+    "group": "g-07e98e2fab",
+    "xlen": 2,
+    "pending_count": 0,
+    "pending": [],
+    "consumers": [
+      {
+        "name": "61b28ce7-13a1-4bbd-8085-66fe2eb835ba",
+        "pending": 0,
+        "idle": 266
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  },
+  {
+    "ts_mono": 858.294230144,
+    "stream": "e05whe:07e98e2fab",
+    "group": "g-07e98e2fab",
+    "xlen": 2,
+    "pending_count": 0,
+    "pending": [],
+    "consumers": [
+      {
+        "name": "61b28ce7-13a1-4bbd-8085-66fe2eb835ba",
+        "pending": 0,
+        "idle": 367
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  }
+]

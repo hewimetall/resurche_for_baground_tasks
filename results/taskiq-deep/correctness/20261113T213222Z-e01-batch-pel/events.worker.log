@@ -1,0 +1,13 @@
+[2026-11-13 21:32:22,530][taskiq.worker][INFO   ][MainProcess] Pid of a main process: 3414
+[2026-11-13 21:32:22,531][taskiq.worker][INFO   ][MainProcess] Starting 1 worker processes.
+[2026-11-13 21:32:22,532][taskiq.process-manager][INFO   ][MainProcess] Started process worker-0 with pid 3415 
+[2026-11-13 21:32:22,608][taskiq.receiver.receiver][INFO   ][worker-0] Listening started.
+[2026-11-13 21:32:33,024][taskiq.receiver.receiver][INFO   ][worker-0] Executing task ready with ID: 061e53fa3a384036a1ad4cd0e9b68972
+[2026-11-13 21:32:33,513][taskiq.receiver.receiver][INFO   ][worker-0] Executing task sleep_async with ID: 554356ec5bac48baa49f7be13a1e32f5
+[2026-11-13 21:32:36,629][taskiq.process-manager][INFO   ][MainProcess] Workers are scheduled for shutdown.
+[2026-11-13 21:32:36,636][taskiq.process-manager][INFO   ][MainProcess] Stopped process worker-0 with pid 3415
+[2026-11-13 21:32:38,517][taskiq.receiver.receiver][INFO   ][worker-0] Stopping prefetching messages...
+[2026-11-13 21:32:38,517][taskiq.receiver.receiver][INFO   ][worker-0] Waiting for 1 running tasks to complete...
+[2026-11-13 21:32:38,517][taskiq.receiver.receiver][INFO   ][worker-0] No more tasks to wait for. Shutting down.
+[2026-11-13 21:32:38,517][taskiq.receiver.receiver][INFO   ][worker-0] The runner is stopped.
+[2026-11-13 21:32:38,517][taskiq.worker][INFO   ][worker-0] Shutting down the broker.

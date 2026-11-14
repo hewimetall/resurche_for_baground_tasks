@@ -1,0 +1,20 @@
+[
+  {
+    "ts_mono": 942.696040538,
+    "stream": "e05whe:a2b7b7f4fc",
+    "group": "g-a2b7b7f4fc",
+    "xlen": 4,
+    "pending_count": 0,
+    "pending": [],
+    "consumers": [
+      {
+        "name": "d5ebe6af-aa00-4d62-b1ba-10864ecfa9ec",
+        "pending": 0,
+        "idle": 61
+      }
+    ],
+    "lock_exists": false,
+    "lock_ttl_ms": -2,
+    "autoclaim_cursor_hint": null
+  }
+]

@@ -15,5 +15,10 @@ results/logs/
 .coverage
 htmlcov/
 docs/_build/
+# Live 2400s control keeps writing keepalive traffic; commit extracts + milestone instead.
+results/taskiq-deep/long/20261113T215617Z-e06-long-tick/events-a.jsonl
+results/taskiq-deep/long/20261113T215617Z-e06-long-tick/events-b.jsonl
+results/taskiq-deep/long/e11-full2400.log
+
 
 results/long/retry-enqueue-6420/

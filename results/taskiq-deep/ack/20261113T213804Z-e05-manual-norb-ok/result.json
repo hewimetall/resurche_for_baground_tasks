@@ -1,0 +1,15 @@
+{
+  "ack_type": "manual",
+  "with_result_backend": false,
+  "boom": false,
+  "event_order": [
+    "pre_execute",
+    "handler_start",
+    "handler_acked",
+    "post_execute",
+    "post_save"
+  ],
+  "pending_cleared": false,
+  "final_pending": 1,
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/ack/20261113T213804Z-e05-manual-norb-ok"
+}

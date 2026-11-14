@@ -1,0 +1,253 @@
+{
+  "generated_at": "2026-11-13T21:59:54Z",
+  "env": {
+    "python": "3.12.3",
+    "platform": "Linux-6.12.113+-x86_64-with-glibc2.39",
+    "hostname": "cursor",
+    "cwd": "/agent/repos/resurche_for_baground_tasks",
+    "redis_url": "redis://127.0.0.1:6413/0",
+    "taskiq": "0.13.0",
+    "taskiq_redis": "1.2.4",
+    "redis_py": "8.1.0",
+    "taskiq_sha": "a00e4b0030f5ada13068da8644048867967aeda4",
+    "taskiq_redis_sha": "8f70bc85dd6a469cae7d3b467af7dea720c92434",
+    "repo_sha": "0b832fb5868e8065484a65ec8262171d9a7541f7",
+    "baseline_matches_current": true,
+    "redis_server": "7.0.15"
+  },
+  "artifacts": {
+    "ack/20261113T213540Z-e05-when_received-norb-ok/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213540Z-e05-when_received-norb-ok/result.json"
+    },
+    "ack/20261113T213552Z-e05-when_received-norb-boom/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213552Z-e05-when_received-norb-boom/result.json"
+    },
+    "ack/20261113T213604Z-e05-when_received-rb-ok/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213604Z-e05-when_received-rb-ok/result.json"
+    },
+    "ack/20261113T213616Z-e05-when_received-rb-boom/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213616Z-e05-when_received-rb-boom/result.json"
+    },
+    "ack/20261113T213628Z-e05-when_executed-norb-ok/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213628Z-e05-when_executed-norb-ok/result.json"
+    },
+    "ack/20261113T213640Z-e05-when_executed-norb-boom/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213640Z-e05-when_executed-norb-boom/result.json"
+    },
+    "ack/20261113T213652Z-e05-when_executed-rb-ok/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213652Z-e05-when_executed-rb-ok/result.json"
+    },
+    "ack/20261113T213705Z-e05-when_executed-rb-boom/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213705Z-e05-when_executed-rb-boom/result.json"
+    },
+    "ack/20261113T213716Z-e05-when_saved-norb-ok/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213716Z-e05-when_saved-norb-ok/result.json"
+    },
+    "ack/20261113T213729Z-e05-when_saved-norb-boom/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213729Z-e05-when_saved-norb-boom/result.json"
+    },
+    "ack/20261113T213740Z-e05-when_saved-rb-ok/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213740Z-e05-when_saved-rb-ok/result.json"
+    },
+    "ack/20261113T213753Z-e05-when_saved-rb-boom/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213753Z-e05-when_saved-rb-boom/result.json"
+    },
+    "ack/20261113T213804Z-e05-manual-norb-ok/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213804Z-e05-manual-norb-ok/result.json"
+    },
+    "ack/20261113T213831Z-e05-manual-rb-ok/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T213831Z-e05-manual-rb-ok/result.json"
+    },
+    "ack/20261113T215917Z-e05-manual-norb-ok/result.json": {
+      "experiment": null,
+      "status": null,
+      "path": "results/taskiq-deep/ack/20261113T215917Z-e05-manual-norb-ok/result.json"
+    },
+    "correctness/20261113T213222Z-e01-batch-pel/result.json": {
+      "experiment": "e01_batch_pel",
+      "status": "fail",
+      "path": "results/taskiq-deep/correctness/20261113T213222Z-e01-batch-pel/result.json"
+    },
+    "correctness/20261113T213332Z-e01-batch-pel/result.json": {
+      "experiment": "e01_batch_pel",
+      "status": "pass",
+      "path": "results/taskiq-deep/correctness/20261113T213332Z-e01-batch-pel/result.json"
+    },
+    "correctness/20261113T213908Z-e07-prefetch/result.json": {
+      "experiment": "e07_prefetch",
+      "status": "pass",
+      "path": "results/taskiq-deep/correctness/20261113T213908Z-e07-prefetch/result.json"
+    },
+    "correctness/20261113T213937Z-e07-recycle/result.json": {
+      "experiment": "e07_recycle",
+      "status": "pass",
+      "path": "results/taskiq-deep/correctness/20261113T213937Z-e07-recycle/result.json"
+    },
+    "long/20261113T214325Z-e06-long-sleep_async/result.json": {
+      "experiment": "e06_long_ownership",
+      "status": "pass",
+      "path": "results/taskiq-deep/long/20261113T214325Z-e06-long-sleep_async/result.json"
+    },
+    "long/20261113T214352Z-e06-long-sleep_block/result.json": {
+      "experiment": "e06_long_ownership",
+      "status": "pass",
+      "path": "results/taskiq-deep/long/20261113T214352Z-e06-long-sleep_block/result.json"
+    },
+    "long/20261113T214418Z-e06-long-sleep_sync/result.json": {
+      "experiment": "e06_long_ownership",
+      "status": "pass",
+      "path": "results/taskiq-deep/long/20261113T214418Z-e06-long-sleep_sync/result.json"
+    },
+    "long/20261113T214445Z-e06-long-tick/result.json": {
+      "experiment": "e06_long_ownership",
+      "status": "pass",
+      "path": "results/taskiq-deep/long/20261113T214445Z-e06-long-tick/result.json"
+    },
+    "long/20261113T215732Z-e06-long-tick/result.json": {
+      "experiment": "e06_long_ownership",
+      "status": "pass",
+      "path": "results/taskiq-deep/long/20261113T215732Z-e06-long-tick/result.json"
+    },
+    "performance/20261113T215615Z-e10-idle_single/result.json": {
+      "experiment": "idle_single",
+      "status": null,
+      "path": "results/taskiq-deep/performance/20261113T215615Z-e10-idle_single/result.json"
+    },
+    "performance/20261113T215628Z-e10-short_burst/result.json": {
+      "experiment": "short_burst",
+      "status": null,
+      "path": "results/taskiq-deep/performance/20261113T215628Z-e10-short_burst/result.json"
+    },
+    "performance/20261113T215640Z-e10-sustained/result.json": {
+      "experiment": "sustained",
+      "status": null,
+      "path": "results/taskiq-deep/performance/20261113T215640Z-e10-sustained/result.json"
+    },
+    "performance/20261113T215653Z-e10-mixed/result.json": {
+      "experiment": "mixed",
+      "status": null,
+      "path": "results/taskiq-deep/performance/20261113T215653Z-e10-mixed/result.json"
+    },
+    "recovery/20261113T213351Z-e02-quiet-reclaim/result.json": {
+      "experiment": "e02_quiet_reclaim",
+      "status": "pass",
+      "path": "results/taskiq-deep/recovery/20261113T213351Z-e02-quiet-reclaim/result.json"
+    },
+    "recovery/20261113T213426Z-e04-lock-death/result.json": {
+      "experiment": "e04_lock_death",
+      "status": "pass",
+      "path": "results/taskiq-deep/recovery/20261113T213426Z-e04-lock-death/result.json"
+    },
+    "recovery/20261113T213431Z-e03-traffic-reclaim/result.json": {
+      "experiment": "e03_traffic_reclaim",
+      "status": "pass",
+      "path": "results/taskiq-deep/recovery/20261113T213431Z-e03-traffic-reclaim/result.json"
+    },
+    "redis_fault/20261113T214522Z-e09-brief-outage/result.json": {
+      "experiment": "brief_outage_sigstop",
+      "status": null,
+      "path": "results/taskiq-deep/redis_fault/20261113T214522Z-e09-brief-outage/result.json"
+    },
+    "redis_fault/20261113T214537Z-e09-restart/result.json": {
+      "experiment": "restart_with_data_loss",
+      "status": null,
+      "path": "results/taskiq-deep/redis_fault/20261113T214537Z-e09-restart/result.json"
+    },
+    "redis_fault/20261113T215542Z-e09-brief-outage/result.json": {
+      "experiment": "brief_outage_sigstop",
+      "status": null,
+      "path": "results/taskiq-deep/redis_fault/20261113T215542Z-e09-brief-outage/result.json"
+    },
+    "redis_fault/20261113T215557Z-e09-restart/result.json": {
+      "experiment": "restart_with_data_loss",
+      "status": null,
+      "path": "results/taskiq-deep/redis_fault/20261113T215557Z-e09-restart/result.json"
+    },
+    "redis_fault/20261113T215612Z-e09-maxmemory/result.json": {
+      "experiment": "maxmemory_noeviction",
+      "status": null,
+      "path": "results/taskiq-deep/redis_fault/20261113T215612Z-e09-maxmemory/result.json"
+    },
+    "shutdown/20261113T214040Z-e08-idle/result.json": {
+      "experiment": "idle",
+      "status": null,
+      "path": "results/taskiq-deep/shutdown/20261113T214040Z-e08-idle/result.json"
+    },
+    "shutdown/20261113T214051Z-e08-during_handler/result.json": {
+      "experiment": "during_handler",
+      "status": null,
+      "path": "results/taskiq-deep/shutdown/20261113T214051Z-e08-during_handler/result.json"
+    },
+    "shutdown/20261113T214108Z-e08-with_prefetched/result.json": {
+      "experiment": "with_prefetched",
+      "status": null,
+      "path": "results/taskiq-deep/shutdown/20261113T214108Z-e08-with_prefetched/result.json"
+    },
+    "shutdown/20261113T214125Z-e08-double-signal/result.json": {
+      "experiment": "double_signal",
+      "status": null,
+      "path": "results/taskiq-deep/shutdown/20261113T214125Z-e08-double-signal/result.json"
+    },
+    "shutdown/20261113T214125Z-e08-early-sigterm/result.json": {
+      "experiment": "early_sigterm",
+      "status": null,
+      "path": "results/taskiq-deep/shutdown/20261113T214125Z-e08-early-sigterm/result.json"
+    },
+    "ack/e05-summary.json": {
+      "summary": true,
+      "path": "results/taskiq-deep/ack/e05-summary.json"
+    },
+    "correctness/e07-summary.json": {
+      "summary": true,
+      "path": "results/taskiq-deep/correctness/e07-summary.json"
+    },
+    "shutdown/e08-summary.json": {
+      "summary": true,
+      "path": "results/taskiq-deep/shutdown/e08-summary.json"
+    },
+    "redis_fault/e09-summary.json": {
+      "summary": true,
+      "path": "results/taskiq-deep/redis_fault/e09-summary.json"
+    },
+    "performance/e10-summary.json": {
+      "summary": true,
+      "path": "results/taskiq-deep/performance/e10-summary.json"
+    },
+    "long/e06-matrix.json": {
+      "summary": true,
+      "path": "results/taskiq-deep/long/e06-matrix.json"
+    },
+    "long/e11-diagnostic.json": {
+      "summary": true,
+      "path": "results/taskiq-deep/long/e11-diagnostic.json"
+    }
+  }
+}

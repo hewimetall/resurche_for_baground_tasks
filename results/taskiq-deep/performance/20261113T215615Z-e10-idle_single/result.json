@@ -1,0 +1,17 @@
+{
+  "profile": "idle_single",
+  "n": 1,
+  "completed_fast_starts": 1,
+  "wall_s": 2.42,
+  "throughput_per_s": 0.413,
+  "enqueue_to_handler_start_s": {
+    "p50": 0.0010602719999042165,
+    "p95": 0.0010602719999042165,
+    "p99": 0.0010602719999042165,
+    "event_pair": "enqueue.sent_mono → handler_start.start_mono (lag_s)"
+  },
+  "workers": 1,
+  "max_async": 1,
+  "artifacts": "/agent/repos/resurche_for_baground_tasks/results/taskiq-deep/performance/20261113T215615Z-e10-idle_single",
+  "evidence_class": "measured"
+}

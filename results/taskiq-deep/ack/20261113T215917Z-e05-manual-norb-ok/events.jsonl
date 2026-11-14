@@ -1,0 +1,9 @@
+{"ts_mono": 2250.216956619, "event": "pre_execute", "task_id": "16d9df9818e441d982cf916a892aa54a", "task_name": "ready", "labels": {"retry_on_error": false}, "args": ["f834f4a0199c4478a1e99d631d3835b6"], "kwargs": {}, "pid": 5888, "host": "cursor"}
+{"ts_mono": 2250.21751267, "event": "handler_ready", "pid": 5888, "host": "cursor", "token": "f834f4a0199c4478a1e99d631d3835b6"}
+{"ts_mono": 2250.218439374, "event": "post_execute", "task_id": "16d9df9818e441d982cf916a892aa54a", "task_name": "ready", "labels": {"retry_on_error": false}, "args": ["f834f4a0199c4478a1e99d631d3835b6"], "kwargs": {}, "pid": 5888, "host": "cursor", "is_err": false, "error": null, "execution_time": 0.0}
+{"ts_mono": 2250.218523362, "event": "post_save", "task_id": "16d9df9818e441d982cf916a892aa54a", "task_name": "ready", "labels": {"retry_on_error": false}, "args": ["f834f4a0199c4478a1e99d631d3835b6"], "kwargs": {}, "pid": 5888, "host": "cursor", "is_err": false}
+{"ts_mono": 2250.635216927, "event": "pre_execute", "task_id": "c47978ef62834afeae942db31a3afbc1", "task_name": "manual_ack", "labels": {"retry_on_error": false}, "args": ["j-manual"], "kwargs": {}, "pid": 5888, "host": "cursor"}
+{"ts_mono": 2250.635430549, "event": "handler_start", "pid": 5888, "host": "cursor", "job_id": "j-manual", "task_kind": "manual_ack"}
+{"ts_mono": 2250.836307826, "event": "handler_acked", "pid": 5888, "host": "cursor", "job_id": "j-manual"}
+{"ts_mono": 2250.836430388, "event": "post_execute", "task_id": "c47978ef62834afeae942db31a3afbc1", "task_name": "manual_ack", "labels": {"retry_on_error": false}, "args": ["j-manual"], "kwargs": {}, "pid": 5888, "host": "cursor", "is_err": false, "error": null, "execution_time": 0.2}
+{"ts_mono": 2250.836470776, "event": "post_save", "task_id": "c47978ef62834afeae942db31a3afbc1", "task_name": "manual_ack", "labels": {"retry_on_error": false}, "args": ["j-manual"], "kwargs": {}, "pid": 5888, "host": "cursor", "is_err": false}
