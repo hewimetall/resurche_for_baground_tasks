@@ -4,6 +4,8 @@
 
 Измерена одна библиотека: simple-q 1.2.0 (runtime и worker), `agent-worker` из `.venv-sq120`. Redis 7.0.15 слушал `127.0.0.1:6415`. Воркеры ходили на прокси `127.0.0.1:6414`. Порты 6379 и 6380 не открывались. Основной набор шёл на процессе Redis pid `126504`. Сценарий `retry_request_dropped` после удлинения наблюдения повторён на новом процессе pid `131242`. Контроль `failonce` и повтор потерянного finish шли на отдельном процессе pid `142603`, порт `6416`. Во время разрыва ни один из этих процессов не перезапускался: каталог и pid внутри сценария те же. После трассы `6416` был остановлен через `SHUTDOWN SAVE`.
 
+Отдельный стенд на портах `6420`/`6421` закрывает границу **retry enqueue B** (не finish A): см. раздел «Retry enqueue: неизвестный результат создания B» и `results/long/retry-enqueue/`.
+
 Прокси либо закрывает сокет клиента до записи команды в Redis, либо передаёт команду, читает полный ответ и только потом закрывает клиент или держит ответ. Данные Redis при этом остаются. Скрипты узнаются по SHA1 файлов apalis-redis 1.1.1, которые worker уже держит в кэше Redis после `FLUSHDB`.
 
 Готовая задача сразу после `send` лежит в zset `bench:scheduled`, не в списке `bench:active`. `fetch_next` переносит её в `bench:inflight:{worker_name}`. Имя воркера имеет вид `agent-worker.bench.{host}.{pid}.{8 hex}`. Окно сироты на этом стенде — `heartbeat_secs 15` × `missed_heartbeats 4` = 60 с. Бюджет наблюдения после обрыва в основном наборе — 90 с.
@@ -122,6 +124,112 @@ Score имени `142821.52da4781` оставался `1794639904` до сэмп
 Старый прогон `retry_request_dropped` на pid `131242` видел вторую строку effect на 2.065 с при том, что исходный id ещё лежал в прежнем inflight, и третью строку на 60.973 с. Harness того прогона не снимал остальные id, поэтому вторая строка там не привязана к конкретному новому ключу. По времени она не попадает в окно сироты. Трасса на pid `142603` разделяет эти две границы: вторая строка — новый id с `retries=1`, третья — исходный id после 60 с.
 
 `retry_response_dropped` на pid `126504` оставил у исходного id result `{"Ok":{"delay_ms":77,"outcome":"retry"}}`, status `Done`, attempts `1`, одну строку handler. Это совпадает с тем, что контроль записывает на первый id, когда finish применился. Второе тело в том файле не появилось: наблюдение кончилось на 0.027 с, child уже вышел.
+
+## Retry enqueue: неизвестный результат создания B
+
+Отдельный стенд закрывает границу, которую трасса `failonce` оставляла открытой: отказ на **enqueue B**, а не на `handle_results` исходной A. Production-код simple-q не менялся. Артефакты: `results/long/retry-enqueue/`. Код: `scripts/simpleq_retry_enqueue_fault.py`, `bench/retry_by_retries_app.py`, доработка `scripts/redis_fault_proxy.py` (в событиях enqueue теперь есть `enqueue_task_id` / `message_id` / `retries`).
+
+### Baseline
+
+| Поле | Значение |
+| --- | --- |
+| SHA стенда (начало прогона) | `2828a095d79d123fc5400155bbb045e5afefee2d` |
+| simple-q-runtime / worker | 1.2.0 / 1.2.0 |
+| apalis-redis | 1.1.1 (SHA скриптов в `KNOWN_SHA`) |
+| Redis | 7.0.15, порт `6420`, dir `results/long/retry-enqueue-6420` |
+| Redis pid (control + delay) | `8348` — без перезапуска внутри этих сценариев |
+| Redis pid (три fault) | `8943` — новый процесс после `SHUTDOWN SAVE` в конце первого suite; внутри каждого fault pid не менялся |
+| Proxy | `6421` → `6420` |
+| Orphan | `heartbeat_secs 15` × `missed_heartbeats 4` = **60 с** |
+| Redis `timeout` | `0`; client timeout виден как `timed out` / `broken pipe` у worker |
+| Effective config | `batch_size=1`, `poll_interval_ms=500`, `max_deliveries=5`, остальное — `Config.from_env()` defaults (`results/long/retry-enqueue/baseline.json`) |
+
+Клиентский `send` идёт **напрямую** в Redis. Worker ходит только через proxy. Fault вооружается **после** регистрации worker, kind=`enqueue`, once — клиентский send trigger не расходует.
+
+Handler `retry_by_retries`: `retries==0` → всегда retry; `retries>=1` → ok. Глобального failonce нет. Журнал пишет `execution_id`, `message_id`, `retries`, `pid`, `worker`, фазы `handler_start` / `handler_end`. **Ограничение (observed):** `CurrentMessage` не содержит `task_id`; связка execution↔task_id — через `retries` + proxy `enqueue_task_id` + Redis timeline, не прямой bridge.
+
+### Граница enqueue
+
+**Observed:** создание retry-задачи — один атомарный `EVALSHA` enqueue (data/meta/scheduled|active/signal).
+
+**Observed:** после успешного ответа worker ещё делает `DEL delivery:{message}:{retries}` и затем `handle_results` для A. Это отдельные команды. При потере ответа enqueue proxy закрывает клиентский сокет, follow-up на этом соединении не выполняются. Называть сценарий «enqueue применён полностью» для всего retry-path нельзя — атомарна только сама enqueue-скрипта.
+
+### Контроль без fault
+
+Redis pid `8348`. Message одного прогона, ids `01M7CGPH9RYF51CA7EYG0JDSDN` (A, retries=0) и `01M7CGPHPZDSHAKGVD6HRT73MR` (B, retries=1).
+
+| Шаг | Observed |
+| --- | --- |
+| Handler A | `handler_start`/`end`, result=`retry`, execution_id свой |
+| B в Redis | да, до finish A |
+| Finish A | `Done`, result `{"Ok":{"delay_ms":…,"outcome":"retry"}}`, attempts=1 |
+| Handler B | result=`ok` |
+| Входы | retries=0: 1; retries=1: 1 |
+| C | нет |
+
+`observe_status=complete`. Exit code 0.
+
+### Три fault на enqueue B
+
+Fault-прогоны — Redis pid `8943`. Второй worker стартует после срабатывания fault (ёмкость для orphan recovery).
+
+| Сценарий | B из faulted enqueue в Redis? | Что увидел Rust | Finish A сразу? | Child | A после orphan? | C? | retries=1 ids | Входы handler (0 / 1) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Enqueue не дошёл (`drop_request`) | **Нет** (proxy `enqueue_task_id=01M7CGV7A4C0HP0Q1DDEYHHSE6` отсутствует в `bench:data`) | `retry enqueue failed; leaving the attempt inflight` / `broken pipe` | Нет (A inflight) | да | да, второй `retries=0` | нет | 1 (создан после recovery A) | 2 / 1 |
+| Enqueue применён, ответ потерян (`drop_response`) | **Да** (`01M7CGX3WN6BB7FPEC5BBB58TC` = proxy `enqueue_task_id`) | то же, `broken pipe` | Нет | да | да | **да** `01M7CGYYK8TYF1R05QCBMQGRBN` | **2** | 2 / 2 |
+| Enqueue применён, ответ задержан 10 с (`delay_response`) | **Да** (`01M7CGZ0F46RAGB2E9MKJPMYTX`) | `… timed out` (не broken pipe) | Нет | да | да | **да** `01M7CH0V5JKEEHBZHBJWC119TR` | **2** | 2 / 2 |
+
+Во всех трёх финалах незавершённых id нет (`observe_status=complete`). Finish A после recovery пишет `Done` с `outcome=retry` (повторный успешный retry-path), не «ok» с первой попытки.
+
+#### Гипотеза «B создана, ответ потерян → … → C?»
+
+**Observed на `enqueue_response_dropped`:**
+
+1. Proxy: `drop_response` enqueue, `reply_len=12`, Redis уже создал B.
+2. Worker: `retry enqueue failed; leaving the attempt inflight`; finish A не уходит.
+3. B исполняется (`retries=1` → ok) другим/тем же живым worker’ом, пока A ещё в inflight умершего имени.
+4. ~60 с: orphan recovery A; handler снова `retries=0` → retry.
+5. Создаётся **C** — второй task id с `retries=1` для того же `message_id`.
+6. Итог: **два** прикладных retry-тела и **два** входа с `retries=0` на одну доставку message_id.
+
+`enqueue_response_delayed` (удержание 10 с > client timeout) дал ту же форму: B есть, Rust видит `timed out`, A inflight, затем C. Proxy позже пишет `release_response` в уже мёртвый сокет — на учёт это не влияет (**inferred** из порядка событий).
+
+`enqueue_request_dropped` отличается: B из faulted команды в Redis нет; после orphan A создаётся ровно один retries=1 id. Дубликата прикладного retry нет.
+
+### delay_ms (отдельно от fault)
+
+Актор `delay_probe`, send `delay=…`. n=1 на значение. Score в `bench:scheduled` — **целые секунды**.
+
+| delay_ms | observed_lag_ms (enqueue→handler_start) | score→handler_ms |
+| --- | --- | --- |
+| 61 | 423.2 | 1355.3 |
+| 999 | 521.9 | 39.0 |
+| 1000 | 1020.4 | 227.4 |
+| 1001 | 923.5 | 395.3 |
+| 1500 | 1522.5 | 51.0 |
+
+**Observed:** субсекундные delay часто схлопываются в ту же unix-секунду score; `poll_interval_ms=500` добавляет джиттер. **Untested:** статистика по многим прогонам. Не выводить точность deadline из одного замера.
+
+### Команды
+
+```bash
+python3 -m venv .venv-sq120 && . .venv-sq120/bin/activate
+pip install 'simple-q-runtime==1.2.0' 'simple-q-worker==1.2.0' redis
+python scripts/simpleq_retry_enqueue_fault.py
+# exit 0 если все сценарии complete и fault сработали; иначе 2
+```
+
+Сводка: `results/long/retry-enqueue/run.json`. Таймлайны: `*.timeline.json`. Сырые proxy/worker/monitor: рядом в том же каталоге.
+
+### Claim (ответ на целевой вопрос)
+
+**Что происходит с исходной доставкой и числом прикладных retry, если Redis создал retry-задачу, но worker не получил подтверждение?**
+
+**Observed:** исходная A остаётся inflight (`leaving the attempt inflight`); finish A в этот момент не применяется. Уже созданная B исполняется как обычная задача с `retries=1`. После orphan window A выполняется снова с `retries=0`, снова возвращает retry и **создаёт ещё один** task id с `retries=1` (C). На один `message_id` получается **два** прикладных retry-исполнения и повторный вход в handler исходной попытки. Backend `attempts` по-прежнему не считает входы handler.
+
+**Inferred:** тот же класс поведения при client timeout на задержанном ответе enqueue (подтверждено одним прогоном `delay_response` 10 с).
+
+**Untested:** живой тот же child после восстановления сокета без выхода; идемпотентный ключ на retry enqueue; другое значение orphan window.
 
 ## Короткий и длинный обрыв
 

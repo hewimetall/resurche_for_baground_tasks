@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import asyncio
 import hashlib
+import json
 import threading
 import time
 from typing import Any
@@ -70,16 +71,43 @@ class FaultProxy:
         self._pending_delay = 0.0
         self._loop: asyncio.AbstractEventLoop | None = None
         self._thread: threading.Thread | None = None
+        self._server: asyncio.AbstractServer | None = None
+        self._started = threading.Event()
+        self._stop = threading.Event()
 
     def start(self) -> None:
+        if self._thread is not None and self._thread.is_alive():
+            raise RuntimeError(f"proxy already running on {self.listen_port}")
+        self._started.clear()
+        self._stop.clear()
         self._thread = threading.Thread(target=self._run, name="redis-fault-proxy", daemon=True)
         self._thread.start()
-        deadline = time.monotonic() + 5
-        while time.monotonic() < deadline:
-            if self._loop is not None:
-                return
-            time.sleep(0.01)
-        raise RuntimeError("proxy loop did not start")
+        if not self._started.wait(5):
+            raise RuntimeError("proxy loop did not start")
+
+    def stop(self) -> None:
+        loop = self._loop
+        server = self._server
+        writers = []
+        with self._lock:
+            writers = list(self._writers)
+        if loop is not None and loop.is_running():
+
+            def _close() -> None:
+                for writer in writers:
+                    writer.close()
+                if server is not None:
+                    server.close()
+                loop.call_soon(loop.stop)
+
+            loop.call_soon_threadsafe(_close)
+        self._stop.set()
+        if self._thread is not None:
+            self._thread.join(timeout=5)
+        self._thread = None
+        self._loop = None
+        self._server = None
+        self._started.clear()
 
     def arm(self, kind: str, mode: str, **extra: Any) -> None:
         self.fired.clear()
@@ -145,12 +173,22 @@ class FaultProxy:
         loop = asyncio.new_event_loop()
         self._loop = loop
         asyncio.set_event_loop(loop)
-        loop.run_until_complete(self._serve())
+        try:
+            loop.run_until_complete(self._serve())
+            loop.run_forever()
+        finally:
+            pending = asyncio.all_tasks(loop)
+            for task in pending:
+                task.cancel()
+            if pending:
+                loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
+            loop.close()
 
     async def _serve(self) -> None:
         server = await asyncio.start_server(self._client, "127.0.0.1", self.listen_port)
-        async with server:
-            await server.serve_forever()
+        self._server = server
+        self._started.set()
+        await server.start_serving()
 
     async def _client(self, reader: asyncio.StreamReader, writer: asyncio.StreamWriter) -> None:
         if self.blackholed():
@@ -177,8 +215,9 @@ class FaultProxy:
                         )
                 kind = self._remember(parts, raw)
                 action, delay = self._match(parts, kind)
+                extra = _script_fields(parts, kind)
                 if action == "drop_request":
-                    self._note("drop_request", {"kind": kind, "op": _op(parts)})
+                    self._note("drop_request", {"kind": kind, "op": _op(parts), **extra})
                     break
                 upstream_writer.write(raw)
                 await upstream_writer.drain()
@@ -187,29 +226,45 @@ class FaultProxy:
                     if self._reply_matches(reply):
                         self._note(
                             "drop_response",
-                            {"kind": kind, "op": _op(parts), "reply_len": len(reply)},
+                            {
+                                "kind": kind,
+                                "op": _op(parts),
+                                "reply_len": len(reply),
+                                **extra,
+                            },
                         )
                         break
                     action = "pass"
                 if action == "drop_response":
                     self._note(
                         "drop_response",
-                        {"kind": kind, "op": _op(parts), "reply_len": len(reply)},
+                        {
+                            "kind": kind,
+                            "op": _op(parts),
+                            "reply_len": len(reply),
+                            **extra,
+                        },
                     )
                     break
                 if action == "delay_response":
-                    self._note("delay_response", {"kind": kind, "op": _op(parts), "delay_s": delay})
+                    self._note(
+                        "delay_response",
+                        {"kind": kind, "op": _op(parts), "delay_s": delay, **extra},
+                    )
                     await asyncio.sleep(delay)
                     if self.blackholed():
                         break
                     writer.write(reply)
                     await writer.drain()
-                    self._note("release_response", {"kind": kind, "op": _op(parts)})
+                    self._note(
+                        "release_response",
+                        {"kind": kind, "op": _op(parts), **extra},
+                    )
                     continue
                 writer.write(reply)
                 await writer.drain()
                 if kind:
-                    self._note("pass", {"kind": kind})
+                    self._note("pass", {"kind": kind, **extra})
         except (asyncio.IncompleteReadError, ConnectionError, BrokenPipeError, OSError):
             return
         finally:
@@ -290,6 +345,44 @@ def _op(parts: list[bytes]) -> str:
     if not parts:
         return ""
     return parts[0].decode("ascii", "replace")
+
+
+def _script_args(parts: list[bytes]) -> list[bytes]:
+    if len(parts) < 3 or not isinstance(parts[0], bytes) or not isinstance(parts[2], bytes):
+        return []
+    if parts[0].upper() not in {b"EVAL", b"EVALSHA"}:
+        return []
+    try:
+        numkeys = int(parts[2])
+    except ValueError:
+        return []
+    return [item for item in parts[3 + numkeys :] if isinstance(item, bytes)]
+
+
+def _script_fields(parts: list[bytes], kind: str | None) -> dict[str, Any]:
+    """Extract correlatable ids from known apalis-redis script ARGV layouts."""
+    args = _script_args(parts)
+    fields: dict[str, Any] = {}
+    if kind == "enqueue" and len(args) >= 3:
+        # ARGV: idempotency_ttl, emit_events, task_id, task_data, ...
+        fields["enqueue_task_id"] = args[2].decode("utf-8", "replace")
+        if len(args) > 3:
+            data = args[3]
+            try:
+                parsed = json.loads(data.decode("utf-8", "replace"))
+            except (UnicodeDecodeError, json.JSONDecodeError, TypeError):
+                parsed = None
+            if isinstance(parsed, dict):
+                for key in ("message_id", "retries", "actor_name"):
+                    if key in parsed:
+                        fields[key] = parsed[key]
+    elif kind in {"finish", "fetch", "renew", "release"} and len(args) >= 1:
+        # Many scripts carry worker / task ids as early ARGV strings (ULID-shaped).
+        for item in args[:6]:
+            text = item.decode("utf-8", "replace")
+            if text.startswith("01") and len(text) >= 26:
+                fields.setdefault("task_ids", []).append(text)
+    return fields
 
 
 def _has_task_ids(parts: list[bytes]) -> bool:
