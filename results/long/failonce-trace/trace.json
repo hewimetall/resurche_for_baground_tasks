@@ -1,0 +1,3021 @@
+{
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-14T07:06:04Z",
+  "redis_port": 6416,
+  "redis_pid": 142603,
+  "redis_pid_end": 142603,
+  "redis_restarted": false,
+  "observer_addr": "127.0.0.1:41442",
+  "control": {
+    "scenario_id": "failonce_control",
+    "redis_pid_start": 142603,
+    "redis_pid_end": 142603,
+    "redis_restarted": false,
+    "enqueue": {
+      "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+      "task_ids": [
+        "01M7CDZE1JXEPV96NHEFXZRHAR"
+      ]
+    },
+    "effects": [
+      {
+        "deliveries": 1,
+        "max_retries": 1,
+        "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+        "pid": 142782,
+        "retries": 0,
+        "t": 1794639902.999821,
+        "token": "failonce-control",
+        "utc": "2026-11-14T07:05:02.999Z",
+        "worker": "agent-worker.bench.cursor.142782.7a271db5"
+      },
+      {
+        "deliveries": 1,
+        "max_retries": 1,
+        "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+        "pid": 142782,
+        "retries": 1,
+        "t": 1794639903.003492,
+        "token": "failonce-control",
+        "utc": "2026-11-14T07:05:02.003Z",
+        "worker": "agent-worker.bench.cursor.142782.7a271db5"
+      }
+    ],
+    "samples": [
+      {
+        "t_s": 0.001,
+        "unix": 1794639902.7747943,
+        "tasks": [
+          {
+            "id": "01M7CDZE1JXEPV96NHEFXZRHAR",
+            "places": [
+              "scheduled"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Pending",
+              "idempotency_key": ""
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+              "kwargs": {
+                "token": "failonce-control"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142782.7a271db5",
+            "score": 1794639901.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [
+          {
+            "id": "01M7CDZE1JXEPV96NHEFXZRHAR",
+            "score": 1794639902.0
+          }
+        ],
+        "effects": []
+      },
+      {
+        "t_s": 0.259,
+        "unix": 1794639903.0326877,
+        "tasks": [
+          {
+            "id": "01M7CDZE1JXEPV96NHEFXZRHAR",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639902",
+              "locked_at": "1794639902",
+              "locked_by": "agent-worker.bench.cursor.142782.7a271db5",
+              "result": "{\"Ok\":{\"delay_ms\":61,\"outcome\":\"retry\"}}",
+              "done_at": "1794639903"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+              "kwargs": {
+                "token": "failonce-control"
+              }
+            }
+          },
+          {
+            "id": "01M7CDZE8RD0CM868GCVZ9DA0Z",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639903",
+              "locked_at": "1794639903",
+              "locked_by": "agent-worker.bench.cursor.142782.7a271db5",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1794639903"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+              "kwargs": {
+                "token": "failonce-control"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142782.7a271db5",
+            "score": 1794639901.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+            "pid": 142782,
+            "retries": 0,
+            "t": 1794639902.999821,
+            "token": "failonce-control",
+            "utc": "2026-11-14T07:05:02.999Z",
+            "worker": "agent-worker.bench.cursor.142782.7a271db5"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+            "pid": 142782,
+            "retries": 1,
+            "t": 1794639903.003492,
+            "token": "failonce-control",
+            "utc": "2026-11-14T07:05:02.003Z",
+            "worker": "agent-worker.bench.cursor.142782.7a271db5"
+          }
+        ]
+      },
+      {
+        "t_s": null,
+        "unix": 1794639904.0353298,
+        "tasks": [
+          {
+            "id": "01M7CDZE1JXEPV96NHEFXZRHAR",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639902",
+              "locked_at": "1794639902",
+              "locked_by": "agent-worker.bench.cursor.142782.7a271db5",
+              "result": "{\"Ok\":{\"delay_ms\":61,\"outcome\":\"retry\"}}",
+              "done_at": "1794639903"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+              "kwargs": {
+                "token": "failonce-control"
+              }
+            }
+          },
+          {
+            "id": "01M7CDZE8RD0CM868GCVZ9DA0Z",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639903",
+              "locked_at": "1794639903",
+              "locked_by": "agent-worker.bench.cursor.142782.7a271db5",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1794639903"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+              "kwargs": {
+                "token": "failonce-control"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142782.7a271db5",
+            "score": 1794639901.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+            "pid": 142782,
+            "retries": 0,
+            "t": 1794639902.999821,
+            "token": "failonce-control",
+            "utc": "2026-11-14T07:05:02.999Z",
+            "worker": "agent-worker.bench.cursor.142782.7a271db5"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+            "pid": 142782,
+            "retries": 1,
+            "t": 1794639903.003492,
+            "token": "failonce-control",
+            "utc": "2026-11-14T07:05:02.003Z",
+            "worker": "agent-worker.bench.cursor.142782.7a271db5"
+          }
+        ],
+        "note": "after one extra second"
+      }
+    ],
+    "final": {
+      "tasks": [
+        {
+          "id": "01M7CDZE1JXEPV96NHEFXZRHAR",
+          "places": [
+            "done"
+          ],
+          "meta": {
+            "attempts": "1",
+            "max_attempts": "1",
+            "status": "Done",
+            "idempotency_key": "",
+            "started_at": "1794639902",
+            "locked_at": "1794639902",
+            "locked_by": "agent-worker.bench.cursor.142782.7a271db5",
+            "result": "{\"Ok\":{\"delay_ms\":61,\"outcome\":\"retry\"}}",
+            "done_at": "1794639903"
+          },
+          "job": {
+            "retries": 0,
+            "max_retries": 1,
+            "actor_name": "failonce",
+            "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+            "kwargs": {
+              "token": "failonce-control"
+            }
+          }
+        },
+        {
+          "id": "01M7CDZE8RD0CM868GCVZ9DA0Z",
+          "places": [
+            "done"
+          ],
+          "meta": {
+            "attempts": "1",
+            "max_attempts": "1",
+            "status": "Done",
+            "idempotency_key": "",
+            "started_at": "1794639903",
+            "locked_at": "1794639903",
+            "locked_by": "agent-worker.bench.cursor.142782.7a271db5",
+            "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+            "done_at": "1794639903"
+          },
+          "job": {
+            "retries": 1,
+            "max_retries": 1,
+            "actor_name": "failonce",
+            "message_id": "032630d0-7385-4871-8ec9-f805dd238bbd",
+            "kwargs": {
+              "token": "failonce-control"
+            }
+          }
+        }
+      ],
+      "inflight": {},
+      "scheduled": [],
+      "done": [
+        {
+          "id": "01M7CDZE1JXEPV96NHEFXZRHAR",
+          "score": 1794639903.0
+        },
+        {
+          "id": "01M7CDZE8RD0CM868GCVZ9DA0Z",
+          "score": 1794639903.0
+        }
+      ],
+      "dead": [],
+      "workers": [
+        {
+          "name": "agent-worker.bench.cursor.142782.7a271db5",
+          "score": 1794639901.0
+        }
+      ],
+      "deliveries": {}
+    },
+    "owner_log": "",
+    "monitor": [
+      {
+        "line": "1794639901.482438 [0 127.0.0.1:41502] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639901\" \"1\" \"agent-worker.bench.cursor.142782.7a271db5\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639901.982758 [0 127.0.0.1:41502] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639901\" \"1\" \"agent-worker.bench.cursor.142782.7a271db5\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639902.483101 [0 127.0.0.1:41502] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639902\" \"1\" \"agent-worker.bench.cursor.142782.7a271db5\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639902.770961 [0 127.0.0.1:41532] \"EVALSHA\" \"3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\" \"6\" \"bench:data\" \"bench:active\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"bench:idempotency\" \"0\" \"0\" \"01M7CDZE1JXEPV96NHEFXZRHAR\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"032630d0-7385-4871-8ec9-f805dd238bbd\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-control\\\"},\\\"headers\\\":{},\\\"retries\\\":0,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms",
+        "kind": "enqueue"
+      },
+      {
+        "line": "1794639902.771811 [0 127.0.0.1:41532] \"EVALSHA\" \"3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\" \"6\" \"bench:data\" \"bench:active\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"bench:idempotency\" \"0\" \"0\" \"01M7CDZE1JXEPV96NHEFXZRHAR\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"032630d0-7385-4871-8ec9-f805dd238bbd\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-control\\\"},\\\"headers\\\":{},\\\"retries\\\":0,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms",
+        "kind": "enqueue"
+      },
+      {
+        "line": "1794639902.771850 [0 lua] \"hsetnx\" \"bench:data\" \"01M7CDZE1JXEPV96NHEFXZRHAR\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"032630d0-7385-4871-8ec9-f805dd238bbd\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-control\\\"},\\\"headers\\\":{},\\\"retries\\\":0,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms\\\":300,\\\"max_deliveries\\\":3,\\\"lock_key\\\":null,\\\"lock_ttl\\\":30,\\\"skip_on_lock\\\":false}\"",
+        "kind": null
+      },
+      {
+        "line": "1794639902.771921 [0 lua] \"zadd\" \"bench:scheduled\" \"1794639902\" \"01M7CDZE1JXEPV96NHEFXZRHAR\"",
+        "kind": null
+      },
+      {
+        "line": "1794639902.983124 [0 127.0.0.1:41502] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639902\" \"1\" \"agent-worker.bench.cursor.142782.7a271db5\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639902.983274 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"01M7CDZE1JXEPV96NHEFXZRHAR\"",
+        "kind": null
+      },
+      {
+        "line": "1794639902.983776 [0 127.0.0.1:41502] \"EVALSHA\" \"f84c79100c44c2348985e8bd49481807fb54d667\" \"1\" \"bench:meta:01M7CDZE1JXEPV96NHEFXZRHAR\"",
+        "kind": null
+      },
+      {
+        "line": "1794639902.983786 [0 127.0.0.1:41502] \"EVALSHA\" \"f7ff133460a6cd6a739e294b0f4f7a584599f1fc\" \"4\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:workers\" \"bench:meta\" \"bench:active\" \"agent-worker.bench.cursor.142782.7a271db5\" \"1794639902\" \"0\" \"01M7CDZE1JXEPV96NHEFXZRHAR\"",
+        "kind": "acquire"
+      },
+      {
+        "line": "1794639902.984148 [0 127.0.0.1:41502] \"EVALSHA\" \"f84c79100c44c2348985e8bd49481807fb54d667\" \"1\" \"bench:meta:01M7CDZE1JXEPV96NHEFXZRHAR\"",
+        "kind": null
+      },
+      {
+        "line": "1794639902.984163 [0 lua] \"HSET\" \"bench:meta:01M7CDZE1JXEPV96NHEFXZRHAR\" \"started_at\" \"1794639902\"",
+        "kind": null
+      },
+      {
+        "line": "1794639902.984168 [0 127.0.0.1:41502] \"EVALSHA\" \"f7ff133460a6cd6a739e294b0f4f7a584599f1fc\" \"4\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:workers\" \"bench:meta\" \"bench:active\" \"agent-worker.bench.cursor.142782.7a271db5\" \"1794639902\" \"0\" \"01M7CDZE1JXEPV96NHEFXZRHAR\"",
+        "kind": "acquire"
+      },
+      {
+        "line": "1794639902.984225 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"01M7CDZE1JXEPV96NHEFXZRHAR\"",
+        "kind": null
+      },
+      {
+        "line": "1794639902.984232 [0 lua] \"hset\" \"bench:meta:01M7CDZE1JXEPV96NHEFXZRHAR\" \"locked_at\" \"1794639902\" \"locked_by\" \"agent-worker.bench.cursor.142782.7a271db5\" \"status\" \"Running\"",
+        "kind": null
+      },
+      {
+        "line": "1794639902.984334 [0 127.0.0.1:41502] \"EVALSHA\" \"8f290130ebe41d5d981486b7a1b8c3bfc152ea00\" \"1\" \"delivery:032630d0-7385-4871-8ec9-f805dd238bbd:0\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1794639902.984471 [0 127.0.0.1:41502] \"EVALSHA\" \"8f290130ebe41d5d981486b7a1b8c3bfc152ea00\" \"1\" \"delivery:032630d0-7385-4871-8ec9-f805dd238bbd:0\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1794639902.984490 [0 lua] \"INCR\" \"delivery:032630d0-7385-4871-8ec9-f805dd238bbd:0\"",
+        "kind": null
+      },
+      {
+        "line": "1794639902.984505 [0 lua] \"EXPIRE\" \"delivery:032630d0-7385-4871-8ec9-f805dd238bbd:0\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.001052 [0 127.0.0.1:41502] \"EVALSHA\" \"3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\" \"6\" \"bench:data\" \"bench:active\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"bench:idempotency\" \"0\" \"0\" \"01M7CDZE8RD0CM868GCVZ9DA0Z\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"032630d0-7385-4871-8ec9-f805dd238bbd\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-control\\\"},\\\"headers\\\":{},\\\"retries\\\":1,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms",
+        "kind": "enqueue"
+      },
+      {
+        "line": "1794639903.001088 [0 lua] \"hsetnx\" \"bench:data\" \"01M7CDZE8RD0CM868GCVZ9DA0Z\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"032630d0-7385-4871-8ec9-f805dd238bbd\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-control\\\"},\\\"headers\\\":{},\\\"retries\\\":1,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms\\\":300,\\\"max_deliveries\\\":3,\\\"lock_key\\\":null,\\\"lock_ttl\\\":30,\\\"skip_on_lock\\\":false}\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.001128 [0 lua] \"zadd\" \"bench:scheduled\" \"1794639903\" \"01M7CDZE8RD0CM868GCVZ9DA0Z\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.001747 [0 127.0.0.1:41502] \"DEL\" \"delivery:032630d0-7385-4871-8ec9-f805dd238bbd:0\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.001986 [0 127.0.0.1:41502] \"EVALSHA\" \"9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\" \"5\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:done\" \"bench:dead\" \"bench:scheduled\" \"bench:meta\" \"0\" \"01M7CDZE1JXEPV96NHEFXZRHAR\" \"1794639903\" \"{\\\"Ok\\\":{\\\"delay_ms\\\":61,\\\"outcome\\\":\\\"retry\\\"}}\" \"Done\" \"1\"",
+        "kind": "finish"
+      },
+      {
+        "line": "1794639903.002457 [0 127.0.0.1:41502] \"EVALSHA\" \"9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\" \"5\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:done\" \"bench:dead\" \"bench:scheduled\" \"bench:meta\" \"0\" \"01M7CDZE1JXEPV96NHEFXZRHAR\" \"1794639903\" \"{\\\"Ok\\\":{\\\"delay_ms\\\":61,\\\"outcome\\\":\\\"retry\\\"}}\" \"Done\" \"1\"",
+        "kind": "finish"
+      },
+      {
+        "line": "1794639903.002480 [0 lua] \"SREM\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"01M7CDZE1JXEPV96NHEFXZRHAR\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.002509 [0 lua] \"ZADD\" \"bench:done\" \"1794639903\" \"01M7CDZE1JXEPV96NHEFXZRHAR\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.002516 [0 lua] \"HSET\" \"bench:meta:01M7CDZE1JXEPV96NHEFXZRHAR\" \"result\" \"{\\\"Ok\\\":{\\\"delay_ms\\\":61,\\\"outcome\\\":\\\"retry\\\"}}\" \"status\" \"Done\" \"attempts\" \"1\" \"done_at\" \"1794639903\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.002649 [0 127.0.0.1:41502] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639903\" \"1\" \"agent-worker.bench.cursor.142782.7a271db5\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639903.002701 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"01M7CDZE8RD0CM868GCVZ9DA0Z\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.002861 [0 127.0.0.1:41502] \"EVALSHA\" \"f84c79100c44c2348985e8bd49481807fb54d667\" \"1\" \"bench:meta:01M7CDZE8RD0CM868GCVZ9DA0Z\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.002872 [0 lua] \"HSET\" \"bench:meta:01M7CDZE8RD0CM868GCVZ9DA0Z\" \"started_at\" \"1794639903\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.002877 [0 127.0.0.1:41502] \"EVALSHA\" \"f7ff133460a6cd6a739e294b0f4f7a584599f1fc\" \"4\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:workers\" \"bench:meta\" \"bench:active\" \"agent-worker.bench.cursor.142782.7a271db5\" \"1794639903\" \"0\" \"01M7CDZE8RD0CM868GCVZ9DA0Z\"",
+        "kind": "acquire"
+      },
+      {
+        "line": "1794639903.002904 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"01M7CDZE8RD0CM868GCVZ9DA0Z\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.002911 [0 lua] \"hset\" \"bench:meta:01M7CDZE8RD0CM868GCVZ9DA0Z\" \"locked_at\" \"1794639903\" \"locked_by\" \"agent-worker.bench.cursor.142782.7a271db5\" \"status\" \"Running\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.002999 [0 127.0.0.1:41502] \"EVALSHA\" \"8f290130ebe41d5d981486b7a1b8c3bfc152ea00\" \"1\" \"delivery:032630d0-7385-4871-8ec9-f805dd238bbd:1\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.003022 [0 lua] \"INCR\" \"delivery:032630d0-7385-4871-8ec9-f805dd238bbd:1\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.003031 [0 lua] \"EXPIRE\" \"delivery:032630d0-7385-4871-8ec9-f805dd238bbd:1\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.003799 [0 127.0.0.1:41502] \"DEL\" \"delivery:032630d0-7385-4871-8ec9-f805dd238bbd:1\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.003887 [0 127.0.0.1:41502] \"EVALSHA\" \"9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\" \"5\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:done\" \"bench:dead\" \"bench:scheduled\" \"bench:meta\" \"0\" \"01M7CDZE8RD0CM868GCVZ9DA0Z\" \"1794639903\" \"{\\\"Ok\\\":{\\\"outcome\\\":\\\"ok\\\",\\\"result\\\":null}}\" \"Done\" \"1\"",
+        "kind": "finish"
+      },
+      {
+        "line": "1794639903.003908 [0 lua] \"SREM\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"01M7CDZE8RD0CM868GCVZ9DA0Z\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.003926 [0 lua] \"ZADD\" \"bench:done\" \"1794639903\" \"01M7CDZE8RD0CM868GCVZ9DA0Z\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.003932 [0 lua] \"HSET\" \"bench:meta:01M7CDZE8RD0CM868GCVZ9DA0Z\" \"result\" \"{\\\"Ok\\\":{\\\"outcome\\\":\\\"ok\\\",\\\"result\\\":null}}\" \"status\" \"Done\" \"attempts\" \"1\" \"done_at\" \"1794639903\"",
+        "kind": null
+      },
+      {
+        "line": "1794639903.004010 [0 127.0.0.1:41502] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639903\" \"1\" \"agent-worker.bench.cursor.142782.7a271db5\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639903.483611 [0 127.0.0.1:41502] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639903\" \"1\" \"agent-worker.bench.cursor.142782.7a271db5\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639903.983906 [0 127.0.0.1:41502] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142782.7a271db5\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639903\" \"1\" \"agent-worker.bench.cursor.142782.7a271db5\"",
+        "kind": "fetch"
+      }
+    ],
+    "finished_at": "2026-11-14T07:05:04Z"
+  },
+  "dropped_finish": {
+    "scenario_id": "failonce_finish_request_dropped",
+    "redis_pid_start": 142603,
+    "redis_pid_end": 142603,
+    "redis_restarted": false,
+    "fault_fired": true,
+    "proxy": {
+      "armed": null,
+      "counts": {
+        "pass": 277,
+        "seen:reenqueue": 10,
+        "seen:register": 3,
+        "seen:fetch": 250,
+        "seen:acquire": 3,
+        "seen:enqueue": 1,
+        "drop_request": 1,
+        "seen:finish": 3,
+        "seen:keepalive": 8
+      },
+      "events": [
+        {
+          "t": 1794639904.6067088,
+          "mono": 57567.533199221,
+          "action": "drop_request",
+          "kind": "finish",
+          "op": "EVALSHA"
+        }
+      ],
+      "commands": 434,
+      "ops": [
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+        },
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+        },
+        {
+          "op": "TIME",
+          "argc": 1,
+          "prefix": "*1\r\n$4\r\nTIME\r\n"
+        },
+        {
+          "op": "TIME",
+          "argc": 1,
+          "prefix": "*1\r\n$4\r\nTIME\r\n"
+        },
+        {
+          "op": "HGETALL",
+          "argc": 2,
+          "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.142801\r\n"
+        },
+        {
+          "op": "HSET",
+          "argc": 38,
+          "prefix": "*38\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.142801\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+        },
+        {
+          "op": "EXPIRE",
+          "argc": 3,
+          "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.142801\r\n$3\r\n120\r\n"
+        },
+        {
+          "op": "ZADD",
+          "argc": 4,
+          "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794639904\r\n$13\r\ncursor.142801\r\n"
+        },
+        {
+          "op": "ZREMRANGEBYSCORE",
+          "argc": 4,
+          "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1794639844"
+        },
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+        },
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 9,
+          "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+        },
+        {
+          "op": "TIME",
+          "argc": 1,
+          "prefix": "*1\r\n$4\r\nTIME\r\n"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 10,
+          "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+        },
+        {
+          "op": "HSET",
+          "argc": 10,
+          "prefix": "*10\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.142821.52da"
+        },
+        {
+          "op": "TYPE",
+          "argc": 2,
+          "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 13,
+          "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+        },
+        {
+          "op": "TYPE",
+          "argc": 2,
+          "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:dead\r\n"
+        },
+        {
+          "op": "SCAN",
+          "argc": 6,
+          "prefix": "*6\r\n$4\r\nSCAN\r\n$1\r\n0\r\n$5\r\nMATCH\r\n$24\r\nbench:workers:metadata:*\r\n$5\r\nCOUNT\r\n$3\r\n10"
+        },
+        {
+          "op": "ZSCORE",
+          "argc": 3,
+          "prefix": "*3\r\n$6\r\nZSCORE\r\n$13\r\nbench:workers\r\n$41\r\nagent-worker.bench.cursor.142821.52da47"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 4,
+          "prefix": "*4\r\n$7\r\nEVALSHA\r\n$40\r\nf84c79100c44c2348985e8bd49481807fb54d667\r\n$1\r\n1\r\n$37\r\nbenc"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 11,
+          "prefix": "*11\r\n$7\r\nEVALSHA\r\n$40\r\nf7ff133460a6cd6a739e294b0f4f7a584599f1fc\r\n$1\r\n4\r\n$56\r\nben"
+        },
+        {
+          "op": "HSET",
+          "argc": 4,
+          "prefix": "*4\r\n$4\r\nHSET\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.142821.52da4"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 5,
+          "prefix": "*5\r\n$7\r\nEVALSHA\r\n$40\r\n8f290130ebe41d5d981486b7a1b8c3bfc152ea00\r\n$1\r\n1\r\n$47\r\ndeli"
+        },
+        {
+          "op": "HSET",
+          "argc": 4,
+          "prefix": "*4\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.142801\r\n$12\r\ntasks:142821\r\n$1\r\n0\r\n"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 18,
+          "prefix": "*18\r\n$7\r\nEVALSHA\r\n$40\r\n3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\r\n$1\r\n6\r\n$10\r\nben"
+        },
+        {
+          "op": "DEL",
+          "argc": 2,
+          "prefix": "*2\r\n$3\r\nDEL\r\n$47\r\ndelivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:0\r\n"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 14,
+          "prefix": "*14\r\n$7\r\nEVALSHA\r\n$40\r\n9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\r\n$1\r\n5\r\n$56\r\nben"
+        },
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+        },
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+        },
+        {
+          "op": "HSET",
+          "argc": 4,
+          "prefix": "*4\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.142801\r\n$12\r\ntasks:142821\r\n$1\r\n1\r\n"
+        },
+        {
+          "op": "DEL",
+          "argc": 2,
+          "prefix": "*2\r\n$3\r\nDEL\r\n$64\r\nbench:workers:metadata:agent-worker.bench.cursor.142821.52da47"
+        },
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+        },
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+        },
+        {
+          "op": "TIME",
+          "argc": 1,
+          "prefix": "*1\r\n$4\r\nTIME\r\n"
+        },
+        {
+          "op": "TIME",
+          "argc": 1,
+          "prefix": "*1\r\n$4\r\nTIME\r\n"
+        },
+        {
+          "op": "HGETALL",
+          "argc": 2,
+          "prefix": "*2\r\n$7\r\nHGETALL\r\n$33\r\nsimple_q:supervisor:cursor.142829\r\n"
+        },
+        {
+          "op": "HSET",
+          "argc": 38,
+          "prefix": "*38\r\n$4\r\nHSET\r\n$33\r\nsimple_q:supervisor:cursor.142829\r\n$4\r\nhost\r\n$6\r\ncursor\r\n$3\r"
+        },
+        {
+          "op": "EXPIRE",
+          "argc": 3,
+          "prefix": "*3\r\n$6\r\nEXPIRE\r\n$33\r\nsimple_q:supervisor:cursor.142829\r\n$3\r\n120\r\n"
+        },
+        {
+          "op": "ZADD",
+          "argc": 4,
+          "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1794639904\r\n$13\r\ncursor.142829\r\n"
+        }
+      ]
+    },
+    "enqueue": {
+      "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+      "task_ids": [
+        "01M7CDZFJNH7Y7DZ1P0NPRCVS9"
+      ]
+    },
+    "effects": [
+      {
+        "deliveries": 1,
+        "max_retries": 1,
+        "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+        "pid": 142821,
+        "retries": 0,
+        "t": 1794639904.604523,
+        "token": "failonce-dropped-finish",
+        "utc": "2026-11-14T07:05:04.604Z",
+        "worker": "agent-worker.bench.cursor.142821.52da4781"
+      },
+      {
+        "deliveries": 1,
+        "max_retries": 1,
+        "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+        "pid": 142849,
+        "retries": 1,
+        "t": 1794639904.9002857,
+        "token": "failonce-dropped-finish",
+        "utc": "2026-11-14T07:05:04.900Z",
+        "worker": "agent-worker.bench.cursor.142849.167dec7b"
+      },
+      {
+        "deliveries": 1,
+        "max_retries": 1,
+        "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+        "pid": 142849,
+        "retries": 0,
+        "t": 1794639964.8949356,
+        "token": "failonce-dropped-finish",
+        "utc": "2026-11-14T07:06:04.894Z",
+        "worker": "agent-worker.bench.cursor.142849.167dec7b"
+      }
+    ],
+    "samples": [
+      {
+        "t_s": 0.0,
+        "unix": 1794639904.610686,
+        "tasks": [
+          {
+            "id": "01M7CDZFJNH7Y7DZ1P0NPRCVS9",
+            "places": [
+              "bench:inflight:agent-worker.bench.cursor.142821.52da4781"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Running",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142821.52da4781"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+            "places": [
+              "scheduled"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Pending",
+              "idempotency_key": ""
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142821.52da4781",
+            "score": 1794639904.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [
+          {
+            "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+            "score": 1794639904.0
+          }
+        ],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142821,
+            "retries": 0,
+            "t": 1794639904.604523,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.604Z",
+            "worker": "agent-worker.bench.cursor.142821.52da4781"
+          }
+        ],
+        "note": "immediate after dropped finish"
+      },
+      {
+        "t_s": 0.313,
+        "unix": 1794639904.9241,
+        "tasks": [
+          {
+            "id": "01M7CDZFJNH7Y7DZ1P0NPRCVS9",
+            "places": [
+              "bench:inflight:agent-worker.bench.cursor.142821.52da4781"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Running",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142821.52da4781"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142849.167dec7b",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1794639904"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142821.52da4781",
+            "score": 1794639904.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142849.167dec7b",
+            "score": 1794639904.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142821,
+            "retries": 0,
+            "t": 1794639904.604523,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.604Z",
+            "worker": "agent-worker.bench.cursor.142821.52da4781"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142849,
+            "retries": 1,
+            "t": 1794639904.9002857,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.900Z",
+            "worker": "agent-worker.bench.cursor.142849.167dec7b"
+          }
+        ]
+      },
+      {
+        "t_s": 1.199,
+        "unix": 1794639905.8097267,
+        "tasks": [
+          {
+            "id": "01M7CDZFJNH7Y7DZ1P0NPRCVS9",
+            "places": [
+              "bench:inflight:agent-worker.bench.cursor.142821.52da4781"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Running",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142821.52da4781"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142849.167dec7b",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1794639904"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142821.52da4781",
+            "score": 1794639904.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142849.167dec7b",
+            "score": 1794639904.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142858.52bbd0ce",
+            "score": 1794639905.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142821,
+            "retries": 0,
+            "t": 1794639904.604523,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.604Z",
+            "worker": "agent-worker.bench.cursor.142821.52da4781"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142849,
+            "retries": 1,
+            "t": 1794639904.9002857,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.900Z",
+            "worker": "agent-worker.bench.cursor.142849.167dec7b"
+          }
+        ]
+      },
+      {
+        "t_s": 15.283,
+        "unix": 1794639919.893233,
+        "tasks": [
+          {
+            "id": "01M7CDZFJNH7Y7DZ1P0NPRCVS9",
+            "places": [
+              "bench:inflight:agent-worker.bench.cursor.142821.52da4781"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Running",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142821.52da4781"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142849.167dec7b",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1794639904"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142821.52da4781",
+            "score": 1794639904.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142858.52bbd0ce",
+            "score": 1794639905.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142849.167dec7b",
+            "score": 1794639919.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142821,
+            "retries": 0,
+            "t": 1794639904.604523,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.604Z",
+            "worker": "agent-worker.bench.cursor.142821.52da4781"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142849,
+            "retries": 1,
+            "t": 1794639904.9002857,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.900Z",
+            "worker": "agent-worker.bench.cursor.142849.167dec7b"
+          }
+        ]
+      },
+      {
+        "t_s": 16.218,
+        "unix": 1794639920.828945,
+        "tasks": [
+          {
+            "id": "01M7CDZFJNH7Y7DZ1P0NPRCVS9",
+            "places": [
+              "bench:inflight:agent-worker.bench.cursor.142821.52da4781"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Running",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142821.52da4781"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142849.167dec7b",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1794639904"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142821.52da4781",
+            "score": 1794639904.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142849.167dec7b",
+            "score": 1794639919.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142858.52bbd0ce",
+            "score": 1794639920.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142821,
+            "retries": 0,
+            "t": 1794639904.604523,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.604Z",
+            "worker": "agent-worker.bench.cursor.142821.52da4781"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142849,
+            "retries": 1,
+            "t": 1794639904.9002857,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.900Z",
+            "worker": "agent-worker.bench.cursor.142849.167dec7b"
+          }
+        ]
+      },
+      {
+        "t_s": 30.331,
+        "unix": 1794639934.941852,
+        "tasks": [
+          {
+            "id": "01M7CDZFJNH7Y7DZ1P0NPRCVS9",
+            "places": [
+              "bench:inflight:agent-worker.bench.cursor.142821.52da4781"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Running",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142821.52da4781"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142849.167dec7b",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1794639904"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142821.52da4781",
+            "score": 1794639904.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142858.52bbd0ce",
+            "score": 1794639920.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142849.167dec7b",
+            "score": 1794639934.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142821,
+            "retries": 0,
+            "t": 1794639904.604523,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.604Z",
+            "worker": "agent-worker.bench.cursor.142821.52da4781"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142849,
+            "retries": 1,
+            "t": 1794639904.9002857,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.900Z",
+            "worker": "agent-worker.bench.cursor.142849.167dec7b"
+          }
+        ]
+      },
+      {
+        "t_s": 31.214,
+        "unix": 1794639935.8251722,
+        "tasks": [
+          {
+            "id": "01M7CDZFJNH7Y7DZ1P0NPRCVS9",
+            "places": [
+              "bench:inflight:agent-worker.bench.cursor.142821.52da4781"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Running",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142821.52da4781"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142849.167dec7b",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1794639904"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142821.52da4781",
+            "score": 1794639904.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142849.167dec7b",
+            "score": 1794639934.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142858.52bbd0ce",
+            "score": 1794639935.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142821,
+            "retries": 0,
+            "t": 1794639904.604523,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.604Z",
+            "worker": "agent-worker.bench.cursor.142821.52da4781"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142849,
+            "retries": 1,
+            "t": 1794639904.9002857,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.900Z",
+            "worker": "agent-worker.bench.cursor.142849.167dec7b"
+          }
+        ]
+      },
+      {
+        "t_s": 45.322,
+        "unix": 1794639949.9328542,
+        "tasks": [
+          {
+            "id": "01M7CDZFJNH7Y7DZ1P0NPRCVS9",
+            "places": [
+              "bench:inflight:agent-worker.bench.cursor.142821.52da4781"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Running",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142821.52da4781"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142849.167dec7b",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1794639904"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142821.52da4781",
+            "score": 1794639904.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142858.52bbd0ce",
+            "score": 1794639935.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142849.167dec7b",
+            "score": 1794639949.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142821,
+            "retries": 0,
+            "t": 1794639904.604523,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.604Z",
+            "worker": "agent-worker.bench.cursor.142821.52da4781"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142849,
+            "retries": 1,
+            "t": 1794639904.9002857,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.900Z",
+            "worker": "agent-worker.bench.cursor.142849.167dec7b"
+          }
+        ]
+      },
+      {
+        "t_s": 46.207,
+        "unix": 1794639950.8173285,
+        "tasks": [
+          {
+            "id": "01M7CDZFJNH7Y7DZ1P0NPRCVS9",
+            "places": [
+              "bench:inflight:agent-worker.bench.cursor.142821.52da4781"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Running",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142821.52da4781"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142849.167dec7b",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1794639904"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142821.52da4781",
+            "score": 1794639904.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142849.167dec7b",
+            "score": 1794639949.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142858.52bbd0ce",
+            "score": 1794639950.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142821,
+            "retries": 0,
+            "t": 1794639904.604523,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.604Z",
+            "worker": "agent-worker.bench.cursor.142821.52da4781"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142849,
+            "retries": 1,
+            "t": 1794639904.9002857,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.900Z",
+            "worker": "agent-worker.bench.cursor.142849.167dec7b"
+          }
+        ]
+      },
+      {
+        "t_s": 60.306,
+        "unix": 1794639964.917152,
+        "tasks": [
+          {
+            "id": "01M7CDZFJNH7Y7DZ1P0NPRCVS9",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639964",
+              "locked_at": "1794639964",
+              "locked_by": "agent-worker.bench.cursor.142849.167dec7b",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1794639964"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1794639904",
+              "locked_at": "1794639904",
+              "locked_by": "agent-worker.bench.cursor.142849.167dec7b",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1794639904"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.cursor.142858.52bbd0ce",
+            "score": 1794639950.0
+          },
+          {
+            "name": "agent-worker.bench.cursor.142849.167dec7b",
+            "score": 1794639964.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142821,
+            "retries": 0,
+            "t": 1794639904.604523,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.604Z",
+            "worker": "agent-worker.bench.cursor.142821.52da4781"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142849,
+            "retries": 1,
+            "t": 1794639904.9002857,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:05:04.900Z",
+            "worker": "agent-worker.bench.cursor.142849.167dec7b"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "pid": 142849,
+            "retries": 0,
+            "t": 1794639964.8949356,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-14T07:06:04.894Z",
+            "worker": "agent-worker.bench.cursor.142849.167dec7b"
+          }
+        ]
+      }
+    ],
+    "final": {
+      "tasks": [
+        {
+          "id": "01M7CDZFJNH7Y7DZ1P0NPRCVS9",
+          "places": [
+            "done"
+          ],
+          "meta": {
+            "attempts": "1",
+            "max_attempts": "1",
+            "status": "Done",
+            "idempotency_key": "",
+            "started_at": "1794639964",
+            "locked_at": "1794639964",
+            "locked_by": "agent-worker.bench.cursor.142849.167dec7b",
+            "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+            "done_at": "1794639964"
+          },
+          "job": {
+            "retries": 0,
+            "max_retries": 1,
+            "actor_name": "failonce",
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "kwargs": {
+              "token": "failonce-dropped-finish"
+            }
+          }
+        },
+        {
+          "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+          "places": [
+            "done"
+          ],
+          "meta": {
+            "attempts": "1",
+            "max_attempts": "1",
+            "status": "Done",
+            "idempotency_key": "",
+            "started_at": "1794639904",
+            "locked_at": "1794639904",
+            "locked_by": "agent-worker.bench.cursor.142849.167dec7b",
+            "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+            "done_at": "1794639904"
+          },
+          "job": {
+            "retries": 1,
+            "max_retries": 1,
+            "actor_name": "failonce",
+            "message_id": "cbef47a6-ab41-418d-8e8c-3aa5d2fb705e",
+            "kwargs": {
+              "token": "failonce-dropped-finish"
+            }
+          }
+        }
+      ],
+      "inflight": {},
+      "scheduled": [],
+      "done": [
+        {
+          "id": "01M7CDZFTXPP8MY34VYPSRPXC4",
+          "score": 1794639904.0
+        },
+        {
+          "id": "01M7CDZFJNH7Y7DZ1P0NPRCVS9",
+          "score": 1794639964.0
+        }
+      ],
+      "dead": [],
+      "workers": [
+        {
+          "name": "agent-worker.bench.cursor.142858.52bbd0ce",
+          "score": 1794639950.0
+        },
+        {
+          "name": "agent-worker.bench.cursor.142849.167dec7b",
+          "score": 1794639964.0
+        }
+      ],
+      "deliveries": {}
+    },
+    "owner_log": "2026-11-14T07:05:04.606937Z  WARN apalis_core::backend::persistence: poll_ready: ProcessEvents failed -> Dead error=Database(broken pipe)\n2026-11-14T07:05:04.606962Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe\n2026-11-14T07:05:04.606981Z  WARN apalis_core::monitor: worker future ended with error name=\"agent-worker.bench.cursor.142821.52da4781\" error=BackendError(PollNextError(Database(broken pipe)))\nError: worker monitor failed: Worker errors:\nMonitoredErrors:\n - Worker `agent-worker.bench.cursor.142821.52da4781`: Failed to poll backend: PollNextError: broken pipe",
+    "other_log": "",
+    "monitor": [
+      {
+        "line": "1794639904.341075 [0 127.0.0.1:41588] \"EVALSHA\" \"3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\" \"6\" \"bench:data\" \"bench:active\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"bench:idempotency\" \"0\" \"0\" \"01M7CDZFJNH7Y7DZ1P0NPRCVS9\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"cbef47a6-ab41-418d-8e8c-3aa5d2fb705e\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-dropped-finish\\\"},\\\"headers\\\":{},\\\"retries\\\":0,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_bac",
+        "kind": "enqueue"
+      },
+      {
+        "line": "1794639904.341119 [0 lua] \"hsetnx\" \"bench:data\" \"01M7CDZFJNH7Y7DZ1P0NPRCVS9\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"cbef47a6-ab41-418d-8e8c-3aa5d2fb705e\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-dropped-finish\\\"},\\\"headers\\\":{},\\\"retries\\\":0,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms\\\":300,\\\"max_deliveries\\\":3,\\\"lock_key\\\":null,\\\"lock_ttl\\\":30,\\\"skip_on_lock\\\":false}\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.341163 [0 lua] \"zadd\" \"bench:scheduled\" \"1794639904\" \"01M7CDZFJNH7Y7DZ1P0NPRCVS9\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.589388 [0 127.0.0.1:41612] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142821.52da4781\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639904\" \"1\" \"agent-worker.bench.cursor.142821.52da4781\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639904.589460 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.cursor.142821.52da4781\" \"01M7CDZFJNH7Y7DZ1P0NPRCVS9\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.590144 [0 127.0.0.1:41612] \"EVALSHA\" \"f84c79100c44c2348985e8bd49481807fb54d667\" \"1\" \"bench:meta:01M7CDZFJNH7Y7DZ1P0NPRCVS9\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.590161 [0 lua] \"HSET\" \"bench:meta:01M7CDZFJNH7Y7DZ1P0NPRCVS9\" \"started_at\" \"1794639904\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.590249 [0 127.0.0.1:41612] \"EVALSHA\" \"f7ff133460a6cd6a739e294b0f4f7a584599f1fc\" \"4\" \"bench:inflight:agent-worker.bench.cursor.142821.52da4781\" \"bench:workers\" \"bench:meta\" \"bench:active\" \"agent-worker.bench.cursor.142821.52da4781\" \"1794639904\" \"0\" \"01M7CDZFJNH7Y7DZ1P0NPRCVS9\"",
+        "kind": "acquire"
+      },
+      {
+        "line": "1794639904.590283 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.cursor.142821.52da4781\" \"01M7CDZFJNH7Y7DZ1P0NPRCVS9\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.590290 [0 lua] \"hset\" \"bench:meta:01M7CDZFJNH7Y7DZ1P0NPRCVS9\" \"locked_at\" \"1794639904\" \"locked_by\" \"agent-worker.bench.cursor.142821.52da4781\" \"status\" \"Running\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.590470 [0 127.0.0.1:41612] \"EVALSHA\" \"8f290130ebe41d5d981486b7a1b8c3bfc152ea00\" \"1\" \"delivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:0\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.590505 [0 lua] \"INCR\" \"delivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:0\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.590516 [0 lua] \"EXPIRE\" \"delivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:0\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.606057 [0 127.0.0.1:41612] \"EVALSHA\" \"3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\" \"6\" \"bench:data\" \"bench:active\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"bench:idempotency\" \"0\" \"0\" \"01M7CDZFTXPP8MY34VYPSRPXC4\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"cbef47a6-ab41-418d-8e8c-3aa5d2fb705e\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-dropped-finish\\\"},\\\"headers\\\":{},\\\"retries\\\":1,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_bac",
+        "kind": "enqueue"
+      },
+      {
+        "line": "1794639904.606112 [0 lua] \"hsetnx\" \"bench:data\" \"01M7CDZFTXPP8MY34VYPSRPXC4\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"cbef47a6-ab41-418d-8e8c-3aa5d2fb705e\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-dropped-finish\\\"},\\\"headers\\\":{},\\\"retries\\\":1,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms\\\":300,\\\"max_deliveries\\\":3,\\\"lock_key\\\":null,\\\"lock_ttl\\\":30,\\\"skip_on_lock\\\":false}\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.606150 [0 lua] \"zadd\" \"bench:scheduled\" \"1794639904\" \"01M7CDZFTXPP8MY34VYPSRPXC4\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.606494 [0 127.0.0.1:41612] \"DEL\" \"delivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:0\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.885966 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639904\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639904.886014 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"01M7CDZFTXPP8MY34VYPSRPXC4\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.886483 [0 127.0.0.1:41638] \"EVALSHA\" \"f84c79100c44c2348985e8bd49481807fb54d667\" \"1\" \"bench:meta:01M7CDZFTXPP8MY34VYPSRPXC4\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.886510 [0 lua] \"HSET\" \"bench:meta:01M7CDZFTXPP8MY34VYPSRPXC4\" \"started_at\" \"1794639904\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.886634 [0 127.0.0.1:41638] \"EVALSHA\" \"f7ff133460a6cd6a739e294b0f4f7a584599f1fc\" \"4\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:workers\" \"bench:meta\" \"bench:active\" \"agent-worker.bench.cursor.142849.167dec7b\" \"1794639904\" \"0\" \"01M7CDZFTXPP8MY34VYPSRPXC4\"",
+        "kind": "acquire"
+      },
+      {
+        "line": "1794639904.886680 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"01M7CDZFTXPP8MY34VYPSRPXC4\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.886686 [0 lua] \"hset\" \"bench:meta:01M7CDZFTXPP8MY34VYPSRPXC4\" \"locked_at\" \"1794639904\" \"locked_by\" \"agent-worker.bench.cursor.142849.167dec7b\" \"status\" \"Running\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.886931 [0 127.0.0.1:41638] \"EVALSHA\" \"8f290130ebe41d5d981486b7a1b8c3bfc152ea00\" \"1\" \"delivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:1\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.886939 [0 lua] \"INCR\" \"delivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:1\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.886943 [0 lua] \"EXPIRE\" \"delivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:1\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.901862 [0 127.0.0.1:41638] \"DEL\" \"delivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:1\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.902549 [0 127.0.0.1:41638] \"EVALSHA\" \"9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\" \"5\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:done\" \"bench:dead\" \"bench:scheduled\" \"bench:meta\" \"0\" \"01M7CDZFTXPP8MY34VYPSRPXC4\" \"1794639904\" \"{\\\"Ok\\\":{\\\"outcome\\\":\\\"ok\\\",\\\"result\\\":null}}\" \"Done\" \"1\"",
+        "kind": "finish"
+      },
+      {
+        "line": "1794639904.902576 [0 lua] \"SREM\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"01M7CDZFTXPP8MY34VYPSRPXC4\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.902593 [0 lua] \"ZADD\" \"bench:done\" \"1794639904\" \"01M7CDZFTXPP8MY34VYPSRPXC4\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.902599 [0 lua] \"HSET\" \"bench:meta:01M7CDZFTXPP8MY34VYPSRPXC4\" \"result\" \"{\\\"Ok\\\":{\\\"outcome\\\":\\\"ok\\\",\\\"result\\\":null}}\" \"status\" \"Done\" \"attempts\" \"1\" \"done_at\" \"1794639904\"",
+        "kind": null
+      },
+      {
+        "line": "1794639904.903481 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639904\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639905.386725 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639905\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639905.795761 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639905\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639905.886930 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639905\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639906.296213 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639906\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639906.387122 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639906\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639906.796150 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639906\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639906.887434 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639906\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639907.296507 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639907\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639907.387747 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639907\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639907.796830 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639907\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639907.887444 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639907\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639908.297029 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639908\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639908.387920 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639908\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639908.797358 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639908\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639908.888112 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639908\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639909.297334 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639909\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639909.388511 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639909\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639909.797464 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639909\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639909.888773 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639909\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639910.297854 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639910\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639910.388582 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639910\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639910.797720 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639910\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639910.888822 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639910\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639911.298154 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639911\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639911.388851 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639911\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639911.798312 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639911\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639911.889210 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639911\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639912.298468 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639912\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639912.389380 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639912\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639912.798912 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639912\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639912.889802 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639912\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639913.299065 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639913\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639913.389833 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639913\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639913.799238 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639913\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639913.889821 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639913\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639914.299597 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639914\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639914.390199 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639914\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639914.799490 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639914\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639914.890458 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639914\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639915.299991 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639915\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639915.390897 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639915\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639915.799965 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639915\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639915.890856 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639915\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639916.300116 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639916\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639916.391282 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639916\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639916.800417 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639916\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639916.891502 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639916\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639917.300503 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639917\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639917.391753 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639917\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639917.800582 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639917\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639917.891778 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639917\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639918.300785 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639918\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639918.391950 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639918\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639918.801094 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639918\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639918.892119 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639918\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639919.300998 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639919\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639919.392338 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639919\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639919.801043 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639919\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639919.888139 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639919\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639919.892217 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639919\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639920.301180 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639920\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639920.392808 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639920\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639920.796928 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639920\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639920.801449 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639920\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639920.893065 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639920\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639921.301457 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639921\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639921.393165 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639921\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639921.801814 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639921\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639921.893562 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639921\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639922.301818 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639922\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639922.393553 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639922\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639922.802077 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639922\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639922.894126 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639922\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639923.302283 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639923\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639923.394230 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639923\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639923.802275 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639923\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639923.894302 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639923\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639924.302780 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639924\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639924.394735 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639924\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639924.803045 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639924\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639924.895042 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639924\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639925.303346 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639925\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639925.395084 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639925\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639925.803483 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639925\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639925.895402 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639925\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639926.303394 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639926\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639926.395496 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639926\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639926.803877 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639926\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639926.895936 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639926\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639927.304069 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639927\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639927.395767 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639927\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639927.804426 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639927\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639927.896521 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639927\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639928.304657 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639928\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639928.396672 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639928\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639928.804696 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639928\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639928.896742 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639928\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639929.305166 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639929\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639929.397231 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639929\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639929.805225 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639929\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639929.897117 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639929\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639930.305826 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639930\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639930.397300 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639930\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639930.805789 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639930\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639930.897558 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639930\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639931.306363 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639931\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639931.398017 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639931\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639931.806211 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639931\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639931.897969 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639931\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639932.306750 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639932\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639932.398321 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639932\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639932.806695 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639932\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639932.898540 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639932\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639933.307253 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639933\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639933.398839 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639933\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639933.807452 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639933\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639933.899010 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639933\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639934.307640 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639934\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639934.399228 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639934\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639934.808009 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639934\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639934.889323 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639934\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639934.899544 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639934\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639935.307885 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639935\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639935.399791 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639935\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639935.799582 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639935\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639935.808164 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639935\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639935.899853 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639935\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639936.308438 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639936\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639936.400063 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639936\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639936.808483 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639936\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639936.900329 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639936\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639937.308481 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639937\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639937.400416 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639937\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639937.808822 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639937\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639937.900697 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639937\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639938.308815 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639938\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639938.400724 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639938\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639938.809053 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639938\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639938.901052 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639938\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639939.309575 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639939\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639939.401025 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639939\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639939.809621 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639939\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639939.901117 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639939\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639940.309902 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639940\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639940.401337 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639940\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639940.809974 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639940\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639940.901466 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639940\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639941.310255 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639941\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639941.401617 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639941\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639941.810468 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639941\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639941.901853 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639941\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639942.310564 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639942\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639942.402544 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639942\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639942.810804 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639942\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639942.902759 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639942\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639943.310906 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639943\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639943.402952 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639943\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639943.811398 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639943\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639943.903015 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639943\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639944.311298 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639944\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639944.403376 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639944\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639944.812035 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639944\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639944.903696 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639944\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639945.311954 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639945\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639945.403770 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639945\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639945.812256 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639945\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639945.904318 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639945\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639946.312567 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639946\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639946.404524 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639946\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639946.812535 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639946\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639946.904694 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639946\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639947.312980 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639947\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639947.404983 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639947\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639947.812881 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639947\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639947.904889 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639947\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639948.313056 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639948\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639948.405054 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639948\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639948.813421 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639948\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639948.905094 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639948\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639949.313589 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639949\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639949.405818 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639949\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639949.813796 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639949\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639949.890053 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639949\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639949.905389 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639949\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639950.313840 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639950\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639950.406076 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639950\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639950.799937 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639950\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639950.814184 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639950\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639950.906248 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639950\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639951.314530 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639951\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639951.406423 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639951\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639951.814426 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639951\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639951.906758 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639951\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639952.314968 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639952\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639952.407251 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639952\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639952.815220 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639952\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639952.907303 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639952\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639953.315304 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639953\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639953.407325 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639953\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639953.815452 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639953\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639953.907682 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639953\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639954.315652 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639954\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639954.408121 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639954\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639954.816003 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639954\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639954.907990 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639954\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639955.316176 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639955\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639955.408152 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639955\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639955.816098 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639955\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639955.908428 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639955\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639956.316271 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639956\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639956.408692 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639956\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639956.816391 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639956\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639956.908611 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639956\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639957.316722 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639957\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639957.408744 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639957\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639957.817046 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639957\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639957.908828 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639957\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639958.317160 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639958\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639958.408914 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639958\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639958.817258 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639958\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639958.909149 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639958\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639959.317364 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639959\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639959.409248 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639959\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639959.817466 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639959\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639959.909321 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639959\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639960.317794 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639960\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639960.409580 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639960\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639960.818226 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639960\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639960.909709 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639960\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639961.318500 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639961\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639961.410028 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639961\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639961.818690 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639961\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639961.910109 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639961\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639962.319305 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639962\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639962.410369 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639962\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639962.819078 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639962\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639962.910529 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639962\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639963.319601 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639963\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639963.410630 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639963\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639963.819966 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639963\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639963.911285 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639963\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639964.319945 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639964\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639964.411411 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639964\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639964.819987 [0 127.0.0.1:41640] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142858.52bbd0ce\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639964\" \"1\" \"agent-worker.bench.cursor.142858.52bbd0ce\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639964.891791 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639964\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639964.891819 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"01M7CDZFJNH7Y7DZ1P0NPRCVS9\"",
+        "kind": null
+      },
+      {
+        "line": "1794639964.892350 [0 127.0.0.1:41638] \"EVALSHA\" \"f84c79100c44c2348985e8bd49481807fb54d667\" \"1\" \"bench:meta:01M7CDZFJNH7Y7DZ1P0NPRCVS9\"",
+        "kind": null
+      },
+      {
+        "line": "1794639964.892359 [0 lua] \"HSET\" \"bench:meta:01M7CDZFJNH7Y7DZ1P0NPRCVS9\" \"started_at\" \"1794639964\"",
+        "kind": null
+      },
+      {
+        "line": "1794639964.892464 [0 127.0.0.1:41638] \"EVALSHA\" \"f7ff133460a6cd6a739e294b0f4f7a584599f1fc\" \"4\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:workers\" \"bench:meta\" \"bench:active\" \"agent-worker.bench.cursor.142849.167dec7b\" \"1794639964\" \"0\" \"01M7CDZFJNH7Y7DZ1P0NPRCVS9\"",
+        "kind": "acquire"
+      },
+      {
+        "line": "1794639964.892493 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"01M7CDZFJNH7Y7DZ1P0NPRCVS9\"",
+        "kind": null
+      },
+      {
+        "line": "1794639964.892498 [0 lua] \"hset\" \"bench:meta:01M7CDZFJNH7Y7DZ1P0NPRCVS9\" \"locked_at\" \"1794639964\" \"locked_by\" \"agent-worker.bench.cursor.142849.167dec7b\" \"status\" \"Running\"",
+        "kind": null
+      },
+      {
+        "line": "1794639964.892595 [0 127.0.0.1:41638] \"EVALSHA\" \"8f290130ebe41d5d981486b7a1b8c3bfc152ea00\" \"1\" \"delivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:0\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1794639964.892612 [0 lua] \"INCR\" \"delivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:0\"",
+        "kind": null
+      },
+      {
+        "line": "1794639964.892621 [0 lua] \"EXPIRE\" \"delivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:0\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1794639964.896695 [0 127.0.0.1:41638] \"DEL\" \"delivery:cbef47a6-ab41-418d-8e8c-3aa5d2fb705e:0\"",
+        "kind": null
+      },
+      {
+        "line": "1794639964.897313 [0 127.0.0.1:41638] \"EVALSHA\" \"9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\" \"5\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:done\" \"bench:dead\" \"bench:scheduled\" \"bench:meta\" \"0\" \"01M7CDZFJNH7Y7DZ1P0NPRCVS9\" \"1794639964\" \"{\\\"Ok\\\":{\\\"outcome\\\":\\\"ok\\\",\\\"result\\\":null}}\" \"Done\" \"1\"",
+        "kind": "finish"
+      },
+      {
+        "line": "1794639964.897350 [0 lua] \"SREM\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"01M7CDZFJNH7Y7DZ1P0NPRCVS9\"",
+        "kind": null
+      },
+      {
+        "line": "1794639964.897385 [0 lua] \"ZADD\" \"bench:done\" \"1794639964\" \"01M7CDZFJNH7Y7DZ1P0NPRCVS9\"",
+        "kind": null
+      },
+      {
+        "line": "1794639964.897390 [0 lua] \"HSET\" \"bench:meta:01M7CDZFJNH7Y7DZ1P0NPRCVS9\" \"result\" \"{\\\"Ok\\\":{\\\"outcome\\\":\\\"ok\\\",\\\"result\\\":null}}\" \"status\" \"Done\" \"attempts\" \"1\" \"done_at\" \"1794639964\"",
+        "kind": null
+      },
+      {
+        "line": "1794639964.897816 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639964\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1794639964.911352 [0 127.0.0.1:41638] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.cursor.142849.167dec7b\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1794639964\" \"1\" \"agent-worker.bench.cursor.142849.167dec7b\"",
+        "kind": "fetch"
+      }
+    ],
+    "finished_at": "2026-11-14T07:06:04Z"
+  }
+}

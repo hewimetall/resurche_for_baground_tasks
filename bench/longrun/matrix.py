@@ -668,8 +668,13 @@ SCENARIOS: list[dict] = [
             "Drop the Redis connection while a retry is being written. "
             "max_retries is 2 so a retry exists to interrupt. The plan is "
             "still 2400s. "
-            "simple-q updates the same message for a retry. A lost write "
-            "can keep the old copy or drop the retry. "
+            "simple-q 1.2.0, measured with no fault on Redis pid 142603: "
+            "retry enqueues a new task id, same message_id, retries+1, "
+            "then handle_results marks the current id Done. The schedule "
+            "score in that run was the integer second of the enqueue. A "
+            "finish dropped before Redis sees it leaves the original id "
+            "inflight and the new id already scheduled. "
+            "See docs/reference/ambiguous-redis.md. "
             "Dramatiq re-enqueues on retry. A lost write can drop the "
             "message or leave the original. "
             "Celery publishes the retry as another message. The original "
@@ -738,14 +743,14 @@ SCENARIOS: list[dict] = [
         workers=2,
         fault="redis_reconnect_same_owner",
         note=(
-            "The proxy refused worker sockets for 3s and then accepted "
-            "them again. Redis was not restarted. The owner child logged "
-            "HeartBeat failed and fetch_next failed, then exited. Its "
-            "zset score stayed at the pre-gap value for the next 44s. The "
-            "task remained in that worker's inflight set, with one start "
-            "line and no end line. 44s is inside the 60s orphan window, so "
-            "this row does not show the later reap. The same worker name "
-            "did not resume the handler after the socket returned."
+            "Short gap, not a live reconnect of the same owner. The proxy "
+            "refused worker sockets for 3s and then accepted them again. "
+            "Redis was not restarted. Both children logged broken pipe and "
+            "exited. The owner score stayed at the pre-gap value for the "
+            "next 44.6s. The task remained in that inflight set, with one "
+            "start line and no end line. 44s is inside the 60s orphan "
+            "window, so this row stops before the reap. It shows that a "
+            "brief gap kills the child and leaves the task accounted for."
         ),
     ),
     _row(
@@ -757,16 +762,19 @@ SCENARIOS: list[dict] = [
         workers=2,
         fault="redis_reconnect_after_transfer",
         note=(
-            "After a lost fetch reply, a lost renew, or a 70s proxy "
-            "blackhole, a different worker name held the task once the old "
-            "score was about 60s old, and that worker ran the handler. "
-            "During the 70s blackhole the first handler wrote its end "
-            "line while Redis still showed the original inflight member; "
-            "the second worker then ran the body again and the task "
-            "reached done. A renew reply held for 75s was written back "
-            "after the child had already exited on a timeout; the task "
-            "stayed on the new inflight key. There is no generation field "
-            "for a late reply to restore."
+            "Orphan recovery after the old child has exited, not a fence "
+            "against a live previous owner. After a lost fetch reply, a "
+            "lost renew, or a 70s proxy blackhole, a different worker name "
+            "held the task once the old score was about 60s old, and that "
+            "worker ran the handler. During the 70s blackhole the first "
+            "handler wrote its end line while Redis still showed the "
+            "original inflight member; the second worker then ran the body "
+            "again and the task reached done. A renew reply held for 75s "
+            "was written back after the child had already exited; the task "
+            "stayed on the new inflight key. The old process was already "
+            "gone, so this does not show a live owner sending renew or "
+            "finish after the transfer. A missing field named generation "
+            "is not, by itself, the defect under test."
         ),
     ),
     _row(
