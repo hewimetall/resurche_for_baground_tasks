@@ -15,6 +15,8 @@ Kubernetes: kind `0.33.0`, один control-plane, образ узла `kindest/
 | Библиотека | T_drain, с | Код | T_gap, с | Прогресс | Что изменилось в попытке |
 | --- | --- | --- | --- | --- | --- |
 | simple-q | 1.201 | 0 | 1.46 | 4/4 | тот же message id, `retries` 0 → 1, `deliveries` остался 1 |
+
+На 1.3.0 тот же сценарий: `T_drain` 1.201 с, код 0, `T_gap` 1.452 с, прогресс 4/4, `retries` 0 → 1, `deliveries` остался 1 (`results/simpleq-1.3.0/long_on.json`). Строка таблицы — измерение rc7. Без чекпоинта на 1.3.0 `T_drain` 2.001 с, одна попытка (`long_off.json`). Ранний SIGTERM 0.4 / 1.5 / 2.5 с снова дал 0.2 с и код 0.
 | Dramatiq | 8.010 | −9 | 2.26 | 4/4 | retries 0…4, несколько повторов, пока старый процесс ещё умирал |
 | Celery | 1.201 | 0 | 1.60 | 4/4 | retries 0 → 1 |
 | arq | 1.601 | 0 | 2.26 | 4/4 | try 1 → 2, тот же job id |
@@ -62,6 +64,8 @@ Dramatiq на этом прогоне не уложился в grace и полу
 | taskiq | 2 с, код 0 | 2 с, код 0 | успешно |
 
 Потери сигнала в первые 1–3 с на rc7 в этом кластере не воспроизвелись. Пять rollout подряд на одной долгой задаче в kind не делались. На процессах пять SIGKILL подряд по одной задаче simple-q довели её до poison: `fail_reason = poison deliveries=6 retries=0` (`results/simpleq/five_kills.json`). У Dramatiq, Celery, arq и taskiq за окно того же сценария статус остался `running`, отдельной причины poison нет.
+
+Kind на 1.3.0 не запускался: в машине нет `docker` и `kind` (`results/kind/simpleq-1.3.0/kind.json`). На процессах пять SIGKILL снова дали `poison deliveries=6 retries=0` (`results/simpleq-1.3.0/five_kills.json`). `SIGKILL` супервизора на 1.3.0 переводит ребёнка в drain через pidfd: принятая delivery доделывается, новых fetch нет, выход ребёнка через 4.067 с (`results/simpleq-1.3.0/mechanisms-cgroup.json`).
 
 ## Что из этого следует для пода с задачей до 30 минут
 

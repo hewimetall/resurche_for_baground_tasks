@@ -108,8 +108,14 @@ Dramatiq, Celery, arq, taskiq: блокировка 4 с завершилась 
 
 simple-q за эти 5 с очередь не добрал: период опроса heartbeat длиннее паузы. arq после обрыва соединения сам вышел (код 1 в stop).
 
+На 1.3.0 тот же `redis_down` добрал 6 из 6, воркер остался жив, `T_drain` 2.802 с, код 0 (`results/simpleq-1.3.0/redis_down.json`). Пустой опрос больше не равен heartbeat. `redis_loss` записан в `results/simpleq-1.3.0/redis_loss.json` (24.921 с). Потеря ответа на отдельной команде разобрана для 1.2.0 в `docs/reference/ambiguous-redis.md` и для 1.3.0 там же, в разделе про 1.3.0.
+
 `maxmemory` + `noeviction` прогнан, файл `results/<lib>/maxmemory.json`. На short это проверка, что брокер не принимает запись при полном Redis, а не замер деградации.
 
 ## 12. Короткий прогон 80 задач
 
-Цифры и оговорка про p50 simple-q — в `docs/bench.md`.
+Цифры и оговорка про p50 simple-q — в `docs/bench.md`. На 1.3.0 та же пачка: 151.21 задачи/с, p50 36 мс (`results/simpleq-1.3.0/fast.json`).
+
+## 13. simple-q 1.3.0
+
+Сценарии этой страницы прогнаны ещё раз. Каталог `results/simpleq-1.3.0/`. Что совпало с rc7: `parallel` без потерь, `recycle` 12 элементов и 5 pid, `sigkill` при 5×2 через 10.25 с с `deliveries` 2 и `retries` 0, пять kill до `poison deliveries=6`, ранний SIGTERM 0.2 с и код 0, блокировка 4 с одной доставкой, дедуп на send. Что разошлось: пустой опрос и короткая пачка (раздел 12), `redis_down` добрал пачку, `soft_memory` потерял 1 из 8 и остался в `running` (в логе метрик порт 9191 занят). Механизмы 1.1.0–1.3.0, которых в этой сюите нет, записаны в `docs/reference/simpleq-1.3.md`.

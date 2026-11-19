@@ -1,5 +1,7 @@
 # Почему simple-q ждёт heartbeat
 
+Ниже разобран 1.0.0rc7. На 1.3.0 пустой воркер этот heartbeat не ждёт: выборка идёт по `poll_with_interval` и `SIMPLE_Q_POLL_INTERVAL_MS` (500 мс). Разбор и цифры — в `docs/reference/simpleq-1.3.md`. Текст rc7 оставлен.
+
 Числа — в {doc}`/reference/simpleq` и {doc}`/reference/wait-traces`.
 
 Пустой `fetch_next` не блокируется в Redis. `poll_next` возвращает `Pending` и запоминает waker. Перед этим в том же проходе `poll_ready` уже опросил `Delay` и, если срок не вышел, повесил тот же waker на таймер. Следующий вызов выборки происходит, когда таймер срабатывает. Период таймера — `heartbeat_interval` из `queue_config`, то есть `SIMPLE_Q_HEARTBEAT_SECS`.
@@ -23,3 +25,5 @@
 Серия из 19 точек после первого fetch держит сумму фазы и pickup в 4614–4650 мс при park 0.35 с. Шесть `fast`, отправленных через 2.4 с после входа в задачу на 2 с, приходят за 2584–2603 мс: срок идёт от fetch, сон внутри задачи его не перезапускает. Числа и разрез, где `ZADD` на +97 мс, а следующее чтение scheduled через 5000.6 мс, — в {doc}`/reference/phase-series`.
 
 На короткой пачке из 80 задач при heartbeat 15 с p50 11.6 с (`docs/bench.md`). Пачка укладывается в один такой сон: воркер просыпается и разбирает уже лежащие задачи. 6.8 задачи/с на этой пачке — следствие этого сна, не потолка исполнителя. Celery на той же пачке дал 244/с и p50 17 мс, потому что его ожидание — `BRPOP` с таймаутом 1 с, а не период 15 с.
+
+На 1.3.0 этот сон снят. `worker_storage` вызывает `poll_with_interval` с `SIMPLE_Q_POLL_INTERVAL_MS` ([`redis_api.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/simple-q-runtime/src/redis_api.rs#L44-L58)). Та же пачка: 151.21 задачи/с, p50 36 мс. Heartbeat остаётся таймером lease и окна сироты, не таймером пустой выборки.
