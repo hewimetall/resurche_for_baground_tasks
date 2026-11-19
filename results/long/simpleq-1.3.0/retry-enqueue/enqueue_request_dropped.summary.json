@@ -1,0 +1,238 @@
+{
+  "answers": {
+    "scenario_id": "enqueue_request_dropped",
+    "observe_status": "complete",
+    "B_appeared_in_redis": true,
+    "B_task_ids": [
+      "01M7T4VHYCG7YP1DYC66A5798E"
+    ],
+    "rust_enqueue_result_observed": "error_leaving_attempt_inflight",
+    "enqueue_proxy_events": [
+      {
+        "t": 1795100040.415724,
+        "mono": 543.394381202,
+        "action": "drop_request",
+        "kind": "enqueue",
+        "op": "EVALSHA",
+        "enqueue_task_id": "01M7T4SQ6ZDESHP3VDV3MPCAQ2",
+        "message_id": "d800109f-cec2-4ab2-9f67-da299e924273",
+        "retries": 1,
+        "actor_name": "retry_by_retries"
+      }
+    ],
+    "finish_A": {
+      "task_id": "01M7T4SPPPN96AFWFE8B2Y5F3W",
+      "places": [
+        "done"
+      ],
+      "meta": {
+        "attempts": "1",
+        "max_attempts": "1",
+        "status": "Done",
+        "idempotency_key": "",
+        "started_at": "1795100100",
+        "locked_at": "1795100100",
+        "locked_by": "agent-worker.bench.<redacted>.9066.543c5ecd",
+        "result": "{\"Ok\":{\"delay_ms\":31,\"outcome\":\"retry\"}}",
+        "done_at": "1795100100"
+      }
+    },
+    "child_exited_hint": true,
+    "owner_log_excerpt": "2026-11-19T14:54:00.416022Z ERROR process{otel.name=process retry_by_retries otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=d800109f-cec2-4ab2-9f67-da299e924273 actor_name=retry_by_retries}: agent_worker::worker: retry enqueue failed; leaving the attempt inflight message_id=d800109f-cec2-4ab2-9f67-da299e924273 actor_name=retry_by_retries queue_name=bench retries=0 error=enqueue failed: Failed to push task: broken pipe",
+    "other_log_excerpt": "",
+    "A_recovered_after_orphan_window": true,
+    "C_created": false,
+    "C_task_ids": [],
+    "retries_eq_1_task_id_count": 1,
+    "handler_entries_by_retries": {
+      "0": 2,
+      "1": 1
+    },
+    "unfinished_task_ids": [],
+    "final_workers": [
+      {
+        "name": "agent-worker.bench.<redacted>.9066.543c5ecd",
+        "score": 1795100100.0
+      },
+      {
+        "name": "agent-worker.bench.<redacted>.9128.3989ed69",
+        "score": 1795100101.0
+      }
+    ],
+    "A_handler_start_count": 2
+  },
+  "summary": {
+    "message_id": "d800109f-cec2-4ab2-9f67-da299e924273",
+    "task_ids": [
+      "01M7T4SPPPN96AFWFE8B2Y5F3W",
+      "01M7T4VHYCG7YP1DYC66A5798E"
+    ],
+    "task_ids_by_retries": {
+      "0": [
+        "01M7T4SPPPN96AFWFE8B2Y5F3W"
+      ],
+      "1": [
+        "01M7T4VHYCG7YP1DYC66A5798E"
+      ]
+    },
+    "retries_eq_1_count": 1,
+    "handler_starts": 3,
+    "handler_ends": 3,
+    "execution_ids": [
+      "37d9059a-2fd3-4602-a323-ffe60ca4dbe3",
+      "94e599ec-9f12-41d0-8695-774f57eebd15",
+      "ae82ec15-cf95-482a-8afb-dfdd4c3dfa3d"
+    ],
+    "per_task": {
+      "01M7T4SPPPN96AFWFE8B2Y5F3W": {
+        "retries": 0,
+        "places": [
+          "done"
+        ],
+        "meta": {
+          "attempts": "1",
+          "max_attempts": "1",
+          "status": "Done",
+          "idempotency_key": "",
+          "started_at": "1795100100",
+          "locked_at": "1795100100",
+          "locked_by": "agent-worker.bench.<redacted>.9066.543c5ecd",
+          "result": "{\"Ok\":{\"delay_ms\":31,\"outcome\":\"retry\"}}",
+          "done_at": "1795100100"
+        },
+        "handler_starts_same_retries": 2,
+        "handler_ends_same_retries": 2,
+        "execution_ids_start": [
+          "37d9059a-2fd3-4602-a323-ffe60ca4dbe3",
+          "ae82ec15-cf95-482a-8afb-dfdd4c3dfa3d"
+        ],
+        "execution_ids_end": [
+          "37d9059a-2fd3-4602-a323-ffe60ca4dbe3",
+          "ae82ec15-cf95-482a-8afb-dfdd4c3dfa3d"
+        ],
+        "binding": "inferred_by_retries_not_direct_task_id"
+      },
+      "01M7T4VHYCG7YP1DYC66A5798E": {
+        "retries": 1,
+        "places": [
+          "done"
+        ],
+        "meta": {
+          "attempts": "1",
+          "max_attempts": "1",
+          "status": "Done",
+          "idempotency_key": "",
+          "started_at": "1795100100",
+          "locked_at": "1795100100",
+          "locked_by": "agent-worker.bench.<redacted>.9066.543c5ecd",
+          "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":\"ok\"}}",
+          "done_at": "1795100100"
+        },
+        "handler_starts_same_retries": 1,
+        "handler_ends_same_retries": 1,
+        "execution_ids_start": [
+          "94e599ec-9f12-41d0-8695-774f57eebd15"
+        ],
+        "execution_ids_end": [
+          "94e599ec-9f12-41d0-8695-774f57eebd15"
+        ],
+        "binding": "inferred_by_retries_not_direct_task_id"
+      }
+    },
+    "effects": [
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "37d9059a-2fd3-4602-a323-ffe60ca4dbe3",
+        "max_retries": 3,
+        "message_id": "d800109f-cec2-4ab2-9f67-da299e924273",
+        "phase": "handler_start",
+        "pid": 8989,
+        "retries": 0,
+        "t": 1795100040.4145813,
+        "token": "enqueue_request_dropped-a57ab035",
+        "utc": "2026-11-19T14:54:00.414Z",
+        "worker": "agent-worker.bench.<redacted>.8989.1b23b1c9"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "37d9059a-2fd3-4602-a323-ffe60ca4dbe3",
+        "max_retries": 3,
+        "message_id": "d800109f-cec2-4ab2-9f67-da299e924273",
+        "phase": "handler_end",
+        "pid": 8989,
+        "reason": "retries==0",
+        "result": "retry",
+        "retries": 0,
+        "t": 1795100040.414649,
+        "token": "enqueue_request_dropped-a57ab035",
+        "utc": "2026-11-19T14:54:00.414Z",
+        "worker": "agent-worker.bench.<redacted>.8989.1b23b1c9"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 2,
+        "execution_id": "ae82ec15-cf95-482a-8afb-dfdd4c3dfa3d",
+        "max_retries": 3,
+        "message_id": "d800109f-cec2-4ab2-9f67-da299e924273",
+        "phase": "handler_start",
+        "pid": 9066,
+        "retries": 0,
+        "t": 1795100100.55625,
+        "token": "enqueue_request_dropped-a57ab035",
+        "utc": "2026-11-19T14:55:00.556Z",
+        "worker": "agent-worker.bench.<redacted>.9066.543c5ecd"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 2,
+        "execution_id": "ae82ec15-cf95-482a-8afb-dfdd4c3dfa3d",
+        "max_retries": 3,
+        "message_id": "d800109f-cec2-4ab2-9f67-da299e924273",
+        "phase": "handler_end",
+        "pid": 9066,
+        "reason": "retries==0",
+        "result": "retry",
+        "retries": 0,
+        "t": 1795100100.5563154,
+        "token": "enqueue_request_dropped-a57ab035",
+        "utc": "2026-11-19T14:55:00.556Z",
+        "worker": "agent-worker.bench.<redacted>.9066.543c5ecd"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "94e599ec-9f12-41d0-8695-774f57eebd15",
+        "max_retries": 3,
+        "message_id": "d800109f-cec2-4ab2-9f67-da299e924273",
+        "phase": "handler_start",
+        "pid": 9066,
+        "retries": 1,
+        "t": 1795100100.559556,
+        "token": "enqueue_request_dropped-a57ab035",
+        "utc": "2026-11-19T14:55:00.559Z",
+        "worker": "agent-worker.bench.<redacted>.9066.543c5ecd"
+      },
+      {
+        "actor": "retry_by_retries",
+        "deliveries": 1,
+        "execution_id": "94e599ec-9f12-41d0-8695-774f57eebd15",
+        "max_retries": 3,
+        "message_id": "d800109f-cec2-4ab2-9f67-da299e924273",
+        "phase": "handler_end",
+        "pid": 9066,
+        "reason": "retries>=1",
+        "result": "ok",
+        "retries": 1,
+        "t": 1795100100.55974,
+        "token": "enqueue_request_dropped-a57ab035",
+        "utc": "2026-11-19T14:55:00.559Z",
+        "worker": "agent-worker.bench.<redacted>.9066.543c5ecd"
+      }
+    ],
+    "limitation": "CurrentMessage has no task_id; execution_id\u2194task_id is inferred from retries + worker + Redis timeline / proxy enqueue_task_id, not a direct bridge."
+  },
+  "fault_fired": true,
+  "observe_status": "complete"
+}

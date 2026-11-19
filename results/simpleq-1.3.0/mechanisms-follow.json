@@ -1,0 +1,155 @@
+{
+  "library": "simpleq",
+  "version": "1.3.0",
+  "scenario": "mechanisms-follow",
+  "checks": [
+    {
+      "id": "log_reread",
+      "measured": true,
+      "duration_s": 0.0,
+      "result": {
+        "fetch_lost_log": [
+          "2026-11-19T15:00:13.892420Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.13990.6adc073d started",
+          "2026-11-19T15:00:14.894961Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.13990.6adc073d restarted",
+          "2026-11-19T15:00:14.895004Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.13990.f96a559b started",
+          "2026-11-19T15:00:18.995042Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.13990.6adc073d paused",
+          "2026-11-19T15:00:19.196389Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.13990.6adc073d stopped",
+          "2026-11-19T15:00:19.196411Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.13990.f96a559b stopped",
+          "2026-11-19T15:00:18.900335Z  INFO process{otel.name=process nap otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=038e9c3a-e0f6-45ce-92b0-6dbbd092f4b6 actor_name=nap",
+          "2026-11-19T15:00:14.894954Z  WARN apalis_core::monitor: worker future ended with error name=\"agent-worker.bench.<redacted>.13990.6adc073d\" error=BackendError(PollNextError(Database(broken pipe)))"
+        ],
+        "soft_busy_log": [
+          "2026-11-19T14:59:12.980725Z  INFO process{otel.name=process nap otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=ae6091e6-1811-4b30-90d8-7f13942ffd32 actor_name=nap",
+          "2026-11-19T14:59:19.935513Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=13281 rss=35438592",
+          "2026-11-19T14:59:19.952971Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes",
+          "2026-11-19T14:59:19.939131Z  INFO agent_worker::supervisor: worker process recycled index=0 pid=13281"
+        ],
+        "gap_running": [
+          "2026-11-19T15:00:19.533879Z  INFO process{otel.name=process nap otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=3b6ec143-370c-4b7c-b45f-d3937b4ded00 actor_name=nap",
+          "2026-11-19T15:00:30.993327Z  INFO process{otel.name=process nap otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=3b6ec143-370c-4b7c-b45f-d3937b4ded00 actor_name=nap"
+        ]
+      }
+    },
+    {
+      "id": "soft_during_delivery",
+      "measured": true,
+      "duration_s": 8.892,
+      "result": {
+        "handler_ended": true,
+        "end_after_send_s": 6.132,
+        "drain_lines": [
+          "2026-11-19T15:05:28.111206Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=16087 rss=35364864",
+          "2026-11-19T15:05:29.112594Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=16148 rss=29970432"
+        ],
+        "paused_lines": [
+          "2026-11-19T15:05:28.111684Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.16087.4df80397 paused",
+          "2026-11-19T15:05:29.112951Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.16148.29f8aec7 paused"
+        ]
+      }
+    },
+    {
+      "id": "slot_after_sigkill",
+      "measured": true,
+      "duration_s": 4.369,
+      "result": {
+        "lines": [
+          "2026-11-19T15:05:30.997210Z ERROR agent_worker::supervisor: killing child reason=\"memory hard\" pid=16189 rss=85532672",
+          "2026-11-19T15:05:32.999574Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=16203 rss=29913088",
+          "2026-11-19T15:05:34.000982Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=16654 rss=29962240"
+        ]
+      }
+    },
+    {
+      "id": "slow_ack_once",
+      "measured": true,
+      "duration_s": 3.969,
+      "result": {
+        "saw_key": true,
+        "released": true,
+        "release_t": 3.539,
+        "delayed": 1,
+        "samples_head": [
+          {
+            "t": 0.0,
+            "exists": "1"
+          },
+          {
+            "t": 0.252,
+            "exists": "1"
+          },
+          {
+            "t": 0.505,
+            "exists": "1"
+          },
+          {
+            "t": 0.758,
+            "exists": "1"
+          },
+          {
+            "t": 1.01,
+            "exists": "1"
+          },
+          {
+            "t": 1.263,
+            "exists": "1"
+          }
+        ],
+        "samples_tail": [
+          {
+            "t": 2.78,
+            "exists": "1"
+          },
+          {
+            "t": 3.033,
+            "exists": "1"
+          },
+          {
+            "t": 3.286,
+            "exists": "1"
+          },
+          {
+            "t": 3.539,
+            "exists": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cgroup_ratios",
+      "measured": true,
+      "duration_s": 13.054,
+      "result": {
+        "measured": true,
+        "joined_cgroup": true,
+        "rss_before_limit": {
+          "16925": 29724672
+        },
+        "memory_current_before": 66158592,
+        "memory_max_for_95": 68915200,
+        "hard_lines": [
+          "\u001b[2m2026-11-19T15:05:49.412194Z\u001b[0m \u001b[33m WARN\u001b[0m \u001b[2magent_worker::supervisor\u001b[0m\u001b[2m:\u001b[0m container memory crossed the hard threshold but no child owns it; draining the largest child \u001b[3mpid\u001b[0m\u001b[2m=\u001b[0m16948 \u001b[3mrss\u001b[0m\u001b[2m=\u001b[0m30248960",
+          "\u001b[2m2026-11-19T15:05:50.413865Z\u001b[0m \u001b[33m WARN\u001b[0m \u001b[2magent_worker::supervisor\u001b[0m\u001b[2m:\u001b[0m container memory crossed the hard threshold but no child owns it; draining the largest child \u001b[3mpid\u001b[0m\u001b[2m=\u001b[0m16949 \u001b[3mrss\u001b[0m\u001b[2m=\u001b[0m30203904"
+        ],
+        "soft_lines": [],
+        "kills": [],
+        "allocated": []
+      }
+    },
+    {
+      "id": "supervisor_sigkill",
+      "measured": false,
+      "duration_s": 0.361,
+      "error": "NameError: name 'os' is not defined"
+    },
+    {
+      "id": "prom_delayed",
+      "measured": true,
+      "duration_s": 1.437,
+      "result": {
+        "delayed_lines": [],
+        "inprogress_lines": [],
+        "body_len": 360
+      }
+    }
+  ]
+}

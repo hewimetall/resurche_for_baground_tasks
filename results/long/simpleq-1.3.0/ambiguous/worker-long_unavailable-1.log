@@ -1,0 +1,11 @@
+2026-11-19T15:01:50.421417Z  WARN agent_worker::supervisor: supervisor heartbeat failed error=failed to read Redis time
+2026-11-19T15:02:00.022375Z  WARN agent_worker::worker: failed to write tasks_done error=failed to record tasks_done name=agent-worker.bench.<redacted>.15371.6fd3ef4a
+2026-11-19T15:02:00.022523Z  WARN agent_worker::worker: failed to drop the delivery key after ack message_id=464927ed-ca7d-42c6-aad8-42af08a073a7 retries=0 error=failed to drop a delivery key
+2026-11-19T15:02:09.477351Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done name=agent-worker.bench.<redacted>.15371.6fd3ef4a
+2026-11-19T15:02:14.873468Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis
+2026-11-19T15:02:18.932309Z  WARN agent_worker::worker: failed to write tasks_done error=failed to record tasks_done name=agent-worker.bench.<redacted>.15371.6fd3ef4a
+2026-11-19T15:02:28.384264Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done name=agent-worker.bench.<redacted>.15371.6fd3ef4a
+2026-11-19T15:02:29.873122Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis
+2026-11-19T15:02:37.839217Z  WARN agent_worker::child: queue sweep failed error=failed to read the type of bench:done queue=bench
+2026-11-19T15:02:37.839339Z  WARN agent_worker::worker: failed to write tasks_done error=failed to record tasks_done name=agent-worker.bench.<redacted>.15371.6fd3ef4a
+2026-11-19T15:02:44.873140Z  WARN agent_worker::supervisor: supervisor redis connect failed error=failed to connect to Redis

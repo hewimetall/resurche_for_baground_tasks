@@ -1,0 +1,99 @@
+[
+  {
+    "source": "observer",
+    "t_s": 0.001,
+    "unix": 1795100038.1018813,
+    "tasks": [
+      {
+        "id": "01M7T4SMYKHD11902JMG6SV1AV",
+        "retries": 0,
+        "places": [
+          "scheduled"
+        ],
+        "status": "Pending",
+        "attempts": "0"
+      }
+    ]
+  },
+  {
+    "source": "observer",
+    "t_s": 0.415,
+    "unix": 1795100038.51583,
+    "tasks": [
+      {
+        "id": "01M7T4SMYKHD11902JMG6SV1AV",
+        "retries": 0,
+        "places": [
+          "bench:inflight:agent-worker.bench.<redacted>.8919.9f991e5d"
+        ],
+        "status": "Running",
+        "attempts": "0"
+      }
+    ]
+  },
+  {
+    "source": "handler",
+    "unix": 1795100038.5243082,
+    "phase": "handler_start",
+    "execution_id": "9fcd6604-8ec5-4064-93c6-55498475a018",
+    "retries": 0,
+    "result": null,
+    "worker": "agent-worker.bench.<redacted>.8919.9f991e5d",
+    "pid": 8919
+  },
+  {
+    "source": "handler",
+    "unix": 1795100038.5243733,
+    "phase": "handler_end",
+    "execution_id": "9fcd6604-8ec5-4064-93c6-55498475a018",
+    "retries": 0,
+    "result": "retry",
+    "worker": "agent-worker.bench.<redacted>.8919.9f991e5d",
+    "pid": 8919
+  },
+  {
+    "source": "handler",
+    "unix": 1795100038.5290062,
+    "phase": "handler_start",
+    "execution_id": "ee7cef4a-cc43-4ab3-a172-b327ad84fa0c",
+    "retries": 1,
+    "result": null,
+    "worker": "agent-worker.bench.<redacted>.8919.9f991e5d",
+    "pid": 8919
+  },
+  {
+    "source": "handler",
+    "unix": 1795100038.529189,
+    "phase": "handler_end",
+    "execution_id": "ee7cef4a-cc43-4ab3-a172-b327ad84fa0c",
+    "retries": 1,
+    "result": "ok",
+    "worker": "agent-worker.bench.<redacted>.8919.9f991e5d",
+    "pid": 8919
+  },
+  {
+    "source": "observer",
+    "t_s": 0.467,
+    "unix": 1795100038.5683012,
+    "tasks": [
+      {
+        "id": "01M7T4SMYKHD11902JMG6SV1AV",
+        "retries": 0,
+        "places": [
+          "done"
+        ],
+        "status": "Done",
+        "attempts": "1"
+      },
+      {
+        "id": "01M7T4SNBXG5HPGEB1NNM7B3RT",
+        "retries": 1,
+        "places": [
+          "done"
+        ],
+        "status": "Done",
+        "attempts": "1"
+      }
+    ]
+  }
+]

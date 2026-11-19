@@ -1,0 +1,69 @@
+2026-11-19T14:50:25.566533Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:50:25.569392Z  INFO agent_worker::supervisor: worker process started index=0 pid=5894
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py", line 110, in serve
+    HTTPServer((host, port), Handler).serve_forever()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Error: metrics server failed
+
+Caused by:
+    OSError: [Errno 98] Address already in use
+2026-11-19T14:50:25.695413Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.5894.a3cd6892 started
+2026-11-19T14:50:25.697060Z  INFO process{otel.name=process probe otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=026804dc-d4e9-4c47-9294-8cb304882239 actor_name=probe}: agent_worker::worker: running actor message_id=026804dc-d4e9-4c47-9294-8cb304882239 actor_name=probe queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:26.197921Z  INFO process{otel.name=process boom otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=c2c2f2d5-c04f-40f7-b3d3-9f7df854d1c1 actor_name=boom}: agent_worker::worker: running actor message_id=c2c2f2d5-c04f-40f7-b3d3-9f7df854d1c1 actor_name=boom queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:26.203534Z  INFO process{otel.name=process boom otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=c2c2f2d5-c04f-40f7-b3d3-9f7df854d1c1 actor_name=boom}: agent_worker::worker: running actor message_id=c2c2f2d5-c04f-40f7-b3d3-9f7df854d1c1 actor_name=boom queue_name=bench retries=1 deliveries=1
+2026-11-19T14:50:26.205335Z  INFO process{otel.name=process boom otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=c2c2f2d5-c04f-40f7-b3d3-9f7df854d1c1 actor_name=boom}: agent_worker::worker: running actor message_id=c2c2f2d5-c04f-40f7-b3d3-9f7df854d1c1 actor_name=boom queue_name=bench retries=2 deliveries=1
+2026-11-19T14:50:26.281623Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T14:50:26.282369Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.5894.a3cd6892 paused
+2026-11-19T14:50:26.282380Z  INFO agent_worker::child: drain requested
+2026-11-19T14:50:26.282383Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.5894.a3cd6892 stopped
+2026-11-19T14:51:06.732477Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:51:06.733699Z  INFO agent_worker::supervisor: worker process started index=0 pid=6620
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py", line 110, in serve
+    HTTPServer((host, port), Handler).serve_forever()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Error: metrics server failed
+
+Caused by:
+    OSError: [Errno 98] Address already in use
+2026-11-19T14:51:06.863496Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6620.5ef3d0d8 started
+2026-11-19T14:51:06.864653Z  INFO process{otel.name=process probe otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=52ecf8f4-b03d-44f7-b977-5a59e72c479b actor_name=probe}: agent_worker::worker: running actor message_id=52ecf8f4-b03d-44f7-b977-5a59e72c479b actor_name=probe queue_name=bench retries=0 deliveries=1
+2026-11-19T14:51:07.365291Z  INFO process{otel.name=process blocker otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=80521a92-dfb5-4fc0-8e06-994279838ef6 actor_name=blocker}: agent_worker::worker: running actor message_id=80521a92-dfb5-4fc0-8e06-994279838ef6 actor_name=blocker queue_name=bench retries=0 deliveries=1
+2026-11-19T14:51:07.548423Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T14:51:07.548524Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6620.5ef3d0d8 paused
+2026-11-19T14:51:07.548535Z  INFO agent_worker::child: drain requested
+2026-11-19T14:53:04.140270Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:53:04.146338Z  INFO agent_worker::supervisor: worker process started index=0 pid=7650
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py", line 110, in serve
+    HTTPServer((host, port), Handler).serve_forever()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Error: metrics server failed
+
+Caused by:
+    OSError: [Errno 98] Address already in use
+2026-11-19T14:53:04.274674Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.7650.52a26b6e started
+2026-11-19T14:53:04.275777Z  INFO process{otel.name=process probe otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=56aa0743-1e86-42f7-b73a-5acc661dc672 actor_name=probe}: agent_worker::worker: running actor message_id=56aa0743-1e86-42f7-b73a-5acc661dc672 actor_name=probe queue_name=bench retries=0 deliveries=1
+2026-11-19T14:53:14.277332Z  INFO process{otel.name=process poisonjob otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=92b5c674-f9bc-4cc3-99e1-213470b8b40f actor_name=poisonjob}: agent_worker::worker: running actor message_id=92b5c674-f9bc-4cc3-99e1-213470b8b40f actor_name=poisonjob queue_name=bench retries=0 deliveries=2

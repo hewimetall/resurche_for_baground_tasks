@@ -1,0 +1,1478 @@
+{
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-19T14:54:01Z",
+  "redis_port": 6416,
+  "redis_pid": 8847,
+  "redis_pid_end": 8847,
+  "redis_restarted": false,
+  "observer_addr": "127.0.0.1:57168",
+  "control": {
+    "scenario_id": "failonce_control",
+    "redis_pid_start": 8847,
+    "redis_pid_end": 8847,
+    "redis_restarted": false,
+    "enqueue": {
+      "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+      "task_ids": [
+        "01M7T4SP32SG6G07H58C1PJ6KE"
+      ]
+    },
+    "effects": [
+      {
+        "deliveries": 1,
+        "max_retries": 1,
+        "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+        "pid": 8892,
+        "retries": 0,
+        "t": 1795100039.486753,
+        "token": "failonce-control",
+        "utc": "2026-11-19T14:53:59.486Z",
+        "worker": "agent-worker.bench.<redacted>.8892.389faeb9"
+      },
+      {
+        "deliveries": 1,
+        "max_retries": 1,
+        "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+        "pid": 8892,
+        "retries": 1,
+        "t": 1795100039.4889367,
+        "token": "failonce-control",
+        "utc": "2026-11-19T14:53:59.488Z",
+        "worker": "agent-worker.bench.<redacted>.8892.389faeb9"
+      }
+    ],
+    "samples": [
+      {
+        "t_s": 0.001,
+        "unix": 1795100039.270171,
+        "tasks": [
+          {
+            "id": "01M7T4SP32SG6G07H58C1PJ6KE",
+            "places": [
+              "scheduled"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Pending",
+              "idempotency_key": ""
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+              "kwargs": {
+                "token": "failonce-control"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.<redacted>.8892.389faeb9",
+            "score": 1795100037.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [
+          {
+            "id": "01M7T4SP32SG6G07H58C1PJ6KE",
+            "score": 1795100039.0
+          }
+        ],
+        "effects": []
+      },
+      {
+        "t_s": 0.207,
+        "unix": 1795100039.4762826,
+        "tasks": [
+          {
+            "id": "01M7T4SP32SG6G07H58C1PJ6KE",
+            "places": [
+              "bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Running",
+              "idempotency_key": "",
+              "started_at": "1795100039",
+              "locked_at": "1795100039",
+              "locked_by": "agent-worker.bench.<redacted>.8892.389faeb9"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+              "kwargs": {
+                "token": "failonce-control"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.<redacted>.8892.389faeb9",
+            "score": 1795100037.0
+          }
+        ],
+        "deliveries": {
+          "delivery:f24f058b-7f5a-4300-878b-235b16f43a3e:0": "1"
+        },
+        "scheduled": [],
+        "effects": []
+      },
+      {
+        "t_s": 0.259,
+        "unix": 1795100039.5282161,
+        "tasks": [
+          {
+            "id": "01M7T4SP32SG6G07H58C1PJ6KE",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1795100039",
+              "locked_at": "1795100039",
+              "locked_by": "agent-worker.bench.<redacted>.8892.389faeb9",
+              "result": "{\"Ok\":{\"delay_ms\":87,\"outcome\":\"retry\"}}",
+              "done_at": "1795100039"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+              "kwargs": {
+                "token": "failonce-control"
+              }
+            }
+          },
+          {
+            "id": "01M7T4SP9ZYF13ZM456A4DTJ9R",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1795100039",
+              "locked_at": "1795100039",
+              "locked_by": "agent-worker.bench.<redacted>.8892.389faeb9",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1795100039"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+              "kwargs": {
+                "token": "failonce-control"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.<redacted>.8892.389faeb9",
+            "score": 1795100037.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+            "pid": 8892,
+            "retries": 0,
+            "t": 1795100039.486753,
+            "token": "failonce-control",
+            "utc": "2026-11-19T14:53:59.486Z",
+            "worker": "agent-worker.bench.<redacted>.8892.389faeb9"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+            "pid": 8892,
+            "retries": 1,
+            "t": 1795100039.4889367,
+            "token": "failonce-control",
+            "utc": "2026-11-19T14:53:59.488Z",
+            "worker": "agent-worker.bench.<redacted>.8892.389faeb9"
+          }
+        ]
+      },
+      {
+        "t_s": null,
+        "unix": 1795100040.5296798,
+        "tasks": [
+          {
+            "id": "01M7T4SP32SG6G07H58C1PJ6KE",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1795100039",
+              "locked_at": "1795100039",
+              "locked_by": "agent-worker.bench.<redacted>.8892.389faeb9",
+              "result": "{\"Ok\":{\"delay_ms\":87,\"outcome\":\"retry\"}}",
+              "done_at": "1795100039"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+              "kwargs": {
+                "token": "failonce-control"
+              }
+            }
+          },
+          {
+            "id": "01M7T4SP9ZYF13ZM456A4DTJ9R",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1795100039",
+              "locked_at": "1795100039",
+              "locked_by": "agent-worker.bench.<redacted>.8892.389faeb9",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1795100039"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+              "kwargs": {
+                "token": "failonce-control"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.<redacted>.8892.389faeb9",
+            "score": 1795100037.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+            "pid": 8892,
+            "retries": 0,
+            "t": 1795100039.486753,
+            "token": "failonce-control",
+            "utc": "2026-11-19T14:53:59.486Z",
+            "worker": "agent-worker.bench.<redacted>.8892.389faeb9"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+            "pid": 8892,
+            "retries": 1,
+            "t": 1795100039.4889367,
+            "token": "failonce-control",
+            "utc": "2026-11-19T14:53:59.488Z",
+            "worker": "agent-worker.bench.<redacted>.8892.389faeb9"
+          }
+        ],
+        "note": "after one extra second"
+      }
+    ],
+    "final": {
+      "tasks": [
+        {
+          "id": "01M7T4SP32SG6G07H58C1PJ6KE",
+          "places": [
+            "done"
+          ],
+          "meta": {
+            "attempts": "1",
+            "max_attempts": "1",
+            "status": "Done",
+            "idempotency_key": "",
+            "started_at": "1795100039",
+            "locked_at": "1795100039",
+            "locked_by": "agent-worker.bench.<redacted>.8892.389faeb9",
+            "result": "{\"Ok\":{\"delay_ms\":87,\"outcome\":\"retry\"}}",
+            "done_at": "1795100039"
+          },
+          "job": {
+            "retries": 0,
+            "max_retries": 1,
+            "actor_name": "failonce",
+            "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+            "kwargs": {
+              "token": "failonce-control"
+            }
+          }
+        },
+        {
+          "id": "01M7T4SP9ZYF13ZM456A4DTJ9R",
+          "places": [
+            "done"
+          ],
+          "meta": {
+            "attempts": "1",
+            "max_attempts": "1",
+            "status": "Done",
+            "idempotency_key": "",
+            "started_at": "1795100039",
+            "locked_at": "1795100039",
+            "locked_by": "agent-worker.bench.<redacted>.8892.389faeb9",
+            "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+            "done_at": "1795100039"
+          },
+          "job": {
+            "retries": 1,
+            "max_retries": 1,
+            "actor_name": "failonce",
+            "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e",
+            "kwargs": {
+              "token": "failonce-control"
+            }
+          }
+        }
+      ],
+      "inflight": {},
+      "scheduled": [],
+      "done": [
+        {
+          "id": "01M7T4SP32SG6G07H58C1PJ6KE",
+          "score": 1795100039.0
+        },
+        {
+          "id": "01M7T4SP9ZYF13ZM456A4DTJ9R",
+          "score": 1795100039.0
+        }
+      ],
+      "dead": [],
+      "workers": [
+        {
+          "name": "agent-worker.bench.<redacted>.8892.389faeb9",
+          "score": 1795100037.0
+        }
+      ],
+      "deliveries": {}
+    },
+    "owner_log": "",
+    "monitor": [
+      {
+        "line": "1795100037.971695 [0 127.0.0.1:57210] \"EVALSHA\" \"6b6f3808de063cd4ca38e9e11b6968a6cc826069\" \"4\" \"bench:workers\" \"bench:active\" \"bench:signal\" \"bench:inflight\" \"1795100022\" \"agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": "reenqueue"
+      },
+      {
+        "line": "1795100037.971879 [0 127.0.0.1:57210] \"SCRIPT\" \"LOAD\" \"-- KEYS[1]: the worker set\\n-- KEYS[2]: the active job list\\n-- KEYS[3]: the signal list\\n-- KEYS[4]: The workers key prefix\\n-- ARGV[1]: the timestamp before which a worker is considered expired\\n-- ARGV[2]: (optional) restrict to this specific worker only\\n-- Returns: number of jobs processed\\nlocal worker_key_prefix = KEYS[4]\\n\\nlocal workers\\nif ARGV[2] then\\n    -- Only consider this worker if it is in fact expired\\n    local score = re",
+        "kind": null
+      },
+      {
+        "line": "1795100037.972046 [0 127.0.0.1:57210] \"HSET\" \"bench:workers:metadata:agent-worker.bench.<redacted>.8892.389faeb9\" \"ppid\" \"8866\" \"started_at\" \"1795100037\" \"max_tasks\" \"500\" \"slot\" \"0\"",
+        "kind": null
+      },
+      {
+        "line": "1795100037.972077 [0 127.0.0.1:57210] \"EVALSHA\" \"6b6f3808de063cd4ca38e9e11b6968a6cc826069\" \"4\" \"bench:workers\" \"bench:active\" \"bench:signal\" \"bench:inflight\" \"1795100022\" \"agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": "reenqueue"
+      },
+      {
+        "line": "1795100037.972156 [0 127.0.0.1:57210] \"EVALSHA\" \"0d5fbce91e1dcff1121ece41f7169da3c0e39194\" \"2\" \"bench:workers\" \"bench:workers:metadata:agent-worker.bench.<redacted>.8892.389faeb9\" \"1795100037\" \"agent-worker.bench.<redacted>.8892.389faeb9\" \"60\" \"RedisStorage\" \"apalis_core::task::data::AddExtension<tower::limit::concurrency::service::ConcurrencyLimit<apalis_core::worker::ext::event_listener::EventListenerService<apalis_core::worker::lifecycle::LifecycleService<apalis_core::task::task_fn::TaskFn<agent_work",
+        "kind": "register"
+      },
+      {
+        "line": "1795100037.972233 [0 127.0.0.1:57210] \"SCRIPT\" \"LOAD\" \"-- KEYS[1]: the active workers set\\n-- KEYS[2]: worker metadata_key\\n-- ARGV[1]: current time\\n-- ARGV[2]: worker name\\n-- ARGV[3]: threshold\\n-- ARGV[4]: backend_name\\n-- ARGV[5]: service\\nlocal now = tonumber(ARGV[1])\\nlocal worker_name = ARGV[2]\\nlocal threshold = tonumber(ARGV[3])\\nlocal backend_name = ARGV[4]\\nlocal service = ARGV[5]\\nlocal worker_metadata_key = KEYS[2]\\n\\nlocal last_seen = redis.call(\\\"zscore\\\", KEYS[1], worker_name)\\n",
+        "kind": null
+      },
+      {
+        "line": "1795100037.972303 [0 127.0.0.1:57210] \"EVALSHA\" \"0d5fbce91e1dcff1121ece41f7169da3c0e39194\" \"2\" \"bench:workers\" \"bench:workers:metadata:agent-worker.bench.<redacted>.8892.389faeb9\" \"1795100037\" \"agent-worker.bench.<redacted>.8892.389faeb9\" \"60\" \"RedisStorage\" \"apalis_core::task::data::AddExtension<tower::limit::concurrency::service::ConcurrencyLimit<apalis_core::worker::ext::event_listener::EventListenerService<apalis_core::worker::lifecycle::LifecycleService<apalis_core::task::task_fn::TaskFn<agent_work",
+        "kind": "register"
+      },
+      {
+        "line": "1795100037.972336 [0 lua] \"zadd\" \"bench:workers\" \"1795100037\" \"agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": null
+      },
+      {
+        "line": "1795100037.972344 [0 lua] \"zadd\" \"core:apalis:queues:list\" \"GT\" \"1795100037\" \"bench:workers\"",
+        "kind": null
+      },
+      {
+        "line": "1795100037.972461 [0 127.0.0.1:57210] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1795100037\" \"1\" \"agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1795100037.972537 [0 127.0.0.1:57210] \"HSET\" \"bench:workers:metadata:agent-worker.bench.<redacted>.8892.389faeb9\" \"tasks_done\" \"0\"",
+        "kind": null
+      },
+      {
+        "line": "1795100037.972654 [0 127.0.0.1:57210] \"SCRIPT\" \"LOAD\" \"-- KEYS[1]: the active workers sorted set\\n-- KEYS[2]: the active job list\\n-- KEYS[3]: this workers inflight set\\n-- KEYS[4]: the task data hash\\n-- KEYS[5]: the signal list\\n-- KEYS[6]: the task metadata prefix\\n-- KEYS[7]: the scheduled jobs sorted set\\n\\n-- ARGV[1]: current timestamp\\n-- ARGV[2]: maximum number of jobs to fetch\\n-- ARGV[3]: worker name\\n\\n-- Returns: {results, meta}\\n\\nlocal worker_inflight_set = KEYS[3]\\nlocal worker_na",
+        "kind": null
+      },
+      {
+        "line": "1795100037.972770 [0 127.0.0.1:57210] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1795100037\" \"1\" \"agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1795100037.972806 [0 lua] \"del\" \"bench:signal\"",
+        "kind": null
+      },
+      {
+        "line": "1795100038.472866 [0 127.0.0.1:57210] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1795100038\" \"1\" \"agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1795100038.472918 [0 lua] \"del\" \"bench:signal\"",
+        "kind": null
+      },
+      {
+        "line": "1795100038.973161 [0 127.0.0.1:57210] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1795100038\" \"1\" \"agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1795100038.973198 [0 lua] \"del\" \"bench:signal\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.266400 [0 127.0.0.1:58452] \"EVALSHA\" \"3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\" \"6\" \"bench:data\" \"bench:active\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"bench:idempotency\" \"0\" \"0\" \"01M7T4SP32SG6G07H58C1PJ6KE\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"f24f058b-7f5a-4300-878b-235b16f43a3e\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-control\\\"},\\\"headers\\\":{},\\\"retries\\\":0,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms",
+        "kind": "enqueue"
+      },
+      {
+        "line": "1795100039.266687 [0 127.0.0.1:58452] \"SCRIPT\" \"LOAD\" \"-- KEYS[1]: the task data hash\\n-- KEYS[2]: the active task list\\n-- KEYS[3]: the signal list\\n-- KEYS[4]: the metadata prefix (e.g. \\\"task_meta\\\")\\n-- KEYS[5]: the scheduled set (for delayed tasks)\\n-- KEYS[6]: the idempotency key set (e.g. \\\"task_idempotency\\\")\\n\\n-- ARGV[1]: the idempotency_ttl\\n-- ARGV[2]: emit pubsub events\\n-- ARGV[3..]: [task_id1, task_data1, attempts1, max_attempts1, metadata_json1, schedule_time1, idempotency_key1,\\",
+        "kind": null
+      },
+      {
+        "line": "1795100039.267186 [0 127.0.0.1:58452] \"EVALSHA\" \"3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\" \"6\" \"bench:data\" \"bench:active\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"bench:idempotency\" \"0\" \"0\" \"01M7T4SP32SG6G07H58C1PJ6KE\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"f24f058b-7f5a-4300-878b-235b16f43a3e\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-control\\\"},\\\"headers\\\":{},\\\"retries\\\":0,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms",
+        "kind": "enqueue"
+      },
+      {
+        "line": "1795100039.267219 [0 lua] \"hsetnx\" \"bench:data\" \"01M7T4SP32SG6G07H58C1PJ6KE\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"f24f058b-7f5a-4300-878b-235b16f43a3e\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-control\\\"},\\\"headers\\\":{},\\\"retries\\\":0,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms\\\":300,\\\"max_deliveries\\\":3,\\\"lock_key\\\":null,\\\"lock_ttl\\\":30,\\\"skip_on_lock\\\":false}\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.267264 [0 lua] \"zadd\" \"bench:scheduled\" \"1795100039\" \"01M7T4SP32SG6G07H58C1PJ6KE\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.473697 [0 127.0.0.1:57210] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1795100039\" \"1\" \"agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1795100039.473757 [0 lua] \"del\" \"bench:signal\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.473770 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"01M7T4SP32SG6G07H58C1PJ6KE\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.474333 [0 127.0.0.1:57210] \"EVALSHA\" \"f84c79100c44c2348985e8bd49481807fb54d667\" \"1\" \"bench:meta:01M7T4SP32SG6G07H58C1PJ6KE\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.474342 [0 127.0.0.1:57210] \"EVALSHA\" \"f7ff133460a6cd6a739e294b0f4f7a584599f1fc\" \"4\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:workers\" \"bench:meta\" \"bench:active\" \"agent-worker.bench.<redacted>.8892.389faeb9\" \"1795100039\" \"0\" \"01M7T4SP32SG6G07H58C1PJ6KE\"",
+        "kind": "acquire"
+      },
+      {
+        "line": "1795100039.474687 [0 127.0.0.1:57210] \"SCRIPT\" \"LOAD\" \"\\nlocal secs = tonumber(redis.call(\\\"TIME\\\")[1])\\nredis.call(\\\"HSET\\\", KEYS[1], \\\"started_at\\\", secs)\\nreturn secs\\n\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.474726 [0 127.0.0.1:57210] \"SCRIPT\" \"LOAD\" \"-- KEYS[1]: this worker's inflight set\\n-- KEYS[2]: the active workers sorted set\\n-- KEYS[3]: the task metadata prefix\\n-- KEYS[4]: the active jobs list (jobs must currently be queued, not already inflight elsewhere)\\n-- ARGV[1]: worker name\\n-- ARGV[2]: current timestamp\\n-- ARGV[3]: emit pubsub events\\n-- ARGV[4..]: task_ids to acquire\\n-- Returns: number of leases acquired (== #task_ids, or the call errors)\\nlocal worker_inflight_set = K",
+        "kind": null
+      },
+      {
+        "line": "1795100039.475030 [0 127.0.0.1:57210] \"EVALSHA\" \"f84c79100c44c2348985e8bd49481807fb54d667\" \"1\" \"bench:meta:01M7T4SP32SG6G07H58C1PJ6KE\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.475044 [0 lua] \"HSET\" \"bench:meta:01M7T4SP32SG6G07H58C1PJ6KE\" \"started_at\" \"1795100039\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.475049 [0 127.0.0.1:57210] \"EVALSHA\" \"f7ff133460a6cd6a739e294b0f4f7a584599f1fc\" \"4\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:workers\" \"bench:meta\" \"bench:active\" \"agent-worker.bench.<redacted>.8892.389faeb9\" \"1795100039\" \"0\" \"01M7T4SP32SG6G07H58C1PJ6KE\"",
+        "kind": "acquire"
+      },
+      {
+        "line": "1795100039.475077 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"01M7T4SP32SG6G07H58C1PJ6KE\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.475083 [0 lua] \"hset\" \"bench:meta:01M7T4SP32SG6G07H58C1PJ6KE\" \"locked_at\" \"1795100039\" \"locked_by\" \"agent-worker.bench.<redacted>.8892.389faeb9\" \"status\" \"Running\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.475172 [0 127.0.0.1:57210] \"EVALSHA\" \"8f290130ebe41d5d981486b7a1b8c3bfc152ea00\" \"1\" \"delivery:f24f058b-7f5a-4300-878b-235b16f43a3e:0\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.475522 [0 127.0.0.1:57210] \"SCRIPT\" \"LOAD\" \"\\nlocal n = redis.call('INCR', KEYS[1])\\nredis.call('EXPIRE', KEYS[1], ARGV[1])\\nreturn n\\n\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.475596 [0 127.0.0.1:57210] \"EVALSHA\" \"8f290130ebe41d5d981486b7a1b8c3bfc152ea00\" \"1\" \"delivery:f24f058b-7f5a-4300-878b-235b16f43a3e:0\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.475605 [0 lua] \"INCR\" \"delivery:f24f058b-7f5a-4300-878b-235b16f43a3e:0\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.475615 [0 lua] \"EXPIRE\" \"delivery:f24f058b-7f5a-4300-878b-235b16f43a3e:0\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.487567 [0 127.0.0.1:57210] \"EVALSHA\" \"3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\" \"6\" \"bench:data\" \"bench:active\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"bench:idempotency\" \"0\" \"0\" \"01M7T4SP9ZYF13ZM456A4DTJ9R\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"f24f058b-7f5a-4300-878b-235b16f43a3e\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-control\\\"},\\\"headers\\\":{},\\\"retries\\\":1,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms",
+        "kind": "enqueue"
+      },
+      {
+        "line": "1795100039.487599 [0 lua] \"hsetnx\" \"bench:data\" \"01M7T4SP9ZYF13ZM456A4DTJ9R\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"f24f058b-7f5a-4300-878b-235b16f43a3e\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-control\\\"},\\\"headers\\\":{},\\\"retries\\\":1,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms\\\":300,\\\"max_deliveries\\\":3,\\\"lock_key\\\":null,\\\"lock_ttl\\\":30,\\\"skip_on_lock\\\":false}\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.487632 [0 lua] \"zadd\" \"bench:scheduled\" \"1795100039\" \"01M7T4SP9ZYF13ZM456A4DTJ9R\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.487859 [0 127.0.0.1:57210] \"DEL\" \"delivery:f24f058b-7f5a-4300-878b-235b16f43a3e:0\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.487939 [0 127.0.0.1:57210] \"EVALSHA\" \"9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\" \"5\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:done\" \"bench:dead\" \"bench:scheduled\" \"bench:meta\" \"0\" \"01M7T4SP32SG6G07H58C1PJ6KE\" \"1795100039\" \"{\\\"Ok\\\":{\\\"delay_ms\\\":87,\\\"outcome\\\":\\\"retry\\\"}}\" \"Done\" \"1\"",
+        "kind": "finish"
+      },
+      {
+        "line": "1795100039.488087 [0 127.0.0.1:57210] \"SCRIPT\" \"LOAD\" \"-- KEYS[1] =  the worker inflight_set\\n-- KEYS[2] = done_jobs_set\\n-- KEYS[3] = dead_jobs_set\\n-- KEYS[4] = scheduled_jobs_set\\n-- KEYS[5] = job_meta_hash\\n-- ARGV[1] = emit events\\n-- ARGV[2..] = repeating groups of: task_id, timestamp, result_data, status, attempt\\nlocal inflight_set = KEYS[1]\\nlocal done_jobs_set = KEYS[2]\\nlocal dead_jobs_set = KEYS[3]\\nlocal scheduled_jobs_set = KEYS[4]\\nlocal job_meta_hash = KEYS[5]\\nlocal emit_events ",
+        "kind": null
+      },
+      {
+        "line": "1795100039.488247 [0 127.0.0.1:57210] \"EVALSHA\" \"9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\" \"5\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:done\" \"bench:dead\" \"bench:scheduled\" \"bench:meta\" \"0\" \"01M7T4SP32SG6G07H58C1PJ6KE\" \"1795100039\" \"{\\\"Ok\\\":{\\\"delay_ms\\\":87,\\\"outcome\\\":\\\"retry\\\"}}\" \"Done\" \"1\"",
+        "kind": "finish"
+      },
+      {
+        "line": "1795100039.488263 [0 lua] \"SREM\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"01M7T4SP32SG6G07H58C1PJ6KE\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.488281 [0 lua] \"ZADD\" \"bench:done\" \"1795100039\" \"01M7T4SP32SG6G07H58C1PJ6KE\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.488288 [0 lua] \"HSET\" \"bench:meta:01M7T4SP32SG6G07H58C1PJ6KE\" \"result\" \"{\\\"Ok\\\":{\\\"delay_ms\\\":87,\\\"outcome\\\":\\\"retry\\\"}}\" \"status\" \"Done\" \"attempts\" \"1\" \"done_at\" \"1795100039\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.488395 [0 127.0.0.1:57210] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1795100039\" \"1\" \"agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1795100039.488448 [0 lua] \"del\" \"bench:signal\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.488459 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"01M7T4SP9ZYF13ZM456A4DTJ9R\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.488625 [0 127.0.0.1:57210] \"EVALSHA\" \"f84c79100c44c2348985e8bd49481807fb54d667\" \"1\" \"bench:meta:01M7T4SP9ZYF13ZM456A4DTJ9R\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.488652 [0 lua] \"HSET\" \"bench:meta:01M7T4SP9ZYF13ZM456A4DTJ9R\" \"started_at\" \"1795100039\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.488685 [0 127.0.0.1:57210] \"EVALSHA\" \"f7ff133460a6cd6a739e294b0f4f7a584599f1fc\" \"4\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:workers\" \"bench:meta\" \"bench:active\" \"agent-worker.bench.<redacted>.8892.389faeb9\" \"1795100039\" \"0\" \"01M7T4SP9ZYF13ZM456A4DTJ9R\"",
+        "kind": "acquire"
+      },
+      {
+        "line": "1795100039.488711 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"01M7T4SP9ZYF13ZM456A4DTJ9R\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.488716 [0 lua] \"hset\" \"bench:meta:01M7T4SP9ZYF13ZM456A4DTJ9R\" \"locked_at\" \"1795100039\" \"locked_by\" \"agent-worker.bench.<redacted>.8892.389faeb9\" \"status\" \"Running\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.488732 [0 127.0.0.1:57210] \"EVALSHA\" \"8f290130ebe41d5d981486b7a1b8c3bfc152ea00\" \"1\" \"delivery:f24f058b-7f5a-4300-878b-235b16f43a3e:1\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.488739 [0 lua] \"INCR\" \"delivery:f24f058b-7f5a-4300-878b-235b16f43a3e:1\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.488742 [0 lua] \"EXPIRE\" \"delivery:f24f058b-7f5a-4300-878b-235b16f43a3e:1\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.489129 [0 127.0.0.1:57210] \"DEL\" \"delivery:f24f058b-7f5a-4300-878b-235b16f43a3e:1\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.489225 [0 127.0.0.1:57210] \"EVALSHA\" \"9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\" \"5\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:done\" \"bench:dead\" \"bench:scheduled\" \"bench:meta\" \"0\" \"01M7T4SP9ZYF13ZM456A4DTJ9R\" \"1795100039\" \"{\\\"Ok\\\":{\\\"outcome\\\":\\\"ok\\\",\\\"result\\\":null}}\" \"Done\" \"1\"",
+        "kind": "finish"
+      },
+      {
+        "line": "1795100039.489241 [0 lua] \"SREM\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"01M7T4SP9ZYF13ZM456A4DTJ9R\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.489259 [0 lua] \"ZADD\" \"bench:done\" \"1795100039\" \"01M7T4SP9ZYF13ZM456A4DTJ9R\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.489264 [0 lua] \"HSET\" \"bench:meta:01M7T4SP9ZYF13ZM456A4DTJ9R\" \"result\" \"{\\\"Ok\\\":{\\\"outcome\\\":\\\"ok\\\",\\\"result\\\":null}}\" \"status\" \"Done\" \"attempts\" \"1\" \"done_at\" \"1795100039\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.489337 [0 127.0.0.1:57210] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1795100039\" \"1\" \"agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1795100039.489368 [0 lua] \"del\" \"bench:signal\"",
+        "kind": null
+      },
+      {
+        "line": "1795100039.974144 [0 127.0.0.1:57210] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1795100039\" \"1\" \"agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1795100039.974189 [0 lua] \"del\" \"bench:signal\"",
+        "kind": null
+      },
+      {
+        "line": "1795100040.473951 [0 127.0.0.1:57210] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.<redacted>.8892.389faeb9\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1795100040\" \"1\" \"agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1795100040.473998 [0 lua] \"del\" \"bench:signal\"",
+        "kind": null
+      },
+      {
+        "line": "1795100040.530305 [0 127.0.0.1:57210] \"DEL\" \"bench:workers:metadata:agent-worker.bench.<redacted>.8892.389faeb9\"",
+        "kind": null
+      }
+    ],
+    "finished_at": "2026-11-19T14:54:00Z"
+  },
+  "dropped_finish": {
+    "scenario_id": "failonce_finish_request_dropped",
+    "redis_pid_start": 8847,
+    "redis_pid_end": 8847,
+    "redis_restarted": false,
+    "fault_fired": true,
+    "proxy": {
+      "armed": null,
+      "counts": {
+        "pass": 10,
+        "seen:reenqueue": 1,
+        "seen:register": 1,
+        "seen:fetch": 3,
+        "seen:acquire": 2,
+        "seen:enqueue": 1,
+        "drop_request": 1,
+        "seen:finish": 3
+      },
+      "events": [
+        {
+          "t": 1795100041.0797086,
+          "mono": 544.05836606,
+          "action": "drop_request",
+          "kind": "finish",
+          "op": "EVALSHA",
+          "task_ids": [
+            "01M7T4SQKRX0CP6G5RW3GPS1WX"
+          ]
+        }
+      ],
+      "commands": 45,
+      "ops": [
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+        },
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+        },
+        {
+          "op": "TIME",
+          "argc": 1,
+          "prefix": "*1\r\n$4\r\nTIME\r\n"
+        },
+        {
+          "op": "TIME",
+          "argc": 1,
+          "prefix": "*1\r\n$4\r\nTIME\r\n"
+        },
+        {
+          "op": "HGETALL",
+          "argc": 2,
+          "prefix": "*2\r\n$7\r\nHGETALL\r\n$31\r\nsimple_q:supervisor:<redacted>.9078\r\n"
+        },
+        {
+          "op": "HSET",
+          "argc": 38,
+          "prefix": "*38\r\n$4\r\nHSET\r\n$31\r\nsimple_q:supervisor:<redacted>.9078\r\n$4\r\nhost\r\n$6\r\n<redacted>\r\n$3\r\np"
+        },
+        {
+          "op": "EXPIRE",
+          "argc": 3,
+          "prefix": "*3\r\n$6\r\nEXPIRE\r\n$31\r\nsimple_q:supervisor:<redacted>.9078\r\n$3\r\n120\r\n"
+        },
+        {
+          "op": "ZADD",
+          "argc": 4,
+          "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1795100040\r\n$11\r\n<redacted>.9078\r\n"
+        },
+        {
+          "op": "ZREMRANGEBYSCORE",
+          "argc": 4,
+          "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1795099980"
+        },
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+        },
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 9,
+          "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+        },
+        {
+          "op": "TIME",
+          "argc": 1,
+          "prefix": "*1\r\n$4\r\nTIME\r\n"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 10,
+          "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+        },
+        {
+          "op": "TYPE",
+          "argc": 2,
+          "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+        },
+        {
+          "op": "HSET",
+          "argc": 10,
+          "prefix": "*10\r\n$4\r\nHSET\r\n$62\r\nbench:workers:metadata:agent-worker.bench.<redacted>.9098.78feed"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 13,
+          "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+        },
+        {
+          "op": "TYPE",
+          "argc": 2,
+          "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:dead\r\n"
+        },
+        {
+          "op": "SCAN",
+          "argc": 6,
+          "prefix": "*6\r\n$4\r\nSCAN\r\n$1\r\n0\r\n$5\r\nMATCH\r\n$24\r\nbench:workers:metadata:*\r\n$5\r\nCOUNT\r\n$3\r\n10"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 4,
+          "prefix": "*4\r\n$7\r\nEVALSHA\r\n$40\r\nf84c79100c44c2348985e8bd49481807fb54d667\r\n$1\r\n1\r\n$37\r\nbenc"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 11,
+          "prefix": "*11\r\n$7\r\nEVALSHA\r\n$40\r\nf7ff133460a6cd6a739e294b0f4f7a584599f1fc\r\n$1\r\n4\r\n$54\r\nben"
+        },
+        {
+          "op": "ZSCORE",
+          "argc": 3,
+          "prefix": "*3\r\n$6\r\nZSCORE\r\n$13\r\nbench:workers\r\n$39\r\nagent-worker.bench.<redacted>.9098.78feed30"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 5,
+          "prefix": "*5\r\n$7\r\nEVALSHA\r\n$40\r\n8f290130ebe41d5d981486b7a1b8c3bfc152ea00\r\n$1\r\n1\r\n$47\r\ndeli"
+        },
+        {
+          "op": "HSET",
+          "argc": 4,
+          "prefix": "*4\r\n$4\r\nHSET\r\n$62\r\nbench:workers:metadata:agent-worker.bench.<redacted>.9098.78feed3"
+        },
+        {
+          "op": "HSET",
+          "argc": 4,
+          "prefix": "*4\r\n$4\r\nHSET\r\n$31\r\nsimple_q:supervisor:<redacted>.9078\r\n$10\r\ntasks:9098\r\n$1\r\n0\r\n"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 18,
+          "prefix": "*18\r\n$7\r\nEVALSHA\r\n$40\r\n3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\r\n$1\r\n6\r\n$10\r\nben"
+        },
+        {
+          "op": "DEL",
+          "argc": 2,
+          "prefix": "*2\r\n$3\r\nDEL\r\n$47\r\ndelivery:49346e5e-e7a0-483a-8487-b83cd88ad997:0\r\n"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 14,
+          "prefix": "*14\r\n$7\r\nEVALSHA\r\n$40\r\n9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\r\n$1\r\n5\r\n$54\r\nben"
+        },
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+        },
+        {
+          "op": "CLIENT",
+          "argc": 4,
+          "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 14,
+          "prefix": "*14\r\n$7\r\nEVALSHA\r\n$40\r\n9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\r\n$1\r\n5\r\n$54\r\nben"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 13,
+          "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 4,
+          "prefix": "*4\r\n$7\r\nEVALSHA\r\n$40\r\nf84c79100c44c2348985e8bd49481807fb54d667\r\n$1\r\n1\r\n$37\r\nbenc"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 11,
+          "prefix": "*11\r\n$7\r\nEVALSHA\r\n$40\r\nf7ff133460a6cd6a739e294b0f4f7a584599f1fc\r\n$1\r\n4\r\n$54\r\nben"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 5,
+          "prefix": "*5\r\n$7\r\nEVALSHA\r\n$40\r\n8f290130ebe41d5d981486b7a1b8c3bfc152ea00\r\n$1\r\n1\r\n$47\r\ndeli"
+        },
+        {
+          "op": "DEL",
+          "argc": 2,
+          "prefix": "*2\r\n$3\r\nDEL\r\n$47\r\ndelivery:49346e5e-e7a0-483a-8487-b83cd88ad997:1\r\n"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 14,
+          "prefix": "*14\r\n$7\r\nEVALSHA\r\n$40\r\n9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\r\n$1\r\n5\r\n$54\r\nben"
+        },
+        {
+          "op": "EVALSHA",
+          "argc": 13,
+          "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+        },
+        {
+          "op": "ZREM",
+          "argc": 3,
+          "prefix": "*3\r\n$4\r\nZREM\r\n$13\r\nbench:workers\r\n$39\r\nagent-worker.bench.<redacted>.9098.78feed30\r\n"
+        },
+        {
+          "op": "HSET",
+          "argc": 4,
+          "prefix": "*4\r\n$4\r\nHSET\r\n$31\r\nsimple_q:supervisor:<redacted>.9078\r\n$10\r\ntasks:9098\r\n$1\r\n2\r\n"
+        }
+      ]
+    },
+    "enqueue": {
+      "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+      "task_ids": [
+        "01M7T4SQKRX0CP6G5RW3GPS1WX"
+      ]
+    },
+    "effects": [
+      {
+        "deliveries": 1,
+        "max_retries": 1,
+        "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+        "pid": 9098,
+        "retries": 0,
+        "t": 1795100041.077588,
+        "token": "failonce-dropped-finish",
+        "utc": "2026-11-19T14:54:01.077Z",
+        "worker": "agent-worker.bench.<redacted>.9098.78feed30"
+      },
+      {
+        "deliveries": 1,
+        "max_retries": 1,
+        "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+        "pid": 9098,
+        "retries": 1,
+        "t": 1795100041.133107,
+        "token": "failonce-dropped-finish",
+        "utc": "2026-11-19T14:54:01.133Z",
+        "worker": "agent-worker.bench.<redacted>.9098.78feed30"
+      }
+    ],
+    "samples": [
+      {
+        "t_s": 0.0,
+        "unix": 1795100041.0814462,
+        "tasks": [
+          {
+            "id": "01M7T4SQKRX0CP6G5RW3GPS1WX",
+            "places": [
+              "bench:inflight:agent-worker.bench.<redacted>.9098.78feed30"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Running",
+              "idempotency_key": "",
+              "started_at": "1795100041",
+              "locked_at": "1795100041",
+              "locked_by": "agent-worker.bench.<redacted>.9098.78feed30"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7T4SQVP5J3YST218Y09Q68S",
+            "places": [
+              "scheduled"
+            ],
+            "meta": {
+              "attempts": "0",
+              "max_attempts": "1",
+              "status": "Pending",
+              "idempotency_key": ""
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.<redacted>.9098.78feed30",
+            "score": 1795100041.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [
+          {
+            "id": "01M7T4SQVP5J3YST218Y09Q68S",
+            "score": 1795100041.0
+          }
+        ],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+            "pid": 9098,
+            "retries": 0,
+            "t": 1795100041.077588,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-19T14:54:01.077Z",
+            "worker": "agent-worker.bench.<redacted>.9098.78feed30"
+          }
+        ],
+        "note": "immediate after dropped finish"
+      },
+      {
+        "t_s": 0.053,
+        "unix": 1795100041.1344182,
+        "tasks": [
+          {
+            "id": "01M7T4SQKRX0CP6G5RW3GPS1WX",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1795100041",
+              "locked_at": "1795100041",
+              "locked_by": "agent-worker.bench.<redacted>.9098.78feed30",
+              "result": "{\"Ok\":{\"delay_ms\":62,\"outcome\":\"retry\"}}",
+              "done_at": "1795100041"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7T4SQVP5J3YST218Y09Q68S",
+            "places": [
+              "bench:inflight:agent-worker.bench.<redacted>.9098.78feed30"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1795100041",
+              "locked_at": "1795100041",
+              "locked_by": "agent-worker.bench.<redacted>.9098.78feed30",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1795100041"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.<redacted>.9098.78feed30",
+            "score": 1795100041.0
+          }
+        ],
+        "deliveries": {
+          "delivery:49346e5e-e7a0-483a-8487-b83cd88ad997:1": "1"
+        },
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+            "pid": 9098,
+            "retries": 0,
+            "t": 1795100041.077588,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-19T14:54:01.077Z",
+            "worker": "agent-worker.bench.<redacted>.9098.78feed30"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+            "pid": 9098,
+            "retries": 1,
+            "t": 1795100041.133107,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-19T14:54:01.133Z",
+            "worker": "agent-worker.bench.<redacted>.9098.78feed30"
+          }
+        ]
+      },
+      {
+        "t_s": 0.104,
+        "unix": 1795100041.185718,
+        "tasks": [
+          {
+            "id": "01M7T4SQKRX0CP6G5RW3GPS1WX",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1795100041",
+              "locked_at": "1795100041",
+              "locked_by": "agent-worker.bench.<redacted>.9098.78feed30",
+              "result": "{\"Ok\":{\"delay_ms\":62,\"outcome\":\"retry\"}}",
+              "done_at": "1795100041"
+            },
+            "job": {
+              "retries": 0,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          },
+          {
+            "id": "01M7T4SQVP5J3YST218Y09Q68S",
+            "places": [
+              "done"
+            ],
+            "meta": {
+              "attempts": "1",
+              "max_attempts": "1",
+              "status": "Done",
+              "idempotency_key": "",
+              "started_at": "1795100041",
+              "locked_at": "1795100041",
+              "locked_by": "agent-worker.bench.<redacted>.9098.78feed30",
+              "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+              "done_at": "1795100041"
+            },
+            "job": {
+              "retries": 1,
+              "max_retries": 1,
+              "actor_name": "failonce",
+              "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+              "kwargs": {
+                "token": "failonce-dropped-finish"
+              }
+            }
+          }
+        ],
+        "workers": [
+          {
+            "name": "agent-worker.bench.<redacted>.9098.78feed30",
+            "score": 1795100041.0
+          }
+        ],
+        "deliveries": {},
+        "scheduled": [],
+        "effects": [
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+            "pid": 9098,
+            "retries": 0,
+            "t": 1795100041.077588,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-19T14:54:01.077Z",
+            "worker": "agent-worker.bench.<redacted>.9098.78feed30"
+          },
+          {
+            "deliveries": 1,
+            "max_retries": 1,
+            "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+            "pid": 9098,
+            "retries": 1,
+            "t": 1795100041.133107,
+            "token": "failonce-dropped-finish",
+            "utc": "2026-11-19T14:54:01.133Z",
+            "worker": "agent-worker.bench.<redacted>.9098.78feed30"
+          }
+        ]
+      }
+    ],
+    "final": {
+      "tasks": [
+        {
+          "id": "01M7T4SQKRX0CP6G5RW3GPS1WX",
+          "places": [
+            "done"
+          ],
+          "meta": {
+            "attempts": "1",
+            "max_attempts": "1",
+            "status": "Done",
+            "idempotency_key": "",
+            "started_at": "1795100041",
+            "locked_at": "1795100041",
+            "locked_by": "agent-worker.bench.<redacted>.9098.78feed30",
+            "result": "{\"Ok\":{\"delay_ms\":62,\"outcome\":\"retry\"}}",
+            "done_at": "1795100041"
+          },
+          "job": {
+            "retries": 0,
+            "max_retries": 1,
+            "actor_name": "failonce",
+            "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+            "kwargs": {
+              "token": "failonce-dropped-finish"
+            }
+          }
+        },
+        {
+          "id": "01M7T4SQVP5J3YST218Y09Q68S",
+          "places": [
+            "done"
+          ],
+          "meta": {
+            "attempts": "1",
+            "max_attempts": "1",
+            "status": "Done",
+            "idempotency_key": "",
+            "started_at": "1795100041",
+            "locked_at": "1795100041",
+            "locked_by": "agent-worker.bench.<redacted>.9098.78feed30",
+            "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+            "done_at": "1795100041"
+          },
+          "job": {
+            "retries": 1,
+            "max_retries": 1,
+            "actor_name": "failonce",
+            "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997",
+            "kwargs": {
+              "token": "failonce-dropped-finish"
+            }
+          }
+        }
+      ],
+      "inflight": {},
+      "scheduled": [],
+      "done": [
+        {
+          "id": "01M7T4SQKRX0CP6G5RW3GPS1WX",
+          "score": 1795100041.0
+        },
+        {
+          "id": "01M7T4SQVP5J3YST218Y09Q68S",
+          "score": 1795100041.0
+        }
+      ],
+      "dead": [],
+      "workers": [
+        {
+          "name": "agent-worker.bench.<redacted>.9098.78feed30",
+          "score": 1795100041.0
+        }
+      ],
+      "deliveries": {}
+    },
+    "owner_log": "",
+    "other_log": "",
+    "monitor": [
+      {
+        "line": "1795100040.824504 [0 127.0.0.1:58542] \"EVALSHA\" \"3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\" \"6\" \"bench:data\" \"bench:active\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"bench:idempotency\" \"0\" \"0\" \"01M7T4SQKRX0CP6G5RW3GPS1WX\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"49346e5e-e7a0-483a-8487-b83cd88ad997\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-dropped-finish\\\"},\\\"headers\\\":{},\\\"retries\\\":0,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_bac",
+        "kind": "enqueue"
+      },
+      {
+        "line": "1795100040.824535 [0 lua] \"hsetnx\" \"bench:data\" \"01M7T4SQKRX0CP6G5RW3GPS1WX\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"49346e5e-e7a0-483a-8487-b83cd88ad997\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-dropped-finish\\\"},\\\"headers\\\":{},\\\"retries\\\":0,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms\\\":300,\\\"max_deliveries\\\":3,\\\"lock_key\\\":null,\\\"lock_ttl\\\":30,\\\"skip_on_lock\\\":false}\"",
+        "kind": null
+      },
+      {
+        "line": "1795100040.824573 [0 lua] \"zadd\" \"bench:scheduled\" \"1795100040\" \"01M7T4SQKRX0CP6G5RW3GPS1WX\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.065875 [0 127.0.0.1:58566] \"EVALSHA\" \"6b6f3808de063cd4ca38e9e11b6968a6cc826069\" \"4\" \"bench:workers\" \"bench:active\" \"bench:signal\" \"bench:inflight\" \"1795100026\" \"agent-worker.bench.<redacted>.9098.78feed30\"",
+        "kind": "reenqueue"
+      },
+      {
+        "line": "1795100041.066355 [0 127.0.0.1:58566] \"EVALSHA\" \"0d5fbce91e1dcff1121ece41f7169da3c0e39194\" \"2\" \"bench:workers\" \"bench:workers:metadata:agent-worker.bench.<redacted>.9098.78feed30\" \"1795100041\" \"agent-worker.bench.<redacted>.9098.78feed30\" \"60\" \"RedisStorage\" \"apalis_core::task::data::AddExtension<tower::limit::concurrency::service::ConcurrencyLimit<apalis_core::worker::ext::event_listener::EventListenerService<apalis_core::worker::lifecycle::LifecycleService<apalis_core::task::task_fn::TaskFn<agent_work",
+        "kind": "register"
+      },
+      {
+        "line": "1795100041.066395 [0 lua] \"zadd\" \"bench:workers\" \"1795100041\" \"agent-worker.bench.<redacted>.9098.78feed30\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.066400 [0 lua] \"zadd\" \"core:apalis:queues:list\" \"GT\" \"1795100041\" \"bench:workers\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.066712 [0 127.0.0.1:58566] \"HSET\" \"bench:workers:metadata:agent-worker.bench.<redacted>.9098.78feed30\" \"ppid\" \"9078\" \"started_at\" \"1795100041\" \"max_tasks\" \"500\" \"slot\" \"0\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.066835 [0 127.0.0.1:58566] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1795100041\" \"1\" \"agent-worker.bench.<redacted>.9098.78feed30\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1795100041.066872 [0 lua] \"del\" \"bench:signal\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.066883 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"01M7T4SQKRX0CP6G5RW3GPS1WX\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.067180 [0 127.0.0.1:58566] \"EVALSHA\" \"f84c79100c44c2348985e8bd49481807fb54d667\" \"1\" \"bench:meta:01M7T4SQKRX0CP6G5RW3GPS1WX\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.067190 [0 lua] \"HSET\" \"bench:meta:01M7T4SQKRX0CP6G5RW3GPS1WX\" \"started_at\" \"1795100041\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.067282 [0 127.0.0.1:58566] \"EVALSHA\" \"f7ff133460a6cd6a739e294b0f4f7a584599f1fc\" \"4\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"bench:workers\" \"bench:meta\" \"bench:active\" \"agent-worker.bench.<redacted>.9098.78feed30\" \"1795100041\" \"0\" \"01M7T4SQKRX0CP6G5RW3GPS1WX\"",
+        "kind": "acquire"
+      },
+      {
+        "line": "1795100041.067329 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"01M7T4SQKRX0CP6G5RW3GPS1WX\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.067336 [0 lua] \"hset\" \"bench:meta:01M7T4SQKRX0CP6G5RW3GPS1WX\" \"locked_at\" \"1795100041\" \"locked_by\" \"agent-worker.bench.<redacted>.9098.78feed30\" \"status\" \"Running\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.067485 [0 127.0.0.1:58566] \"EVALSHA\" \"8f290130ebe41d5d981486b7a1b8c3bfc152ea00\" \"1\" \"delivery:49346e5e-e7a0-483a-8487-b83cd88ad997:0\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.067493 [0 lua] \"INCR\" \"delivery:49346e5e-e7a0-483a-8487-b83cd88ad997:0\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.067497 [0 lua] \"EXPIRE\" \"delivery:49346e5e-e7a0-483a-8487-b83cd88ad997:0\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.067549 [0 127.0.0.1:58566] \"HSET\" \"bench:workers:metadata:agent-worker.bench.<redacted>.9098.78feed30\" \"tasks_done\" \"0\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.079088 [0 127.0.0.1:58566] \"EVALSHA\" \"3db3e4f4b96d92c5dd8874e33f1dd4c0152c0682\" \"6\" \"bench:data\" \"bench:active\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"bench:idempotency\" \"0\" \"0\" \"01M7T4SQVP5J3YST218Y09Q68S\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"49346e5e-e7a0-483a-8487-b83cd88ad997\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-dropped-finish\\\"},\\\"headers\\\":{},\\\"retries\\\":1,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_bac",
+        "kind": "enqueue"
+      },
+      {
+        "line": "1795100041.079122 [0 lua] \"hsetnx\" \"bench:data\" \"01M7T4SQVP5J3YST218Y09Q68S\" \"{\\\"version\\\":1,\\\"message_id\\\":\\\"49346e5e-e7a0-483a-8487-b83cd88ad997\\\",\\\"actor_name\\\":\\\"failonce\\\",\\\"queue\\\":\\\"bench\\\",\\\"kwargs\\\":{\\\"token\\\":\\\"failonce-dropped-finish\\\"},\\\"headers\\\":{},\\\"retries\\\":1,\\\"max_retries\\\":1,\\\"time_limit_ms\\\":30000,\\\"min_backoff_ms\\\":100,\\\"max_backoff_ms\\\":300,\\\"max_deliveries\\\":3,\\\"lock_key\\\":null,\\\"lock_ttl\\\":30,\\\"skip_on_lock\\\":false}\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.079164 [0 lua] \"zadd\" \"bench:scheduled\" \"1795100041\" \"01M7T4SQVP5J3YST218Y09Q68S\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.079483 [0 127.0.0.1:58566] \"DEL\" \"delivery:49346e5e-e7a0-483a-8487-b83cd88ad997:0\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.131182 [0 127.0.0.1:58582] \"EVALSHA\" \"9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\" \"5\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"bench:done\" \"bench:dead\" \"bench:scheduled\" \"bench:meta\" \"0\" \"01M7T4SQKRX0CP6G5RW3GPS1WX\" \"1795100041\" \"{\\\"Ok\\\":{\\\"delay_ms\\\":62,\\\"outcome\\\":\\\"retry\\\"}}\" \"Done\" \"1\"",
+        "kind": "finish"
+      },
+      {
+        "line": "1795100041.131217 [0 lua] \"SREM\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"01M7T4SQKRX0CP6G5RW3GPS1WX\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.131255 [0 lua] \"ZADD\" \"bench:done\" \"1795100041\" \"01M7T4SQKRX0CP6G5RW3GPS1WX\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.131270 [0 lua] \"HSET\" \"bench:meta:01M7T4SQKRX0CP6G5RW3GPS1WX\" \"result\" \"{\\\"Ok\\\":{\\\"delay_ms\\\":62,\\\"outcome\\\":\\\"retry\\\"}}\" \"status\" \"Done\" \"attempts\" \"1\" \"done_at\" \"1795100041\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.131951 [0 127.0.0.1:58582] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1795100041\" \"1\" \"agent-worker.bench.<redacted>.9098.78feed30\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1795100041.131982 [0 lua] \"del\" \"bench:signal\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.131990 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"01M7T4SQVP5J3YST218Y09Q68S\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.132330 [0 127.0.0.1:58582] \"EVALSHA\" \"f84c79100c44c2348985e8bd49481807fb54d667\" \"1\" \"bench:meta:01M7T4SQVP5J3YST218Y09Q68S\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.132339 [0 lua] \"HSET\" \"bench:meta:01M7T4SQVP5J3YST218Y09Q68S\" \"started_at\" \"1795100041\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.132442 [0 127.0.0.1:58582] \"EVALSHA\" \"f7ff133460a6cd6a739e294b0f4f7a584599f1fc\" \"4\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"bench:workers\" \"bench:meta\" \"bench:active\" \"agent-worker.bench.<redacted>.9098.78feed30\" \"1795100041\" \"0\" \"01M7T4SQVP5J3YST218Y09Q68S\"",
+        "kind": "acquire"
+      },
+      {
+        "line": "1795100041.132480 [0 lua] \"sadd\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"01M7T4SQVP5J3YST218Y09Q68S\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.132486 [0 lua] \"hset\" \"bench:meta:01M7T4SQVP5J3YST218Y09Q68S\" \"locked_at\" \"1795100041\" \"locked_by\" \"agent-worker.bench.<redacted>.9098.78feed30\" \"status\" \"Running\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.132810 [0 127.0.0.1:58582] \"EVALSHA\" \"8f290130ebe41d5d981486b7a1b8c3bfc152ea00\" \"1\" \"delivery:49346e5e-e7a0-483a-8487-b83cd88ad997:1\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.132818 [0 lua] \"INCR\" \"delivery:49346e5e-e7a0-483a-8487-b83cd88ad997:1\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.132821 [0 lua] \"EXPIRE\" \"delivery:49346e5e-e7a0-483a-8487-b83cd88ad997:1\" \"604800\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.133396 [0 127.0.0.1:58582] \"DEL\" \"delivery:49346e5e-e7a0-483a-8487-b83cd88ad997:1\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.133664 [0 127.0.0.1:58582] \"EVALSHA\" \"9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\" \"5\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"bench:done\" \"bench:dead\" \"bench:scheduled\" \"bench:meta\" \"0\" \"01M7T4SQVP5J3YST218Y09Q68S\" \"1795100041\" \"{\\\"Ok\\\":{\\\"outcome\\\":\\\"ok\\\",\\\"result\\\":null}}\" \"Done\" \"1\"",
+        "kind": "finish"
+      },
+      {
+        "line": "1795100041.133680 [0 lua] \"SREM\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"01M7T4SQVP5J3YST218Y09Q68S\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.133694 [0 lua] \"ZADD\" \"bench:done\" \"1795100041\" \"01M7T4SQVP5J3YST218Y09Q68S\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.133699 [0 lua] \"HSET\" \"bench:meta:01M7T4SQVP5J3YST218Y09Q68S\" \"result\" \"{\\\"Ok\\\":{\\\"outcome\\\":\\\"ok\\\",\\\"result\\\":null}}\" \"status\" \"Done\" \"attempts\" \"1\" \"done_at\" \"1795100041\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.133878 [0 127.0.0.1:58582] \"EVALSHA\" \"f053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\" \"7\" \"bench:workers\" \"bench:active\" \"bench:inflight:agent-worker.bench.<redacted>.9098.78feed30\" \"bench:data\" \"bench:signal\" \"bench:meta\" \"bench:scheduled\" \"1795100041\" \"1\" \"agent-worker.bench.<redacted>.9098.78feed30\"",
+        "kind": "fetch"
+      },
+      {
+        "line": "1795100041.133899 [0 lua] \"del\" \"bench:signal\"",
+        "kind": null
+      },
+      {
+        "line": "1795100041.188885 [0 127.0.0.1:58582] \"DEL\" \"bench:workers:metadata:agent-worker.bench.<redacted>.9098.78feed30\"",
+        "kind": null
+      }
+    ],
+    "finished_at": "2026-11-19T14:54:01Z"
+  }
+}

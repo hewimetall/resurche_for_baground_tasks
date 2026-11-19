@@ -1,0 +1,209 @@
+[
+  {
+    "source": "handler",
+    "unix": 1795100164.4489317,
+    "phase": "handler_start",
+    "execution_id": "75675e74-dd88-43e3-ab82-2c01a0c57dd0",
+    "retries": 0,
+    "result": null,
+    "worker": "agent-worker.bench.<redacted>.10439.15124fd0",
+    "pid": 10439
+  },
+  {
+    "source": "handler",
+    "unix": 1795100164.4490018,
+    "phase": "handler_end",
+    "execution_id": "75675e74-dd88-43e3-ab82-2c01a0c57dd0",
+    "retries": 0,
+    "result": "retry",
+    "worker": "agent-worker.bench.<redacted>.10439.15124fd0",
+    "pid": 10439
+  },
+  {
+    "source": "proxy",
+    "unix": 1795100164.450215,
+    "action": "delay_response",
+    "kind": "enqueue",
+    "enqueue_task_id": "01M7T4XGB1NC3DPFY12CR73BNV",
+    "message_id": "57918869-e462-429a-9f5a-7e0ac6ea8106",
+    "retries": 1
+  },
+  {
+    "source": "observer",
+    "t_s": 0.003,
+    "unix": 1795100164.454435,
+    "tasks": [
+      {
+        "id": "01M7T4XFXR7MYD9NQGHMWK9CST",
+        "retries": 0,
+        "places": [
+          "bench:inflight:agent-worker.bench.<redacted>.10439.15124fd0"
+        ],
+        "status": "Running",
+        "attempts": "0"
+      },
+      {
+        "id": "01M7T4XGB1NC3DPFY12CR73BNV",
+        "retries": 1,
+        "places": [
+          "scheduled"
+        ],
+        "status": "Pending",
+        "attempts": "0"
+      }
+    ]
+  },
+  {
+    "source": "observer",
+    "t_s": 0.109,
+    "unix": 1795100164.5595944,
+    "tasks": [
+      {
+        "id": "01M7T4XFXR7MYD9NQGHMWK9CST",
+        "retries": 0,
+        "places": [
+          "bench:inflight:agent-worker.bench.<redacted>.10439.15124fd0"
+        ],
+        "status": "Running",
+        "attempts": "0"
+      },
+      {
+        "id": "01M7T4XGB1NC3DPFY12CR73BNV",
+        "retries": 1,
+        "places": [
+          "bench:inflight:agent-worker.bench.<redacted>.10468.d97f34bf"
+        ],
+        "status": "Running",
+        "attempts": "0"
+      }
+    ]
+  },
+  {
+    "source": "handler",
+    "unix": 1795100164.5815687,
+    "phase": "handler_start",
+    "execution_id": "ca4cb05d-4d57-456a-94f3-b387e6d48969",
+    "retries": 1,
+    "result": null,
+    "worker": "agent-worker.bench.<redacted>.10468.d97f34bf",
+    "pid": 10468
+  },
+  {
+    "source": "handler",
+    "unix": 1795100164.5816267,
+    "phase": "handler_end",
+    "execution_id": "ca4cb05d-4d57-456a-94f3-b387e6d48969",
+    "retries": 1,
+    "result": "ok",
+    "worker": "agent-worker.bench.<redacted>.10468.d97f34bf",
+    "pid": 10468
+  },
+  {
+    "source": "observer",
+    "t_s": 0.16,
+    "unix": 1795100164.611233,
+    "tasks": [
+      {
+        "id": "01M7T4XFXR7MYD9NQGHMWK9CST",
+        "retries": 0,
+        "places": [
+          "bench:inflight:agent-worker.bench.<redacted>.10439.15124fd0"
+        ],
+        "status": "Running",
+        "attempts": "0"
+      },
+      {
+        "id": "01M7T4XGB1NC3DPFY12CR73BNV",
+        "retries": 1,
+        "places": [
+          "done"
+        ],
+        "status": "Done",
+        "attempts": "1"
+      }
+    ]
+  },
+  {
+    "source": "proxy",
+    "unix": 1795100174.4511247,
+    "action": "release_response",
+    "kind": "enqueue",
+    "enqueue_task_id": "01M7T4XGB1NC3DPFY12CR73BNV",
+    "message_id": "57918869-e462-429a-9f5a-7e0ac6ea8106",
+    "retries": 1
+  },
+  {
+    "source": "handler",
+    "unix": 1795100224.5615098,
+    "phase": "handler_start",
+    "execution_id": "d8e38fe6-9914-42f2-a99d-8b3a0689ab89",
+    "retries": 0,
+    "result": null,
+    "worker": "agent-worker.bench.<redacted>.10468.d97f34bf",
+    "pid": 10468
+  },
+  {
+    "source": "handler",
+    "unix": 1795100224.5616262,
+    "phase": "handler_end",
+    "execution_id": "d8e38fe6-9914-42f2-a99d-8b3a0689ab89",
+    "retries": 0,
+    "result": "retry",
+    "worker": "agent-worker.bench.<redacted>.10468.d97f34bf",
+    "pid": 10468
+  },
+  {
+    "source": "handler",
+    "unix": 1795100224.5637708,
+    "phase": "handler_start",
+    "execution_id": "1f5bda6b-a53b-43b8-81c0-a7e86abe8e85",
+    "retries": 1,
+    "result": null,
+    "worker": "agent-worker.bench.<redacted>.10468.d97f34bf",
+    "pid": 10468
+  },
+  {
+    "source": "handler",
+    "unix": 1795100224.5638483,
+    "phase": "handler_end",
+    "execution_id": "1f5bda6b-a53b-43b8-81c0-a7e86abe8e85",
+    "retries": 1,
+    "result": "ok",
+    "worker": "agent-worker.bench.<redacted>.10468.d97f34bf",
+    "pid": 10468
+  },
+  {
+    "source": "observer",
+    "t_s": 60.137,
+    "unix": 1795100224.588323,
+    "tasks": [
+      {
+        "id": "01M7T4XFXR7MYD9NQGHMWK9CST",
+        "retries": 0,
+        "places": [
+          "done"
+        ],
+        "status": "Done",
+        "attempts": "1"
+      },
+      {
+        "id": "01M7T4XGB1NC3DPFY12CR73BNV",
+        "retries": 1,
+        "places": [
+          "done"
+        ],
+        "status": "Done",
+        "attempts": "1"
+      },
+      {
+        "id": "01M7T4ZB1JN7W72Z703RQ81REH",
+        "retries": 1,
+        "places": [
+          "done"
+        ],
+        "status": "Done",
+        "attempts": "1"
+      }
+    ]
+  }
+]

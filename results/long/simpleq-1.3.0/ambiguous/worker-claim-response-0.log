@@ -1,0 +1,5 @@
+2026-11-19T14:54:23.410759Z  WARN apalis_core::backend::persistence: poll_next: fetch_next failed -> Dead error=Database(broken pipe)
+2026-11-19T14:54:23.410774Z  WARN agent_worker::worker: failed to write tasks_done error=failed to record tasks_done name=agent-worker.bench.<redacted>.9435.fcdff8ed
+2026-11-19T14:54:23.410802Z  WARN agent_worker::child: queue sweep failed error=failed to read the type of bench:done queue=bench
+2026-11-19T14:54:23.410787Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe
+2026-11-19T14:54:23.410823Z  WARN apalis_core::monitor: worker future ended with error name="agent-worker.bench.<redacted>.9435.fcdff8ed" error=BackendError(PollNextError(Database(broken pipe)))

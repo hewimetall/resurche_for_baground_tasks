@@ -1,0 +1,52 @@
+2026-11-19T14:50:35.089851Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:50:35.091345Z  INFO agent_worker::supervisor: worker process started index=0 pid=6159
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py", line 110, in serve
+    HTTPServer((host, port), Handler).serve_forever()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Error: metrics server failed
+
+Caused by:
+    OSError: [Errno 98] Address already in use
+2026-11-19T14:50:35.233108Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6159.b9b1acc6 started
+2026-11-19T14:50:35.235125Z  INFO process{otel.name=process probe otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=c6e91ad4-026f-459b-bc9d-a88e40f61ca1 actor_name=probe}: agent_worker::worker: running actor message_id=c6e91ad4-026f-459b-bc9d-a88e40f61ca1 actor_name=probe queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:35.514560Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T14:50:35.515292Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6159.b9b1acc6 paused
+2026-11-19T14:50:35.515303Z  INFO agent_worker::child: drain requested
+2026-11-19T14:50:35.515308Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6159.b9b1acc6 stopped
+2026-11-19T14:51:20.152717Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:51:20.154405Z  INFO agent_worker::supervisor: worker process started index=0 pid=6816
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py", line 110, in serve
+    HTTPServer((host, port), Handler).serve_forever()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Error: metrics server failed
+
+Caused by:
+    OSError: [Errno 98] Address already in use
+2026-11-19T14:51:20.286285Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6816.b91a5f5c started
+2026-11-19T14:51:21.252227Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T14:51:21.252705Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6816.b91a5f5c paused
+2026-11-19T14:51:21.252721Z  INFO agent_worker::child: drain requested
+2026-11-19T14:51:21.252726Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6816.b91a5f5c stopped
+2026-11-19T14:54:05.961435Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:54:05.963211Z  INFO agent_worker::supervisor: worker process started index=0 pid=9166
+2026-11-19T14:54:06.095161Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.9166.4fb0cfb4 started
+2026-11-19T14:54:08.160742Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T14:54:08.160840Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.9166.4fb0cfb4 paused
+2026-11-19T14:54:08.160848Z  INFO agent_worker::child: drain requested
+2026-11-19T14:54:08.160853Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.9166.4fb0cfb4 stopped

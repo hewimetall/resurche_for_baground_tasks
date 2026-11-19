@@ -1,0 +1,21 @@
+2026-11-19T14:51:24.405144Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:51:24.406444Z  INFO agent_worker::supervisor: worker process started index=0 pid=6934
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py", line 110, in serve
+    HTTPServer((host, port), Handler).serve_forever()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Error: metrics server failed
+
+Caused by:
+    OSError: [Errno 98] Address already in use
+2026-11-19T14:51:24.537558Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6934.49a0541e started
+2026-11-19T14:51:24.538877Z  INFO process{otel.name=process probe otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=92524c9a-8118-4c0a-bd38-b2ee4de91056 actor_name=probe}: agent_worker::worker: running actor message_id=92524c9a-8118-4c0a-bd38-b2ee4de91056 actor_name=probe queue_name=bench retries=0 deliveries=1
+2026-11-19T14:51:25.039278Z  INFO process{otel.name=process fanout otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=7ed384fe-c181-4d53-8bbb-2aa82b596a8a actor_name=fanout}: agent_worker::worker: running actor message_id=7ed384fe-c181-4d53-8bbb-2aa82b596a8a actor_name=fanout queue_name=bench retries=0 deliveries=1
+2026-11-19T14:51:25.045135Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=142aa6d4-b64b-4b68-965c-b8c447b9a7ab actor_name=item}: agent_worker::worker: running actor message_id=142aa6d4-b64b-4b68-965c-b8c447b9a7ab actor_name=item queue_name=bench retries=0 deliveries=1

@@ -1,0 +1,393 @@
+{
+  "scenario_id": "finish_response_dropped",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-19T15:01:10Z",
+  "contract_held": true,
+  "checks": [
+    {
+      "name": "fault_fired",
+      "ok": true,
+      "detail": [
+        {
+          "t": 1795100465.0299845,
+          "mono": 968.008641884,
+          "action": "drop_response",
+          "kind": "finish",
+          "op": "EVALSHA",
+          "reply_len": 4,
+          "task_ids": [
+            "01M7T56NKZKHQTCNK1MNY84RF2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "handler_ran",
+      "ok": true,
+      "detail": [
+        "finish_response_dropped"
+      ]
+    },
+    {
+      "name": "finish_applied",
+      "ok": true,
+      "detail": [
+        "done"
+      ]
+    },
+    {
+      "name": "data_kept_if_unfinished",
+      "ok": true,
+      "detail": {
+        "places": [
+          "done"
+        ],
+        "inflight": {},
+        "workers": {
+          "agent-worker.bench.<redacted>.14419.8cef9d07": "1795100465"
+        },
+        "meta": {
+          "attempts": "1",
+          "max_attempts": "1",
+          "status": "Done",
+          "idempotency_key": "",
+          "started_at": "1795100465",
+          "locked_at": "1795100465",
+          "locked_by": "agent-worker.bench.<redacted>.14419.8cef9d07",
+          "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+          "done_at": "1795100465"
+        },
+        "data": true
+      }
+    },
+    {
+      "name": "no_extra_attempt",
+      "ok": true,
+      "detail": [
+        "finish_response_dropped"
+      ]
+    },
+    {
+      "name": "ends_done",
+      "ok": true,
+      "detail": [
+        "done"
+      ]
+    },
+    {
+      "name": "not_scheduled",
+      "ok": true,
+      "detail": [
+        "done"
+      ]
+    }
+  ],
+  "aaa": {
+    "arrange": "Task 01M7T56NKZKHQTCNK1MNY84RF2. The handler records the token before finish. The proxy arms the first handle_results.",
+    "act": "handle_results is drop_response. A second worker is started only when the command was not forwarded.",
+    "assert": "A lost request leaves the task recoverable and does not mark it done. A lost reply leaves it done, and a repeated finish does not add an execution or a retry."
+  },
+  "redis_restarted": false,
+  "task_id": "01M7T56NKZKHQTCNK1MNY84RF2",
+  "message_id": "ac40c8f6-f0f4-4250-b8e5-70b65f6e1a12",
+  "owner_alive_after_fault": null,
+  "owner_pid": 14399,
+  "other_pid": null,
+  "owner_exit": null,
+  "other_exit": null,
+  "before": null,
+  "immediate": {
+    "places": [
+      "done"
+    ],
+    "inflight": {},
+    "workers": {
+      "agent-worker.bench.<redacted>.14419.8cef9d07": "1795100465"
+    },
+    "meta": {
+      "attempts": "1",
+      "max_attempts": "1",
+      "status": "Done",
+      "idempotency_key": "",
+      "started_at": "1795100465",
+      "locked_at": "1795100465",
+      "locked_by": "agent-worker.bench.<redacted>.14419.8cef9d07",
+      "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+      "done_at": "1795100465"
+    },
+    "data": true
+  },
+  "final": {
+    "places": [
+      "done"
+    ],
+    "workers": {
+      "agent-worker.bench.<redacted>.14419.4c2ce0a0": "1795100465",
+      "agent-worker.bench.<redacted>.14419.8cef9d07": "1795100465"
+    },
+    "meta": {
+      "attempts": "1",
+      "max_attempts": "1",
+      "status": "Done",
+      "idempotency_key": "",
+      "started_at": "1795100465",
+      "locked_at": "1795100465",
+      "locked_by": "agent-worker.bench.<redacted>.14419.8cef9d07",
+      "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+      "done_at": "1795100465"
+    },
+    "data": true
+  },
+  "effects": [
+    "finish_response_dropped"
+  ],
+  "samples": [
+    {
+      "t_s": null,
+      "places": [
+        "done"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.14419.4c2ce0a0": "1795100465",
+        "agent-worker.bench.<redacted>.14419.8cef9d07": "1795100465"
+      },
+      "locked_at": "1795100465",
+      "effects": null
+    }
+  ],
+  "proxy": {
+    "armed": null,
+    "counts": {
+      "pass": 17,
+      "seen:reenqueue": 2,
+      "seen:register": 2,
+      "seen:fetch": 11,
+      "seen:acquire": 1,
+      "drop_response": 1,
+      "seen:finish": 2
+    },
+    "events": [
+      {
+        "t": 1795100465.0299845,
+        "mono": 968.008641884,
+        "action": "drop_response",
+        "kind": "finish",
+        "op": "EVALSHA",
+        "reply_len": 4,
+        "task_ids": [
+          "01M7T56NKZKHQTCNK1MNY84RF2"
+        ]
+      }
+    ],
+    "commands": 46,
+    "ops": [
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$32\r\nsimple_q:supervisor:<redacted>.14399\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$32\r\nsimple_q:supervisor:<redacted>.14399\r\n$4\r\nhost\r\n$6\r\n<redacted>\r\n$3\r\n"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$32\r\nsimple_q:supervisor:<redacted>.14399\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1795100464\r\n$12\r\n<redacted>.14399\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1795100404"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$63\r\nbench:workers:metadata:agent-worker.bench.<redacted>.14419.8cef9"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 4,
+        "prefix": "*4\r\n$7\r\nEVALSHA\r\n$40\r\nf84c79100c44c2348985e8bd49481807fb54d667\r\n$1\r\n1\r\n$37\r\nbenc"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 11,
+        "prefix": "*11\r\n$7\r\nEVALSHA\r\n$40\r\nf7ff133460a6cd6a739e294b0f4f7a584599f1fc\r\n$1\r\n4\r\n$55\r\nben"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:dead\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 5,
+        "prefix": "*5\r\n$7\r\nEVALSHA\r\n$40\r\n8f290130ebe41d5d981486b7a1b8c3bfc152ea00\r\n$1\r\n1\r\n$47\r\ndeli"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$63\r\nbench:workers:metadata:agent-worker.bench.<redacted>.14419.8cef9d"
+      },
+      {
+        "op": "SCAN",
+        "argc": 6,
+        "prefix": "*6\r\n$4\r\nSCAN\r\n$1\r\n0\r\n$5\r\nMATCH\r\n$24\r\nbench:workers:metadata:*\r\n$5\r\nCOUNT\r\n$3\r\n10"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$32\r\nsimple_q:supervisor:<redacted>.14399\r\n$11\r\ntasks:14419\r\n$1\r\n0\r\n"
+      },
+      {
+        "op": "ZSCORE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nZSCORE\r\n$13\r\nbench:workers\r\n$40\r\nagent-worker.bench.<redacted>.14419.8cef9d0"
+      },
+      {
+        "op": "DEL",
+        "argc": 2,
+        "prefix": "*2\r\n$3\r\nDEL\r\n$47\r\ndelivery:ac40c8f6-f0f4-4250-b8e5-70b65f6e1a12:0\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 14,
+        "prefix": "*14\r\n$7\r\nEVALSHA\r\n$40\r\n9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\r\n$1\r\n5\r\n$55\r\nben"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 14,
+        "prefix": "*14\r\n$7\r\nEVALSHA\r\n$40\r\n9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\r\n$1\r\n5\r\n$55\r\nben"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$63\r\nbench:workers:metadata:agent-worker.bench.<redacted>.14419.4c2ce"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$63\r\nbench:workers:metadata:agent-worker.bench.<redacted>.14419.4c2ce0"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$32\r\nsimple_q:supervisor:<redacted>.14399\r\n$11\r\ntasks:14419\r\n$1\r\n1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      }
+    ]
+  },
+  "owner_log": "2026-11-19T15:01:05.082694Z  WARN apalis_core::backend::persistence: poll_ready: ProcessEvents failed -> Dead error=Database(ResponseError: user_script:80: task not executed by worker script: 9a702ec86f2a2dcdd3f53342b4e7cdce332871cd, on @user_script:80.)\n2026-11-19T15:01:05.082725Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: ResponseError: user_script:80: task not executed by worker script: 9a702ec86f2a2dcdd3f53342b4e7cdce332871cd, on @user_script:80.\n2026-11-19T15:01:05.082735Z  WARN apalis_core::monitor: worker future ended with error name=\"agent-worker.bench.<redacted>.14419.8cef9d07\" error=BackendError(PollNextError(Database(ResponseError: user_script:80: task not executed by worker script: 9a702ec86f2a2dcdd3f53342b4e7cdce332871cd, on @user_script:80.)))",
+  "other_log": "",
+  "redis_pid": 8835,
+  "finished_at": "2026-11-19T15:01:10Z"
+}

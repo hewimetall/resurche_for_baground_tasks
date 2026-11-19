@@ -1,0 +1,23 @@
+2026-11-19T15:05:33.144184Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T15:05:33.149393Z  INFO agent_worker::supervisor: worker process started index=0 pid=16763
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py", line 110, in serve
+    HTTPServer((host, port), Handler).serve_forever()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Error: metrics server failed
+
+Caused by:
+    OSError: [Errno 98] Address already in use
+2026-11-19T15:05:33.276503Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.16763.35c21c59 started
+2026-11-19T15:05:36.281021Z  INFO process{otel.name=process fast otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=13ebd95e-f349-4c68-9ed0-88b304874d99 actor_name=fast}: agent_worker::worker: running actor message_id=13ebd95e-f349-4c68-9ed0-88b304874d99 actor_name=fast queue_name=bench retries=0 deliveries=1
+2026-11-19T15:05:36.324176Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T15:05:36.324292Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.16763.35c21c59 paused
+2026-11-19T15:05:36.324301Z  INFO agent_worker::child: drain requested
+2026-11-19T15:05:36.324304Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.16763.35c21c59 stopped

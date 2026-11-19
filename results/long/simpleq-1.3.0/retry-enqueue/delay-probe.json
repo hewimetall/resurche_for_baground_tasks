@@ -1,0 +1,295 @@
+{
+  "runs": [
+    {
+      "delay_ms": 61,
+      "enqueue_unix": 1795100225.8213208,
+      "scheduled_score": 1795100225.0,
+      "handler_start_unix": 1795100226.2438223,
+      "observed_lag_ms": 422.5,
+      "score_to_handler_ms": 1243.8,
+      "observe_status": "complete",
+      "effects": [
+        {
+          "actor": "delay_probe",
+          "deliveries": 1,
+          "execution_id": "3ce79db2-2ddc-4264-9323-97b6955fe56a",
+          "max_retries": 0,
+          "message_id": "816bc43b-c550-488c-add3-c58a2e5dfc91",
+          "phase": "handler_start",
+          "pid": 11145,
+          "requested_delay_ms": 61,
+          "retries": 0,
+          "t": 1795100226.2438223,
+          "token": "delay-61",
+          "utc": "2026-11-19T14:57:06.243Z",
+          "worker": "agent-worker.bench.<redacted>.11145.65303406"
+        },
+        {
+          "actor": "delay_probe",
+          "deliveries": 1,
+          "execution_id": "3ce79db2-2ddc-4264-9323-97b6955fe56a",
+          "max_retries": 0,
+          "message_id": "816bc43b-c550-488c-add3-c58a2e5dfc91",
+          "phase": "handler_end",
+          "pid": 11145,
+          "requested_delay_ms": 61,
+          "result": "ok",
+          "retries": 0,
+          "t": 1795100226.2438862,
+          "token": "delay-61",
+          "utc": "2026-11-19T14:57:06.243Z",
+          "worker": "agent-worker.bench.<redacted>.11145.65303406"
+        }
+      ],
+      "enqueue": {
+        "message_id": "816bc43b-c550-488c-add3-c58a2e5dfc91",
+        "task_ids": [
+          "01M7T4ZC8X8YAN00JHY2KJKYYC"
+        ],
+        "enqueue_unix": 1795100225.8213208,
+        "accepted_unix": 1795100225.8224087,
+        "scheduled": [
+          {
+            "id": "01M7T4ZC8X8YAN00JHY2KJKYYC",
+            "score": 1795100225.0
+          }
+        ],
+        "delay_ms": 61
+      },
+      "note": "Single run per value. Separate deadline rounding from poll_interval_ms=500; do not claim precision from n=1."
+    },
+    {
+      "delay_ms": 999,
+      "enqueue_unix": 1795100226.407209,
+      "scheduled_score": 1795100227.0,
+      "handler_start_unix": 1795100227.4301887,
+      "observed_lag_ms": 1023.0,
+      "score_to_handler_ms": 430.2,
+      "observe_status": "complete",
+      "effects": [
+        {
+          "actor": "delay_probe",
+          "deliveries": 1,
+          "execution_id": "20f7c767-b141-41f6-aa50-9c345512a8a3",
+          "max_retries": 0,
+          "message_id": "fcc392e9-0505-4626-bfc8-75c42a53c01c",
+          "phase": "handler_start",
+          "pid": 11182,
+          "requested_delay_ms": 999,
+          "retries": 0,
+          "t": 1795100227.4301887,
+          "token": "delay-999",
+          "utc": "2026-11-19T14:57:07.430Z",
+          "worker": "agent-worker.bench.<redacted>.11182.7c99a5ee"
+        },
+        {
+          "actor": "delay_probe",
+          "deliveries": 1,
+          "execution_id": "20f7c767-b141-41f6-aa50-9c345512a8a3",
+          "max_retries": 0,
+          "message_id": "fcc392e9-0505-4626-bfc8-75c42a53c01c",
+          "phase": "handler_end",
+          "pid": 11182,
+          "requested_delay_ms": 999,
+          "result": "ok",
+          "retries": 0,
+          "t": 1795100227.4302533,
+          "token": "delay-999",
+          "utc": "2026-11-19T14:57:07.430Z",
+          "worker": "agent-worker.bench.<redacted>.11182.7c99a5ee"
+        }
+      ],
+      "enqueue": {
+        "message_id": "fcc392e9-0505-4626-bfc8-75c42a53c01c",
+        "task_ids": [
+          "01M7T4ZCV7963HB76T1V4ECTSW"
+        ],
+        "enqueue_unix": 1795100226.407209,
+        "accepted_unix": 1795100226.4079115,
+        "scheduled": [
+          {
+            "id": "01M7T4ZCV7963HB76T1V4ECTSW",
+            "score": 1795100227.0
+          }
+        ],
+        "delay_ms": 999
+      },
+      "note": "Single run per value. Separate deadline rounding from poll_interval_ms=500; do not claim precision from n=1."
+    },
+    {
+      "delay_ms": 1000,
+      "enqueue_unix": 1795100227.5638456,
+      "scheduled_score": 1795100228.0,
+      "handler_start_unix": 1795100228.0843637,
+      "observed_lag_ms": 520.5,
+      "score_to_handler_ms": 84.4,
+      "observe_status": "complete",
+      "effects": [
+        {
+          "actor": "delay_probe",
+          "deliveries": 1,
+          "execution_id": "370391a8-d5e6-477b-95ee-493265a8d64f",
+          "max_retries": 0,
+          "message_id": "6fcd3094-c362-4832-a19e-272c138273f3",
+          "phase": "handler_start",
+          "pid": 11228,
+          "requested_delay_ms": 1000,
+          "retries": 0,
+          "t": 1795100228.0843637,
+          "token": "delay-1000",
+          "utc": "2026-11-19T14:57:08.084Z",
+          "worker": "agent-worker.bench.<redacted>.11228.7cfbc9a1"
+        },
+        {
+          "actor": "delay_probe",
+          "deliveries": 1,
+          "execution_id": "370391a8-d5e6-477b-95ee-493265a8d64f",
+          "max_retries": 0,
+          "message_id": "6fcd3094-c362-4832-a19e-272c138273f3",
+          "phase": "handler_end",
+          "pid": 11228,
+          "requested_delay_ms": 1000,
+          "result": "ok",
+          "retries": 0,
+          "t": 1795100228.084429,
+          "token": "delay-1000",
+          "utc": "2026-11-19T14:57:08.084Z",
+          "worker": "agent-worker.bench.<redacted>.11228.7cfbc9a1"
+        }
+      ],
+      "enqueue": {
+        "message_id": "6fcd3094-c362-4832-a19e-272c138273f3",
+        "task_ids": [
+          "01M7T4ZDZCNMFS6H35C2Z8K1JQ"
+        ],
+        "enqueue_unix": 1795100227.5638456,
+        "accepted_unix": 1795100227.564499,
+        "scheduled": [
+          {
+            "id": "01M7T4ZDZCNMFS6H35C2Z8K1JQ",
+            "score": 1795100228.0
+          }
+        ],
+        "delay_ms": 1000
+      },
+      "note": "Single run per value. Separate deadline rounding from poll_interval_ms=500; do not claim precision from n=1."
+    },
+    {
+      "delay_ms": 1001,
+      "enqueue_unix": 1795100228.2006912,
+      "scheduled_score": 1795100229.0,
+      "handler_start_unix": 1795100229.22269,
+      "observed_lag_ms": 1022.0,
+      "score_to_handler_ms": 222.7,
+      "observe_status": "complete",
+      "effects": [
+        {
+          "actor": "delay_probe",
+          "deliveries": 1,
+          "execution_id": "306e8660-375a-4e8b-b15b-87e9b18cd909",
+          "max_retries": 0,
+          "message_id": "a83c4fdf-b07b-49b2-b4da-64ad9acc2807",
+          "phase": "handler_start",
+          "pid": 11258,
+          "requested_delay_ms": 1001,
+          "retries": 0,
+          "t": 1795100229.22269,
+          "token": "delay-1001",
+          "utc": "2026-11-19T14:57:09.222Z",
+          "worker": "agent-worker.bench.<redacted>.11258.5cb4ef70"
+        },
+        {
+          "actor": "delay_probe",
+          "deliveries": 1,
+          "execution_id": "306e8660-375a-4e8b-b15b-87e9b18cd909",
+          "max_retries": 0,
+          "message_id": "a83c4fdf-b07b-49b2-b4da-64ad9acc2807",
+          "phase": "handler_end",
+          "pid": 11258,
+          "requested_delay_ms": 1001,
+          "result": "ok",
+          "retries": 0,
+          "t": 1795100229.2227566,
+          "token": "delay-1001",
+          "utc": "2026-11-19T14:57:09.222Z",
+          "worker": "agent-worker.bench.<redacted>.11258.5cb4ef70"
+        }
+      ],
+      "enqueue": {
+        "message_id": "a83c4fdf-b07b-49b2-b4da-64ad9acc2807",
+        "task_ids": [
+          "01M7T4ZEK8XK792R5Z7ZGD4RZQ"
+        ],
+        "enqueue_unix": 1795100228.2006912,
+        "accepted_unix": 1795100228.201201,
+        "scheduled": [
+          {
+            "id": "01M7T4ZEK8XK792R5Z7ZGD4RZQ",
+            "score": 1795100229.0
+          }
+        ],
+        "delay_ms": 1001
+      },
+      "note": "Single run per value. Separate deadline rounding from poll_interval_ms=500; do not claim precision from n=1."
+    },
+    {
+      "delay_ms": 1500,
+      "enqueue_unix": 1795100229.3510752,
+      "scheduled_score": 1795100230.0,
+      "handler_start_unix": 1795100230.3722851,
+      "observed_lag_ms": 1021.2,
+      "score_to_handler_ms": 372.3,
+      "observe_status": "complete",
+      "effects": [
+        {
+          "actor": "delay_probe",
+          "deliveries": 1,
+          "execution_id": "ed1e914c-66b3-4b31-9d97-eedcc711b8c6",
+          "max_retries": 0,
+          "message_id": "3b6b42d9-9951-4a16-a695-24b66c49fdb4",
+          "phase": "handler_start",
+          "pid": 11298,
+          "requested_delay_ms": 1500,
+          "retries": 0,
+          "t": 1795100230.3722851,
+          "token": "delay-1500",
+          "utc": "2026-11-19T14:57:10.372Z",
+          "worker": "agent-worker.bench.<redacted>.11298.482f1516"
+        },
+        {
+          "actor": "delay_probe",
+          "deliveries": 1,
+          "execution_id": "ed1e914c-66b3-4b31-9d97-eedcc711b8c6",
+          "max_retries": 0,
+          "message_id": "3b6b42d9-9951-4a16-a695-24b66c49fdb4",
+          "phase": "handler_end",
+          "pid": 11298,
+          "requested_delay_ms": 1500,
+          "result": "ok",
+          "retries": 0,
+          "t": 1795100230.372351,
+          "token": "delay-1500",
+          "utc": "2026-11-19T14:57:10.372Z",
+          "worker": "agent-worker.bench.<redacted>.11298.482f1516"
+        }
+      ],
+      "enqueue": {
+        "message_id": "3b6b42d9-9951-4a16-a695-24b66c49fdb4",
+        "task_ids": [
+          "01M7T4ZFQ78XR8VYSN9V8AD44D"
+        ],
+        "enqueue_unix": 1795100229.3510752,
+        "accepted_unix": 1795100229.3519077,
+        "scheduled": [
+          {
+            "id": "01M7T4ZFQ78XR8VYSN9V8AD44D",
+            "score": 1795100230.0
+          }
+        ],
+        "delay_ms": 1500
+      },
+      "note": "Single run per value. Separate deadline rounding from poll_interval_ms=500; do not claim precision from n=1."
+    }
+  ],
+  "finished_at": "2026-11-19T14:57:10Z"
+}

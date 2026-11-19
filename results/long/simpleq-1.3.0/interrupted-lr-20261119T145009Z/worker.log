@@ -1,0 +1,4 @@
+2026-11-19T14:50:10.079715Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:50:10.081264Z  INFO agent_worker::supervisor: worker process started index=0 pid=5063
+2026-11-19T14:50:10.211082Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.5063.599739c3 started
+2026-11-19T14:50:12.215287Z  INFO process{otel.name=process hold otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=9f6116f3-bbef-4f40-a186-e271a42ef2c2 actor_name=hold}: agent_worker::worker: running actor message_id=9f6116f3-bbef-4f40-a186-e271a42ef2c2 actor_name=hold queue_name=bench retries=0 deliveries=1

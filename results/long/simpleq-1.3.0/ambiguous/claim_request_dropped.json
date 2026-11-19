@@ -1,0 +1,496 @@
+{
+  "scenario_id": "claim_request_dropped",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-19T14:54:23Z",
+  "contract_held": true,
+  "checks": [
+    {
+      "name": "fault_fired",
+      "ok": true,
+      "detail": [
+        {
+          "t": 1795100062.675374,
+          "mono": 565.654031287,
+          "action": "drop_request",
+          "kind": "fetch",
+          "op": "EVALSHA"
+        },
+        {
+          "t": 1795100062.67659,
+          "mono": 565.655247195,
+          "action": "drop_request",
+          "kind": "fetch",
+          "op": "EVALSHA"
+        },
+        {
+          "t": 1795100062.6776526,
+          "mono": 565.656309624,
+          "action": "drop_request",
+          "kind": "fetch",
+          "op": "EVALSHA"
+        },
+        {
+          "t": 1795100062.6787686,
+          "mono": 565.657425897,
+          "action": "drop_request",
+          "kind": "fetch",
+          "op": "EVALSHA"
+        },
+        {
+          "t": 1795100062.6796343,
+          "mono": 565.658291689,
+          "action": "drop_request",
+          "kind": "fetch",
+          "op": "EVALSHA"
+        },
+        {
+          "t": 1795100062.680982,
+          "mono": 565.659639371,
+          "action": "drop_request",
+          "kind": "fetch",
+          "op": "EVALSHA"
+        },
+        {
+          "t": 1795100062.6819234,
+          "mono": 565.660580548,
+          "action": "drop_request",
+          "kind": "fetch",
+          "op": "EVALSHA"
+        },
+        {
+          "t": 1795100062.684056,
+          "mono": 565.662713311,
+          "action": "drop_request",
+          "kind": "fetch",
+          "op": "EVALSHA"
+        },
+        {
+          "t": 1795100062.6851866,
+          "mono": 565.663843809,
+          "action": "drop_request",
+          "kind": "fetch",
+          "op": "EVALSHA"
+        }
+      ]
+    },
+    {
+      "name": "was_ready",
+      "ok": true,
+      "detail": [
+        "scheduled"
+      ]
+    },
+    {
+      "name": "command_not_applied",
+      "ok": true,
+      "detail": [
+        "scheduled"
+      ]
+    },
+    {
+      "name": "not_accepted_locally",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "still_present",
+      "ok": true,
+      "detail": {
+        "places": [
+          "scheduled"
+        ],
+        "inflight": {},
+        "workers": {
+          "agent-worker.bench.<redacted>.9352.002dd77d": "1795100062",
+          "agent-worker.bench.<redacted>.9352.37086d82": "1795100062",
+          "agent-worker.bench.<redacted>.9352.479ba8cb": "1795100062",
+          "agent-worker.bench.<redacted>.9352.844cde1f": "1795100062",
+          "agent-worker.bench.<redacted>.9352.9c846bfb": "1795100062",
+          "agent-worker.bench.<redacted>.9352.a2f8a90c": "1795100062",
+          "agent-worker.bench.<redacted>.9352.c5ca15d9": "1795100062",
+          "agent-worker.bench.<redacted>.9352.f0af8dff": "1795100062",
+          "agent-worker.bench.<redacted>.9352.f7071028": "1795100062"
+        },
+        "meta": {
+          "attempts": "0",
+          "max_attempts": "1",
+          "status": "Pending",
+          "idempotency_key": ""
+        },
+        "data": true
+      }
+    },
+    {
+      "name": "runs_once_after_restore",
+      "ok": true,
+      "detail": [
+        "claim-request"
+      ]
+    },
+    {
+      "name": "terminal_done",
+      "ok": true,
+      "detail": [
+        "done"
+      ]
+    }
+  ],
+  "aaa": {
+    "arrange": "Task 01M7T4TCPE2Q3ARKNCZFQMTVR2 is in the ready list. The proxy is armed to drop the next fetch before Redis sees it.",
+    "act": "Start the worker, let the fetch command die, stop that worker, then start a worker with the proxy open.",
+    "assert": "The task stays ready, the handler does not run, and one later execution finishes it."
+  },
+  "redis_restarted": false,
+  "task_id": "01M7T4TCPE2Q3ARKNCZFQMTVR2",
+  "message_id": "11f63ab4-5a4e-4ea0-b875-9f01e3afc786",
+  "owner_alive_after_fault": null,
+  "owner_pid": 9332,
+  "other_pid": 9372,
+  "owner_exit": 0,
+  "other_exit": null,
+  "before": null,
+  "immediate": {
+    "places": [
+      "scheduled"
+    ],
+    "inflight": {},
+    "workers": {
+      "agent-worker.bench.<redacted>.9352.002dd77d": "1795100062",
+      "agent-worker.bench.<redacted>.9352.37086d82": "1795100062",
+      "agent-worker.bench.<redacted>.9352.479ba8cb": "1795100062",
+      "agent-worker.bench.<redacted>.9352.844cde1f": "1795100062",
+      "agent-worker.bench.<redacted>.9352.9c846bfb": "1795100062",
+      "agent-worker.bench.<redacted>.9352.a2f8a90c": "1795100062",
+      "agent-worker.bench.<redacted>.9352.c5ca15d9": "1795100062",
+      "agent-worker.bench.<redacted>.9352.f0af8dff": "1795100062",
+      "agent-worker.bench.<redacted>.9352.f7071028": "1795100062"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Pending",
+      "idempotency_key": ""
+    },
+    "data": true
+  },
+  "final": {
+    "places": [
+      "done"
+    ],
+    "workers": {
+      "agent-worker.bench.<redacted>.9352.002dd77d": "1795100062",
+      "agent-worker.bench.<redacted>.9352.37086d82": "1795100062",
+      "agent-worker.bench.<redacted>.9352.479ba8cb": "1795100062",
+      "agent-worker.bench.<redacted>.9352.844cde1f": "1795100062",
+      "agent-worker.bench.<redacted>.9352.9c846bfb": "1795100062",
+      "agent-worker.bench.<redacted>.9352.a2f8a90c": "1795100062",
+      "agent-worker.bench.<redacted>.9352.c5ca15d9": "1795100062",
+      "agent-worker.bench.<redacted>.9352.f0af8dff": "1795100062",
+      "agent-worker.bench.<redacted>.9352.f7071028": "1795100062",
+      "agent-worker.bench.<redacted>.9392.528e6c80": "1795100062"
+    },
+    "meta": {
+      "attempts": "1",
+      "max_attempts": "1",
+      "status": "Done",
+      "idempotency_key": "",
+      "started_at": "1795100062",
+      "locked_at": "1795100062",
+      "locked_by": "agent-worker.bench.<redacted>.9392.528e6c80",
+      "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+      "done_at": "1795100062"
+    },
+    "data": true
+  },
+  "effects": [
+    "claim-request"
+  ],
+  "samples": [],
+  "proxy": {
+    "armed": null,
+    "counts": {
+      "pass": 24,
+      "seen:reenqueue": 10,
+      "seen:register": 10,
+      "drop_request": 9,
+      "seen:fetch": 11,
+      "seen:acquire": 1,
+      "seen:finish": 1
+    },
+    "events": [
+      {
+        "t": 1795100062.675374,
+        "mono": 565.654031287,
+        "action": "drop_request",
+        "kind": "fetch",
+        "op": "EVALSHA"
+      },
+      {
+        "t": 1795100062.67659,
+        "mono": 565.655247195,
+        "action": "drop_request",
+        "kind": "fetch",
+        "op": "EVALSHA"
+      },
+      {
+        "t": 1795100062.6776526,
+        "mono": 565.656309624,
+        "action": "drop_request",
+        "kind": "fetch",
+        "op": "EVALSHA"
+      },
+      {
+        "t": 1795100062.6787686,
+        "mono": 565.657425897,
+        "action": "drop_request",
+        "kind": "fetch",
+        "op": "EVALSHA"
+      },
+      {
+        "t": 1795100062.6796343,
+        "mono": 565.658291689,
+        "action": "drop_request",
+        "kind": "fetch",
+        "op": "EVALSHA"
+      },
+      {
+        "t": 1795100062.680982,
+        "mono": 565.659639371,
+        "action": "drop_request",
+        "kind": "fetch",
+        "op": "EVALSHA"
+      },
+      {
+        "t": 1795100062.6819234,
+        "mono": 565.660580548,
+        "action": "drop_request",
+        "kind": "fetch",
+        "op": "EVALSHA"
+      },
+      {
+        "t": 1795100062.684056,
+        "mono": 565.662713311,
+        "action": "drop_request",
+        "kind": "fetch",
+        "op": "EVALSHA"
+      },
+      {
+        "t": 1795100062.6851866,
+        "mono": 565.663843809,
+        "action": "drop_request",
+        "kind": "fetch",
+        "op": "EVALSHA"
+      }
+    ],
+    "commands": 124,
+    "ops": [
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$31\r\nsimple_q:supervisor:<redacted>.9332\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$31\r\nsimple_q:supervisor:<redacted>.9332\r\n$4\r\nhost\r\n$6\r\n<redacted>\r\n$3\r\np"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$31\r\nsimple_q:supervisor:<redacted>.9332\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1795100062\r\n$11\r\n<redacted>.9332\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1795100002"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:dead\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$62\r\nbench:workers:metadata:agent-worker.bench.<redacted>.9352.37086d"
+      },
+      {
+        "op": "SCAN",
+        "argc": 6,
+        "prefix": "*6\r\n$4\r\nSCAN\r\n$1\r\n0\r\n$5\r\nMATCH\r\n$24\r\nbench:workers:metadata:*\r\n$5\r\nCOUNT\r\n$3\r\n10"
+      },
+      {
+        "op": "ZSCORE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nZSCORE\r\n$13\r\nbench:workers\r\n$39\r\nagent-worker.bench.<redacted>.9352.37086d82"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$62\r\nbench:workers:metadata:agent-worker.bench.<redacted>.9352.a2f8a9"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$62\r\nbench:workers:metadata:agent-worker.bench.<redacted>.9352.479ba8"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$31\r\nsimple_q:supervisor:<redacted>.9332\r\n$10\r\ntasks:9352\r\n$1\r\n0\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      }
+    ]
+  },
+  "owner_log": "",
+  "other_log": "",
+  "redis_pid": 8835,
+  "finished_at": "2026-11-19T14:54:23Z"
+}

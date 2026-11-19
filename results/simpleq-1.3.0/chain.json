@@ -1,0 +1,29 @@
+{
+  "library": "simpleq",
+  "scenario": "chain",
+  "scale": "short",
+  "started_at": "2026-11-19T14:50:17.752770+00:00",
+  "measured": true,
+  "send": {
+    "accepted": true,
+    "id": "313cfa55-0057-4dd6-bb38-499210c26375"
+  },
+  "steps": 4,
+  "rows": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "stop": [
+    {
+      "sigterm_at": 1795099820.6727738,
+      "exit_at": 1795099820.8729124,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 3.12
+}

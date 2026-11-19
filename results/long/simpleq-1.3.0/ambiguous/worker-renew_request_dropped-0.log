@@ -1,0 +1,1 @@
+2026-11-19T14:55:39.447615Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done name=agent-worker.bench.<redacted>.10209.f5c79cae

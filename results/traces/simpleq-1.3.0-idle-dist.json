@@ -1,0 +1,209 @@
+{
+  "redis": "redis://127.0.0.1:6393/0",
+  "note": "phase \u2014 \u0441\u043e\u043d \u043f\u043e\u0441\u043b\u0435 park 0.35 \u0441. \u041f\u0435\u0440\u0432\u0430\u044f \u0442\u043e\u0447\u043a\u0430 \u0441\u0435\u0440\u0438\u0438 \u043d\u0435 \u0438\u043c\u0435\u0435\u0442 \u043f\u0440\u0435\u0434\u044b\u0434\u0443\u0449\u0435\u0433\u043e fetch, \u0435\u0451 phase_plus_pickup \u043d\u0435 \u0432\u0445\u043e\u0434\u0438\u0442 \u0432 \u0441\u0443\u043c\u043c\u0443.",
+  "simpleq_phase": {
+    "rows": [
+      {
+        "i": 0,
+        "phase_s": 0.0,
+        "pickup_ms": 248,
+        "enqueue_ms": 255.6,
+        "n": 0
+      },
+      {
+        "i": 1,
+        "phase_s": 0.5,
+        "pickup_ms": 132,
+        "enqueue_ms": 134.5,
+        "n": 1
+      },
+      {
+        "i": 2,
+        "phase_s": 1.0,
+        "pickup_ms": 148,
+        "enqueue_ms": 154.9,
+        "n": 2
+      },
+      {
+        "i": 3,
+        "phase_s": 1.5,
+        "pickup_ms": 144,
+        "enqueue_ms": 154.9,
+        "n": 3
+      },
+      {
+        "i": 4,
+        "phase_s": 2.0,
+        "pickup_ms": 140,
+        "enqueue_ms": 154.9,
+        "n": 4
+      },
+      {
+        "i": 5,
+        "phase_s": 2.5,
+        "pickup_ms": 136,
+        "enqueue_ms": 154.7,
+        "n": 5
+      },
+      {
+        "i": 6,
+        "phase_s": 3.0,
+        "pickup_ms": 133,
+        "enqueue_ms": 134.5,
+        "n": 6
+      },
+      {
+        "i": 7,
+        "phase_s": 3.5,
+        "pickup_ms": 150,
+        "enqueue_ms": 154.7,
+        "n": 7
+      },
+      {
+        "i": 8,
+        "phase_s": 4.0,
+        "pickup_ms": 147,
+        "enqueue_ms": 154.7,
+        "n": 8
+      },
+      {
+        "i": 9,
+        "phase_s": 4.5,
+        "pickup_ms": 146,
+        "enqueue_ms": 154.9,
+        "n": 9
+      },
+      {
+        "i": 10,
+        "phase_s": 0.0,
+        "pickup_ms": 141,
+        "enqueue_ms": 154.7,
+        "n": 10
+      },
+      {
+        "i": 11,
+        "phase_s": 0.5,
+        "pickup_ms": 136,
+        "enqueue_ms": 154.6,
+        "n": 11
+      },
+      {
+        "i": 12,
+        "phase_s": 1.0,
+        "pickup_ms": 132,
+        "enqueue_ms": 134.7,
+        "n": 12
+      },
+      {
+        "i": 13,
+        "phase_s": 1.5,
+        "pickup_ms": 148,
+        "enqueue_ms": 154.8,
+        "n": 13
+      },
+      {
+        "i": 14,
+        "phase_s": 2.0,
+        "pickup_ms": 146,
+        "enqueue_ms": 155.0,
+        "n": 14
+      },
+      {
+        "i": 15,
+        "phase_s": 2.5,
+        "pickup_ms": 140,
+        "enqueue_ms": 154.9,
+        "n": 15
+      },
+      {
+        "i": 16,
+        "phase_s": 3.0,
+        "pickup_ms": 138,
+        "enqueue_ms": 154.8,
+        "n": 16
+      },
+      {
+        "i": 17,
+        "phase_s": 3.5,
+        "pickup_ms": 135,
+        "enqueue_ms": 154.8,
+        "n": 17
+      },
+      {
+        "i": 18,
+        "phase_s": 4.0,
+        "pickup_ms": 132,
+        "enqueue_ms": 134.3,
+        "n": 18
+      },
+      {
+        "i": 19,
+        "phase_s": 4.5,
+        "pickup_ms": 151,
+        "enqueue_ms": 154.6,
+        "n": 19
+      }
+    ],
+    "pickup": {
+      "n": 20,
+      "min": 132.0,
+      "p50": 141.0,
+      "p90": 150.0,
+      "max": 248.0
+    },
+    "phase_plus_pickup_ms": {
+      "n": 19,
+      "min": 141.0,
+      "p50": 2636.0,
+      "p90": 4147.0,
+      "max": 4651.0
+    }
+  },
+  "simpleq_hold2s": {
+    "rows": [
+      {
+        "i": 0,
+        "hold_wait_ms": 141.1,
+        "fast_after_actor_s": 2.4,
+        "fast_pickup_ms": 106
+      },
+      {
+        "i": 1,
+        "hold_wait_ms": 383.1,
+        "fast_after_actor_s": 2.4,
+        "fast_pickup_ms": 104
+      },
+      {
+        "i": 2,
+        "hold_wait_ms": 383.4,
+        "fast_after_actor_s": 2.4,
+        "fast_pickup_ms": 605
+      },
+      {
+        "i": 3,
+        "hold_wait_ms": 383.4,
+        "fast_after_actor_s": 2.4,
+        "fast_pickup_ms": 110
+      },
+      {
+        "i": 4,
+        "hold_wait_ms": 383.5,
+        "fast_after_actor_s": 2.4,
+        "fast_pickup_ms": 107
+      },
+      {
+        "i": 5,
+        "hold_wait_ms": 323.0,
+        "fast_after_actor_s": 2.4,
+        "fast_pickup_ms": 100
+      }
+    ],
+    "fast_pickup": {
+      "n": 6,
+      "min": 100.0,
+      "p50": 106.0,
+      "p90": 110.0,
+      "max": 605.0
+    }
+  }
+}

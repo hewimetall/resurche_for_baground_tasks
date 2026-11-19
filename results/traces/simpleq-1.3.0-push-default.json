@@ -1,0 +1,97 @@
+{
+  "redis": "redis://127.0.0.1:6391/0",
+  "runs": [
+    {
+      "lib": "simpleq",
+      "idle_s": 2.0,
+      "heartbeat": null,
+      "sent_ms": 1795100881938,
+      "done_ms": 1795100882190,
+      "pickup_ms": 252,
+      "client_ms": 108.0,
+      "client_rc": 0,
+      "client_stdout": "{\"accepted\": true, \"id\": \"c93b6cc0-fe61-4c65-9fa9-1a43f2b1191f\"}",
+      "client_stderr": "",
+      "near_send": [
+        {
+          "cmd": "ZADD",
+          "where": "client",
+          "key": "simple_q:supervisors",
+          "ms_after_sent": -1895.3
+        },
+        {
+          "cmd": "ZADD",
+          "where": "lua",
+          "key": "bench:workers",
+          "ms_after_sent": -1762.8
+        },
+        {
+          "cmd": "ZADD",
+          "where": "lua",
+          "key": "core:apalis:queues:list",
+          "ms_after_sent": -1762.8
+        },
+        {
+          "cmd": "ZRANGEBYSCORE",
+          "where": "lua",
+          "key": "bench:scheduled",
+          "ms_after_sent": -1762.6
+        },
+        {
+          "cmd": "ZRANGEBYSCORE",
+          "where": "lua",
+          "key": "bench:scheduled",
+          "ms_after_sent": -1262.0
+        },
+        {
+          "cmd": "ZRANGEBYSCORE",
+          "where": "lua",
+          "key": "bench:scheduled",
+          "ms_after_sent": -761.8
+        },
+        {
+          "cmd": "ZRANGEBYSCORE",
+          "where": "lua",
+          "key": "bench:scheduled",
+          "ms_after_sent": -261.6
+        },
+        {
+          "cmd": "ZADD",
+          "where": "lua",
+          "key": "bench:scheduled",
+          "ms_after_sent": 90.1
+        },
+        {
+          "cmd": "ZRANGEBYSCORE",
+          "where": "lua",
+          "key": "bench:scheduled",
+          "ms_after_sent": 238.8
+        },
+        {
+          "cmd": "RPUSH",
+          "where": "lua",
+          "key": "bench:active",
+          "ms_after_sent": 238.8
+        },
+        {
+          "cmd": "LPUSH",
+          "where": "lua",
+          "key": "bench:signal",
+          "ms_after_sent": 238.8
+        },
+        {
+          "cmd": "ZADD",
+          "where": "lua",
+          "key": "bench:done",
+          "ms_after_sent": 254.2
+        },
+        {
+          "cmd": "ZRANGEBYSCORE",
+          "where": "lua",
+          "key": "bench:scheduled",
+          "ms_after_sent": 254.4
+        }
+      ]
+    }
+  ]
+}

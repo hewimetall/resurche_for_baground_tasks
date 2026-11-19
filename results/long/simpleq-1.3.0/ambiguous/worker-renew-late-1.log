@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py", line 110, in serve
+    HTTPServer((host, port), Handler).serve_forever()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Error: metrics server failed
+
+Caused by:
+    OSError: [Errno 98] Address already in use
+2026-11-19T14:59:22.644494Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done name=agent-worker.bench.<redacted>.13113.d843156a
+2026-11-19T14:59:37.645326Z  WARN agent_worker::worker: failed to write tasks_done error=failed to record tasks_done name=agent-worker.bench.<redacted>.13113.d843156a
+2026-11-19T14:59:38.146952Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done name=agent-worker.bench.<redacted>.13113.d843156a
+2026-11-19T14:59:52.643850Z  WARN agent_worker::worker: failed to write tasks_done error=failed to record tasks_done name=agent-worker.bench.<redacted>.13113.d843156a
+2026-11-19T14:59:53.145273Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done name=agent-worker.bench.<redacted>.13113.d843156a
+2026-11-19T15:00:07.644109Z  WARN agent_worker::child: queue sweep failed error=failed to read the type of bench:done queue=bench
+2026-11-19T15:00:07.644131Z  WARN agent_worker::worker: failed to write tasks_done error=failed to record tasks_done name=agent-worker.bench.<redacted>.13113.d843156a
+2026-11-19T15:00:08.145435Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done name=agent-worker.bench.<redacted>.13113.d843156a
+2026-11-19T15:00:22.644139Z  WARN agent_worker::worker: failed to write tasks_done error=failed to record tasks_done name=agent-worker.bench.<redacted>.13113.d843156a
+2026-11-19T15:00:23.144712Z  WARN agent_worker::worker: failed to record tasks_done on the supervisor error=failed to record child tasks_done name=agent-worker.bench.<redacted>.13113.d843156a
+2026-11-19T15:00:37.148190Z  WARN apalis_core::backend::persistence: poll_ready: HeartBeat failed -> Dead error=Database(ResponseError: user_script:20: Cant renew leases: worker not registered script: d30754a560d0f0ae884decdcb986ceb755020d07, on @user_script:20.)
+2026-11-19T15:00:37.148225Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: ResponseError: user_script:20: Cant renew leases: worker not registered script: d30754a560d0f0ae884decdcb986ceb755020d07, on @user_script:20.
+2026-11-19T15:00:37.148271Z  WARN apalis_core::monitor: worker future ended with error name="agent-worker.bench.<redacted>.13113.d843156a" error=BackendError(PollNextError(Database(ResponseError: user_script:20: Cant renew leases: worker not registered script: d30754a560d0f0ae884decdcb986ceb755020d07, on @user_script:20.)))

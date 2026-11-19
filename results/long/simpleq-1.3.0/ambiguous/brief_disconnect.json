@@ -1,0 +1,494 @@
+{
+  "scenario_id": "brief_disconnect",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-19T15:01:35Z",
+  "contract_held": true,
+  "checks": [
+    {
+      "name": "was_inflight",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.<redacted>.15204.882ce6fc"
+      ]
+    },
+    {
+      "name": "redis_pid_same",
+      "ok": true,
+      "detail": 8835
+    },
+    {
+      "name": "one_start",
+      "ok": true,
+      "detail": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "name": "one_end",
+      "ok": true,
+      "detail": [
+        "end brief_disconnect"
+      ]
+    },
+    {
+      "name": "done",
+      "ok": true,
+      "detail": [
+        "done"
+      ]
+    }
+  ],
+  "aaa": {
+    "arrange": "Task 01M7T56XQSV4JS62ANDBYR1DX5 is running on one of two workers. Redis is not restarted.",
+    "act": "The proxy closes worker sockets and refuses new ones for 3s, then accepts again.",
+    "assert": "A gap shorter than the orphan window keeps one owner and one execution. A longer gap still finishes the task once after the link returns."
+  },
+  "redis_restarted": false,
+  "task_id": "01M7T56XQSV4JS62ANDBYR1DX5",
+  "message_id": "346b0cee-cfab-4762-822a-52baaebae58a",
+  "owner_alive_after_fault": null,
+  "owner_pid": 15163,
+  "other_pid": 15164,
+  "owner_exit": null,
+  "other_exit": null,
+  "before": null,
+  "immediate": {
+    "places": [
+      "bench:inflight:agent-worker.bench.<redacted>.15204.882ce6fc"
+    ],
+    "inflight": {
+      "bench:inflight:agent-worker.bench.<redacted>.15204.882ce6fc": [
+        "01M7T56XQSV4JS62ANDBYR1DX5"
+      ]
+    },
+    "workers": {
+      "agent-worker.bench.<redacted>.15202.91cbb235": "1795100473",
+      "agent-worker.bench.<redacted>.15204.882ce6fc": "1795100473"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1795100473",
+      "locked_at": "1795100473",
+      "locked_by": "agent-worker.bench.<redacted>.15204.882ce6fc"
+    },
+    "data": true
+  },
+  "final": {
+    "places": [
+      "done"
+    ],
+    "workers": {
+      "agent-worker.bench.<redacted>.15202.91cbb235": "1795100473",
+      "agent-worker.bench.<redacted>.15204.882ce6fc": "1795100488",
+      "agent-worker.bench.<redacted>.15202.11ab34a1": "1795100493"
+    },
+    "meta": {
+      "attempts": "1",
+      "max_attempts": "1",
+      "status": "Done",
+      "idempotency_key": "",
+      "started_at": "1795100473",
+      "locked_at": "1795100488",
+      "locked_by": "agent-worker.bench.<redacted>.15204.882ce6fc",
+      "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+      "done_at": "1795100493"
+    },
+    "data": true,
+    "t_s": 18.252,
+    "effects": [
+      "start brief_disconnect",
+      "end brief_disconnect"
+    ]
+  },
+  "effects": [
+    "start brief_disconnect",
+    "end brief_disconnect"
+  ],
+  "samples": [
+    {
+      "t_s": 0.026,
+      "places": [
+        "bench:inflight:agent-worker.bench.<redacted>.15204.882ce6fc"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.15202.91cbb235": "1795100473",
+        "agent-worker.bench.<redacted>.15204.882ce6fc": "1795100473"
+      },
+      "locked_at": "1795100473",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 2.049,
+      "places": [
+        "bench:inflight:agent-worker.bench.<redacted>.15204.882ce6fc"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.15202.91cbb235": "1795100473",
+        "agent-worker.bench.<redacted>.15204.882ce6fc": "1795100473",
+        "agent-worker.bench.<redacted>.15202.11ab34a1": "1795100478"
+      },
+      "locked_at": "1795100473",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 4.074,
+      "places": [
+        "bench:inflight:agent-worker.bench.<redacted>.15204.882ce6fc"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.15202.91cbb235": "1795100473",
+        "agent-worker.bench.<redacted>.15204.882ce6fc": "1795100473",
+        "agent-worker.bench.<redacted>.15202.11ab34a1": "1795100478"
+      },
+      "locked_at": "1795100473",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 6.1,
+      "places": [
+        "bench:inflight:agent-worker.bench.<redacted>.15204.882ce6fc"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.15202.91cbb235": "1795100473",
+        "agent-worker.bench.<redacted>.15204.882ce6fc": "1795100473",
+        "agent-worker.bench.<redacted>.15202.11ab34a1": "1795100478"
+      },
+      "locked_at": "1795100473",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 8.126,
+      "places": [
+        "bench:inflight:agent-worker.bench.<redacted>.15204.882ce6fc"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.15202.91cbb235": "1795100473",
+        "agent-worker.bench.<redacted>.15204.882ce6fc": "1795100473",
+        "agent-worker.bench.<redacted>.15202.11ab34a1": "1795100478"
+      },
+      "locked_at": "1795100473",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 10.152,
+      "places": [
+        "bench:inflight:agent-worker.bench.<redacted>.15204.882ce6fc"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.15202.91cbb235": "1795100473",
+        "agent-worker.bench.<redacted>.15204.882ce6fc": "1795100473",
+        "agent-worker.bench.<redacted>.15202.11ab34a1": "1795100478"
+      },
+      "locked_at": "1795100473",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 12.176,
+      "places": [
+        "bench:inflight:agent-worker.bench.<redacted>.15204.882ce6fc"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.15202.91cbb235": "1795100473",
+        "agent-worker.bench.<redacted>.15202.11ab34a1": "1795100478",
+        "agent-worker.bench.<redacted>.15204.882ce6fc": "1795100488"
+      },
+      "locked_at": "1795100488",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 14.203,
+      "places": [
+        "bench:inflight:agent-worker.bench.<redacted>.15204.882ce6fc"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.15202.91cbb235": "1795100473",
+        "agent-worker.bench.<redacted>.15202.11ab34a1": "1795100478",
+        "agent-worker.bench.<redacted>.15204.882ce6fc": "1795100488"
+      },
+      "locked_at": "1795100488",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 16.227,
+      "places": [
+        "bench:inflight:agent-worker.bench.<redacted>.15204.882ce6fc"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.15202.91cbb235": "1795100473",
+        "agent-worker.bench.<redacted>.15204.882ce6fc": "1795100488",
+        "agent-worker.bench.<redacted>.15202.11ab34a1": "1795100493"
+      },
+      "locked_at": "1795100488",
+      "effects": [
+        "start brief_disconnect"
+      ]
+    },
+    {
+      "t_s": 18.252,
+      "places": [
+        "done"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.15202.91cbb235": "1795100473",
+        "agent-worker.bench.<redacted>.15204.882ce6fc": "1795100488",
+        "agent-worker.bench.<redacted>.15202.11ab34a1": "1795100493"
+      },
+      "locked_at": "1795100488",
+      "effects": [
+        "start brief_disconnect",
+        "end brief_disconnect"
+      ]
+    }
+  ],
+  "proxy": {
+    "armed": null,
+    "counts": {
+      "pass": 55,
+      "seen:reenqueue": 5,
+      "seen:register": 3,
+      "seen:fetch": 42,
+      "seen:acquire": 1,
+      "blackhole": 1,
+      "seen:keepalive": 2,
+      "seen:renew": 1,
+      "seen:finish": 1
+    },
+    "events": [
+      {
+        "t": 1795100473.5092123,
+        "mono": 976.487869534,
+        "action": "blackhole",
+        "seconds": 3
+      }
+    ],
+    "commands": 113,
+    "ops": [
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$32\r\nsimple_q:supervisor:<redacted>.15163\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$32\r\nsimple_q:supervisor:<redacted>.15163\r\n$4\r\nhost\r\n$6\r\n<redacted>\r\n$3\r\n"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$32\r\nsimple_q:supervisor:<redacted>.15163\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1795100473\r\n$12\r\n<redacted>.15163\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1795100413"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$32\r\nsimple_q:supervisor:<redacted>.15164\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$32\r\nsimple_q:supervisor:<redacted>.15164\r\n$4\r\nhost\r\n$6\r\n<redacted>\r\n$3\r\n"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$32\r\nsimple_q:supervisor:<redacted>.15164\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1795100473\r\n$12\r\n<redacted>.15164\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1795100413"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$63\r\nbench:workers:metadata:agent-worker.bench.<redacted>.15204.882ce"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:dead\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "SCAN",
+        "argc": 6,
+        "prefix": "*6\r\n$4\r\nSCAN\r\n$1\r\n0\r\n$5\r\nMATCH\r\n$24\r\nbench:workers:metadata:*\r\n$5\r\nCOUNT\r\n$3\r\n10"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$63\r\nbench:workers:metadata:agent-worker.bench.<redacted>.15204.882ce6"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 4,
+        "prefix": "*4\r\n$7\r\nEVALSHA\r\n$40\r\nf84c79100c44c2348985e8bd49481807fb54d667\r\n$1\r\n1\r\n$37\r\nbenc"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 11,
+        "prefix": "*11\r\n$7\r\nEVALSHA\r\n$40\r\nf7ff133460a6cd6a739e294b0f4f7a584599f1fc\r\n$1\r\n4\r\n$55\r\nben"
+      },
+      {
+        "op": "ZSCORE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nZSCORE\r\n$13\r\nbench:workers\r\n$40\r\nagent-worker.bench.<redacted>.15204.882ce6f"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$32\r\nsimple_q:supervisor:<redacted>.15164\r\n$11\r\ntasks:15204\r\n$1\r\n0\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 5,
+        "prefix": "*5\r\n$7\r\nEVALSHA\r\n$40\r\n8f290130ebe41d5d981486b7a1b8c3bfc152ea00\r\n$1\r\n1\r\n$47\r\ndeli"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$63\r\nbench:workers:metadata:agent-worker.bench.<redacted>.15202.91cbb"
+      }
+    ]
+  },
+  "owner_log": "2026-11-19T15:01:13.836419Z  WARN apalis_core::backend::persistence: poll_next: fetch_next failed -> Dead error=Database(broken pipe)\n2026-11-19T15:01:13.836466Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: broken pipe\n2026-11-19T15:01:13.836477Z  WARN apalis_core::monitor: worker future ended with error name=\"agent-worker.bench.<redacted>.15202.91cbb235\" error=BackendError(PollNextError(Database(broken pipe)))\n2026-11-19T15:01:28.188498Z  WARN agent_worker::supervisor: supervisor heartbeat failed error=failed to read Redis time",
+  "other_log": "2026-11-19T15:01:28.193686Z  WARN agent_worker::supervisor: supervisor heartbeat failed error=failed to read Redis time",
+  "redis_pid": 8835,
+  "finished_at": "2026-11-19T15:01:35Z"
+}

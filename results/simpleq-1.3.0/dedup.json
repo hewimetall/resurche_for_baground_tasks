@@ -1,0 +1,48 @@
+{
+  "library": "simpleq",
+  "scenario": "dedup",
+  "scale": "short",
+  "started_at": "2026-11-19T14:50:13.012215+00:00",
+  "measured": true,
+  "first": {
+    "accepted": true,
+    "id": "a89441cf-3d54-4561-8452-0bc798f8949a"
+  },
+  "second": {
+    "accepted": false,
+    "id": null
+  },
+  "after_ack": {
+    "accepted": true,
+    "id": "b032ff2c-d869-4fbb-acf1-e29be785eccf"
+  },
+  "invariant": {
+    "expected": 1,
+    "lost": 0,
+    "duplicated": 1,
+    "attempts": 2,
+    "distinct_items": 1,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 1
+  },
+  "mock": {
+    "keys": 1,
+    "calls": 2,
+    "duplicated_keys": 1
+  },
+  "stop": [
+    {
+      "sigterm_at": 1795099817.5387266,
+      "exit_at": 1795099817.7388687,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 4.727
+}

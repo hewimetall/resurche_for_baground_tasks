@@ -1,0 +1,2 @@
+{"deliveries": 1, "max_retries": 1, "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997", "pid": 9098, "retries": 0, "t": 1795100041.077588, "token": "failonce-dropped-finish", "utc": "2026-11-19T14:54:01.077Z", "worker": "agent-worker.bench.<redacted>.9098.78feed30"}
+{"deliveries": 1, "max_retries": 1, "message_id": "49346e5e-e7a0-483a-8487-b83cd88ad997", "pid": 9098, "retries": 1, "t": 1795100041.133107, "token": "failonce-dropped-finish", "utc": "2026-11-19T14:54:01.133Z", "worker": "agent-worker.bench.<redacted>.9098.78feed30"}
