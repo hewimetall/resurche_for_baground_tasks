@@ -1,4 +1,9 @@
-"""Адаптер simple-q 1.0.0rc7."""
+"""Адаптер simple-q 1.3.0.
+
+Вызовы те же, что у 1.0.0rc7: ``Client(url, config)``, ``send_with_options``,
+``QueueAdmin.snapshot/dead/peek``. ``around_dispatch`` по-прежнему получает
+dict, который worker передаёт в ``App.dispatch``.
+"""
 
 from __future__ import annotations
 
