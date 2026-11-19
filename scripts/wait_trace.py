@@ -17,6 +17,7 @@ from pathlib import Path
 
 ROOT = Path("/workspace")
 OUT = ROOT / "results" / "traces"
+TRACE_STEM = os.environ.get("TRACE_STEM", "")
 PORT = "6391"
 URL = f"redis://127.0.0.1:{PORT}/0"
 PY = ROOT / ".venv" / "bin" / "python"
@@ -251,8 +252,9 @@ def latency_ms(path: Path) -> int | None:
 def run_case(spec: dict) -> dict:
     lib = spec["lib"]
     lat = Path(f"/tmp/bench-trace-{lib}.txt")
-    mon_path = OUT / f"{lib}.monitor.txt"
-    log_path = OUT / f"{lib}.worker.log"
+    stem = TRACE_STEM or lib
+    mon_path = OUT / f"{stem}.monitor.txt"
+    log_path = OUT / f"{stem}.worker.log"
     lat.unlink(missing_ok=True)
     _run(["redis-cli", "-p", PORT, "FLUSHALL"])
     monitor = subprocess.Popen(
@@ -269,8 +271,12 @@ def run_case(spec: dict) -> dict:
     env["PYTHONPATH"] = str(ROOT)
     env["PG_DSN"] = "postgresql://ubuntu@127.0.0.1:5432/bench"
     env["MOCK_URL"] = "http://127.0.0.1:8090"
-    if spec.get("heartbeat"):
-        env["SIMPLE_Q_HEARTBEAT_SECS"] = spec["heartbeat"]
+    heartbeat = os.environ.get("TRACE_HEARTBEAT", spec.get("heartbeat") or "")
+    if heartbeat and heartbeat != "default":
+        env["SIMPLE_Q_HEARTBEAT_SECS"] = heartbeat
+    missed = os.environ.get("TRACE_MISSED")
+    if missed:
+        env["SIMPLE_Q_MISSED_HEARTBEATS"] = missed
     t_start = time.time()
     log = log_path.open("w")
     worker = subprocess.Popen(
@@ -340,14 +346,20 @@ def main() -> None:
         print(f"trace {spec['lib']}", flush=True)
         item = run_case(spec)
         results.append(item)
-        (OUT / f"{spec['lib']}.json").write_text(
+        stem = TRACE_STEM or spec["lib"]
+        (OUT / f"{stem}.json").write_text(
             json.dumps(item, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
         print(f"  pickup_ms={item['pickup_ms']} err={item['enqueue_error']}", flush=True)
     rows = []
-    for spec in CASES:
-        path = OUT / f"{spec['lib']}.json"
+    if TRACE_STEM:
+        sources = [(TRACE_STEM, OUT / f"{TRACE_STEM}.json")]
+        summary_path = OUT / f"{TRACE_STEM}-summary.json"
+    else:
+        sources = [(spec["lib"], OUT / f"{spec['lib']}.json") for spec in CASES]
+        summary_path = OUT / "summary.json"
+    for _name, path in sources:
         if not path.exists():
             continue
         item = json.loads(path.read_text(encoding="utf-8"))
@@ -360,7 +372,7 @@ def main() -> None:
                 "commands": item["monitor"]["command_counts"],
             }
         )
-    (OUT / "summary.json").write_text(
+    summary_path.write_text(
         json.dumps(rows, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )

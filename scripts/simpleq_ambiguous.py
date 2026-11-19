@@ -28,9 +28,9 @@ from scripts.redis_fault_proxy import FaultProxy
 
 REDIS_PORT = 6415
 PROXY_PORT = 6414
-REDIS_DIR = Path("/workspace/results/long/ambiguous-redis-6415")
-OUT = ROOT / "results" / "long" / "ambiguous"
-WORKER = "/workspace/.venv-sq120/bin/agent-worker"
+REDIS_DIR = Path(os.environ.get("SIMPLEQ_REDIS_DIR", "/workspace/results/long/ambiguous-redis-6415"))
+OUT = Path(os.environ.get("SIMPLEQ_OUT", str(ROOT / "results" / "long" / "ambiguous")))
+WORKER = os.environ.get("SIMPLEQ_WORKER", "/workspace/.venv-sq120/bin/agent-worker")
 DIRECT = f"redis://127.0.0.1:{REDIS_PORT}/0"
 VIA_PROXY = f"redis://127.0.0.1:{PROXY_PORT}/0"
 HEARTBEAT_S = 15

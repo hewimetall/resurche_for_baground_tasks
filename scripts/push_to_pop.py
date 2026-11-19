@@ -208,14 +208,21 @@ def run_one(lib: str, py: Path, heartbeat: str | None, idle_s: float) -> dict:
 
 def main() -> None:
     ensure_redis()
-    runs = [
-        run_one("celery", PY, None, 3.0),
-        run_one("taskiq", PY, None, 3.0),
-        run_one("dramatiq", PY, None, 8.0),
-        run_one("arq", ARQ_PY, None, 2.0),
-        run_one("simpleq", PY, "5", 2.0),
-    ]
-    path = ROOT / "results" / "traces" / "push-to-pop.json"
+    only = os.environ.get("PUSH_ONLY", "")
+    heartbeat = os.environ.get("PUSH_HEARTBEAT", "5")
+    runs = []
+    if not only:
+        runs = [
+            run_one("celery", PY, None, 3.0),
+            run_one("taskiq", PY, None, 3.0),
+            run_one("dramatiq", PY, None, 8.0),
+            run_one("arq", ARQ_PY, None, 2.0),
+            run_one("simpleq", PY, "5", 2.0),
+        ]
+    elif only == "simpleq":
+        beat = None if heartbeat in {"", "default"} else heartbeat
+        runs = [run_one("simpleq", PY, beat, 2.0)]
+    path = Path(os.environ.get("PUSH_OUT", str(ROOT / "results" / "traces" / "push-to-pop.json")))
     path.write_text(json.dumps({"redis": URL, "runs": runs}, indent=2), encoding="utf-8")
     print(path)
     for run in runs:

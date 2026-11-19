@@ -33,9 +33,9 @@ from scripts.redis_fault_proxy import KNOWN_SHA, FaultProxy
 
 REDIS_PORT = 6420
 PROXY_PORT = 6421
-REDIS_DIR = "/workspace/results/long/retry-enqueue-6420"
-OUT = ROOT / "results" / "long" / "retry-enqueue"
-WORKER = str(ROOT / ".venv-sq120" / "bin" / "agent-worker")
+REDIS_DIR = os.environ.get("SIMPLEQ_REDIS_DIR", "/workspace/results/long/retry-enqueue-6420")
+OUT = Path(os.environ.get("SIMPLEQ_OUT", str(ROOT / "results" / "long" / "retry-enqueue")))
+WORKER = os.environ.get("SIMPLEQ_WORKER", str(ROOT / ".venv-sq120" / "bin" / "agent-worker"))
 DIRECT = f"redis://127.0.0.1:{REDIS_PORT}/0"
 VIA_PROXY = f"redis://127.0.0.1:{PROXY_PORT}/0"
 ORPHAN_S = 15 * 4

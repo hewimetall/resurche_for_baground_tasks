@@ -27,7 +27,7 @@ from bench.workers import command, python_for
 
 REDIS_PORT = 6410
 EFFECT_PORT = 6411
-REDIS_DIR = ROOT / "results" / "long" / "redis-6410"
+REDIS_DIR = Path(os.environ.get("LONGRUN_REDIS_DIR", str(ROOT / "results" / "long" / "redis-6410")))
 
 
 def _utc() -> str:

@@ -221,6 +221,9 @@ class FaultProxy:
                     break
                 upstream_writer.write(raw)
                 await upstream_writer.drain()
+                if action == "reset":
+                    self._note("reset", {"kind": kind, "op": _op(parts), **extra})
+                    break
                 reply = await read_reply(remote_reader, writer)
                 if action == "inspect":
                     if self._reply_matches(reply):
@@ -323,6 +326,8 @@ class FaultProxy:
             return "drop_request", 0.0
         if mode == "drop_response":
             return "drop_response", 0.0
+        if mode == "reset":
+            return "reset", 0.0
         if mode == "delay_response":
             return "delay_response", delay
         return "pass", 0.0
