@@ -1,0 +1,29 @@
+2026-11-19T14:52:36.913792Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:52:36.917389Z  INFO agent_worker::supervisor: worker process started index=0 pid=7272
+2026-11-19T14:52:36.917434Z  INFO agent_worker::supervisor: worker process started index=1 pid=7273
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py", line 110, in serve
+    HTTPServer((host, port), Handler).serve_forever()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Error: metrics server failed
+
+Caused by:
+    OSError: [Errno 98] Address already in use
+2026-11-19T14:52:37.045070Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.7273.b4a5873a started
+2026-11-19T14:52:37.045134Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.7272.d487f2c1 started
+2026-11-19T14:52:37.045782Z  INFO process{otel.name=process probe otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=6c1957d8-2253-40a1-8201-de6e9aa41489 actor_name=probe}: agent_worker::worker: running actor message_id=6c1957d8-2253-40a1-8201-de6e9aa41489 actor_name=probe queue_name=bench retries=0 deliveries=1
+2026-11-19T14:52:37.547804Z  INFO process{otel.name=process blocker otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=abb7f9c6-b94a-4956-b132-75b8d5a46e70 actor_name=blocker}: agent_worker::worker: running actor message_id=abb7f9c6-b94a-4956-b132-75b8d5a46e70 actor_name=blocker queue_name=bench retries=0 deliveries=1
+2026-11-19T14:52:49.336477Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T14:52:49.336610Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.7273.b4a5873a paused
+2026-11-19T14:52:49.336626Z  INFO agent_worker::child: drain requested
+2026-11-19T14:52:49.336630Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.7273.b4a5873a stopped
+2026-11-19T14:52:49.336663Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.7272.d487f2c1 paused
+2026-11-19T14:52:49.336675Z  INFO agent_worker::child: drain requested
+2026-11-19T14:52:49.336679Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.7272.d487f2c1 stopped

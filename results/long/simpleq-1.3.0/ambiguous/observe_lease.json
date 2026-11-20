@@ -1,0 +1,178 @@
+{
+  "scenario_id": "observe_lease",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-19T14:54:22Z",
+  "contract_held": true,
+  "checks": [
+    {
+      "name": "handler_once",
+      "ok": true,
+      "detail": [
+        "start observe-lease",
+        "end observe-lease"
+      ]
+    },
+    {
+      "name": "one_place_while_running",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.<redacted>.9026.de7d218e"
+      ]
+    },
+    {
+      "name": "finished_in_done",
+      "ok": true,
+      "detail": [
+        "done"
+      ]
+    },
+    {
+      "name": "renew_seen",
+      "ok": true,
+      "detail": {
+        "pass": 16,
+        "seen:reenqueue": 3,
+        "seen:register": 2,
+        "seen:fetch": 3,
+        "seen:acquire": 2,
+        "seen:keepalive": 2,
+        "seen:renew": 2,
+        "seen:finish": 2
+      }
+    },
+    {
+      "name": "locked_at_moved",
+      "ok": true,
+      "detail": {
+        "before": {
+          "attempts": "0",
+          "max_attempts": "1",
+          "status": "Running",
+          "idempotency_key": "",
+          "started_at": "1795100040",
+          "locked_at": "1795100040",
+          "locked_by": "agent-worker.bench.<redacted>.9026.de7d218e"
+        },
+        "after": {
+          "attempts": "0",
+          "max_attempts": "1",
+          "status": "Running",
+          "idempotency_key": "",
+          "started_at": "1795100040",
+          "locked_at": "1795100055",
+          "locked_by": "agent-worker.bench.<redacted>.9026.de7d218e"
+        }
+      }
+    },
+    {
+      "name": "no_generation_suffix",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.<redacted>.9026.de7d218e"
+      ]
+    }
+  ],
+  "aaa": {
+    "arrange": "One known task id, one worker, no injected fault.",
+    "act": "Hold the handler for 22s so a 15s heartbeat can run.",
+    "assert": "The task sits in one inflight set, renew_leases is sent with the task id, and done is the only terminal place."
+  },
+  "redis_restarted": false,
+  "task_id": "01M7T4SPPCF88C71VMB1RXCF2E",
+  "message_id": "7ea54b2b-b40f-471b-aff7-477ef8a8f990",
+  "worker_pid": 9006,
+  "names_before": [],
+  "inflight_keys": [
+    "bench:inflight:agent-worker.bench.<redacted>.9026.de7d218e"
+  ],
+  "keys": [
+    "bench:meta:01M7T4SPPCF88C71VMB1RXCF2E",
+    "bench:data",
+    "bench:workers:metadata:agent-worker.bench.<redacted>.9026.de7d218e",
+    "bench:done",
+    "bench:workers"
+  ],
+  "counts": {
+    "pass": 16,
+    "seen:reenqueue": 3,
+    "seen:register": 2,
+    "seen:fetch": 3,
+    "seen:acquire": 2,
+    "seen:keepalive": 2,
+    "seen:renew": 2,
+    "seen:finish": 2
+  },
+  "first": {
+    "places": [
+      "bench:inflight:agent-worker.bench.<redacted>.9026.de7d218e"
+    ],
+    "inflight": {
+      "bench:inflight:agent-worker.bench.<redacted>.9026.de7d218e": [
+        "01M7T4SPPCF88C71VMB1RXCF2E"
+      ]
+    },
+    "workers": {
+      "agent-worker.bench.<redacted>.9026.de7d218e": "1795100040"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1795100040",
+      "locked_at": "1795100040",
+      "locked_by": "agent-worker.bench.<redacted>.9026.de7d218e"
+    },
+    "data": true
+  },
+  "second": {
+    "places": [
+      "bench:inflight:agent-worker.bench.<redacted>.9026.de7d218e"
+    ],
+    "inflight": {
+      "bench:inflight:agent-worker.bench.<redacted>.9026.de7d218e": [
+        "01M7T4SPPCF88C71VMB1RXCF2E"
+      ]
+    },
+    "workers": {
+      "agent-worker.bench.<redacted>.9026.de7d218e": "1795100055"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1795100040",
+      "locked_at": "1795100055",
+      "locked_by": "agent-worker.bench.<redacted>.9026.de7d218e"
+    },
+    "data": true
+  },
+  "final": {
+    "places": [
+      "done"
+    ],
+    "inflight": {},
+    "workers": {
+      "agent-worker.bench.<redacted>.9026.de7d218e": "1795100055"
+    },
+    "meta": {
+      "attempts": "1",
+      "max_attempts": "1",
+      "status": "Done",
+      "idempotency_key": "",
+      "started_at": "1795100040",
+      "locked_at": "1795100055",
+      "locked_by": "agent-worker.bench.<redacted>.9026.de7d218e",
+      "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+      "done_at": "1795100062"
+    },
+    "data": true
+  },
+  "log_tail": "Traceback (most recent call last):\n  File \"/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py\", line 110, in serve\n    HTTPServer((host, port), Handler).serve_forever()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/socketserver.py\", line 457, in __init__\n    self.server_bind()\n  File \"/usr/lib/python3.12/http/server.py\", line 136, in server_bind\n    socketserver.TCPServer.server_bind(self)\n  File \"/usr/lib/python3.12/socketserver.py\", line 473, in server_bind\n    self.socket.bind(self.server_address)\nOSError: [Errno 98] Address already in use\nError: metrics server failed\n\nCaused by:\n    OSError: [Errno 98] Address already in use",
+  "redis_pid": 8835,
+  "finished_at": "2026-11-19T14:54:22Z"
+}

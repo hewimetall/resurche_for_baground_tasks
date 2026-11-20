@@ -1,0 +1,111 @@
+{
+  "run_id": "lr-20261119T145009Z-simpleq-A1_control_40-scored",
+  "scenario_id": "A1_control_40",
+  "class": "scored",
+  "library": "simpleq",
+  "versions": {
+    "simple-q-runtime": "1.3.0",
+    "simple-q-worker": "1.3.0",
+    "dramatiq": "2.2.1",
+    "celery": "5.7.0",
+    "kombu": "5.7.0",
+    "taskiq": "0.13.0",
+    "taskiq-redis": "1.2.4",
+    "redis": "8.1.0"
+  },
+  "source_commit": "6dc91f090c0a3dc444ff19af9d1ce78f8a46af06",
+  "planned_s": 2400.0,
+  "steps": 240,
+  "step_s": 10.0,
+  "kind": "sleep",
+  "time_limit_s": 3000,
+  "max_retries": 0,
+  "workers": 1,
+  "fault": null,
+  "counts_as_2400": true,
+  "redis_port": 6410,
+  "redis_dir": "/workspace/results/long/simpleq-1.3.0/redis-6410",
+  "effect_port": 6411,
+  "clock": {
+    "realtime": 1795099809.6772096,
+    "monotonic": 312.655867355,
+    "offset_realtime_minus_mono": 1795099497.0213423
+  },
+  "resource_limits": "no cgroup and no RLIMIT_AS on the control worker; host is shared with kind",
+  "effective": {
+    "env": {
+      "LONGRUN_EFFECT_URL": "http://127.0.0.1:6411",
+      "LONGRUN_EVENTS": "/workspace/results/long/lr-20261119T145009Z-simpleq-A1_control_40-scored/events.jsonl",
+      "LONGRUN_LIB": "simpleq",
+      "LONGRUN_LIBRARY": "simpleq",
+      "LONGRUN_MAX_RETRIES": "0",
+      "LONGRUN_REDIS_DIR": "/workspace/results/long/simpleq-1.3.0/redis-6410",
+      "LONGRUN_RUN_ID": "lr-20261119T145009Z-simpleq-A1_control_40-scored",
+      "LONGRUN_SCENARIO": "A1_control_40",
+      "LONGRUN_TIME_LIMIT_S": "3000"
+    },
+    "actor": {
+      "name": "hold",
+      "time_limit": 3000000,
+      "max_retries": 0,
+      "max_deliveries": 8,
+      "queue": "bench"
+    },
+    "config": {
+      "batch_size": 1,
+      "child_memory_hard": null,
+      "child_memory_soft": null,
+      "dead_ttl_secs": 604800,
+      "done_ttl_secs": 86400,
+      "from_env": "<built-in method from_env of type object at 0x3bb3b540>",
+      "heartbeat_secs": 15,
+      "idempotency_wait_max_ms": 5000,
+      "idempotency_wait_ms": 20,
+      "lifecycle_interval_ms": 200,
+      "max_deliveries": 5,
+      "memory_hard_ratio": 0.95,
+      "memory_soft_ratio": 0.8,
+      "missed_heartbeats": 4,
+      "ping_budget_secs": 1860,
+      "ping_interval_ms": 2000,
+      "ping_timeout_ms": 3000,
+      "poll_interval_ms": 500,
+      "sweep_batch": 100,
+      "sweep_interval_secs": 60,
+      "unique_ttl_secs": 86400
+    }
+  },
+  "status": "failed",
+  "worker_exit_during_run": -9,
+  "handler_starts": 1,
+  "handler_finishes": 0,
+  "progress_events": 22,
+  "span_s": null,
+  "stop": {},
+  "files_before_manifest": {
+    "effects.jsonl": {
+      "bytes": 5974,
+      "sha256": "db045aa52c34dd8675352aef2f016a5ddd93bf510d6ae3ae91bbb471b992baf5"
+    },
+    "enqueue.json": {
+      "bytes": 120,
+      "sha256": "9c98f55835424db30ad63a5af8361ed7535771936eccf68636083810d406ef77"
+    },
+    "events.jsonl": {
+      "bytes": 30509,
+      "sha256": "0c85f00b37c3791869ca1330b1df4ccf4a898a6cf67faecae53bbe4ffd5b5c85"
+    },
+    "manifest.json": {
+      "bytes": 2406,
+      "sha256": "cf985ddd64cea90922be89b4941bf7f9389cb5c515b1a0cd5d08fc1cf8777c24"
+    },
+    "samples.jsonl": {
+      "bytes": 39000,
+      "sha256": "6d49ca51ed0f202ba5d6ddebf004a7b64ed5926853ebcdcf20dd167dffb68db0"
+    },
+    "worker.log": {
+      "bytes": 728,
+      "sha256": "d973db4c9ce6cf68055a54bfd971bff281f826f16f772a8b33e49805cc246a1e"
+    }
+  }
+}

@@ -18,7 +18,9 @@ from pathlib import Path
 
 ROOT = Path("/workspace")
 sys.path.insert(0, str(ROOT))
-OUT = ROOT / "results" / "traces"
+OUT = Path(os.environ.get("IDLE_DIST_OUT", str(ROOT / "results" / "traces" / "idle-dist.json"))).parent
+IDLE_DIST_FILE = Path(os.environ.get("IDLE_DIST_OUT", str(ROOT / "results" / "traces" / "idle-dist.json")))
+IDLE_ONLY = os.environ.get("IDLE_ONLY", "")
 PORT = "6393"
 URL = f"redis://127.0.0.1:{PORT}/0"
 PY = ROOT / ".venv" / "bin" / "python"
@@ -115,6 +117,9 @@ def base_env(lib: str, heartbeat: str | None = None) -> dict[str, str]:
     }
     if heartbeat:
         env["SIMPLE_Q_HEARTBEAT_SECS"] = heartbeat
+    missed = os.environ.get("IDLE_MISSED")
+    if missed:
+        env["SIMPLE_Q_MISSED_HEARTBEATS"] = missed
     return env
 
 
@@ -300,9 +305,10 @@ def run_hold(repeats: int = 6) -> dict:
 
 def main() -> None:
     ensure_redis()
-    OUT.mkdir(parents=True, exist_ok=True)
+    IDLE_DIST_FILE.parent.mkdir(parents=True, exist_ok=True)
     heartbeat = 5.0
     phases_5 = [i * 0.5 for i in range(10)] * 2
+    simpleq_heartbeat = os.environ.get("IDLE_HEARTBEAT", "5")
     report = {
         "redis": URL,
         "note": (
@@ -311,12 +317,18 @@ def main() -> None:
         ),
         "simpleq_phase": run_series(
             "simpleq",
-            heartbeat="5",
+            heartbeat=None if simpleq_heartbeat in {"", "default"} else simpleq_heartbeat,
             warmup=2.0,
             park_s=0.35,
             phases=phases_5,
             timeout=heartbeat + 4,
         ),
+    }
+    if IDLE_ONLY == "simpleq":
+        if os.environ.get("IDLE_HOLD", "1") == "1" and simpleq_heartbeat == "5":
+            report["simpleq_hold2s"] = run_hold()
+    else:
+        report.update({
         "dramatiq_phase": run_series(
             "dramatiq",
             heartbeat=None,
@@ -358,8 +370,8 @@ def main() -> None:
             phases=[i * 0.2 for i in range(10)] * 2,
             timeout=6,
         ),
-    }
-    path = OUT / "idle-dist.json"
+        })
+    path = IDLE_DIST_FILE
     path.write_text(json.dumps(report, indent=2), encoding="utf-8")
     print(path)
     for name, block in report.items():

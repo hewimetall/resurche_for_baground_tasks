@@ -1,0 +1,8 @@
+2026-11-19T14:55:01.884848Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:55:01.885903Z  INFO agent_worker::supervisor: worker process started index=0 pid=9990
+2026-11-19T14:55:02.436200Z  INFO process{otel.name=process retry_by_retries otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=a9f705b5-81aa-4f33-892a-5151c0671e7d actor_name=retry_by_retries}: agent_worker::worker: running actor message_id=a9f705b5-81aa-4f33-892a-5151c0671e7d actor_name=retry_by_retries queue_name=bench retries=0 deliveries=1
+2026-11-19T14:55:02.460988Z ERROR process{otel.name=process retry_by_retries otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=a9f705b5-81aa-4f33-892a-5151c0671e7d actor_name=retry_by_retries}: agent_worker::worker: retry enqueue failed; leaving the attempt inflight message_id=a9f705b5-81aa-4f33-892a-5151c0671e7d actor_name=retry_by_retries queue_name=bench retries=0 error=enqueue failed: Failed to push task: broken pipe
+2026-11-19T14:55:02.461906Z  WARN agent_worker::supervisor: worker process exited index=0 pid=9990 code=ExitStatus(unix_wait_status(512))
+2026-11-19T14:55:03.463159Z  INFO agent_worker::supervisor: worker process started index=0 pid=10031
+2026-11-19T14:56:03.602220Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T14:56:03.602407Z  INFO agent_worker::child: drain requested

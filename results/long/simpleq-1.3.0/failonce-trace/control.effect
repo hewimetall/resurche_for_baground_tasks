@@ -1,0 +1,2 @@
+{"deliveries": 1, "max_retries": 1, "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e", "pid": 8892, "retries": 0, "t": 1795100039.486753, "token": "failonce-control", "utc": "2026-11-19T14:53:59.486Z", "worker": "agent-worker.bench.<redacted>.8892.389faeb9"}
+{"deliveries": 1, "max_retries": 1, "message_id": "f24f058b-7f5a-4300-878b-235b16f43a3e", "pid": 8892, "retries": 1, "t": 1795100039.4889367, "token": "failonce-control", "utc": "2026-11-19T14:53:59.488Z", "worker": "agent-worker.bench.<redacted>.8892.389faeb9"}

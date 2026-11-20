@@ -22,3 +22,7 @@ results/taskiq-deep/long/e11-full2400.log
 
 
 results/long/retry-enqueue-6420/
+results/long/simpleq-1.3.0/redis-*/
+results/long/simpleq-1.3.0/ambiguous-redis-*/
+results/long/simpleq-1.3.0/failonce-trace-*/
+results/long/simpleq-1.3.0/retry-enqueue-*/

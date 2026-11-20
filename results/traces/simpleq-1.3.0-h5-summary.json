@@ -1,0 +1,37 @@
+[
+  {
+    "lib": "simpleq",
+    "pickup_ms": 536,
+    "idle_before_send_s": 2.713,
+    "enqueue_error": null,
+    "commands": {
+      "TIME": 4,
+      "HGETALL\"": 2,
+      "HSET\"": 8,
+      "EXPIRE\"": 2,
+      "ZADD\"": 5,
+      "ZREMRANGEBYSCORE\"": 1,
+      "EVALSHA\"": 23,
+      "SCRIPT\"": 8,
+      "TYPE\"": 3,
+      "ZSCORE\"": 12,
+      "SCAN\"": 1,
+      "HMSET\"": 2,
+      "DEL\"": 12,
+      "ZRANGEBYSCORE\"": 8,
+      "LRANGE\"": 8,
+      "HSETNX\"": 1,
+      "RPUSH\"": 1,
+      "ZREM\"": 3,
+      "LPUSH\"": 1,
+      "SADD\"": 2,
+      "LTRIM\"": 1,
+      "HMGET\"": 1,
+      "SISMEMBER\"": 1,
+      "LREM\"": 1,
+      "INCR\"": 1,
+      "SREM\"": 1,
+      "HGET\"": 1
+    }
+  }
+]

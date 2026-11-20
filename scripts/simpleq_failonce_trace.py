@@ -30,9 +30,9 @@ from scripts.redis_fault_proxy import KNOWN_SHA, FaultProxy
 
 REDIS_PORT = 6416
 PROXY_PORT = 6417
-REDIS_DIR = "/workspace/results/long/failonce-trace-6416"
-OUT = ROOT / "results" / "long" / "failonce-trace"
-WORKER = "/workspace/.venv-sq120/bin/agent-worker"
+REDIS_DIR = os.environ.get("SIMPLEQ_REDIS_DIR", "/workspace/results/long/failonce-trace-6416")
+OUT = Path(os.environ.get("SIMPLEQ_OUT", str(ROOT / "results" / "long" / "failonce-trace")))
+WORKER = os.environ.get("SIMPLEQ_WORKER", "/workspace/.venv-sq120/bin/agent-worker")
 DIRECT = f"redis://127.0.0.1:{REDIS_PORT}/0"
 VIA_PROXY = f"redis://127.0.0.1:{PROXY_PORT}/0"
 PG_DSN = "postgresql://ubuntu@127.0.0.1:5432/longrun"

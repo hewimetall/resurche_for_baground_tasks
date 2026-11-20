@@ -1,0 +1,119 @@
+2026-11-19T14:50:13.109154Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:50:13.113388Z  INFO agent_worker::supervisor: worker process started index=0 pid=5671
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py", line 110, in serve
+    HTTPServer((host, port), Handler).serve_forever()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Error: metrics server failed
+
+Caused by:
+    OSError: [Errno 98] Address already in use
+2026-11-19T14:50:13.238615Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.5671.d6de5920 started
+2026-11-19T14:50:13.240082Z  INFO process{otel.name=process probe otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=f433d2f4-9f0e-4996-9b2c-19c4150767ce actor_name=probe}: agent_worker::worker: running actor message_id=f433d2f4-9f0e-4996-9b2c-19c4150767ce actor_name=probe queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:13.740956Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=a89441cf-3d54-4561-8452-0bc798f8949a actor_name=item}: agent_worker::worker: running actor message_id=a89441cf-3d54-4561-8452-0bc798f8949a actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:15.742808Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=b032ff2c-d869-4fbb-acf1-e29be785eccf actor_name=item}: agent_worker::worker: running actor message_id=b032ff2c-d869-4fbb-acf1-e29be785eccf actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:17.538959Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T14:50:17.539300Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.5671.d6de5920 paused
+2026-11-19T14:50:17.539316Z  INFO agent_worker::child: drain requested
+2026-11-19T14:50:17.539320Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.5671.d6de5920 stopped
+2026-11-19T14:50:40.845234Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:50:40.850532Z  INFO agent_worker::supervisor: worker process started index=0 pid=6380
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py", line 110, in serve
+    HTTPServer((host, port), Handler).serve_forever()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Error: metrics server failed
+
+Caused by:
+    OSError: [Errno 98] Address already in use
+2026-11-19T14:50:40.983059Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6380.2abc8a35 started
+2026-11-19T14:50:40.984375Z  INFO process{otel.name=process probe otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=9c84520f-3efe-4c97-8ce7-d28f9f0b42c8 actor_name=probe}: agent_worker::worker: running actor message_id=9c84520f-3efe-4c97-8ce7-d28f9f0b42c8 actor_name=probe queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:41.485268Z  INFO process{otel.name=process fanout otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=7b9561a2-34ba-44c3-88bf-918a5f46d851 actor_name=fanout}: agent_worker::worker: running actor message_id=7b9561a2-34ba-44c3-88bf-918a5f46d851 actor_name=fanout queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:41.494122Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=0c3504f8-e61e-424c-a14e-20f96b265c99 actor_name=item}: agent_worker::worker: running actor message_id=0c3504f8-e61e-424c-a14e-20f96b265c99 actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:41.518005Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=0c3504f8-e61e-424c-a14e-20f96b265c99 actor_name=item}: apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6380.2abc8a35 paused
+2026-11-19T14:50:41.518021Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=0c3504f8-e61e-424c-a14e-20f96b265c99 actor_name=item}: agent_worker::worker: process reached max tasks; draining active handlers finished=3 max_tasks=3 in_flight=0
+2026-11-19T14:50:41.608422Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6380.2abc8a35 stopped
+2026-11-19T14:50:41.612492Z  INFO agent_worker::supervisor: worker process recycled index=0 pid=6380
+2026-11-19T14:50:41.613772Z  INFO agent_worker::supervisor: worker process started index=0 pid=6396
+2026-11-19T14:50:41.748332Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6396.2da2eaf4 started
+2026-11-19T14:50:41.749141Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=fe240862-b830-4dd7-a470-a2a603c4633c actor_name=item}: agent_worker::worker: running actor message_id=fe240862-b830-4dd7-a470-a2a603c4633c actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:41.787593Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=efcc5097-8794-44d1-bcc6-e8fa118e4d4a actor_name=item}: agent_worker::worker: running actor message_id=efcc5097-8794-44d1-bcc6-e8fa118e4d4a actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:41.792375Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=cef2c7ac-544f-4ccc-9fd0-e985f6312c7b actor_name=item}: agent_worker::worker: running actor message_id=cef2c7ac-544f-4ccc-9fd0-e985f6312c7b actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:41.796120Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=cef2c7ac-544f-4ccc-9fd0-e985f6312c7b actor_name=item}: apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6396.2da2eaf4 paused
+2026-11-19T14:50:41.796136Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=cef2c7ac-544f-4ccc-9fd0-e985f6312c7b actor_name=item}: agent_worker::worker: process reached max tasks; draining active handlers finished=3 max_tasks=3 in_flight=0
+2026-11-19T14:50:41.971461Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6396.2da2eaf4 stopped
+2026-11-19T14:50:41.976482Z  INFO agent_worker::supervisor: worker process recycled index=0 pid=6396
+2026-11-19T14:50:41.977826Z  INFO agent_worker::supervisor: worker process started index=0 pid=6413
+2026-11-19T14:50:42.114085Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6413.4881799f started
+2026-11-19T14:50:42.115475Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=0201a2db-91af-4b98-97a2-0688f698c23b actor_name=item}: agent_worker::worker: running actor message_id=0201a2db-91af-4b98-97a2-0688f698c23b actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:42.151646Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=c7a097dd-98c4-4b6f-8adb-93ceb121f9c5 actor_name=item}: agent_worker::worker: running actor message_id=c7a097dd-98c4-4b6f-8adb-93ceb121f9c5 actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:42.156094Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=6d40bce3-53f4-462c-9587-70698c5340af actor_name=item}: agent_worker::worker: running actor message_id=6d40bce3-53f4-462c-9587-70698c5340af actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:42.159496Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=6d40bce3-53f4-462c-9587-70698c5340af actor_name=item}: apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6413.4881799f paused
+2026-11-19T14:50:42.159506Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=6d40bce3-53f4-462c-9587-70698c5340af actor_name=item}: agent_worker::worker: process reached max tasks; draining active handlers finished=3 max_tasks=3 in_flight=0
+2026-11-19T14:50:42.336639Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6413.4881799f stopped
+2026-11-19T14:50:42.341319Z  INFO agent_worker::supervisor: worker process recycled index=0 pid=6413
+2026-11-19T14:50:42.342628Z  INFO agent_worker::supervisor: worker process started index=0 pid=6428
+2026-11-19T14:50:42.476382Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6428.a856960d started
+2026-11-19T14:50:42.477268Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=94e43b63-2bfb-49ce-a190-5c22af8be115 actor_name=item}: agent_worker::worker: running actor message_id=94e43b63-2bfb-49ce-a190-5c22af8be115 actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:42.515633Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=cf9d3abb-f5fe-4951-8ae9-3d54e86e5004 actor_name=item}: agent_worker::worker: running actor message_id=cf9d3abb-f5fe-4951-8ae9-3d54e86e5004 actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:42.520481Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=324a6982-e03a-48b4-a923-1040e0a52273 actor_name=item}: agent_worker::worker: running actor message_id=324a6982-e03a-48b4-a923-1040e0a52273 actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:42.523798Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=324a6982-e03a-48b4-a923-1040e0a52273 actor_name=item}: apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6428.a856960d paused
+2026-11-19T14:50:42.523812Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=324a6982-e03a-48b4-a923-1040e0a52273 actor_name=item}: agent_worker::worker: process reached max tasks; draining active handlers finished=3 max_tasks=3 in_flight=0
+2026-11-19T14:50:42.699649Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6428.a856960d stopped
+2026-11-19T14:50:42.704258Z  INFO agent_worker::supervisor: worker process recycled index=0 pid=6428
+2026-11-19T14:50:42.705699Z  INFO agent_worker::supervisor: worker process started index=0 pid=6440
+2026-11-19T14:50:42.840400Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6440.ee73ba89 started
+2026-11-19T14:50:42.841098Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=cfcce579-c00e-4952-9711-b49a7c114572 actor_name=item}: agent_worker::worker: running actor message_id=cfcce579-c00e-4952-9711-b49a7c114572 actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:42.878270Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=3c21e8ab-1687-4509-b371-d38223ae3044 actor_name=item}: agent_worker::worker: running actor message_id=3c21e8ab-1687-4509-b371-d38223ae3044 actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:50:43.072667Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T14:50:43.072756Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6440.ee73ba89 paused
+2026-11-19T14:50:43.072770Z  INFO agent_worker::child: drain requested
+2026-11-19T14:50:43.072775Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.6440.ee73ba89 stopped
+2026-11-19T14:52:57.047527Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:52:57.049106Z  INFO agent_worker::supervisor: worker process started index=0 pid=7454
+Traceback (most recent call last):
+  File "/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py", line 110, in serve
+    HTTPServer((host, port), Handler).serve_forever()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Error: metrics server failed
+
+Caused by:
+    OSError: [Errno 98] Address already in use
+2026-11-19T14:52:57.179212Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.7454.719914d9 started
+2026-11-19T14:52:57.180169Z  INFO process{otel.name=process probe otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=e58efb23-677a-4f18-841d-bd89cb0de41d actor_name=probe}: agent_worker::worker: running actor message_id=e58efb23-677a-4f18-841d-bd89cb0de41d actor_name=probe queue_name=bench retries=0 deliveries=1
+2026-11-19T14:52:57.358087Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T14:52:57.358290Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.7454.719914d9 paused
+2026-11-19T14:52:57.358304Z  INFO agent_worker::child: drain requested
+2026-11-19T14:52:57.358308Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.7454.719914d9 stopped
+2026-11-19T14:54:35.104461Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:54:35.105739Z  INFO agent_worker::supervisor: worker process started index=0 pid=9610
+2026-11-19T14:54:35.249045Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.9610.879bbea2 started
+2026-11-19T14:54:35.251697Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=c03c87ec-06f4-4e87-8fee-f8c9c35d2fa0 actor_name=item}: agent_worker::worker: running actor message_id=c03c87ec-06f4-4e87-8fee-f8c9c35d2fa0 actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:54:35.291437Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=38bb6d10-2b8c-4961-b577-9fde82a54910 actor_name=item}: agent_worker::worker: running actor message_id=38bb6d10-2b8c-4961-b577-9fde82a54910 actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:54:35.296118Z  INFO process{otel.name=process item otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=d3d066b3-ba82-41be-8670-99d80bac5411 actor_name=item}: agent_worker::worker: running actor message_id=d3d066b3-ba82-41be-8670-99d80bac5411 actor_name=item queue_name=bench retries=0 deliveries=1
+2026-11-19T14:54:35.300202Z  INFO process{otel.name=process probe otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=da8931b9-5a33-4178-8cf0-ad9f6612b644 actor_name=probe}: agent_worker::worker: running actor message_id=da8931b9-5a33-4178-8cf0-ad9f6612b644 actor_name=probe queue_name=bench retries=0 deliveries=1
+2026-11-19T14:54:35.416700Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T14:54:35.416763Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.9610.879bbea2 paused
+2026-11-19T14:54:35.416769Z  INFO agent_worker::child: drain requested
+2026-11-19T14:54:35.416772Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.9610.879bbea2 stopped

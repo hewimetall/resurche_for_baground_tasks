@@ -1,0 +1,6 @@
+2026-11-19T14:54:00.466515Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T14:54:00.467711Z  INFO agent_worker::supervisor: worker process started index=0 pid=9066
+2026-11-19T14:55:00.531801Z  INFO process{otel.name=process retry_by_retries otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=d800109f-cec2-4ab2-9f67-da299e924273 actor_name=retry_by_retries}: agent_worker::worker: running actor message_id=d800109f-cec2-4ab2-9f67-da299e924273 actor_name=retry_by_retries queue_name=bench retries=0 deliveries=2
+2026-11-19T14:55:00.559339Z  INFO process{otel.name=process retry_by_retries otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=d800109f-cec2-4ab2-9f67-da299e924273 actor_name=retry_by_retries}: agent_worker::worker: running actor message_id=d800109f-cec2-4ab2-9f67-da299e924273 actor_name=retry_by_retries queue_name=bench retries=1 deliveries=1
+2026-11-19T14:55:01.614328Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T14:55:01.614517Z  INFO agent_worker::child: drain requested

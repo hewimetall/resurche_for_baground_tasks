@@ -14,7 +14,7 @@ Sphinx, MyST, отдельные страницы «что наблюдалос�
 | Reference | **что** сделал процесс и что написано в коде | команды Redis, wchan, строки |
 | Explanation | **почему** задержка такая | таймер, `LPOP`, `BRPOP`, GIL |
 
-Версии стенда: simple-q 1.0.0rc7, Dramatiq 2.2.1 и отдельно 1.18.0, Celery 5.7.0, arq 0.28.0, taskiq 0.13.0 + taskiq-redis 1.2.4, CPython 3.12.3.
+Версии стенда: simple-q 1.0.0rc7 и отдельно 1.3.0 на тех же сценариях, Dramatiq 2.2.1 и отдельно 1.18.0, Celery 5.7.0, arq 0.28.0, taskiq 0.13.0 + taskiq-redis 1.2.4, CPython 3.12.3. Дерево rc7 воспроизводится с коммита `6dc91f0`.
 
 ```{toctree}
 :maxdepth: 1
@@ -38,6 +38,7 @@ how-to/compare-dramatiq-1.18
 reference/wait-traces
 reference/phase-series
 reference/simpleq
+reference/simpleq-1.3
 reference/dramatiq
 reference/celery
 reference/arq

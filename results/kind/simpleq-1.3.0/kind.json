@@ -1,0 +1,7 @@
+{
+  "id": "kind_rollout",
+  "measured": false,
+  "reason": "docker и kind в машине агента не установлены",
+  "docker": false,
+  "kind": false
+}

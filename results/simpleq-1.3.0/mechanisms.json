@@ -1,0 +1,776 @@
+{
+  "library": "simpleq",
+  "version": "1.3.0",
+  "scenario": "mechanisms-1.3.0",
+  "redis_port": 6430,
+  "checks": [
+    {
+      "id": "defaults",
+      "measured": true,
+      "duration_s": 0.0,
+      "result": {
+        "config": {
+          "batch_size": 1,
+          "poll_interval_ms": 500,
+          "ping_interval_ms": 2000,
+          "ping_timeout_ms": 3000,
+          "lifecycle_interval_ms": 200,
+          "sweep_interval_secs": 60,
+          "sweep_batch": 100,
+          "idempotency_wait_ms": 20,
+          "idempotency_wait_max_ms": 5000,
+          "ping_budget_secs": 1860,
+          "dead_ttl_secs": 604800,
+          "unique_ttl_secs": 86400,
+          "heartbeat_secs": 15,
+          "missed_heartbeats": 4,
+          "max_deliveries": 5,
+          "memory_soft_ratio": 0.8,
+          "memory_hard_ratio": 0.95
+        },
+        "matches_changelog": true
+      }
+    },
+    {
+      "id": "unique_release",
+      "measured": true,
+      "duration_s": 0.984,
+      "result": {
+        "first_id": "76393975-d309-4c5e-9adf-2ebce4037766",
+        "key": "bench:idempotency:item:unique-release",
+        "released": true,
+        "release_after_end_s": 0.061,
+        "second_id": "9494d790-2b2f-43f5-b1aa-f9f74e72dd6d",
+        "second_ran": true,
+        "ttl_left": "-2"
+      }
+    },
+    {
+      "id": "unique_stop",
+      "measured": true,
+      "duration_s": 1.173,
+      "result": {
+        "key": "bench:idempotency:item:unique-stop",
+        "exists_after_sigkill": "1",
+        "ttl": "86399"
+      }
+    },
+    {
+      "id": "unique_redis_error",
+      "measured": true,
+      "duration_s": 3.167,
+      "result": {
+        "handler_ended": true,
+        "released_after_blackhole": true,
+        "ttl": "-2",
+        "exists": "0"
+      }
+    },
+    {
+      "id": "slow_ack",
+      "measured": true,
+      "duration_s": 21.296,
+      "result": {
+        "handler_ended": true,
+        "saw_key": true,
+        "released": false,
+        "samples": [
+          {
+            "t": 0.0,
+            "exists": "1"
+          },
+          {
+            "t": 0.203,
+            "exists": "1"
+          },
+          {
+            "t": 0.406,
+            "exists": "1"
+          },
+          {
+            "t": 0.61,
+            "exists": "1"
+          },
+          {
+            "t": 0.813,
+            "exists": "1"
+          },
+          {
+            "t": 1.018,
+            "exists": "1"
+          },
+          {
+            "t": 1.221,
+            "exists": "1"
+          },
+          {
+            "t": 1.425,
+            "exists": "1"
+          },
+          {
+            "t": 1.629,
+            "exists": "1"
+          },
+          {
+            "t": 1.833,
+            "exists": "1"
+          },
+          {
+            "t": 2.036,
+            "exists": "1"
+          },
+          {
+            "t": 2.24,
+            "exists": "1"
+          },
+          {
+            "t": 2.443,
+            "exists": "1"
+          },
+          {
+            "t": 2.647,
+            "exists": "1"
+          },
+          {
+            "t": 2.85,
+            "exists": "1"
+          },
+          {
+            "t": 3.054,
+            "exists": "1"
+          },
+          {
+            "t": 3.257,
+            "exists": "1"
+          },
+          {
+            "t": 3.462,
+            "exists": "1"
+          },
+          {
+            "t": 3.666,
+            "exists": "1"
+          },
+          {
+            "t": 3.87,
+            "exists": "1"
+          },
+          {
+            "t": 4.074,
+            "exists": "1"
+          },
+          {
+            "t": 4.278,
+            "exists": "1"
+          },
+          {
+            "t": 4.481,
+            "exists": "1"
+          },
+          {
+            "t": 4.685,
+            "exists": "1"
+          },
+          {
+            "t": 4.889,
+            "exists": "1"
+          },
+          {
+            "t": 5.093,
+            "exists": "1"
+          },
+          {
+            "t": 5.296,
+            "exists": "1"
+          },
+          {
+            "t": 5.5,
+            "exists": "1"
+          },
+          {
+            "t": 5.704,
+            "exists": "1"
+          },
+          {
+            "t": 5.908,
+            "exists": "1"
+          },
+          {
+            "t": 6.112,
+            "exists": "1"
+          },
+          {
+            "t": 6.316,
+            "exists": "1"
+          },
+          {
+            "t": 6.519,
+            "exists": "1"
+          },
+          {
+            "t": 6.723,
+            "exists": "1"
+          },
+          {
+            "t": 6.927,
+            "exists": "1"
+          },
+          {
+            "t": 7.13,
+            "exists": "1"
+          },
+          {
+            "t": 7.334,
+            "exists": "1"
+          },
+          {
+            "t": 7.537,
+            "exists": "1"
+          },
+          {
+            "t": 7.741,
+            "exists": "1"
+          },
+          {
+            "t": 7.944,
+            "exists": "1"
+          }
+        ],
+        "delayed_replies": [
+          {
+            "t": 1795100322.0934272,
+            "mono": 825.072084552,
+            "action": "delay_response",
+            "kind": "finish",
+            "op": "EVALSHA",
+            "delay_s": 3.0,
+            "task_ids": [
+              "01M7T529QJ6A1F4VKH6T8YJSK8"
+            ]
+          },
+          {
+            "t": 1795100325.0951831,
+            "mono": 828.073840494,
+            "action": "delay_response",
+            "kind": "finish",
+            "op": "EVALSHA",
+            "delay_s": 3.0,
+            "task_ids": [
+              "01M7T529QJ6A1F4VKH6T8YJSK8"
+            ]
+          },
+          {
+            "t": 1795100328.0963523,
+            "mono": 831.07500963,
+            "action": "delay_response",
+            "kind": "finish",
+            "op": "EVALSHA",
+            "delay_s": 3.0,
+            "task_ids": [
+              "01M7T529QJ6A1F4VKH6T8YJSK8"
+            ]
+          },
+          {
+            "t": 1795100331.098758,
+            "mono": 834.077415265,
+            "action": "delay_response",
+            "kind": "finish",
+            "op": "EVALSHA",
+            "delay_s": 3.0,
+            "task_ids": [
+              "01M7T529QJ6A1F4VKH6T8YJSK8"
+            ]
+          },
+          {
+            "t": 1795100334.1001842,
+            "mono": 837.078841845,
+            "action": "delay_response",
+            "kind": "finish",
+            "op": "EVALSHA",
+            "delay_s": 3.0,
+            "task_ids": [
+              "01M7T529QJ6A1F4VKH6T8YJSK8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "delivery_ttl",
+      "measured": true,
+      "duration_s": 1.877,
+      "result": {
+        "message_id": "a6179e1d-ea02-4f31-be86-1c63ff1b5c66",
+        "keys": {
+          "delivery:a6179e1d-ea02-4f31-be86-1c63ff1b5c66:0": "118"
+        },
+        "dead_ttl_setting": 120
+      }
+    },
+    {
+      "id": "max_attempts_stored",
+      "measured": true,
+      "duration_s": 0.32,
+      "result": {
+        "message_id": "bcb8f081-2b80-4842-a715-994637f577ec",
+        "hits": [
+          {
+            "key": "bench:data",
+            "hgetall": "01M7T530BN7S4Q9WV7J3EQ05KS\n{\"version\":1,\"message_id\":\"bcb8f081-2b80-4842-a715-994637f577ec\",\"actor_name\":\"nap\",\"queue\":\"bench\",\"kwargs\":{\"seconds\":30,\"token\":\"attempts\"},\"headers\":{},\"retries\":0,\"max_retries\":0,\"time_limit_ms\":180000,\"min_backoff_ms\":15000,\"max_backoff_ms\":604800000,\"max_deliveries\":3,\"lock_key\":null,\"lock_ttl\":30,\"skip_on_lock\":false}"
+          },
+          {
+            "key": "bench:meta:01M7T530BN7S4Q9WV7J3EQ05KS",
+            "hgetall": "attempts\n0\nmax_attempts\n1\nstatus\nPending\nidempotency_key"
+          }
+        ]
+      }
+    },
+    {
+      "id": "retry_new_enqueue",
+      "measured": true,
+      "duration_s": 0.418,
+      "result": {
+        "message_id": "535dab59-ef0a-4785-9f1e-425793e386ce",
+        "starts": [
+          {
+            "retries": 0,
+            "deliveries": 1,
+            "worker": "agent-worker.bench.<redacted>.12980.7eb77458",
+            "pid": 12980
+          },
+          {
+            "retries": 1,
+            "deliveries": 1,
+            "worker": "agent-worker.bench.<redacted>.12980.7eb77458",
+            "pid": 12980
+          }
+        ],
+        "ended": true
+      }
+    },
+    {
+      "id": "per_child_soft",
+      "measured": true,
+      "duration_s": 3.719,
+      "result": {
+        "kind": "soft",
+        "lines": 9,
+        "distinct_pids": 9,
+        "pids": [
+          13012,
+          13010,
+          13011,
+          13041,
+          13042,
+          13043,
+          13139,
+          13140,
+          13141
+        ],
+        "sample": [
+          "2026-11-19T14:59:06.489036Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=13012 rss=30072832",
+          "2026-11-19T14:59:06.489188Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=13010 rss=29925376",
+          "2026-11-19T14:59:06.489406Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=13011 rss=30011392",
+          "2026-11-19T14:59:07.491144Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=13041 rss=29954048",
+          "2026-11-19T14:59:07.491270Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=13042 rss=29949952",
+          "2026-11-19T14:59:07.491690Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=13043 rss=29810688",
+          "2026-11-19T14:59:08.492382Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=13139 rss=30011392",
+          "2026-11-19T14:59:08.492544Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=13140 rss=30015488"
+        ]
+      }
+    },
+    {
+      "id": "per_child_hard",
+      "measured": true,
+      "duration_s": 3.718,
+      "result": {
+        "kind": "hard",
+        "lines": 6,
+        "distinct_pids": 6,
+        "pids": [
+          13211,
+          13210,
+          13212,
+          13235,
+          13234,
+          13236
+        ],
+        "sample": [
+          "2026-11-19T14:59:10.210161Z ERROR agent_worker::supervisor: killing child reason=\"memory hard\" pid=13211 rss=29749248",
+          "2026-11-19T14:59:10.210320Z ERROR agent_worker::supervisor: killing child reason=\"memory hard\" pid=13210 rss=30015488",
+          "2026-11-19T14:59:10.210812Z ERROR agent_worker::supervisor: killing child reason=\"memory hard\" pid=13212 rss=29655040",
+          "2026-11-19T14:59:12.215119Z ERROR agent_worker::supervisor: killing child reason=\"memory hard\" pid=13235 rss=29872128",
+          "2026-11-19T14:59:12.215305Z ERROR agent_worker::supervisor: killing child reason=\"memory hard\" pid=13234 rss=29818880",
+          "2026-11-19T14:59:12.215754Z ERROR agent_worker::supervisor: killing child reason=\"memory hard\" pid=13236 rss=29933568"
+        ]
+      }
+    },
+    {
+      "id": "soft_during_delivery",
+      "measured": true,
+      "duration_s": 7.297,
+      "result": {
+        "handler_ended": true,
+        "drain_lines": 0,
+        "drain_before_end": false,
+        "child_alive_when_handler_ended": true,
+        "child_exited_after_handler": true,
+        "sample": []
+      }
+    },
+    {
+      "id": "hard_ignores_busy",
+      "measured": true,
+      "duration_s": 2.871,
+      "result": {
+        "kill_lines": 1,
+        "handler_reached_end": false,
+        "sample": [
+          "2026-11-19T14:59:21.224807Z ERROR agent_worker::supervisor: killing child reason=\"memory hard\" pid=13313 rss=35127296"
+        ]
+      }
+    },
+    {
+      "id": "slot_after_sigkill",
+      "measured": true,
+      "duration_s": 4.371,
+      "result": {
+        "kills": [
+          13362,
+          13379
+        ],
+        "drains": [],
+        "new_child_drained": false,
+        "sample": [
+          "2026-11-19T14:59:24.095546Z ERROR agent_worker::supervisor: killing child reason=\"memory hard\" pid=13362 rss=68829184",
+          "2026-11-19T14:59:26.097950Z ERROR agent_worker::supervisor: killing child reason=\"memory hard\" pid=13379 rss=30003200"
+        ]
+      }
+    },
+    {
+      "id": "undelivered_sigusr1",
+      "measured": true,
+      "duration_s": 3.943,
+      "result": {
+        "measured": true,
+        "failed_lines": 1,
+        "drain_lines": 4,
+        "failed_pid": 13424,
+        "drain_pids": [
+          13424,
+          13424,
+          13441,
+          null
+        ],
+        "same_pid_retried": true,
+        "sample": [
+          "2026-11-19T14:59:28.690382Z  WARN agent_worker::supervisor: failed to signal the worker process pid=13424 signal=10",
+          "2026-11-19T14:59:28.690334Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=13424 rss=30154752",
+          "2026-11-19T14:59:29.691975Z  WARN agent_worker::supervisor: draining child reason=\"memory soft\" pid=13424 rss=30162944"
+        ]
+      }
+    },
+    {
+      "id": "cgroup_soft_80",
+      "measured": true,
+      "duration_s": 7.749,
+      "result": {
+        "measured": true,
+        "memory_current": 41345024,
+        "memory_max": 230686720,
+        "child_rss": {
+          "13112": 44822528,
+          "13113": 46780416,
+          "13502": 30449664
+        },
+        "soft_lines": [],
+        "hard_lines": [],
+        "drains": [],
+        "kills": [],
+        "ids": [
+          "9d2cf926-e002-48be-9bc8-7cc35034a0cd"
+        ]
+      }
+    },
+    {
+      "id": "cgroup_hard_95_half",
+      "measured": true,
+      "duration_s": 7.745,
+      "result": {
+        "measured": true,
+        "memory_current": 41119744,
+        "memory_max": 230686720,
+        "child_rss": {
+          "13112": 44822528,
+          "13113": 46780416,
+          "13585": 30244864
+        },
+        "soft_lines": [],
+        "hard_lines": [],
+        "drains": [],
+        "kills": [],
+        "ids": [
+          "0cfcca26-01c1-4219-a1f5-540ee179b1f1"
+        ]
+      }
+    },
+    {
+      "id": "cgroup_95_below_half",
+      "measured": true,
+      "duration_s": 7.746,
+      "result": {
+        "measured": true,
+        "memory_current": 66150400,
+        "memory_max": 188743680,
+        "child_rss": {
+          "13112": 44826624,
+          "13113": 46784512,
+          "13667": 30175232,
+          "13668": 30220288,
+          "13669": 30298112
+        },
+        "soft_lines": [],
+        "hard_lines": [],
+        "drains": [],
+        "kills": [],
+        "ids": [
+          "fab4a406-9aee-4c1f-83a2-f14585440eaa",
+          "29ee1e5d-e2c6-4d43-8320-f20d0e8b8a75",
+          "2c76ed86-9c08-44c3-a019-717ec42f40c9"
+        ]
+      }
+    },
+    {
+      "id": "reply_heartbeat",
+      "measured": true,
+      "duration_s": 6.381,
+      "result": {
+        "kind": "renew",
+        "mode": "drop_response",
+        "handler_ended": true,
+        "starts": 1,
+        "pids_before": [
+          13112,
+          13113,
+          13754
+        ],
+        "pids_after": [
+          13112,
+          13113,
+          13754
+        ],
+        "same_child_pid": true,
+        "proxy": [
+          {
+            "t": 1795100396.699334,
+            "mono": 899.677991103,
+            "action": "drop_response",
+            "kind": "renew",
+            "op": "EVALSHA",
+            "reply_len": 48,
+            "task_ids": [
+              "01M7T54H300Q7DGYBN4QQPPQ6C"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "reply_ack",
+      "measured": true,
+      "duration_s": 6.431,
+      "result": {
+        "kind": "finish",
+        "mode": "drop_response",
+        "handler_ended": true,
+        "starts": 1,
+        "pids_before": [
+          13112,
+          13113,
+          13816
+        ],
+        "pids_after": [
+          13112,
+          13113,
+          13816
+        ],
+        "same_child_pid": true,
+        "proxy": [
+          {
+            "t": 1795100405.1410556,
+            "mono": 908.119712871,
+            "action": "drop_response",
+            "kind": "finish",
+            "op": "EVALSHA",
+            "reply_len": 4,
+            "task_ids": [
+              "01M7T54QAEQHZK7N2NKKYS22M0"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "broken_pipe",
+      "measured": true,
+      "duration_s": 6.379,
+      "result": {
+        "kind": "keepalive",
+        "mode": "reset",
+        "handler_ended": true,
+        "starts": 1,
+        "pids_before": [
+          13112,
+          13113,
+          13898
+        ],
+        "pids_after": [
+          13112,
+          13113,
+          13898
+        ],
+        "same_child_pid": true,
+        "proxy": [
+          {
+            "t": 1795100409.5134747,
+            "mono": 912.492132062,
+            "action": "reset",
+            "kind": "keepalive",
+            "op": "EVALSHA"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fetch_lost",
+      "measured": true,
+      "duration_s": 5.638,
+      "result": {
+        "message_id": "038e9c3a-e0f6-45ce-92b0-6dbbd092f4b6",
+        "starts": 1,
+        "workers": [
+          "agent-worker.bench.<redacted>.13990.f96a559b"
+        ],
+        "pids": [
+          13990
+        ],
+        "child_pids": [
+          13112,
+          13113,
+          13990
+        ],
+        "proxy": [
+          {
+            "t": 1795100414.8945928,
+            "mono": 917.873250182,
+            "action": "drop_response",
+            "kind": "fetch",
+            "op": "EVALSHA",
+            "reply_len": 487
+          }
+        ],
+        "log_sample": [
+          "2026-11-19T15:00:13.892420Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.13990.6adc073d started",
+          "2026-11-19T15:00:14.894954Z  WARN apalis_core::monitor: worker future ended with error name=\"agent-worker.bench.<redacted>.13990.6adc073d\" error=BackendError(PollNextError(Database(broken pipe)))",
+          "2026-11-19T15:00:14.894959Z  INFO apalis_core::monitor: restarting worker name=\"agent-worker.bench.<redacted>.13990.6adc073d\"",
+          "2026-11-19T15:00:14.894961Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.13990.6adc073d restarted",
+          "2026-11-19T15:00:14.895004Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.13990.f96a559b started"
+        ]
+      }
+    },
+    {
+      "id": "gap_over_orphan",
+      "measured": true,
+      "duration_s": 18.37,
+      "result": {
+        "orphan_window_s": 4,
+        "blackhole_s": 8,
+        "starts": 2,
+        "ends": 1,
+        "workers": [
+          "agent-worker.bench.<redacted>.14051.9cdb4af3",
+          "agent-worker.bench.<redacted>.14050.bcb8e39a"
+        ],
+        "pids": [
+          14051,
+          14050
+        ],
+        "start_t": [
+          1795100419.561,
+          1795100431.019
+        ]
+      }
+    },
+    {
+      "id": "ack_during_blackhole",
+      "measured": true,
+      "duration_s": 10.841,
+      "result": {
+        "handler_ended_during_blackhole": true,
+        "starts": 1,
+        "done_card_after": "0",
+        "child_still_up": true
+      }
+    },
+    {
+      "id": "supervisor_sigkill",
+      "measured": true,
+      "duration_s": 16.982,
+      "result": {
+        "children": [
+          13112,
+          13113,
+          14253
+        ],
+        "handler_ended": true,
+        "child_exit_s": 13.6,
+        "second_id": "260e21fc-9a26-4682-9fae-6f421385f7b9",
+        "second_fetched": false,
+        "log": [
+          "2026-11-19T15:00:48.788268Z  INFO agent_worker::child: supervisor exited; draining accepted work"
+        ],
+        "started": true
+      }
+    },
+    {
+      "id": "prom_delayed",
+      "measured": true,
+      "duration_s": 1.238,
+      "result": {
+        "lines": [],
+        "all_zero": true
+      }
+    },
+    {
+      "id": "admin_shapes",
+      "measured": true,
+      "duration_s": 0.574,
+      "result": {
+        "snapshot_type": "Snapshot",
+        "dead_type": "DeadPage",
+        "page_type": "TaskPage",
+        "types_match": true,
+        "dispatch_is_dict": [
+          true
+        ],
+        "dispatch_type": [
+          "dict"
+        ],
+        "queues": [
+          "bench"
+        ]
+      }
+    },
+    {
+      "id": "kind_rollout",
+      "measured": false,
+      "duration_s": 0.286,
+      "result": {
+        "measured": false,
+        "reason": "docker и kind в машине агента не установлены",
+        "docker": false,
+        "kind": false
+      }
+    }
+  ]
+}

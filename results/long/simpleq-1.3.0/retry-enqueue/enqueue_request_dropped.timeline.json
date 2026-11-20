@@ -1,0 +1,128 @@
+[
+  {
+    "source": "handler",
+    "unix": 1795100040.4145813,
+    "phase": "handler_start",
+    "execution_id": "37d9059a-2fd3-4602-a323-ffe60ca4dbe3",
+    "retries": 0,
+    "result": null,
+    "worker": "agent-worker.bench.<redacted>.8989.1b23b1c9",
+    "pid": 8989
+  },
+  {
+    "source": "handler",
+    "unix": 1795100040.414649,
+    "phase": "handler_end",
+    "execution_id": "37d9059a-2fd3-4602-a323-ffe60ca4dbe3",
+    "retries": 0,
+    "result": "retry",
+    "worker": "agent-worker.bench.<redacted>.8989.1b23b1c9",
+    "pid": 8989
+  },
+  {
+    "source": "proxy",
+    "unix": 1795100040.415724,
+    "action": "drop_request",
+    "kind": "enqueue",
+    "enqueue_task_id": "01M7T4SQ6ZDESHP3VDV3MPCAQ2",
+    "message_id": "d800109f-cec2-4ab2-9f67-da299e924273",
+    "retries": 1
+  },
+  {
+    "source": "observer",
+    "t_s": 0.003,
+    "unix": 1795100040.4196596,
+    "tasks": [
+      {
+        "id": "01M7T4SPPPN96AFWFE8B2Y5F3W",
+        "retries": 0,
+        "places": [
+          "bench:inflight:agent-worker.bench.<redacted>.8989.1b23b1c9"
+        ],
+        "status": "Running",
+        "attempts": "0"
+      }
+    ]
+  },
+  {
+    "source": "observer",
+    "t_s": 60.136,
+    "unix": 1795100100.5523875,
+    "tasks": [
+      {
+        "id": "01M7T4SPPPN96AFWFE8B2Y5F3W",
+        "retries": 0,
+        "places": [
+          "bench:inflight:agent-worker.bench.<redacted>.9066.543c5ecd"
+        ],
+        "status": "Running",
+        "attempts": "0"
+      }
+    ]
+  },
+  {
+    "source": "handler",
+    "unix": 1795100100.55625,
+    "phase": "handler_start",
+    "execution_id": "ae82ec15-cf95-482a-8afb-dfdd4c3dfa3d",
+    "retries": 0,
+    "result": null,
+    "worker": "agent-worker.bench.<redacted>.9066.543c5ecd",
+    "pid": 9066
+  },
+  {
+    "source": "handler",
+    "unix": 1795100100.5563154,
+    "phase": "handler_end",
+    "execution_id": "ae82ec15-cf95-482a-8afb-dfdd4c3dfa3d",
+    "retries": 0,
+    "result": "retry",
+    "worker": "agent-worker.bench.<redacted>.9066.543c5ecd",
+    "pid": 9066
+  },
+  {
+    "source": "handler",
+    "unix": 1795100100.559556,
+    "phase": "handler_start",
+    "execution_id": "94e599ec-9f12-41d0-8695-774f57eebd15",
+    "retries": 1,
+    "result": null,
+    "worker": "agent-worker.bench.<redacted>.9066.543c5ecd",
+    "pid": 9066
+  },
+  {
+    "source": "handler",
+    "unix": 1795100100.55974,
+    "phase": "handler_end",
+    "execution_id": "94e599ec-9f12-41d0-8695-774f57eebd15",
+    "retries": 1,
+    "result": "ok",
+    "worker": "agent-worker.bench.<redacted>.9066.543c5ecd",
+    "pid": 9066
+  },
+  {
+    "source": "observer",
+    "t_s": 60.188,
+    "unix": 1795100100.6049292,
+    "tasks": [
+      {
+        "id": "01M7T4SPPPN96AFWFE8B2Y5F3W",
+        "retries": 0,
+        "places": [
+          "done"
+        ],
+        "status": "Done",
+        "attempts": "1"
+      },
+      {
+        "id": "01M7T4VHYCG7YP1DYC66A5798E",
+        "retries": 1,
+        "places": [
+          "done"
+        ],
+        "status": "Done",
+        "attempts": "1"
+      }
+    ]
+  }
+]

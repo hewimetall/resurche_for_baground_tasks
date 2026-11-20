@@ -240,3 +240,15 @@ python scripts/simpleq_retry_enqueue_fault.py
 ## CI
 
 В репозитории нет workflow GitHub Actions: каталог `.github/workflows` пуст, API списка workflow возвращает ноль. На head `35a659f` единственный check — CodeRabbit, `completed` / `skipped`. Тестового прогона на этом PR нет.
+
+## simple-q 1.3.0
+
+Те же скрипты, другой каталог: `results/long/simpleq-1.3.0/ambiguous/`, `results/long/simpleq-1.3.0/failonce-trace/`, `results/long/simpleq-1.3.0/retry-enqueue/`. Файлы 1.2.0 выше не переписывались. Окно сироты снова 15×4 = 60 с, бюджет наблюдения 90 с. Пакеты `simple-q-runtime==1.3.0` и `simple-q-worker==1.3.0`.
+
+Повтор heartbeat, renewal и ack до двух минут меняет то, что скрипт 1.2.0 считал остановкой владельца. Потерянный renew не остановил старого владельца за 90 с: score продолжал двигаться, проверка `old_owner_stopped_after_budget` ложна. `long_unavailable` на 70 с дал один start и `done`: воркер повторял команды внутри двух минут, и второго тела не было. `renew_late_reply` на 75 с дал два start. Короткий разрыв 3 с оставил один start и один end. Потерянный fetch в отдельном замере (`results/simpleq-1.3.0/mechanisms.json`, `fetch_lost`) завершил имя worker и поднял новое имя в том же процессе; тело пришло через ~4 с при окне 4 с. Разрыв длиннее окна (окно 4 с, чёрная дыра 8 с, два процесса) выполнил тело дважды, старты через ~11.5 с.
+
+Первый broken pipe ребёнка процесс не завершил. Это расхождение с разделом выше, где child 1.2.0 выходил по `broken pipe`. Код: [`redis_retry.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/simple-q-runtime/src/redis_retry.rs#L19-L29). Полные 120 с потолка повтора этим прогоном не выжидались.
+
+Enqueue по-прежнему не повторяется. Контроль без сбоя: 2 входа handler, один task с `retries` 0 и один с `retries` 1. Потерянный запрос enqueue: лог `retry enqueue failed; leaving the attempt inflight`, 3 входа handler, один task с `retries` 1. Потерянный ответ enqueue: 4 входа, два task с `retries` 1. Отложенный ответ enqueue: те же 4 входа и два task с `retries` 1 (`results/long/simpleq-1.3.0/retry-enqueue/`). Исходная попытка остаётся inflight, после окна сироты тело выполняется снова и создаёт ещё один retry.
+
+`failonce` без сбоя на 1.3.0 доводит оба входа: первый task `Done` с результатом `retry`, второй task `Done` с `ok`, `retries` 0 затем 1, `deliveries` 1 (`results/long/simpleq-1.3.0/failonce-trace/trace.json`). Потерянный запрос finish тоже оставил оба task в `done`. Redis в этих прогонах не перезапускался.

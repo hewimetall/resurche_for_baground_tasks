@@ -83,6 +83,52 @@ A soft execution timeout is unsupported. A per-message visibility timeout is uns
 
 ---
 
+## simple-q 1.3.0
+
+Same subsections as the rc7 section. Line numbers are the tree `64d01e7` (tag `v1.3.0`). The rc7 section above is unchanged. The installed packages are `simple-q-runtime==1.3.0` and `simple-q-worker==1.3.0`. `Config()` with no environment overrides returns `ping_budget_secs=1860`, `heartbeat_secs=15`, `missed_heartbeats=4`, `poll_interval_ms=500`, `max_deliveries=5`. The rc7 tree is reproduced from commit `6dc91f0`.
+
+### Execution timeout
+
+There is still one execution limit, `time_limit`, in milliseconds. The actor default is `DEFAULT_TIME_LIMIT_MS = 1_800_000` ([`dispatch.py`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/python/simple_q/dispatch.py#L65)). The same constant is `30 * 60 * 1000` in [`names.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/simple-q-runtime/src/names.rs#L28).
+
+An omitted ping budget is `DEFAULT_TIME_LIMIT_MS / 1000 + PING_MARGIN_SECS` ([`names.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/simple-q-runtime/src/names.rs#L31-L40)), which is 1860 seconds. It does not follow the actor `time_limit`. The 2400-second control leaves `SIMPLE_Q_PING_BUDGET_SECS` unset and sets the actor `time_limit` to 3000000 ms, so the 1800-second default does not fire. That control passed: span 2404.414 s, one handler start and one finish, 240 progress events, 240 effects, no duplicates (`results/long/simpleq-1.3.0/lr-20261119T150521Z-simpleq-A1_control_40-scored`). The manifest records `ping_budget_secs` 1860. The worker log has no unresponsive-loop line. `asyncio.sleep` kept the pings succeeding, so the 1860-second budget did not stop the run.
+
+`asyncio.sleep` still lets the Python ping succeed, so the ping budget does not start. A blocking call on `python-asyncio` fails those pings. Renewal continues until the 1860-second budget elapses. That split is the same as rc7. The control uses `asyncio.sleep(10)` and does not exercise the blocked-loop path.
+
+A soft execution timeout is unsupported. `memory_soft_ratio` and `memory_hard_ratio` are memory ratios.
+
+### ACK relative to handler return
+
+Fetch and the lease happen before the handler. On apalis-core 1.2.0, `TaskPersistService` sends `TaskEvent::Lock`, awaits the handler future, and, when `should_ack` is true, sends `TaskEvent::Complete` ([`service.rs`](https://docs.rs/apalis-core/1.2.0/src/apalis_core/backend/persistence/service.rs.html#133-148)). `should_ack` is `persist_results` (line 84 of that file). simple-q still sets `lock_tasks` on and `persist_results` on.
+
+The idempotency key is deleted only after `done` or `dead` is visible, until the process stops or `SIMPLE_Q_UNIQUE_TTL_SECS` elapses. A Redis error during that wait is retried ([`worker.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/agent-worker/src/worker.rs#L530-L555), [`redis_api.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/simple-q-runtime/src/redis_api.rs#L320-L334)). Measured: the key disappeared 0.061 s after `done`; after `SIGKILL` it remained; a 2.5 s Redis blackhole during the wait released the key after Redis returned; one delayed finish released the key at 3.539 s (`results/simpleq-1.3.0/mechanisms.json`, `results/simpleq-1.3.0/mechanisms-follow.json`).
+
+### Heartbeat, visibility, idle
+
+There is no per-message visibility timeout. A handler call that extends an inflight lease is unsupported.
+
+The orphan window is still `heartbeat_secs * missed_heartbeats`. The defaults are 15 and 4 ([`names.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/simple-q-runtime/src/names.rs#L14-L15)), so 60 seconds.
+
+Idle fetch is no longer the heartbeat `Delay`. `worker_storage` calls `poll_with_interval` with `SIMPLE_Q_POLL_INTERVAL_MS`, default 500 ([`redis_api.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/simple-q-runtime/src/redis_api.rs#L44-L58)). Measured idle gap: 0.332 s at heartbeat 15 s and 0.326 s at 5 s (`results/simpleq-1.3.0/idle_gap.json`). The heartbeat still renews the lease and still sets the orphan window. `sigkill` at 5×2 returned in 10.25 s with `deliveries` 1 then 2 (`results/simpleq-1.3.0/sigkill.json`).
+
+A dropped or timed-out heartbeat, renewal, or ack is sent again for up to 120 seconds. Fetch and enqueue are not sent again ([`redis_retry.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/simple-q-runtime/src/redis_retry.rs#L19-L29)). A backend error that ends the worker restarts it in the same process under a new name ([`worker.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/agent-worker/src/worker.rs#L133-L138)). The full 120-second ceiling was not waited out. A gap longer than the orphan window still ran the body twice: window 4 s, blackhole 8 s, two starts about 11.5 s apart (`results/simpleq-1.3.0/mechanisms.json`, `gap_over_orphan`). A 70 s blackhole against a 60 s window finished once, because the worker kept retrying inside the two-minute budget (`results/long/simpleq-1.3.0/ambiguous/`).
+
+On Linux the supervisor opens one pidfd. `SIGKILL` of the supervisor requests the existing drain. The accepted delivery finishes and is acked. No new fetch is issued ([`parent_pidfd.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/agent-worker/src/parent_pidfd.rs#L1-L21), [`child.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/agent-worker/src/child.rs#L182-L184)). Measured: the child exited 4.067 s after the supervisor was killed, the 4 s handler had finished, and the second task was not fetched (`results/simpleq-1.3.0/mechanisms-cgroup.json`).
+
+### Retry versus redelivery
+
+These are still different counters.
+
+A retry enqueues a new task and returns `Ok` for the current one. Apalis `max_attempts` stays 1 ([`redis_api.rs`](https://github.com/hewimetall/simple-redis-q/blob/64d01e7/crates/simple-q-runtime/src/redis_api.rs#L200), line 231 of the same file). Measured: stored `max_attempts` was 1; two starts of one message had `retries` 0 then 1 and `deliveries` 1 on each. The delivery-counter TTL follows `SIMPLE_Q_DEAD_TTL_SECS`: with the setting 120 the key TTL was 118 s.
+
+`deliveries` is still the counter on `delivery:{message_id}:{retries}`. Poison is still `deliveries > max_deliveries`. Five `SIGKILL`s produced `poison deliveries=6 retries=0` (`results/simpleq-1.3.0/five_kills.json`).
+
+### Unsupported
+
+A soft execution timeout is unsupported. A per-message visibility timeout is unsupported. A handler API that extends the inflight ack is unsupported. Process-kill of the handler at the execution limit is unsupported: the limit is still `asyncio.wait_for` on the Python loop. Fetch and enqueue are not replayed. A gap longer than the orphan window can still run the body twice.
+
+---
+
 ## dramatiq 2.2.1
 
 ### Execution timeout

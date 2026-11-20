@@ -1,0 +1,42 @@
+{
+  "library": "simpleq",
+  "scenario": "soft_memory",
+  "scale": "short",
+  "started_at": "2026-11-19T14:51:35.777802+00:00",
+  "measured": true,
+  "ready": true,
+  "pids": [
+    7031,
+    7056
+  ],
+  "invariant": {
+    "expected": 8,
+    "lost": 1,
+    "duplicated": 0,
+    "attempts": 8,
+    "distinct_items": 8,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "running",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 8
+  },
+  "admin_keys": [
+    "snapshot",
+    "dead",
+    "waiting"
+  ],
+  "log_tail": "2026-11-19T14:51:35.880864Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=167772160 hard_bytes=230686720\n2026-11-19T14:51:35.882327Z  INFO agent_worker::supervisor: worker process started index=0 pid=7031\nTraceback (most recent call last):\n  File \"/agent/repos/resurche_for_baground_tasks/.venv/lib/python3.12/site-packages/simple_q/exposition.py\", line 110, in serve\n    HTTPServer((host, port), Handler).serve_forever()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/socketserver.py\", line 457, in __init__\n    self.server_bind()\n  File \"/usr/lib/python3.12/http/server.py\", line 136, in server_bind\n    socketserver.TCPServer.server_bind(self)\n  File \"/usr/lib/python3.12/socketserver.py\", line 473, in server_bind\n    self.socket.bind(self.server_address)\nOSError: [Errno 98] Address already in use\nError: metrics server failed\n\nCaused by:\n    OSError: [Errno 98] Address already in use\n2026-11-19T14:51:36.011215Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.7031.ca065e85 started\n2026-11-19T14:51:36.012555Z  INFO process{otel.name=process probe otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=e5196986-72ad-46b3-ac0c-760768e516e2 actor_name=probe}: agent_worker::worker: running actor message_id=e5196986-72ad-46b3-ac0c-760768e516e2 actor_name=probe queue_name=bench retries=0 deliveries=1\n2026-11-19T14:51:36.513214Z  INFO process{otel.name=process fanout otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=50a9e21c-659e-446f-9e43-4233e488f71e actor_name=fanout}: agent_worker::worker: running actor message_id=50a9e21c-659e-446f-9e43-4233e488f71e actor_name=fanout queue_name=bench retries=0 deliveries=1\n2026-11-19T14:51:36.520953Z  INFO process{otel.name=process item otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=0f1a664a-d642-4656-9c29-10e38d4257c6 actor_name=item}: agent_worker::worker: running actor message_id=0f1a664a-d642-4656-9c29-10e38d4257c6 actor_name=item queue_name=bench retries=0 deliveries=1\n2026-11-19T14:51:37.057282Z  INFO process{otel.name=process item otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=2c4d4b42-3834-4217-bcdb-3eb676c3831b actor_name=item}: agent_worker::worker: running actor message_id=2c4d4b42-3834-4217-bcdb-3eb676c3831b actor_name=item queue_name=bench retries=0 deliveries=1\n2026-11-19T14:51:37.577674Z  INFO process{otel.name=process item otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=c6334e49-1837-4473-b7d5-44fd5887d992 actor_name=item}: agent_worker::worker: running actor message_id=c6334e49-1837-4473-b7d5-44fd5887d992 actor_name=item queue_name=bench retries=0 deliveries=1\n2026-11-19T14:51:38.099543Z  INFO process{otel.name=process item otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=6d1a43de-051b-4db4-a2b6-ace5cbb61082 actor_name=item}: agent_worker::worker: running actor message_id=6d1a43de-051b-4db4-a2b6-ace5cbb61082 actor_name=item queue_name=bench retries=0 deliveries=1\n2026-11-19T14:51:38.631801Z  INFO process{otel.name=process item otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=946015b3-452c-482a-83c3-895650ed5ae3 actor_name=item}: agent_worker::worker: running actor message_id=946015b3-452c-482a-83c3-895650ed5ae3 actor_name=item queue_name=bench retries=0 deliveries=1\n2026-11-19T14:51:39.163059Z  INFO process{otel.name=process item otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=3e74f5e8-40d8-4b7c-8c67-9d9a20d46a49 actor_name=item}: agent_worker::worker: running actor message_id=3e74f5e8-40d8-4b7c-8c67-9d9a20d46a49 actor_name=item queue_name=bench retries=0 deliveries=1\n2026-11-19T14:51:39.695180Z  INFO process{otel.name=process item otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=72bcbd12-57e7-4ec2-9d1d-d96de95a6723 actor_name=item}: agent_worker::worker: running actor message_id=72bcbd12-57e7-4ec2-9d1d-d96de95a6723 actor_name=item queue_name=bench retries=0 deliveries=1\n2026-11-19T14:51:39.886305Z ERROR agent_worker::supervisor: killing child reason=\"memory hard\" pid=7031 rss=269443072\n2026-11-19T14:51:39.893422Z  WARN agent_worker::supervisor: worker process exited index=0 pid=7031 code=ExitStatus(unix_wait_status(9))\n2026-11-19T14:51:40.896209Z  INFO agent_worker::supervisor: worker process started index=0 pid=7056\n2026-11-19T14:51:41.032569Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.7056.318db95b started\n2026-11-19T14:51:41.033304Z  INFO process{otel.name=process item otel.kind=\"consumer\" messaging.system=\"redis\" messaging.destination=bench messaging.operation=\"process\" messaging.message.id=42f74c28-0864-4fae-8b6c-b8de6454ab16 actor_name=item}: agent_worker::worker: running actor message_id=42f74c28-0864-4fae-8b6c-b8de6454ab16 actor_name=item queue_name=bench retries=0 deliveries=1",
+  "stop": [
+    {
+      "sigterm_at": 1795099956.5902414,
+      "exit_at": 1795099956.7904406,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 61.013
+}

@@ -1,0 +1,54 @@
+{
+  "library": "simpleq",
+  "scenario": "shell_sigterm",
+  "scale": "short",
+  "started_at": "2026-11-19T14:51:18.628685+00:00",
+  "measured": true,
+  "rows": [
+    {
+      "shell": "bash",
+      "signal": "process_group",
+      "stop": {
+        "sigterm_at": 1795099879.8391585,
+        "exit_at": 1795099880.0393496,
+        "t_drain_s": 0.2,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      }
+    },
+    {
+      "shell": "exec",
+      "signal": "process_group",
+      "stop": {
+        "sigterm_at": 1795099881.2520192,
+        "exit_at": 1795099881.4521506,
+        "t_drain_s": 0.2,
+        "killed_after_grace": false,
+        "code": 0,
+        "already_exited": false
+      }
+    },
+    {
+      "shell": "bash",
+      "signal": "pid1",
+      "stop": {
+        "sigterm_at": 1795099882.6709743,
+        "t_drain_s": 0.2,
+        "killed_after_grace": false,
+        "code": 0
+      }
+    },
+    {
+      "shell": "exec",
+      "signal": "pid1",
+      "stop": {
+        "sigterm_at": 1795099884.0911226,
+        "t_drain_s": 0.2,
+        "killed_after_grace": false,
+        "code": 0
+      }
+    }
+  ],
+  "duration_s": 5.663
+}

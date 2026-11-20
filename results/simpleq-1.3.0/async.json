@@ -1,0 +1,35 @@
+{
+  "library": "simpleq",
+  "scenario": "async",
+  "scale": "short",
+  "started_at": "2026-11-19T14:52:49.556655+00:00",
+  "measured": true,
+  "sent": {
+    "accepted": 16,
+    "rejected": 0,
+    "seconds": 0.005,
+    "sample_ids": [
+      "4570641c-b505-475a-b5f6-eb5dbc61290a",
+      "4d7c73e0-ab68-4e76-b8bc-c60d77fc5c32",
+      "aa024b4f-fbd4-4a15-a02f-0a9f3e2e9619"
+    ],
+    "native_dedup": false
+  },
+  "ends": 16,
+  "elapsed_s": 1.717,
+  "work_span_s": 1.021,
+  "serial_s": 4.0,
+  "parallel_floor_s": 1.0,
+  "concurrency": 4,
+  "stop": [
+    {
+      "sigterm_at": 1795099971.6848645,
+      "exit_at": 1795099971.8850694,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 2.328
+}

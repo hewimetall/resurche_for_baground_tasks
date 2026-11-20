@@ -1,0 +1,20 @@
+{
+  "library": "simpleq",
+  "scenario": "admin",
+  "scale": "short",
+  "started_at": "2026-11-19T14:50:34.989116+00:00",
+  "measured": true,
+  "ready": true,
+  "admin_excerpt": "{\"snapshot\": {\"taken_at\": 1795099835, \"queues\": [{\"name\": \"bench\", \"active\": 0, \"scheduled\": 0, \"inflight\": 0, \"done\": 1, \"dead\": 0, \"workers\": 1, \"workers_alive\": 1}], \"supervisors\": [{\"host\": \"<redacted>\", \"pid\": 6133, \"started_at\": 1795099835, \"last_seen\": 1795099835, \"version\": \"1.3.0\", \"queues\": [\"bench\"], \"processes\": 1, \"concurrency\": 1, \"max_tasks\": 500, \"child_soft\": null, \"child_hard\": null, \"cgroup_current\": 469180416, \"cgroup_max\": 15706882048, \"recycled\": 0, \"drains\": 0, \"kills\": 0, \"restarts\": 0, \"children\": [{\"host\": \"<redacted>\", \"pid\": 6159, \"ppid\": 6133, \"slot\": 0, \"state\": \"running\", \"reason\": null, \"exit\": null, \"rss\": null, \"started_at\": 1795099835, \"ended_at\": null, \"tasks_done\": 0, \"max_tasks\": 500, \"workers\": [\"agent-worker.bench.<redacted>.6159.b9b1acc6\"], \"last_seen\": 1795099835, \"alive\": true, \"tasks\": []}]}], \"orphans\": []}, \"dead\": [], \"waiting\": []}",
+  "stop": [
+    {
+      "sigterm_at": 1795099835.5138981,
+      "exit_at": 1795099835.7140348,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 0.725
+}

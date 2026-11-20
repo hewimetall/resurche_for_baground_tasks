@@ -1,0 +1,2 @@
+2026-11-19T15:01:12.807839Z ERROR apalis_core::worker: WorkerError: Failed to poll backend: PollNextError: ResponseError: user_script:80: task not executed by worker script: 9a702ec86f2a2dcdd3f53342b4e7cdce332871cd, on @user_script:80.
+2026-11-19T15:01:12.807881Z  WARN apalis_core::monitor: worker future ended with error name="agent-worker.bench.<redacted>.15109.7d21af35" error=BackendError(PollNextError(Database(ResponseError: user_script:80: task not executed by worker script: 9a702ec86f2a2dcdd3f53342b4e7cdce332871cd, on @user_script:80.)))

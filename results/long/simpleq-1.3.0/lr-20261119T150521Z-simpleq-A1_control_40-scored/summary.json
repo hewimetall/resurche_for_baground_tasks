@@ -1,0 +1,27 @@
+{
+  "run_id": "lr-20261119T150521Z-simpleq-A1_control_40-scored",
+  "scenario_id": "A1_control_40",
+  "library": "simpleq",
+  "class": "scored",
+  "status": "passed",
+  "source_commit": "6dc91f090c0a3dc444ff19af9d1ce78f8a46af06",
+  "planned_s": 2400.0,
+  "span_s": 2404.414111631,
+  "time_limit_s": 3000,
+  "handler_starts": 1,
+  "handler_finishes": 1,
+  "progress": 240,
+  "effects_logged": 240,
+  "effect_duplicates": 0,
+  "event_counts": {
+    "run_started": 1,
+    "accepted": 1,
+    "handler_started": 1,
+    "external_effect_requested": 240,
+    "external_effect_recorded": 240,
+    "progress": 240,
+    "handler_finished": 1,
+    "process_exited": 1
+  },
+  "dir": "results/long/simpleq-1.3.0/lr-20261119T150521Z-simpleq-A1_control_40-scored"
+}

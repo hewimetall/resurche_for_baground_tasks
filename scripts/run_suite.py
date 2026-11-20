@@ -30,6 +30,23 @@ from bench.workers import command, python_for
 ROOT = Path("/workspace")
 RESULTS = ROOT / "results"
 LOGS = RESULTS / "logs"
+
+
+def result_dir(lib: str) -> Path:
+    """Каталог JSON. Для simple-q 1.3.0 задаётся SIMPLEQ_RESULT_DIR, rc7 остаётся в results/simpleq."""
+    if lib == "simpleq":
+        name = os.environ.get("SIMPLEQ_RESULT_DIR")
+        if name:
+            return ROOT / "results" / name
+    return RESULTS / lib
+
+
+def log_dir(lib: str) -> Path:
+    if lib == "simpleq" and os.environ.get("SIMPLEQ_RESULT_DIR"):
+        return result_dir(lib) / "logs"
+    return LOGS
+
+
 REDIS_URL = "redis://127.0.0.1:6379/0"
 PG_DSN = "postgresql://ubuntu@127.0.0.1:5432/bench"
 MOCK = "http://127.0.0.1:8090"
@@ -201,9 +218,10 @@ class Suite:
             opts["processes"] = 1
         cmd = command(self.lib, opts)
         started = []
-        LOGS.mkdir(parents=True, exist_ok=True)
+        logs = log_dir(self.lib)
+        logs.mkdir(parents=True, exist_ok=True)
         for index in range(count):
-            log_path = LOGS / f"{self.lib}-g{self.generation}-{index}.log"
+            log_path = logs / f"{self.lib}-g{self.generation}-{index}.log"
             handle = open(log_path, "ab")
             proc = subprocess.Popen(
                 cmd,
@@ -381,7 +399,7 @@ async def run_one(suite: Suite, lib: str, scenario: str) -> dict:
         if suite.workers:
             result.setdefault("stop", suite.stop_all(grace=3))
     result["duration_s"] = round(time.time() - started, 3)
-    out = RESULTS / lib / f"{scenario}.json"
+    out = result_dir(lib) / f"{scenario}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, indent=2, default=str))
     suite.log(
@@ -856,7 +874,7 @@ async def _long(suite: Suite, lib: str, checkpoint: bool) -> dict:
         }
     )
     await _wait_attempt(suite, jid, timeout=40)
-    admin_path = RESULTS / f"admin-{lib}.jsonl"
+    admin_path = result_dir(lib) / f"admin-{lib}.jsonl" if os.environ.get("SIMPLEQ_RESULT_DIR") and lib == "simpleq" else RESULTS / f"admin-{lib}.jsonl"
     stop_admin = threading.Event()
 
     def _sample_admin() -> None:

@@ -2,8 +2,8 @@
 # arq сюда не входит: arq 0.28 требует redis<6, taskiq-redis 1.2 — redis>=8.
 # Второй интерпретатор: requirements-arq.txt и requirements-arq.lock.
 
-simple-q-runtime==1.0.0rc7
-simple-q-worker==1.0.0rc7
+simple-q-runtime==1.3.0
+simple-q-worker==1.3.0
 dramatiq==2.2.1
 dramatiq-abort==1.2.1
 celery==5.7.0

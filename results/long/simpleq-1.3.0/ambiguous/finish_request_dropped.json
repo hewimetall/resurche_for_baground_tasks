@@ -1,0 +1,414 @@
+{
+  "scenario_id": "finish_request_dropped",
+  "status": "complete",
+  "class": "connection_loss",
+  "counts_as_2400": false,
+  "library": "simple-q 1.2.0",
+  "started_at": "2026-11-19T15:01:04Z",
+  "contract_held": true,
+  "checks": [
+    {
+      "name": "fault_fired",
+      "ok": true,
+      "detail": [
+        {
+          "t": 1795100462.6430879,
+          "mono": 965.621745156,
+          "action": "drop_request",
+          "kind": "finish",
+          "op": "EVALSHA",
+          "task_ids": [
+            "01M7T56K9GKWFTJ2667MTVD4QE"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "handler_ran",
+      "ok": true,
+      "detail": [
+        "finish_request_dropped"
+      ]
+    },
+    {
+      "name": "finish_not_applied",
+      "ok": true,
+      "detail": [
+        "bench:inflight:agent-worker.bench.<redacted>.14328.4e9a3903"
+      ]
+    },
+    {
+      "name": "data_kept_if_unfinished",
+      "ok": true,
+      "detail": {
+        "places": [
+          "bench:inflight:agent-worker.bench.<redacted>.14328.4e9a3903"
+        ],
+        "inflight": {
+          "bench:inflight:agent-worker.bench.<redacted>.14328.4e9a3903": [
+            "01M7T56K9GKWFTJ2667MTVD4QE"
+          ]
+        },
+        "workers": {
+          "agent-worker.bench.<redacted>.14328.4e9a3903": "1795100462"
+        },
+        "meta": {
+          "attempts": "0",
+          "max_attempts": "1",
+          "status": "Running",
+          "idempotency_key": "",
+          "started_at": "1795100462",
+          "locked_at": "1795100462",
+          "locked_by": "agent-worker.bench.<redacted>.14328.4e9a3903"
+        },
+        "data": true
+      }
+    },
+    {
+      "name": "no_extra_attempt",
+      "ok": true,
+      "detail": [
+        "finish_request_dropped"
+      ]
+    },
+    {
+      "name": "ends_done",
+      "ok": true,
+      "detail": [
+        "done"
+      ]
+    },
+    {
+      "name": "not_scheduled",
+      "ok": true,
+      "detail": [
+        "done"
+      ]
+    }
+  ],
+  "aaa": {
+    "arrange": "Task 01M7T56K9GKWFTJ2667MTVD4QE. The handler records the token before finish. The proxy arms the first handle_results.",
+    "act": "handle_results is drop_request. A second worker is started only when the command was not forwarded.",
+    "assert": "A lost request leaves the task recoverable and does not mark it done. A lost reply leaves it done, and a repeated finish does not add an execution or a retry."
+  },
+  "redis_restarted": false,
+  "task_id": "01M7T56K9GKWFTJ2667MTVD4QE",
+  "message_id": "f5ada14b-f508-4e33-829c-244fd416a034",
+  "owner_alive_after_fault": null,
+  "owner_pid": 14307,
+  "other_pid": 14345,
+  "owner_exit": null,
+  "other_exit": null,
+  "before": null,
+  "immediate": {
+    "places": [
+      "bench:inflight:agent-worker.bench.<redacted>.14328.4e9a3903"
+    ],
+    "inflight": {
+      "bench:inflight:agent-worker.bench.<redacted>.14328.4e9a3903": [
+        "01M7T56K9GKWFTJ2667MTVD4QE"
+      ]
+    },
+    "workers": {
+      "agent-worker.bench.<redacted>.14328.4e9a3903": "1795100462"
+    },
+    "meta": {
+      "attempts": "0",
+      "max_attempts": "1",
+      "status": "Running",
+      "idempotency_key": "",
+      "started_at": "1795100462",
+      "locked_at": "1795100462",
+      "locked_by": "agent-worker.bench.<redacted>.14328.4e9a3903"
+    },
+    "data": true
+  },
+  "final": {
+    "places": [
+      "done"
+    ],
+    "workers": {
+      "agent-worker.bench.<redacted>.14328.4e9a3903": "1795100462",
+      "agent-worker.bench.<redacted>.14374.ac80ea4b": "1795100462"
+    },
+    "meta": {
+      "attempts": "1",
+      "max_attempts": "1",
+      "status": "Done",
+      "idempotency_key": "",
+      "started_at": "1795100462",
+      "locked_at": "1795100462",
+      "locked_by": "agent-worker.bench.<redacted>.14328.4e9a3903",
+      "result": "{\"Ok\":{\"outcome\":\"ok\",\"result\":null}}",
+      "done_at": "1795100462"
+    },
+    "data": true,
+    "t_s": 2.05,
+    "effects": [
+      "finish_request_dropped"
+    ]
+  },
+  "effects": [
+    "finish_request_dropped"
+  ],
+  "samples": [
+    {
+      "t_s": 0.021,
+      "places": [
+        "bench:inflight:agent-worker.bench.<redacted>.14328.4e9a3903"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.14328.4e9a3903": "1795100462"
+      },
+      "locked_at": "1795100462",
+      "effects": [
+        "finish_request_dropped"
+      ]
+    },
+    {
+      "t_s": 2.05,
+      "places": [
+        "done"
+      ],
+      "workers": {
+        "agent-worker.bench.<redacted>.14328.4e9a3903": "1795100462",
+        "agent-worker.bench.<redacted>.14374.ac80ea4b": "1795100462"
+      },
+      "locked_at": "1795100462",
+      "effects": [
+        "finish_request_dropped"
+      ]
+    }
+  ],
+  "proxy": {
+    "armed": null,
+    "counts": {
+      "pass": 16,
+      "seen:reenqueue": 2,
+      "seen:register": 2,
+      "seen:fetch": 10,
+      "seen:acquire": 1,
+      "drop_request": 1,
+      "seen:finish": 2
+    },
+    "events": [
+      {
+        "t": 1795100462.6430879,
+        "mono": 965.621745156,
+        "action": "drop_request",
+        "kind": "finish",
+        "op": "EVALSHA",
+        "task_ids": [
+          "01M7T56K9GKWFTJ2667MTVD4QE"
+        ]
+      }
+    ],
+    "commands": 63,
+    "ops": [
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$32\r\nsimple_q:supervisor:<redacted>.14307\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$32\r\nsimple_q:supervisor:<redacted>.14307\r\n$4\r\nhost\r\n$6\r\n<redacted>\r\n$3\r\n"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$32\r\nsimple_q:supervisor:<redacted>.14307\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1795100462\r\n$12\r\n<redacted>.14307\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1795100402"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 9,
+        "prefix": "*9\r\n$7\r\nEVALSHA\r\n$40\r\n6b6f3808de063cd4ca38e9e11b6968a6cc826069\r\n$1\r\n4\r\n$13\r\nbenc"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:done\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 10,
+        "prefix": "*10\r\n$7\r\nEVALSHA\r\n$40\r\n0d5fbce91e1dcff1121ece41f7169da3c0e39194\r\n$1\r\n2\r\n$13\r\nben"
+      },
+      {
+        "op": "HSET",
+        "argc": 10,
+        "prefix": "*10\r\n$4\r\nHSET\r\n$63\r\nbench:workers:metadata:agent-worker.bench.<redacted>.14328.4e9a3"
+      },
+      {
+        "op": "TYPE",
+        "argc": 2,
+        "prefix": "*2\r\n$4\r\nTYPE\r\n$10\r\nbench:dead\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "SCAN",
+        "argc": 6,
+        "prefix": "*6\r\n$4\r\nSCAN\r\n$1\r\n0\r\n$5\r\nMATCH\r\n$24\r\nbench:workers:metadata:*\r\n$5\r\nCOUNT\r\n$3\r\n10"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$63\r\nbench:workers:metadata:agent-worker.bench.<redacted>.14328.4e9a39"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 4,
+        "prefix": "*4\r\n$7\r\nEVALSHA\r\n$40\r\nf84c79100c44c2348985e8bd49481807fb54d667\r\n$1\r\n1\r\n$37\r\nbenc"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 11,
+        "prefix": "*11\r\n$7\r\nEVALSHA\r\n$40\r\nf7ff133460a6cd6a739e294b0f4f7a584599f1fc\r\n$1\r\n4\r\n$55\r\nben"
+      },
+      {
+        "op": "ZSCORE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nZSCORE\r\n$13\r\nbench:workers\r\n$40\r\nagent-worker.bench.<redacted>.14328.4e9a390"
+      },
+      {
+        "op": "HSET",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nHSET\r\n$32\r\nsimple_q:supervisor:<redacted>.14307\r\n$11\r\ntasks:14328\r\n$1\r\n0\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 5,
+        "prefix": "*5\r\n$7\r\nEVALSHA\r\n$40\r\n8f290130ebe41d5d981486b7a1b8c3bfc152ea00\r\n$1\r\n1\r\n$47\r\ndeli"
+      },
+      {
+        "op": "DEL",
+        "argc": 2,
+        "prefix": "*2\r\n$3\r\nDEL\r\n$47\r\ndelivery:f5ada14b-f508-4e33-829c-244fd416a034:0\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 14,
+        "prefix": "*14\r\n$7\r\nEVALSHA\r\n$40\r\n9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\r\n$1\r\n5\r\n$55\r\nben"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 14,
+        "prefix": "*14\r\n$7\r\nEVALSHA\r\n$40\r\n9a702ec86f2a2dcdd3f53342b4e7cdce332871cd\r\n$1\r\n5\r\n$55\r\nben"
+      },
+      {
+        "op": "EVALSHA",
+        "argc": 13,
+        "prefix": "*13\r\n$7\r\nEVALSHA\r\n$40\r\nf053fd9b41b61a2d32b8b7d8dba3f1a96e3aa6e1\r\n$1\r\n7\r\n$13\r\nben"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$8\r\nLIB-NAME\r\n$8\r\nredis-rs\r\n"
+      },
+      {
+        "op": "CLIENT",
+        "argc": 4,
+        "prefix": "*4\r\n$6\r\nCLIENT\r\n$7\r\nSETINFO\r\n$7\r\nLIB-VER\r\n$5\r\n1.8.1\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "TIME",
+        "argc": 1,
+        "prefix": "*1\r\n$4\r\nTIME\r\n"
+      },
+      {
+        "op": "HGETALL",
+        "argc": 2,
+        "prefix": "*2\r\n$7\r\nHGETALL\r\n$32\r\nsimple_q:supervisor:<redacted>.14345\r\n"
+      },
+      {
+        "op": "HSET",
+        "argc": 38,
+        "prefix": "*38\r\n$4\r\nHSET\r\n$32\r\nsimple_q:supervisor:<redacted>.14345\r\n$4\r\nhost\r\n$6\r\n<redacted>\r\n$3\r\n"
+      },
+      {
+        "op": "EXPIRE",
+        "argc": 3,
+        "prefix": "*3\r\n$6\r\nEXPIRE\r\n$32\r\nsimple_q:supervisor:<redacted>.14345\r\n$3\r\n120\r\n"
+      },
+      {
+        "op": "ZADD",
+        "argc": 4,
+        "prefix": "*4\r\n$4\r\nZADD\r\n$20\r\nsimple_q:supervisors\r\n$10\r\n1795100462\r\n$12\r\n<redacted>.14345\r\n"
+      },
+      {
+        "op": "ZREMRANGEBYSCORE",
+        "argc": 4,
+        "prefix": "*4\r\n$16\r\nZREMRANGEBYSCORE\r\n$20\r\nsimple_q:supervisors\r\n$4\r\n-inf\r\n$11\r\n(1795100402"
+      }
+    ]
+  },
+  "owner_log": "",
+  "other_log": "",
+  "redis_pid": 8835,
+  "finished_at": "2026-11-19T15:01:04Z"
+}

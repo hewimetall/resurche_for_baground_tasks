@@ -1,0 +1,8 @@
+2026-11-19T15:05:21.357746Z  INFO agent_worker::supervisor: effective child memory limits soft_bytes=unset hard_bytes=unset
+2026-11-19T15:05:21.359115Z  INFO agent_worker::supervisor: worker process started index=0 pid=16116
+2026-11-19T15:05:21.492133Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.16116.2a62f915 started
+2026-11-19T15:05:23.495575Z  INFO process{otel.name=process hold otel.kind="consumer" messaging.system="redis" messaging.destination=bench messaging.operation="process" messaging.message.id=8d26bd34-06a1-440c-957c-faf751a569fd actor_name=hold}: agent_worker::worker: running actor message_id=8d26bd34-06a1-440c-957c-faf751a569fd actor_name=hold queue_name=bench retries=0 deliveries=1
+2026-11-19T15:51:20.211120Z  INFO agent_worker::supervisor: SIGTERM received; draining child processes
+2026-11-19T15:51:20.211417Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.16116.2a62f915 paused
+2026-11-19T15:51:20.211449Z  INFO agent_worker::child: drain requested
+2026-11-19T15:51:20.211465Z  INFO apalis_core::worker::context: Worker agent-worker.bench.<redacted>.16116.2a62f915 stopped

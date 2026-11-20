@@ -1,0 +1,50 @@
+{
+  "library": "simpleq",
+  "scenario": "periodic",
+  "scale": "short",
+  "started_at": "2026-11-19T14:50:30.554422+00:00",
+  "measured": true,
+  "sends": [
+    {
+      "accepted": true,
+      "id": "72a59f61-e6bd-4811-a9d5-802a2717c607"
+    },
+    {
+      "accepted": false,
+      "id": null
+    },
+    {
+      "accepted": true,
+      "id": "ebc3259b-553f-4778-9a2c-57b697b7603c"
+    },
+    {
+      "accepted": false,
+      "id": null
+    }
+  ],
+  "got": 1,
+  "invariant": {
+    "expected": 1,
+    "lost": 0,
+    "duplicated": 0,
+    "attempts": 1,
+    "distinct_items": 1,
+    "progress_steps": 0,
+    "skips": 0,
+    "status": "done",
+    "fail_reason": null,
+    "cancelled": false,
+    "expected_n": 1
+  },
+  "stop": [
+    {
+      "sigterm_at": 1795099831.6186404,
+      "exit_at": 1795099831.81876,
+      "t_drain_s": 0.2,
+      "killed_after_grace": false,
+      "code": 0,
+      "already_exited": false
+    }
+  ],
+  "duration_s": 1.264
+}
